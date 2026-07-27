@@ -1,0 +1,16 @@
+name = "finitegeom"
+defaultTargets = ["Sumfree", "CapGame", "ProjectiveCap"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+
+[[lean_lib]]
+name = "Sumfree"
+
+[[lean_lib]]
+name = "CapGame"
+
+[[lean_lib]]
+name = "ProjectiveCap"

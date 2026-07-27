@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it using this metadata."
+title: finitegeom
+type: software
+authors:
+  - family-names: Rudd
+    given-names: Tavis
+repository-code: "https://github.com/tavisrudd/finitegeom"
+license: Apache-2.0
+abstract: >-
+  Lean 4 formalizations of second-player outcomes for cap-placement games on
+  finite affine and projective geometries.
+keywords:
+  - Lean
+  - finite geometry
+  - combinatorial games
+  - caps
+  - Nofil

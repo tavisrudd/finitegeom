@@ -1,0 +1,99 @@
+# finitegeom
+
+`finitegeom` is a Lean 4 formalization library for finite geometry, coding
+theory, and their interactions with algebra, combinatorics, and quantum
+information. It is the public formal companion to a paper programme covering:
+
+- rigidity and factorization phenomena around the Clebsch configuration;
+- arcs complete outside a prescribed conic;
+- deep holes of projective Reed–Solomon codes beyond redundancy four;
+- local-unitary rigidity of stabilizer AME states and MDS–CSS codes; and
+- exact transfer, reliability, and geometry of bounded repair ports.
+
+Each paper-facing release has an explicit import boundary, terminal-theorem
+ledger, expected axiom sets, and content-addressed source manifest. Large
+finite classifications are kept in separately pinned certificate packages so
+that the main library remains readable and reviewable.
+
+## Current repository state
+
+The initial checked-in state is the reusable cap-game and finite-projective
+geometry foundation on which several later paper releases depend. Its terminal
+claims establish:
+
+- the second-player outcome for finite affine cap placement;
+- the corresponding outcome for positive-dimensional binary projective
+  spaces;
+- the fixed-point-free projective-involution mirror principle and its
+  odd-cardinality, even-vector-rank consequence; and
+- the rank-three projective outcomes over fields of even cardinality and over
+  fields of cardinality five and seven.
+
+These foundational results also support Tavis Rudd's manuscript in
+preparation, *Achievement games in the Nofil genus — outcome classes of
+cap/Nofil games on finite geometries*.
+
+## Foundation claim map
+
+| Manuscript role | Lean declaration |
+|---|---|
+| Affine cap theorem (`thm:affine-cap`) | `CapGame.Affine.initialP_fin` |
+| Binary projective cap theorem | `ProjectiveCap.Projective.initialPStatement_binary_of_projectiveDim_ge_one` |
+| General projective mirror theorem | `ProjectiveCap.Projective.initialPStatement_of_fixedPointFree_collinearity_preserving_involution` |
+| Odd-field, even-vector-rank consequence | `ProjectiveCap.Projective.initialPStatement_of_odd_card_finrank_eq_two_mul` |
+| Even-field projective-plane theorem | `ProjectiveCap.initialPStatement_of_even_card_finrank` |
+| Projective plane of order five | `ProjectiveCap.ConicLocalization.initialPStatement_of_card_eq_five_finrank` |
+| Projective plane of order seven | `ProjectiveCap.ConicLocalization.initialPStatement_of_card_eq_seven_finrank` |
+
+The exact import closures and expected axiom sets are recorded in
+[`trust/FIRST_TAG.md`](trust/FIRST_TAG.md) and
+[`trust/areas/finitegeom_first_tag.toml`](trust/areas/finitegeom_first_tag.toml).
+None of these seven terminal claims depends on generated certificate data or
+external solver output.
+
+## Reproduce the formal checks
+
+The repository pins Lean through `lean-toolchain`, Mathlib through
+`lakefile.toml` and `lake-manifest.json`, and the optional Nix development
+environment through `flake.lock`.
+
+With Nix:
+
+```sh
+nix develop
+lake exe cache get
+lake build CapGame.Affine ProjectiveCap.Binary \
+  ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome
+lake env lean trust/AxiomAudit.lean
+```
+
+Without Nix, install `elan`, then run the same three `lake` commands. The
+toolchain named in `lean-toolchain` is selected automatically. The axiom audit
+prints exactly `propext`, `Classical.choice`, and `Quot.sound` for every
+terminal.
+
+On Linux, `nix develop .#fhs` is also available for systems that need an
+FHS-compatible shell. The default shell is available on x86-64 Linux, AArch64
+Linux, and Apple Silicon macOS.
+
+## Repository layout
+
+- `CapGame/`, `ProjectiveCap/`, and `Sumfree/` contain the reviewed Lean
+  sources.
+- `trust/` contains the claim boundary, terminal ledger, and reproducible
+  axiom audit.
+- `TARGET_MANIFEST.json` content-addresses the exact 24-module theorem
+  closure.
+- `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
+  source-to-release preparation boundary; they are not build inputs.
+
+## Citation
+
+Until the accompanying manuscript is deposited, cite this repository using
+[`CITATION.cff`](CITATION.cff). The preferred repository URL is
+<https://github.com/tavisrudd/finitegeom>.
+
+## License
+
+This project is licensed under the Apache License 2.0. See
+[`LICENSE`](LICENSE).

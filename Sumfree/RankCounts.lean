@@ -1,0 +1,323 @@
+import Sumfree.Game
+import Mathlib.FieldTheory.Finiteness
+
+/-!
+# Rank-count interface for finite sum-free games
+
+This module packages the cardinality identities for kernels, images, fixed
+loci, and obstruction sets used by the finite-abelian sum-free game theorems.
+The hypotheses state exactly the rank information consumed by the game
+arguments, independently of any particular structure-theorem API.
+-/
+
+namespace Sumfree
+namespace Game
+
+variable {G : Type*} [AddCommGroup G] [Fintype G] [DecidableEq G]
+
+/-- The full order-two kernel, including zero. -/
+noncomputable def OrderTwoKernelElements : Finset G :=
+  Finset.univ.filter fun v => v + v = 0
+
+private theorem mem_orderTwoKernelElements {v : G} :
+    v ∈ OrderTwoKernelElements (G := G) ↔ v + v = 0 := by
+  classical
+  simp [OrderTwoKernelElements]
+
+private theorem mem_orderTwoKernelElements_iff_two_nsmul {v : G} :
+    v ∈ OrderTwoKernelElements (G := G) ↔ (2 : ℕ) • v = 0 := by
+  rw [mem_orderTwoKernelElements]
+  norm_num [two_nsmul]
+
+/-- The full order-three obstruction kernel, including zero. -/
+noncomputable def OrderThreeKernelElements : Finset G :=
+  Finset.univ.filter fun v => v + v = -v
+
+private theorem mem_orderThreeKernelElements {v : G} :
+    v ∈ OrderThreeKernelElements (G := G) ↔ v + v = -v := by
+  classical
+  simp [OrderThreeKernelElements]
+
+private theorem mem_orderThreeKernelElements_iff_three_nsmul {v : G} :
+    v ∈ OrderThreeKernelElements (G := G) ↔ (3 : ℕ) • v = 0 := by
+  rw [mem_orderThreeKernelElements]
+  constructor
+  · intro h
+    rw [three_nsmul]
+    rw [h]
+    simp
+  · intro h
+    rw [three_nsmul] at h
+    have h' := congrArg (fun z => z + -v) h
+    simpa [add_assoc, add_comm, add_left_comm] using h'
+
+private theorem orderTwoKernelElements_eq_insert_zero_nonzeroOrderTwoElements :
+    OrderTwoKernelElements (G := G) = insert 0 (NonzeroOrderTwoElements (G := G)) := by
+  ext x
+  by_cases hx0 : x = 0
+  · subst x
+    simp [OrderTwoKernelElements]
+  · simp [OrderTwoKernelElements, NonzeroOrderTwoElements, hx0]
+
+private theorem orderThreeKernelElements_eq_insert_zero_nonzeroOrderThreeElements :
+    OrderThreeKernelElements (G := G) = insert 0 (NonzeroOrderThreeElements (G := G)) := by
+  ext x
+  by_cases hx0 : x = 0
+  · subst x
+    simp [OrderThreeKernelElements]
+  · simp [OrderThreeKernelElements, NonzeroOrderThreeElements, hx0]
+
+private theorem orderTwoKernelElements_card :
+    (OrderTwoKernelElements (G := G)).card =
+      (NonzeroOrderTwoElements (G := G)).card + 1 := by
+  rw [orderTwoKernelElements_eq_insert_zero_nonzeroOrderTwoElements,
+    Finset.card_insert_of_notMem]
+  simp [NonzeroOrderTwoElements]
+
+private theorem orderThreeKernelElements_card :
+    (OrderThreeKernelElements (G := G)).card =
+      (NonzeroOrderThreeElements (G := G)).card + 1 := by
+  rw [orderThreeKernelElements_eq_insert_zero_nonzeroOrderThreeElements,
+    Finset.card_insert_of_notMem]
+  simp [NonzeroOrderThreeElements]
+
+/--
+`HasTwoRank G s` is the obstruction-count interface for saying that the
+2-torsion has `F_2`-rank `s`: the full order-two kernel has size `2^s`, so
+the nonzero obstruction set has size `2^s - 1`.
+-/
+def HasTwoRank (G : Type*) [AddCommGroup G] [Fintype G] [DecidableEq G] (s : ℕ) :
+    Prop :=
+  (OrderTwoKernelElements (G := G)).card = 2 ^ s
+
+/--
+`HasThreeRank G r` is the obstruction-count interface for saying that the
+3-torsion has `F_3`-rank `r`: the full order-three obstruction kernel has
+size `3^r`, so the nonzero obstruction set has size `3^r - 1`.
+-/
+def HasThreeRank (G : Type*) [AddCommGroup G] [Fintype G] [DecidableEq G] (r : ℕ) :
+    Prop :=
+  (OrderThreeKernelElements (G := G)).card = 3 ^ r
+
+private theorem orderTwoKernelElements_eq_univ_of_zmod2_module [Module (ZMod 2) G] :
+    OrderTwoKernelElements (G := G) = Finset.univ := by
+  ext x
+  rw [mem_orderTwoKernelElements_iff_two_nsmul]
+  simp [ZModModule.char_nsmul_eq_zero (n := 2) x]
+
+private theorem orderThreeKernelElements_eq_singleton_zero_of_zmod2_module [Module (ZMod 2) G] :
+    OrderThreeKernelElements (G := G) = {0} := by
+  ext x
+  rw [mem_orderThreeKernelElements_iff_three_nsmul]
+  constructor
+  · intro hx
+    have hxscalar : (3 : ZMod 2) • x = 0 :=
+      (Nat.cast_smul_eq_nsmul (R := ZMod 2) 3 x).trans hx
+    rcases smul_eq_zero.mp hxscalar with h3 | hxzero
+    · exact ((by decide : (3 : ZMod 2) ≠ 0) h3).elim
+    · simpa using hxzero
+  · intro hx
+    have hx0 : x = 0 := by simpa using hx
+    rw [hx0]
+    simp
+
+/-- For a finite `ZMod 2`-module, the two-rank obstruction count is the vector
+space dimension. -/
+theorem hasTwoRank_finrank_zmod2 [Module (ZMod 2) G] :
+    HasTwoRank G (Module.finrank (ZMod 2) G) := by
+  unfold HasTwoRank
+  rw [orderTwoKernelElements_eq_univ_of_zmod2_module, Finset.card_univ]
+  rw [@Module.card_eq_pow_finrank (K := ZMod 2) (V := G)]
+  rw [show Fintype.card (ZMod 2) = 2 by exact ZMod.card 2]
+
+/-- A `ZMod 2`-module has no nontrivial three-primary obstruction. -/
+theorem hasThreeRank_zero_of_zmod2_module [Module (ZMod 2) G] :
+    HasThreeRank G 0 := by
+  unfold HasThreeRank
+  rw [orderThreeKernelElements_eq_singleton_zero_of_zmod2_module]
+  simp
+
+private theorem orderTwoKernelElements_eq_singleton_zero_of_zmod3_module [Module (ZMod 3) G] :
+    OrderTwoKernelElements (G := G) = {0} := by
+  ext x
+  rw [mem_orderTwoKernelElements_iff_two_nsmul]
+  constructor
+  · intro hx
+    have hxscalar : (2 : ZMod 3) • x = 0 :=
+      (Nat.cast_smul_eq_nsmul (R := ZMod 3) 2 x).trans hx
+    rcases smul_eq_zero.mp hxscalar with h2 | hxzero
+    · exact ((by decide : (2 : ZMod 3) ≠ 0) h2).elim
+    · simpa using hxzero
+  · intro hx
+    have hx0 : x = 0 := by simpa using hx
+    rw [hx0]
+    simp
+
+private theorem orderThreeKernelElements_eq_univ_of_zmod3_module [Module (ZMod 3) G] :
+    OrderThreeKernelElements (G := G) = Finset.univ := by
+  ext x
+  rw [mem_orderThreeKernelElements_iff_three_nsmul]
+  simp [ZModModule.char_nsmul_eq_zero (n := 3) x]
+
+private theorem hasTwoRank_zero_of_zmod3_module [Module (ZMod 3) G] :
+    HasTwoRank G 0 := by
+  unfold HasTwoRank
+  rw [orderTwoKernelElements_eq_singleton_zero_of_zmod3_module]
+  simp
+
+private theorem hasThreeRank_finrank_zmod3 [Module (ZMod 3) G] :
+    HasThreeRank G (Module.finrank (ZMod 3) G) := by
+  unfold HasThreeRank
+  rw [orderThreeKernelElements_eq_univ_of_zmod3_module, Finset.card_univ]
+  rw [@Module.card_eq_pow_finrank (K := ZMod 3) (V := G)]
+  rw [show Fintype.card (ZMod 3) = 3 by exact ZMod.card 3]
+
+private theorem nonzeroOrderTwo_card_eq_zero_of_hasTwoRank_zero
+    (h : HasTwoRank G 0) :
+    (NonzeroOrderTwoElements (G := G)).card = 0 := by
+  unfold HasTwoRank at h
+  rw [orderTwoKernelElements_card] at h
+  omega
+
+private theorem nonzeroOrderTwo_card_eq_one_of_hasTwoRank_one
+    (h : HasTwoRank G 1) :
+    (NonzeroOrderTwoElements (G := G)).card = 1 := by
+  unfold HasTwoRank at h
+  rw [orderTwoKernelElements_card] at h
+  norm_num at h
+  omega
+
+private theorem nonzeroOrderTwo_card_ge_two_of_hasTwoRank_ge_two {s : ℕ}
+    (h : HasTwoRank G s) (hs : 2 ≤ s) :
+    2 ≤ (NonzeroOrderTwoElements (G := G)).card := by
+  unfold HasTwoRank at h
+  rw [orderTwoKernelElements_card] at h
+  have hpow : 4 ≤ 2 ^ s := by
+    have hpow := Nat.pow_le_pow_right (by decide : 0 < 2) hs
+    simpa using hpow
+  omega
+
+private theorem nonzeroOrderThree_card_eq_zero_of_hasThreeRank_zero
+    (h : HasThreeRank G 0) :
+    (NonzeroOrderThreeElements (G := G)).card = 0 := by
+  unfold HasThreeRank at h
+  rw [orderThreeKernelElements_card] at h
+  omega
+
+private theorem nonzeroOrderThree_card_eq_two_of_hasThreeRank_one
+    (h : HasThreeRank G 1) :
+    (NonzeroOrderThreeElements (G := G)).card = 2 := by
+  unfold HasThreeRank at h
+  rw [orderThreeKernelElements_card] at h
+  norm_num at h
+  omega
+
+/--
+Rank-count P-side theorem for the currently proved branches.
+
+This is the rank-facing wrapper around
+`initial_isP_of_obstruction_count_P_cases`.
+-/
+theorem initial_isP_of_rank_count_P_cases {s r : ℕ}
+    (h2 : HasTwoRank G s) (h3 : HasThreeRank G r)
+    (h :
+      2 ≤ s ∨
+        (s = 0 ∧ r = 0) ∨
+        (s = 1 ∧ r = 1)) :
+    IsP (∅ : Finset G) := by
+  rcases h with hs2 | h00 | h11
+  · exact initial_isP_of_obstruction_count_P_cases (G := G)
+      (Or.inl (nonzeroOrderTwo_card_ge_two_of_hasTwoRank_ge_two h2 hs2))
+  · rcases h00 with ⟨rfl, rfl⟩
+    exact initial_isP_of_obstruction_count_P_cases (G := G)
+      (Or.inr (Or.inl
+        ⟨nonzeroOrderTwo_card_eq_zero_of_hasTwoRank_zero h2,
+          nonzeroOrderThree_card_eq_zero_of_hasThreeRank_zero h3⟩))
+  · rcases h11 with ⟨rfl, rfl⟩
+    exact initial_isP_of_obstruction_count_P_cases (G := G)
+      (Or.inr (Or.inr
+        ⟨nonzeroOrderTwo_card_eq_one_of_hasTwoRank_one h2,
+          nonzeroOrderThree_card_eq_two_of_hasThreeRank_one h3⟩))
+
+/--
+Rank-count N-side theorem for the currently proved `r₃ ≤ 1`, `s₂ ≤ 1`
+branches.
+
+This is the rank-facing wrapper around
+`initial_win_of_obstruction_count_N_cases`.
+-/
+theorem initial_win_of_rank_count_N_cases {s r : ℕ}
+    (h2 : HasTwoRank G s) (h3 : HasThreeRank G r)
+    (h :
+      (s = 1 ∧ r = 0) ∨
+        (s = 0 ∧ r = 1)) :
+    Win (∅ : Finset G) := by
+  rcases h with h10 | h01
+  · rcases h10 with ⟨rfl, rfl⟩
+    exact initial_win_of_obstruction_count_N_cases (G := G)
+      (Or.inl
+        ⟨nonzeroOrderTwo_card_eq_one_of_hasTwoRank_one h2,
+          nonzeroOrderThree_card_eq_zero_of_hasThreeRank_zero h3⟩)
+  · rcases h01 with ⟨rfl, rfl⟩
+    exact initial_win_of_obstruction_count_N_cases (G := G)
+      (Or.inr
+        ⟨nonzeroOrderTwo_card_eq_zero_of_hasTwoRank_zero h2,
+          nonzeroOrderThree_card_eq_two_of_hasThreeRank_one h3⟩)
+
+/--
+Rank-count form of the proved `r₃ ≤ 1` P criterion.
+
+The remaining finite-abelian algebra task is to construct `HasTwoRank` and
+`HasThreeRank`; once those are available, this theorem gives the complete
+P-side criterion for `r ≤ 1`.
+-/
+theorem initial_isP_iff_rank_count_P_cases_of_threeRank_le_one {s r : ℕ}
+    (h2 : HasTwoRank G s) (h3 : HasThreeRank G r) (hr : r ≤ 1) :
+    IsP (∅ : Finset G) ↔
+      2 ≤ s ∨ (s = 0 ∧ r = 0) ∨ (s = 1 ∧ r = 1) := by
+  constructor
+  · intro hP
+    by_cases hs2 : 2 ≤ s
+    · exact Or.inl hs2
+    · have hslt : s < 2 := Nat.lt_of_not_ge hs2
+      interval_cases s
+      · interval_cases r
+        · exact Or.inr (Or.inl ⟨rfl, rfl⟩)
+        · exfalso
+          exact hP (initial_win_of_rank_count_N_cases (G := G) h2 h3
+            (Or.inr ⟨rfl, rfl⟩))
+      · interval_cases r
+        · exfalso
+          exact hP (initial_win_of_rank_count_N_cases (G := G) h2 h3
+            (Or.inl ⟨rfl, rfl⟩))
+        · exact Or.inr (Or.inr ⟨rfl, rfl⟩)
+  · exact initial_isP_of_rank_count_P_cases (G := G) h2 h3
+
+/--
+Rank-count form of the proved `r₃ ≤ 1`, `s₂ ≤ 1` N criterion.
+-/
+theorem initial_win_iff_rank_count_N_cases_of_threeRank_le_one {s r : ℕ}
+    (h2 : HasTwoRank G s) (h3 : HasThreeRank G r) (hr : r ≤ 1) :
+    Win (∅ : Finset G) ↔
+      (s = 1 ∧ r = 0) ∨ (s = 0 ∧ r = 1) := by
+  constructor
+  · intro hW
+    by_cases hs2 : 2 ≤ s
+    · exfalso
+      exact (initial_isP_of_rank_count_P_cases (G := G) h2 h3 (Or.inl hs2)) hW
+    · have hslt : s < 2 := Nat.lt_of_not_ge hs2
+      interval_cases s
+      · interval_cases r
+        · exfalso
+          exact (initial_isP_of_rank_count_P_cases (G := G) h2 h3
+            (Or.inr (Or.inl ⟨rfl, rfl⟩))) hW
+        · exact Or.inr ⟨rfl, rfl⟩
+      · interval_cases r
+        · exact Or.inl ⟨rfl, rfl⟩
+        · exfalso
+          exact (initial_isP_of_rank_count_P_cases (G := G) h2 h3
+            (Or.inr (Or.inr ⟨rfl, rfl⟩))) hW
+  · exact initial_win_of_rank_count_N_cases (G := G) h2 h3
+
+end Game
+end Sumfree

@@ -1,0 +1,9 @@
+schema_version = 1
+
+[portfolio]
+libraries = ["CapGame", "ProjectiveCap", "Sumfree"]
+non_source_dirs = [".lake", "trust"]
+
+[[area]]
+name = "finitegeom_first_tag"
+spine = "areas/finitegeom_first_tag.toml"
