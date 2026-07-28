@@ -1,5 +1,7 @@
 # finitegeom
 
+[![DOI](https://zenodo.org/badge/1315103176.svg)](https://doi.org/10.5281/zenodo.21650878)
+
 `finitegeom` is a Lean 4 formalization library for finite geometry, coding
 theory, and their interactions with algebra, combinatorics, and quantum
 information. It is the public formal companion to a paper programme covering:
