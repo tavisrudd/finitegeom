@@ -46,3 +46,16 @@ The review covers every Lean file in the 24-module closure.
 
 `DECLARATION_VISIBILITY.tsv` records the 269 undocumented, module-local proof
 declarations kept private so they do not become an accidental public API.
+
+## Clebsch Passages formal-companion state
+
+The state following `v0.1.0` adds three exact, unmodified Lean sources:
+
+- `RelativeConicArcs/InvolutiveOddUnit.lean`;
+- `RelativeConicArcs/KneserPairEigenspace.lean`; and
+- `RelativeConicArcs/Gates/ClebschOrientationMechanisms.lean`.
+
+`trust/manifests/clebsch_passages.json` content-addresses this exact closure.
+`trust/CLEBSCH_PASSAGES.md` maps its symbolic mechanisms to the adjacent
+manuscript clauses and states the results that remain outside formal coverage.
+No generated certificate or private development history is included.
