@@ -1,0 +1,24 @@
+{
+  "title": "finitegeom",
+  "description": "A Lean 4 formalization library for finite geometry, coding theory, and their interactions with algebra, combinatorics, and quantum information. The initial release provides a reviewer-scale foundation for cap-placement games and finite affine and projective geometry; later versioned releases add explicitly audited paper-facing theorem closures.",
+  "creators": [
+    {
+      "name": "Rudd, Tavis",
+      "orcid": "0009-0003-6405-3275"
+    }
+  ],
+  "version": "0.1.0",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "Lean 4",
+    "formalized mathematics",
+    "finite geometry",
+    "coding theory",
+    "combinatorics",
+    "projective geometry",
+    "cap-placement games"
+  ]
+}

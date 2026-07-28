@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this formalization, please cite it using this metadata."
 title: finitegeom
 type: software
+version: 0.1.0
 authors:
   - family-names: Rudd
     given-names: Tavis
@@ -10,11 +11,16 @@ authors:
 repository-code: "https://github.com/tavisrudd/finitegeom"
 license: Apache-2.0
 abstract: >-
-  Lean 4 formalizations of second-player outcomes for cap-placement games on
-  finite affine and projective geometries.
+  A Lean 4 formalization library for finite geometry, coding theory, and their
+  interactions with algebra, combinatorics, and quantum information. The
+  initial release provides a reviewer-scale foundation for cap-placement games
+  and finite affine and projective geometry; later versioned releases add
+  explicitly audited paper-facing theorem closures.
 keywords:
-  - Lean
+  - Lean 4
+  - formalized mathematics
   - finite geometry
-  - combinatorial games
-  - caps
-  - Nofil
+  - coding theory
+  - combinatorics
+  - projective geometry
+  - cap-placement games
