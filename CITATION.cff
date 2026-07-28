@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Rudd
     given-names: Tavis
+    orcid: "https://orcid.org/0009-0003-6405-3275"
 repository-code: "https://github.com/tavisrudd/finitegeom"
 license: Apache-2.0
 abstract: >-
