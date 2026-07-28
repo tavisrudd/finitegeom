@@ -1,0 +1,91 @@
+# Trust spine for the Clebsch Passages symbolic formal companion.
+
+schema_version = 1
+area = "clebsch_passages"
+manifest = "trust/CLEBSCH_PASSAGES.md"
+
+owns = [
+  "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
+  "RelativeConicArcs.InvolutiveOddUnit",
+  "RelativeConicArcs.KneserPairEigenspace",
+]
+
+permitted_axioms = []
+
+[[gate]]
+module = "RelativeConicArcs.Gates.ClebschOrientationMechanisms"
+terminals = [
+  "RelativeConicArcs.InvolutiveOddUnit.map_evenPart",
+  "RelativeConicArcs.InvolutiveOddUnit.map_oddPart",
+  "RelativeConicArcs.InvolutiveOddUnit.evenPart_add_oddPart",
+  "RelativeConicArcs.InvolutiveOddUnit.invariant_eq_zero_of_antiInvariant",
+  "RelativeConicArcs.InvolutiveOddUnit.oddMulEquiv",
+  "RelativeConicArcs.InvolutiveOddUnit.existsUnique_invariant_add_mul_invariant",
+  "RelativeConicArcs.InvolutiveOddUnit.localized_existsUnique_invariant_add_mul_invariant",
+  "RelativeConicArcs.KneserPairEigenspace.adjacency_pairSum_of_sum_eq_zero",
+  "RelativeConicArcs.KneserPairEigenspace.pairSum_injective_on_sumZero",
+  "RelativeConicArcs.KneserPairEigenspace.existsUnique_pairSum_of_petersenEigen",
+  "RelativeConicArcs.KneserPairEigenspace.standardEquivPetersenNegTwo",
+  "RelativeConicArcs.KneserPairEigenspace.finrank_petersenNegTwoEigenspace",
+]
+coverage_rule = "closure"
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.map_evenPart"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.map_oddPart"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.evenPart_add_oddPart"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.invariant_eq_zero_of_antiInvariant"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.oddMulEquiv"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.existsUnique_invariant_add_mul_invariant"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.InvolutiveOddUnit.localized_existsUnique_invariant_add_mul_invariant"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.KneserPairEigenspace.adjacency_pairSum_of_sum_eq_zero"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.KneserPairEigenspace.pairSum_injective_on_sumZero"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.KneserPairEigenspace.existsUnique_pairSum_of_petersenEigen"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.KneserPairEigenspace.standardEquivPetersenNegTwo"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.KneserPairEigenspace.finrank_petersenNegTwoEigenspace"
+gates = ["RelativeConicArcs.Gates.ClebschOrientationMechanisms"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

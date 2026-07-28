@@ -1,9 +1,13 @@
 schema_version = 1
 
 [portfolio]
-libraries = ["CapGame", "ProjectiveCap", "Sumfree"]
+libraries = ["CapGame", "ProjectiveCap", "RelativeConicArcs", "Sumfree"]
 non_source_dirs = [".lake", "trust"]
 
 [[area]]
 name = "finitegeom_first_tag"
 spine = "areas/finitegeom_first_tag.toml"
+
+[[area]]
+name = "clebsch_passages"
+spine = "areas/clebsch_passages.toml"

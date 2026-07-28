@@ -1,0 +1,30 @@
+{
+  "external_imports": [
+    "Mathlib"
+  ],
+  "module_count": 3,
+  "roots": [
+    "RelativeConicArcs.Gates.ClebschOrientationMechanisms"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 1590,
+      "module": "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
+      "path": "RelativeConicArcs/Gates/ClebschOrientationMechanisms.lean",
+      "sha256": "07b715d6426e3f8543c29f9db25d5037ac34cbb8e3e5e97317a2a0b23069e9bd"
+    },
+    {
+      "bytes": 8258,
+      "module": "RelativeConicArcs.InvolutiveOddUnit",
+      "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
+      "sha256": "d1a3160502013aa859590e15420be016987ac8041039d02ef15e3115dc021618"
+    },
+    {
+      "bytes": 24986,
+      "module": "RelativeConicArcs.KneserPairEigenspace",
+      "path": "RelativeConicArcs/KneserPairEigenspace.lean",
+      "sha256": "eb2c89c22be925a62345746d0d3bf6a639ccd6fe5562859365875bbe3c1c03e6"
+    }
+  ]
+}

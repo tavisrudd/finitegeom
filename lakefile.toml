@@ -1,5 +1,5 @@
 name = "finitegeom"
-defaultTargets = ["Sumfree", "CapGame", "ProjectiveCap"]
+defaultTargets = ["Sumfree", "CapGame", "ProjectiveCap", "RelativeConicArcs"]
 
 [[require]]
 name = "mathlib"
@@ -14,3 +14,6 @@ name = "CapGame"
 
 [[lean_lib]]
 name = "ProjectiveCap"
+
+[[lean_lib]]
+name = "RelativeConicArcs"

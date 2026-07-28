@@ -1,0 +1,23 @@
+import RelativeConicArcs.Gates.ClebschOrientationMechanisms
+
+/-!
+# Axiom audit for the Clebsch Passages formal companion
+
+The paper-facing boundary consists of symbolic involutive-splitting and
+Petersen pair-sum mechanisms. The manuscript itself makes no Lean dependency
+claim.
+-/
+
+#print axioms RelativeConicArcs.InvolutiveOddUnit.map_evenPart
+#print axioms RelativeConicArcs.InvolutiveOddUnit.map_oddPart
+#print axioms RelativeConicArcs.InvolutiveOddUnit.evenPart_add_oddPart
+#print axioms RelativeConicArcs.InvolutiveOddUnit.invariant_eq_zero_of_antiInvariant
+#print axioms RelativeConicArcs.InvolutiveOddUnit.oddMulEquiv
+#print axioms RelativeConicArcs.InvolutiveOddUnit.existsUnique_invariant_add_mul_invariant
+#print axioms RelativeConicArcs.InvolutiveOddUnit.localized_existsUnique_invariant_add_mul_invariant
+
+#print axioms RelativeConicArcs.KneserPairEigenspace.adjacency_pairSum_of_sum_eq_zero
+#print axioms RelativeConicArcs.KneserPairEigenspace.pairSum_injective_on_sumZero
+#print axioms RelativeConicArcs.KneserPairEigenspace.existsUnique_pairSum_of_petersenEigen
+#print axioms RelativeConicArcs.KneserPairEigenspace.standardEquivPetersenNegTwo
+#print axioms RelativeConicArcs.KneserPairEigenspace.finrank_petersenNegTwoEigenspace

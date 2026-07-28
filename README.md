@@ -17,11 +17,10 @@ ledger, expected axiom sets, and content-addressed source manifest. Large
 finite classifications are kept in separately pinned certificate packages so
 that the main library remains readable and reviewable.
 
-## Current repository state
+## Released and candidate states
 
-The initial checked-in state is the reusable cap-game and finite-projective
-geometry foundation on which several later paper releases depend. Its terminal
-claims establish:
+The archived `v0.1.0` state is the reusable finite-geometry foundation. Its
+terminal claims establish:
 
 - the second-player outcome for finite affine cap placement;
 - the corresponding outcome for positive-dimensional binary projective
@@ -34,6 +33,14 @@ claims establish:
 These foundational results also support Tavis Rudd's manuscript in
 preparation, *Achievement games in the Nofil genus — outcome classes of
 cap/Nofil games on finite geometries*.
+
+The next reviewed state adds two symbolic mechanisms accompanying
+*Arithmetic and harmonic realizations of the Clebsch cubic*: localized
+splitting of an involutive algebra by an odd unit, and the equivalence between
+the sum-zero five-vertex module and the Petersen graph's four-dimensional
+minus-two eigenspace. The paper does not use Lean as a premise for any
+manuscript theorem; the exact correspondence and exclusions are recorded in
+[`trust/CLEBSCH_PASSAGES.md`](trust/CLEBSCH_PASSAGES.md).
 
 ## Foundation claim map
 
@@ -65,8 +72,10 @@ With Nix:
 nix develop
 lake exe cache get
 lake build CapGame.Affine ProjectiveCap.Binary \
-  ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome
+  ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome \
+  RelativeConicArcs.Gates.ClebschOrientationMechanisms
 lake env lean trust/AxiomAudit.lean
+lake env lean trust/ClebschPassagesAxiomAudit.lean
 ```
 
 Without Nix, install `elan`, then run the same three `lake` commands. The
@@ -80,12 +89,14 @@ Linux, and Apple Silicon macOS.
 
 ## Repository layout
 
-- `CapGame/`, `ProjectiveCap/`, and `Sumfree/` contain the reviewed Lean
-  sources.
+- `CapGame/`, `ProjectiveCap/`, `RelativeConicArcs/`, and `Sumfree/` contain
+  the reviewed Lean sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
 - `TARGET_MANIFEST.json` content-addresses the exact 24-module theorem
-  closure.
+  closure archived as `v0.1.0`.
+- `trust/manifests/clebsch_passages.json` content-addresses the three-module
+  formal-companion closure added after `v0.1.0`.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 
