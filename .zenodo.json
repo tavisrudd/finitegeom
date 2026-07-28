@@ -1,6 +1,6 @@
 {
   "title": "finitegeom",
-  "description": "A Lean 4 formalization library for finite geometry, coding theory, and their interactions with algebra, combinatorics, and quantum information. The initial release provides a reviewer-scale foundation for cap-placement games and finite affine and projective geometry; later versioned releases add explicitly audited paper-facing theorem closures.",
+  "description": "Lean 4 formalizations supporting papers on Clebsch geometry, arcs complete outside a prescribed conic, projective Reed\u2013Solomon deep holes, local-unitary rigidity of stabilizer AME states, and bounded repair ports. Version 0.1.0 establishes the shared finite-geometry foundation; later releases add explicitly audited paper-facing theorem closures.",
   "creators": [
     {
       "name": "Rudd, Tavis",
@@ -16,9 +16,10 @@
     "Lean 4",
     "formalized mathematics",
     "finite geometry",
+    "Clebsch geometry",
     "coding theory",
-    "combinatorics",
-    "projective geometry",
-    "cap-placement games"
+    "Reed\u2013Solomon codes",
+    "quantum information",
+    "algebraic combinatorics"
   ]
 }

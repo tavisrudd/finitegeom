@@ -11,16 +11,17 @@ authors:
 repository-code: "https://github.com/tavisrudd/finitegeom"
 license: Apache-2.0
 abstract: >-
-  A Lean 4 formalization library for finite geometry, coding theory, and their
-  interactions with algebra, combinatorics, and quantum information. The
-  initial release provides a reviewer-scale foundation for cap-placement games
-  and finite affine and projective geometry; later versioned releases add
+  Lean 4 formalizations supporting papers on Clebsch geometry, arcs complete
+  outside a prescribed conic, projective Reed–Solomon deep holes, local-unitary
+  rigidity of stabilizer AME states, and bounded repair ports. Version 0.1.0
+  establishes the shared finite-geometry foundation; later releases add
   explicitly audited paper-facing theorem closures.
 keywords:
   - Lean 4
   - formalized mathematics
   - finite geometry
+  - Clebsch geometry
   - coding theory
-  - combinatorics
-  - projective geometry
-  - cap-placement games
+  - Reed–Solomon codes
+  - quantum information
+  - algebraic combinatorics
