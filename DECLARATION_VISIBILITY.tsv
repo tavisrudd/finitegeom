@@ -11,7 +11,6 @@ CapGame/Affine.lean	206	theorem	mirror_move_legal	private
 CapGame/Affine.lean	288	theorem	mirrorGood_step	private
 CapGame/Affine.lean	323	theorem	isP_of_mirrorGood	private
 CapGame/BuildGame.lean	375	theorem	move_map	private
-CapGame/BuildGame.lean	427	theorem	isP_map	private
 CapGame/Mirror.lean	50	theorem	mirrorInvariant_insert_pair	private
 ProjectiveCap/Binary.lean	32	theorem	binary_mk_rep	private
 ProjectiveCap/Binary.lean	120	theorem	mem_binaryRepFinset	private
@@ -128,7 +127,6 @@ ProjectiveCap/FrameGridBridge.lean	141	theorem	rowDirection_ne_colDirection	priv
 ProjectiveCap/FrameGridBridge.lean	153	theorem	affinePoint_ne_rowDirection	private
 ProjectiveCap/FrameGridBridge.lean	162	theorem	affinePoint_ne_colDirection	private
 ProjectiveCap/FrameGridBridge.lean	171	theorem	affinePoint_injective	private
-ProjectiveCap/FrameGridBridge.lean	196	theorem	mk_collinear_iff_det_eq_zero	private
 ProjectiveCap/FrameGridBridge.lean	243	theorem	det_rowDirection_affine_affine	private
 ProjectiveCap/FrameGridBridge.lean	249	theorem	det_colDirection_affine_affine	private
 ProjectiveCap/FrameGridBridge.lean	256	theorem	det_rowDirection_colDirection_affine	private
@@ -188,10 +186,8 @@ ProjectiveCap/PlaneTransitivity.lean	32	theorem	comp_rep_triple	private
 ProjectiveCap/PlaneTransitivity.lean	60	theorem	li_sub01	private
 ProjectiveCap/PlaneTransitivity.lean	68	theorem	li_sub02	private
 ProjectiveCap/PlaneTransitivity.lean	76	theorem	li_sub12	private
-ProjectiveCap/PlaneTransitivity.lean	84	theorem	li_rotate	private
 ProjectiveCap/PlaneTransitivity.lean	114	theorem	dependent_of_collinear	private
 ProjectiveCap/PlaneTransitivity.lean	148	theorem	collinear_of_dependent	private
-ProjectiveCap/PlaneTransitivity.lean	211	theorem	not_collinear_iff_independent	private
 ProjectiveCap/PlaneTransitivity.lean	282	theorem	mapLinearEquiv_mk	private
 ProjectiveCap/PlaneTransitivity.lean	287	theorem	mapLinearEquiv_symm_eq	private
 ProjectiveCap/PlaneTransitivity.lean	291	theorem	mapLinearEquiv_symm_apply	private

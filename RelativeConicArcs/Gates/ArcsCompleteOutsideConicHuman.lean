@@ -1,0 +1,74 @@
+import RelativeConicArcs.Affine
+import RelativeConicArcs.Asymptotic
+import RelativeConicArcs.Averaging
+import RelativeConicArcs.EvaluationObstruction
+import RelativeConicArcs.MatchingDesignRigidity
+import RelativeConicArcs.Q16Reduction
+import RelativeConicArcs.QuadraticLineTriangleObstruction
+import RelativeConicArcs.Results
+import RelativeConicArcs.TangentPairFourGroup
+import RelativeConicArcs.UncoveredLocusReconstruction
+
+/-!
+# Human-scale verification boundary for arcs outside a conic
+
+This import-only gate checks the reusable geometric theory, checker semantics,
+small-field witnesses, and the two-sided `GF(16)` bound without importing the
+generated q16 transition, row, or leaf families.  The separate q16 certificate
+package imports this library and proves the exact `GF(16)` exclusion and value.
+-/
+
+#print axioms RelativeConicArcs.Conic.completeOutside_bound_general
+#print axioms RelativeConicArcs.Conic.NonsingularConic.finite_lower_bound
+#print axioms RelativeConicArcs.pointIndex_le_half_card
+#print axioms RelativeConicArcs.first_secant_moment
+#print axioms RelativeConicArcs.second_secant_moment
+#print axioms RelativeConicArcs.scaledDefect_eq_remainders
+#print axioms RelativeConicArcs.scaledDefect_eq_zero_iff
+#print axioms RelativeConicArcs.coverage_bound
+#print axioms RelativeConicArcs.uncovered_bound
+#print axioms RelativeConicArcs.stability_bound
+#print axioms RelativeConicArcs.completeAffine_bound
+#print axioms RelativeConicArcs.completeAffine_bound_eq_iff
+#print axioms RelativeConicArcs.Conic.rhoC_explicit_additive_lower_bound
+#print axioms RelativeConicArcs.Conic.eventually_lt_centered
+#print axioms RelativeConicArcs.Averaging.exists_completeOutside_of_completeArc
+#print axioms RelativeConicArcs.Averaging.rhoC_le_t2
+#print axioms RelativeConicArcs.Averaging.rhoC_le_of_kimVuBound
+
+#print axioms RelativeConicArcs.linesAboveUncoveredThreshold_eq_secants
+#print axioms RelativeConicArcs.verticesOfLineFamily_secants_eq
+#print axioms RelativeConicArcs.canonical_reconstruction
+#print axioms RelativeConicArcs.eq_of_ordinaryUncovered_eq
+#print axioms RelativeConicArcs.stabilizes_iff_stabilizes_ordinaryUncovered
+
+#print axioms RelativeConicArcs.disjoint_arcPairs_existsUnique_concurrence
+#print axioms RelativeConicArcs.concurrence_matching_injective
+#print axioms RelativeConicArcs.concurrenceCenter_pointIndex_eq_half
+#print axioms RelativeConicArcs.concurrenceCenters_card_mul_choose_half
+#print axioms RelativeConicArcs.concurrenceCenters_card_eq_quotient
+#print axioms RelativeConicArcs.concurrenceCentersOnPair_card_mul_sub_one
+#print axioms RelativeConicArcs.concurrenceCentersOnPair_card_eq_quotient
+#print axioms RelativeConicArcs.two_mul_badConcurrenceEdgeCount_le
+#print axioms RelativeConicArcs.exists_secantDeletionSet
+
+#print axioms RelativeConicArcs.scaledDefect_eq_zero_or_half_sub_two_le
+#print axioms RelativeConicArcs.completeAffine_equality_order
+#print axioms RelativeConicArcs.even_completeOutside_zeroDefect_order_spectrum
+#print axioms RelativeConicArcs.odd_completeOutside_zeroDefect_order_spectrum
+#print axioms RelativeConicArcs.odd_standardConic_zeroDefect_charTwo_order
+#print axioms RelativeConicArcs.TangentPairFourGroup.no_upper_even_equality_branch
+#print axioms RelativeConicArcs.TangentPairFourGroup.even_standardConic_zeroDefect_charTwo_order
+
+#print axioms RelativeConicArcs.eq_zero_of_evaluationMap_injective
+#print axioms RelativeConicArcs.evaluation_eq_zero_of_eq_sum
+#print axioms RelativeConicArcs.ternaryQuadratic_eq_zero_of_standardLine_and_offLineTriangle
+
+#print axioms RelativeConicArcs.Certificate.rawArc_iff_projectiveCap
+#print axioms RelativeConicArcs.Certificate.check_sound
+#print axioms RelativeConicArcs.Examples.rhoC_ZMod5
+#print axioms RelativeConicArcs.Examples.rho_points_ZMod5
+#print axioms RelativeConicArcs.Examples.rhoC_GF8
+#print axioms RelativeConicArcs.Examples.rhoC_GF9
+#print axioms RelativeConicArcs.Examples.rhoC_ZMod11
+#print axioms RelativeConicArcs.Examples.rhoC_GF16_bounds

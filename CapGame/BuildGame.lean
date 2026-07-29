@@ -424,7 +424,9 @@ decreasing_by
     rw [hcard]
     omega
 
-private theorem isP_map {Valid : Finset α -> Prop} (e : α ≃ α)
+/-- Previous-player positions are invariant under a board equivalence that
+preserves the validity predicate on every finite position. -/
+theorem isP_map {Valid : Finset α -> Prop} (e : α ≃ α)
     (hValid : ∀ S : Finset α, Valid (S.map e.toEmbedding) ↔ Valid S)
     (S : Finset α) : IsP Valid (S.map e.toEmbedding) ↔ IsP Valid S :=
   not_congr (win_map e hValid S)

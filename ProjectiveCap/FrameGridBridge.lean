@@ -193,7 +193,9 @@ def affineEmbedding : GridPoint K ↪ Point K (PlaneVec K) where
   toFun := affinePoint (K := K)
   inj' := affinePoint_injective (K := K)
 
-private theorem mk_collinear_iff_det_eq_zero {x y z : PlaneVec K}
+/-- Three nonzero coordinate vectors represent collinear projective points
+exactly when the determinant of the matrix with those vectors as rows is zero. -/
+theorem mk_collinear_iff_det_eq_zero {x y z : PlaneVec K}
     (hx : x ≠ 0) (hy : y ≠ 0) (hz : z ≠ 0) :
     Projective.Collinear K (PlaneVec K)
         (Projectivization.mk K x hx)

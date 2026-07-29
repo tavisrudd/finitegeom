@@ -81,7 +81,8 @@ private theorem li_sub12 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     fin_cases i <;> rfl
   rwa [hcomp] at h2
 
-private theorem li_rotate {x y z : V} (h : LinearIndependent K ![x, y, z]) :
+/-- Cyclically rotating a linearly independent triple preserves linear independence. -/
+theorem li_rotate {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     LinearIndependent K ![z, x, y] := by
   have h2 := h.comp ![2, 0, 1] (by decide)
   have hcomp : ![x, y, z] ∘ ![(2 : Fin 3), 0, 1] = ![z, x, y] := by
@@ -208,7 +209,9 @@ theorem collinear_iff_dependent {a b c : Point K V} :
     Collinear K V a b c ↔ Dependent ![a, b, c] :=
   ⟨dependent_of_collinear, collinear_of_dependent⟩
 
-private theorem not_collinear_iff_independent {a b c : Point K V} :
+/-- Three projective points are noncollinear exactly when their chosen
+representatives are linearly independent. -/
+theorem not_collinear_iff_independent {a b c : Point K V} :
     ¬ Collinear K V a b c ↔ Independent ![a, b, c] := by
   rw [collinear_iff_dependent, ← independent_iff_not_dependent]
 

@@ -34,13 +34,21 @@ These foundational results also support Tavis Rudd's manuscript in
 preparation, *Achievement games in the Nofil genus — outcome classes of
 cap/Nofil games on finite geometries*.
 
-The next reviewed state adds two symbolic mechanisms accompanying
+The next reviewed states add two symbolic mechanisms accompanying
 *Arithmetic and harmonic realizations of the Clebsch cubic*: localized
 splitting of an involutive algebra by an odd unit, and the equivalence between
 the sum-zero five-vertex module and the Petersen graph's four-dimensional
 minus-two eigenspace. The paper does not use Lean as a premise for any
 manuscript theorem; the exact correspondence and exclusions are recorded in
 [`trust/CLEBSCH_PASSAGES.md`](trust/CLEBSCH_PASSAGES.md).
+
+They also add the human-scale formal library accompanying *Arcs complete
+outside a prescribed conic*. This boundary includes the general geometry,
+moment and reconstruction arguments, small-field witnesses, and the
+kernel-checked bound `8 ≤ rho_C(16) ≤ 9`. The generated exhaustive
+classification proving the exact value at order 16 is deliberately isolated
+in the separately versioned `finitegeom-q16-certificates` repository. See
+[`trust/ARCS_COMPLETE_OUTSIDE_CONIC.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC.md).
 
 ## Foundation claim map
 
@@ -73,15 +81,17 @@ nix develop
 lake exe cache get
 lake build CapGame.Affine ProjectiveCap.Binary \
   ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome \
-  RelativeConicArcs.Gates.ClebschOrientationMechanisms
+  RelativeConicArcs.Gates.ClebschOrientationMechanisms \
+  RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman
 lake env lean trust/AxiomAudit.lean
 lake env lean trust/ClebschPassagesAxiomAudit.lean
+lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
 ```
 
 Without Nix, install `elan`, then run the same three `lake` commands. The
-toolchain named in `lean-toolchain` is selected automatically. The axiom audit
-prints exactly `propext`, `Classical.choice`, and `Quot.sound` for every
-terminal.
+toolchain named in `lean-toolchain` is selected automatically. The axiom
+audits report only the standard axioms `propext`, `Classical.choice`, and
+`Quot.sound`; no project-local axiom is used.
 
 On Linux, `nix develop .#fhs` is also available for systems that need an
 FHS-compatible shell. The default shell is available on x86-64 Linux, AArch64
@@ -93,10 +103,12 @@ Linux, and Apple Silicon macOS.
   the reviewed Lean sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the exact 24-module theorem
-  closure archived as `v0.1.0`.
+- `TARGET_MANIFEST.json` content-addresses the complete 93-module reviewed
+  library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   formal-companion closure added after `v0.1.0`.
+- `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
+  the 77-module human Arcs boundary.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 

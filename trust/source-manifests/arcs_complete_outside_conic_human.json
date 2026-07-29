@@ -1,72 +1,16 @@
 {
-  "external_imports": [
-    "Mathlib",
-    "Mathlib.Algebra.BigOperators.ModEq",
-    "Mathlib.Algebra.CharP.Two",
-    "Mathlib.Algebra.Field.Basic",
-    "Mathlib.Algebra.Group.Action.Pointwise.Finset",
-    "Mathlib.Algebra.Group.Basic",
-    "Mathlib.Analysis.Asymptotics.Defs",
-    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
-    "Mathlib.Combinatorics.Configuration",
-    "Mathlib.Data.Finset.Basic",
-    "Mathlib.Data.Finset.Card",
-    "Mathlib.Data.Finset.Powerset",
-    "Mathlib.Data.Fintype.Basic",
-    "Mathlib.Data.Fintype.BigOperators",
-    "Mathlib.Data.Fintype.Pi",
-    "Mathlib.Data.Fintype.Prod",
-    "Mathlib.Data.Nat.Choose.Basic",
-    "Mathlib.Data.Nat.ModEq",
-    "Mathlib.Data.Set.Basic",
-    "Mathlib.Data.ZMod.Basic",
-    "Mathlib.FieldTheory.Finite.Basic",
-    "Mathlib.FieldTheory.Finiteness",
-    "Mathlib.GroupTheory.GroupAction.Quotient",
-    "Mathlib.GroupTheory.Perm.Cycle.Type",
-    "Mathlib.LinearAlgebra.AffineSpace.FiniteDimensional",
-    "Mathlib.LinearAlgebra.AffineSpace.Midpoint",
-    "Mathlib.LinearAlgebra.CrossProduct",
-    "Mathlib.LinearAlgebra.Dimension.Constructions",
-    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
-    "Mathlib.LinearAlgebra.Matrix.Nondegenerate",
-    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
-    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
-    "Mathlib.LinearAlgebra.Pi",
-    "Mathlib.LinearAlgebra.Projectivization.Action",
-    "Mathlib.LinearAlgebra.Projectivization.Cardinality",
-    "Mathlib.LinearAlgebra.Projectivization.Collinear",
-    "Mathlib.LinearAlgebra.Projectivization.Subspace",
-    "Mathlib.Order.LiminfLimsup",
-    "Mathlib.Tactic"
-  ],
-  "module_count": 93,
+  "module_count": 77,
   "roots": [
-    "CapGame.Affine",
-    "ProjectiveCap.Binary",
-    "ProjectiveCap.EllipticMirror",
-    "ProjectiveCap.PlaneOutcome",
-    "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"
+    "RelativeConicArcs.Gates.ArcsCompleteOutsideConic"
   ],
   "schema_version": 1,
+  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
   "sources": [
     {
-      "bytes": 19835,
-      "module": "CapGame.Affine",
-      "path": "CapGame/Affine.lean",
-      "sha256": "eb41b6c435939faf423e9e7ee5b759b9597556d8178fbc27fee4e6214f2719b3"
-    },
-    {
-      "bytes": 23500,
+      "bytes": 23163,
       "module": "CapGame.BuildGame",
       "path": "CapGame/BuildGame.lean",
-      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
-    },
-    {
-      "bytes": 3740,
-      "module": "CapGame.Embedding",
-      "path": "CapGame/Embedding.lean",
-      "sha256": "11fcec9b45efa519157cef18eb17dc1a2272e05506fcd7be9230722bdb3ee63a"
+      "sha256": "e31e60bf0f2f0984c82811fac02768d90f3a8204ad73cc5e34392cfa502633c9"
     },
     {
       "bytes": 10058,
@@ -75,112 +19,52 @@
       "sha256": "7469f96b47f5d42f5d6613a7fef6f2f10dad230e07d931ae94a8c850d82dcd18"
     },
     {
-      "bytes": 4945,
+      "bytes": 4735,
       "module": "CapGame.Mirror",
       "path": "CapGame/Mirror.lean",
-      "sha256": "821081adb9627ed2618c53212b35703fb409a93562ce2cbad83bd5f746e5a912"
+      "sha256": "b597ff24b013e4a629ee12e8bb1d2d2924c6ee828af02aaf7b8ba8f4bba662b6"
     },
     {
-      "bytes": 9859,
-      "module": "ProjectiveCap.Binary",
-      "path": "ProjectiveCap/Binary.lean",
-      "sha256": "a2b92c016175637ce1cc382f9247c75564452efff0c46c6d50f320ae50b8fc73"
-    },
-    {
-      "bytes": 71179,
-      "module": "ProjectiveCap.ConicLocalization",
-      "path": "ProjectiveCap/ConicLocalization.lean",
-      "sha256": "0fda6fc768fa25eab6effee853915b09f884ddb10b6001fa00281506c6a695b9"
-    },
-    {
-      "bytes": 4722,
-      "module": "ProjectiveCap.EllipticMirror",
-      "path": "ProjectiveCap/EllipticMirror.lean",
-      "sha256": "dfc806bcdf72d0767d4af0aa0f2a31c5d684f6ac69d026f3aabcfbb18bc4eadc"
-    },
-    {
-      "bytes": 2882,
-      "module": "ProjectiveCap.EscapeParity",
-      "path": "ProjectiveCap/EscapeParity.lean",
-      "sha256": "df90058910d8855953ff59549e42229e971784b7df181910b09f664c868837ee"
-    },
-    {
-      "bytes": 20935,
-      "module": "ProjectiveCap.ExtensionCount",
-      "path": "ProjectiveCap/ExtensionCount.lean",
-      "sha256": "017e32a4b2a1e6967f549247f2ef12fc25667c4c0916d7b8e6d50e3095c17109"
-    },
-    {
-      "bytes": 37603,
+      "bytes": 36870,
       "module": "ProjectiveCap.FrameGridBridge",
       "path": "ProjectiveCap/FrameGridBridge.lean",
-      "sha256": "9d2451785655a171dca7aa8496ef50976e77bd4ef7f34ad3296c2bc42325d525"
+      "sha256": "0448371cea1563e6b1e5616c96dfaab438b46df6ef542d833bc6bda3182bb566"
     },
     {
-      "bytes": 5312,
+      "bytes": 5322,
       "module": "ProjectiveCap.Grid",
       "path": "ProjectiveCap/Grid.lean",
-      "sha256": "e0390eb4844a3a007fe8fe5d0b62ef37d680c8a476de1a68919e084335f2aec4"
+      "sha256": "6adf3652160c4703af0413e432300c48123a0ee4667b92776eed2a14e06331f2"
     },
     {
-      "bytes": 3765,
-      "module": "ProjectiveCap.GridCounting",
-      "path": "ProjectiveCap/GridCounting.lean",
-      "sha256": "292c6ebd99ff7cb92c6c1bee1f1b5f2e9e41b6fc8a0fe775032f82bdac7e990b"
-    },
-    {
-      "bytes": 4287,
+      "bytes": 4082,
       "module": "ProjectiveCap.GridGame",
       "path": "ProjectiveCap/GridGame.lean",
-      "sha256": "62a2ce2448ecf5a117125ad388dedf4337832258bd5abd5828be9c91b262610f"
+      "sha256": "c6a5ac95dc563f757221e0d32886cae4ada2d61a540d96ac727cc1054be1c285"
     },
     {
-      "bytes": 29805,
-      "module": "ProjectiveCap.GridMirror",
-      "path": "ProjectiveCap/GridMirror.lean",
-      "sha256": "dce18a74797b9f100cd986e01d6f8b60b4fd927b464e3c4eeecbb59750667c16"
-    },
-    {
-      "bytes": 2455,
+      "bytes": 2272,
       "module": "ProjectiveCap.GridSeed",
       "path": "ProjectiveCap/GridSeed.lean",
-      "sha256": "9bc43c6f469729ea9964c430905f2285703808c1a93afd39684a6f548f5c56fa"
+      "sha256": "195ac5fccf5639172245bdc8749d7929df48abe9ab3f1b15f9bd40300413770f"
     },
     {
-      "bytes": 30452,
-      "module": "ProjectiveCap.IntrusionCalculus",
-      "path": "ProjectiveCap/IntrusionCalculus.lean",
-      "sha256": "6a6f41fa7176b2c1d51b1bc97c45e87b9a10f73cbb1a5199d82af4b5ba6b1a3a"
-    },
-    {
-      "bytes": 16206,
-      "module": "ProjectiveCap.Mirror",
-      "path": "ProjectiveCap/Mirror.lean",
-      "sha256": "9d11cfb77d87cbce5776707917065a85aabdbe5fd246134fecc610b96a91da35"
-    },
-    {
-      "bytes": 7747,
-      "module": "ProjectiveCap.PlaneOutcome",
-      "path": "ProjectiveCap/PlaneOutcome.lean",
-      "sha256": "ea13f76462a9349838b7fbe976bc2a5745174989460c1c7bbec60969e2a3b03a"
-    },
-    {
-      "bytes": 51832,
+      "bytes": 50566,
       "module": "ProjectiveCap.PlaneTransitivity",
       "path": "ProjectiveCap/PlaneTransitivity.lean",
-      "sha256": "afd991554831800770798f20ac62e7466a22da80d0208b7303e8edbc7eb46cb5"
+      "sha256": "5fc66fd86a5a95549837cabe48b7a52c05435ab8446fdaa95f03c61975c03f37"
     },
     {
-      "bytes": 5083,
+      "bytes": 4733,
       "module": "ProjectiveCap.Projective",
       "path": "ProjectiveCap/Projective.lean",
-      "sha256": "3ff69261a041cbcf39a91b6e3d7a749d35f1cae21950d42d504d68433d1883bc"
+      "sha256": "886f01783902bfaa06244aa7d7762cd16dc8382b21135696bbf6bbdf706c76fe"
     },
     {
-      "bytes": 19394,
+      "bytes": 20155,
       "module": "ProjectiveCap.Sym2ConicBridge",
       "path": "ProjectiveCap/Sym2ConicBridge.lean",
-      "sha256": "aa70d9c2524a00d7f239007b94165c16c4a3cc57f92f1bc6ec64002a76614529"
+      "sha256": "c37bb42531122fde2c0f5a62938bcb59bf61c77f785793be8eac0704e0745e3a"
     },
     {
       "bytes": 4396,
@@ -309,10 +193,10 @@
       "sha256": "b21331dc60c6f69dd70333df9b65f4399295af01256823d637a3b9bb6c90821e"
     },
     {
-      "bytes": 4293,
+      "bytes": 4321,
       "module": "RelativeConicArcs.ExampleChecks.Q5",
       "path": "RelativeConicArcs/ExampleChecks/Q5.lean",
-      "sha256": "5f1b4cd00bffb16cac73341598c1579504a99b51c4ca279e69a01249d0abf054"
+      "sha256": "8730ceab7ce86687ec01285051d157220fc9d855390f4214550c37136b1d79bb"
     },
     {
       "bytes": 243,
@@ -339,10 +223,10 @@
       "sha256": "875aa9f878c70760d43235278dca88bd19fb3c90412c6c647812e46d5ffa5901"
     },
     {
-      "bytes": 3985,
-      "module": "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman",
-      "path": "RelativeConicArcs/Gates/ArcsCompleteOutsideConicHuman.lean",
-      "sha256": "bdbda97ea3fcc6727a4acdf414b640117e72444c1b0020c274b6e88bde079fd7"
+      "bytes": 5220,
+      "module": "RelativeConicArcs.Gates.ArcsCompleteOutsideConic",
+      "path": "RelativeConicArcs/Gates/ArcsCompleteOutsideConic.lean",
+      "sha256": "60de8b957a1284a3653278d4860bfbd5d8ac9eba3163cc2ef70f9f6a4d9a58ae"
     },
     {
       "bytes": 4437,
@@ -531,10 +415,10 @@
       "sha256": "568be2fa296466c059a9cdcefcb4f830a861a1dba18e6a69eab29eb07872cfc1"
     },
     {
-      "bytes": 38616,
+      "bytes": 38587,
       "module": "RelativeConicArcs.Q16Classification",
       "path": "RelativeConicArcs/Q16Classification.lean",
-      "sha256": "c032ae7bdc7f95b0a5d964632eaaa8088027be3926586cf05a914674b29b6b6d"
+      "sha256": "daba6d4ef78f62c2a30b6e72eb699c8eab9732b8733639b2d918bd2d2d2a7835"
     },
     {
       "bytes": 14568,
@@ -555,10 +439,10 @@
       "sha256": "26fe7d71c4dfd51b29bec92f4f0419ac5d24d0f256c063cc7391a25f343b963d"
     },
     {
-      "bytes": 4297,
+      "bytes": 3812,
       "module": "RelativeConicArcs.Results",
       "path": "RelativeConicArcs/Results.lean",
-      "sha256": "1df51110bef86d1ea2664bef1a93e58e505f429c9e292bf02824944f7e30d00d"
+      "sha256": "82ea8bad1a78f8cb6126085ed36a670a089bb9188369112e0d0d1bb6b1930f2b"
     },
     {
       "bytes": 13261,
@@ -583,30 +467,6 @@
       "module": "RelativeConicArcs.ZeroDefectConicInvariance",
       "path": "RelativeConicArcs/ZeroDefectConicInvariance.lean",
       "sha256": "33e0eda83d556af7cc0efd71c091ac09f41427ab95a633e2ba30a80d9df67ccc"
-    },
-    {
-      "bytes": 45498,
-      "module": "Sumfree.Game",
-      "path": "Sumfree/Game.lean",
-      "sha256": "1b10a834c4a95ff5aafe978611bfa3e0b144c25c612ac8f5e0b39378ea3a2830"
-    },
-    {
-      "bytes": 40116,
-      "module": "Sumfree.MirrorLemmas",
-      "path": "Sumfree/MirrorLemmas.lean",
-      "sha256": "b837b6e0753dba5fac1c81f01741c7dc5c44693eb3d63ed527adbe8aa491cc0e"
-    },
-    {
-      "bytes": 2262,
-      "module": "Sumfree.Nonzero",
-      "path": "Sumfree/Nonzero.lean",
-      "sha256": "e5f5e07ea1a2ae07670ddf77b5093a3597fff69dd85fd0f3ec28dce5bfe75836"
-    },
-    {
-      "bytes": 11762,
-      "module": "Sumfree.RankCounts",
-      "path": "Sumfree/RankCounts.lean",
-      "sha256": "61fcca09cc63ec4253b1da7e3d134458def675dfae97c6bac62ac19b4eaf0084"
     }
   ]
 }
