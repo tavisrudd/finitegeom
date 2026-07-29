@@ -110,7 +110,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 224,
+  "module_count": 239,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -122,6 +122,7 @@
     "RelativeConicArcs.Gates.ClebschArithmeticGluing",
     "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
     "RelativeConicArcs.Gates.ClebschHyperplaneSquare",
+    "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
     "RelativeConicArcs.Gates.ClebschRigidityHuman",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
@@ -140,10 +141,10 @@
       "sha256": "eb41b6c435939faf423e9e7ee5b759b9597556d8178fbc27fee4e6214f2719b3"
     },
     {
-      "bytes": 23500,
+      "bytes": 23492,
       "module": "CapGame.BuildGame",
       "path": "CapGame/BuildGame.lean",
-      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
+      "sha256": "af11d11adcbc19b715dc65c077c9dcd542547b076b4f237ad657392ba5de4654"
     },
     {
       "bytes": 3740,
@@ -176,6 +177,42 @@
       "sha256": "8f1a80de44827f97226b5825640956997147cbeb320d59e8c9c4c14208b6ebde"
     },
     {
+      "bytes": 5391,
+      "module": "FiniteGeom.BaerCompletion.BaerPlane",
+      "path": "FiniteGeom/BaerCompletion/BaerPlane.lean",
+      "sha256": "6c87d0f10e2ff8c4cf0271314a4abf407eeb8edccb52d7b64600760925273f1e"
+    },
+    {
+      "bytes": 13065,
+      "module": "FiniteGeom.BaerCompletion.CollisionProfile",
+      "path": "FiniteGeom/BaerCompletion/CollisionProfile.lean",
+      "sha256": "4f2ad9afa8c87e00ca7dec664bc4aa9d8c3b304d331f8a9826a1942a64baf29f"
+    },
+    {
+      "bytes": 4257,
+      "module": "FiniteGeom.BaerCompletion.Obstruction",
+      "path": "FiniteGeom/BaerCompletion/Obstruction.lean",
+      "sha256": "430a3fc9b5eef5ba2886d6a6e33cf6e94575239ef64a70bb797baa11cc11f0a0"
+    },
+    {
+      "bytes": 4927,
+      "module": "FiniteGeom.BaerCompletion.OrbitCounting",
+      "path": "FiniteGeom/BaerCompletion/OrbitCounting.lean",
+      "sha256": "4320c3179b64484f543ffc5908b859ca21f718ab6c261c81077f2f102afe5475"
+    },
+    {
+      "bytes": 6769,
+      "module": "FiniteGeom.BaerCompletion.PairExtension",
+      "path": "FiniteGeom/BaerCompletion/PairExtension.lean",
+      "sha256": "6d437f8921950c5dc8422107caf8133afa8995d7cf041038a6ad309e61e318b4"
+    },
+    {
+      "bytes": 4869,
+      "module": "FiniteGeom.BaerCompletion.Secant",
+      "path": "FiniteGeom/BaerCompletion/Secant.lean",
+      "sha256": "c311dd763c7cdafb098b2448eda769cd875dbd23bc5fb0806689eb505053b0b2"
+    },
+    {
       "bytes": 15555,
       "module": "FiniteGeom.Code",
       "path": "FiniteGeom/Code.lean",
@@ -198,6 +235,12 @@
       "module": "FiniteGeom.ColumnCode",
       "path": "FiniteGeom/ColumnCode.lean",
       "sha256": "d0240e7f8afbc7f2cebc4c273fee6994ccf8b014dabc8da269e9083668b50cd7"
+    },
+    {
+      "bytes": 5582,
+      "module": "FiniteGeom.Completion",
+      "path": "FiniteGeom/Completion.lean",
+      "sha256": "ebda7760b906b72bb9bd7a0e5727e0a19d8cb69aa4cfdc8d801eb2fda4f502c0"
     },
     {
       "bytes": 8243,
@@ -242,16 +285,34 @@
       "sha256": "398367706a96ad5d8786d0289dad4554d9a3d2d836c446aa77c45dfc09428fa6"
     },
     {
+      "bytes": 1690,
+      "module": "ProjectiveCap.Almost.OddEscape",
+      "path": "ProjectiveCap/Almost/OddEscape.lean",
+      "sha256": "babb2a3f86fea4799d6d571e2d891dd3e1f163da5277e21c0f5f7cf9de37844b"
+    },
+    {
       "bytes": 9859,
       "module": "ProjectiveCap.Binary",
       "path": "ProjectiveCap/Binary.lean",
       "sha256": "a2b92c016175637ce1cc382f9247c75564452efff0c46c6d50f320ae50b8fc73"
     },
     {
-      "bytes": 71179,
+      "bytes": 65533,
+      "module": "ProjectiveCap.CertCheck",
+      "path": "ProjectiveCap/CertCheck.lean",
+      "sha256": "9ed3d77ff988b33438a49fab07c7de669a06a9a4bc4d6b88d0c223f525bbbb28"
+    },
+    {
+      "bytes": 9036,
+      "module": "ProjectiveCap.Certificate",
+      "path": "ProjectiveCap/Certificate.lean",
+      "sha256": "0d221e0ceddfbe44d31fb92b00563da87e2b2baf378a31593e67e2f5669c55f0"
+    },
+    {
+      "bytes": 71171,
       "module": "ProjectiveCap.ConicLocalization",
       "path": "ProjectiveCap/ConicLocalization.lean",
-      "sha256": "0fda6fc768fa25eab6effee853915b09f884ddb10b6001fa00281506c6a695b9"
+      "sha256": "c11439cb3cb7860f607c2b912f6072ba11643bc4103c9908e7c9362085b2477f"
     },
     {
       "bytes": 4722,
@@ -336,6 +397,12 @@
       "module": "ProjectiveCap.Projective",
       "path": "ProjectiveCap/Projective.lean",
       "sha256": "3ff69261a041cbcf39a91b6e3d7a749d35f1cae21950d42d504d68433d1883bc"
+    },
+    {
+      "bytes": 2356,
+      "module": "ProjectiveCap.StableFacts",
+      "path": "ProjectiveCap/StableFacts.lean",
+      "sha256": "59dca7f9ff37099de529899d433237e190bf4b226ffdafd2db7cd03f2e526d3a"
     },
     {
       "bytes": 19394,
@@ -974,6 +1041,12 @@
       "sha256": "8b76e121f657f454c1727fc2018e0b535ff7125a08e381de1cecd259018fe450"
     },
     {
+      "bytes": 1590,
+      "module": "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
+      "path": "RelativeConicArcs/Gates/ClebschOrientationMechanisms.lean",
+      "sha256": "07b715d6426e3f8543c29f9db25d5037ac34cbb8e3e5e97317a2a0b23069e9bd"
+    },
+    {
       "bytes": 1103,
       "module": "RelativeConicArcs.Gates.ClebschRigidityHuman",
       "path": "RelativeConicArcs/Gates/ClebschRigidityHuman.lean",
@@ -1016,10 +1089,22 @@
       "sha256": "192d9d6142b42182e9c4948809eb24691870710565876678498f6fd413be8eb1"
     },
     {
+      "bytes": 8258,
+      "module": "RelativeConicArcs.InvolutiveOddUnit",
+      "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
+      "sha256": "d1a3160502013aa859590e15420be016987ac8041039d02ef15e3115dc021618"
+    },
+    {
       "bytes": 4437,
       "module": "RelativeConicArcs.KleinFourOrbitCongruence",
       "path": "RelativeConicArcs/KleinFourOrbitCongruence.lean",
       "sha256": "760f5d9bf592ddf74194a93bfd0a3b2d552d3b4f604215f359cd1280973f5725"
+    },
+    {
+      "bytes": 24986,
+      "module": "RelativeConicArcs.KneserPairEigenspace",
+      "path": "RelativeConicArcs/KneserPairEigenspace.lean",
+      "sha256": "eb2c89c22be925a62345746d0d3bf6a639ccd6fe5562859365875bbe3c1c03e6"
     },
     {
       "bytes": 35290,
@@ -1128,6 +1213,12 @@
       "module": "RelativeConicArcs.Q11Coding",
       "path": "RelativeConicArcs/Q11Coding.lean",
       "sha256": "7d8974aa1e4a46ea176d465ac520f0f6a82762afd10edab741a6fe3e4bfe2fd2"
+    },
+    {
+      "bytes": 2577,
+      "module": "RelativeConicArcs.Q11DyeAxioms",
+      "path": "RelativeConicArcs/Q11DyeAxioms.lean",
+      "sha256": "5dc4fd1e42c9f807a65311ca5b7b07cda94bcf1ec7978d3d6807254200729a7f"
     },
     {
       "bytes": 1677,

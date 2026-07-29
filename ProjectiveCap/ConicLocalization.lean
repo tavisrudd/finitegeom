@@ -1133,7 +1133,7 @@ def GridSymmetry (f : GridPoint K -> GridPoint K) : Prop :=
     ∀ S : Finset (GridPoint K),
       GridCap (K := K) (S.image f) ↔ GridCap (K := K) S
 
-private theorem gridSymmetry_isP_image {f : GridPoint K -> GridPoint K}
+theorem gridSymmetry_isP_image {f : GridPoint K -> GridPoint K}
     (hf : GridSymmetry (K := K) f) (S : Finset (GridPoint K)) :
     GridGame.IsP (K := K) (S.image f) ↔ GridGame.IsP (K := K) S := by
   classical

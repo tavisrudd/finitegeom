@@ -21,7 +21,8 @@
     "Mathlib.LinearAlgebra.Projectivization.Cardinality",
     "Mathlib.LinearAlgebra.Projectivization.Collinear",
     "Mathlib.LinearAlgebra.Projectivization.Subspace",
-    "Mathlib.Tactic"
+    "Mathlib.Tactic",
+    "RelativeConicArcs.Q11DyeAxioms"
   ],
   "module_count": 27,
   "roots": [

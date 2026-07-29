@@ -4,25 +4,34 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-224-module library state. Per-area source and target manifests preserve the
+239-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build
 input, and the formal claims are checked entirely from files present in this
 repository.
 
-## Canonical residual-grid API
+## Residual-grid certificate API
 
-Two compatibility modules are not part of the release:
+Version 0.2 includes four human-readable support modules used by the separate
+projective-cap q=11 and q=13 certificate packages:
 
-- `ProjectiveCap/Almost/OddEscape.lean`; and
-- `ProjectiveCap/StableFacts.lean`.
+- `ProjectiveCap/Almost/OddEscape.lean`;
+- `ProjectiveCap/StableFacts.lean`;
+- `ProjectiveCap/Certificate.lean`; and
+- `ProjectiveCap/CertCheck.lean`.
 
-Their mathematical content duplicated declarations in
-`ProjectiveCap.GridGame` and `ProjectiveCap.ExtensionCount`.
+The first two retain compatibility propositions used by the generated
+certificate assemblies.  The canonical game and extension-count declarations
+remain in `ProjectiveCap.GridGame` and `ProjectiveCap.ExtensionCount`;
 `ProjectiveCap.EscapeParity`, `ProjectiveCap.ConicLocalization`, and
-`ProjectiveCap.ExtensionCount` now use those canonical declarations directly.
-No compatibility aliases are exported.
+`ProjectiveCap.ExtensionCount` use those canonical declarations directly.
+`ProjectiveCap.Certificate` states the semantic reply-book interface, while
+`ProjectiveCap.CertCheck` proves its Boolean checker sound.
+
+Version 0.2 also includes the seven human-readable `FiniteGeom.Completion` and
+`FiniteGeom.BaerCompletion` modules used by the separate q=25 certificate
+package.  The generated q=25 finite tables remain outside this repository.
 
 The direct extension-count theorem is
 `ProjectiveCap.sizeThreeExtensionCount`. Its conclusion is stated over
@@ -41,10 +50,11 @@ release names:
 
 ## Documentation and visibility
 
-Module headers and declaration documentation describe the mathematical
-objects, hypotheses, conclusions, and trust boundaries. Cross-module
-declarations and all seven terminal theorems have self-contained docstrings.
-The review covers every Lean file in the 24-module closure.
+For `v0.1.0`, module headers and declaration documentation describe the
+mathematical objects, hypotheses, conclusions, and trust boundaries.
+Cross-module declarations and all seven terminal theorems have self-contained
+docstrings.  That review covers every Lean file in the 24-module foundational
+closure.
 
 `DECLARATION_VISIBILITY.tsv` records the 269 undocumented, module-local proof
 declarations kept private so they do not become an accidental public API.
@@ -94,7 +104,10 @@ native-evaluation axioms from the five affected terminal closures.
 The Clebsch rigidity target replaces the generated-data-consuming paper gate
 with `RelativeConicArcs.Gates.ClebschRigidityHuman`. The original complete
 paper gate is retained downstream in the separately versioned q11 certificate
-package.
+package. The main library retains `RelativeConicArcs.Q11DyeAxioms`, the
+human-readable boundary for the two explicitly cited consequences of Dye's
+1991 classification required by `RelativeConicArcs.SixArcDefectBridge`; the
+generated order-eleven orbit/action family remains downstream.
 
 ## Complete bounded repair ports
 

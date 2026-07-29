@@ -372,7 +372,7 @@ theorem isP_iff_grundy_eq_zero {Valid : Finset α -> Prop} {S : Finset α} :
 /-! ## Game-value transport along board symmetries -/
 
 omit [Fintype α] in
-private theorem move_map {Valid : Finset α -> Prop} (e : α ≃ α)
+theorem move_map {Valid : Finset α -> Prop} (e : α ≃ α)
     (hValid : ∀ S : Finset α, Valid (S.map e.toEmbedding) ↔ Valid S)
     {S : Finset α} {x : α} :
     Move Valid (S.map e.toEmbedding) (e x) ↔ Move Valid S x := by

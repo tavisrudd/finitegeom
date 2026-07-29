@@ -41,10 +41,10 @@
   "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
   "sources": [
     {
-      "bytes": 23500,
+      "bytes": 23492,
       "module": "CapGame.BuildGame",
       "path": "CapGame/BuildGame.lean",
-      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
+      "sha256": "af11d11adcbc19b715dc65c077c9dcd542547b076b4f237ad657392ba5de4654"
     },
     {
       "bytes": 10058,

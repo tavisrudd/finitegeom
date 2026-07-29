@@ -1,5 +1,13 @@
 name = "finitegeom"
-defaultTargets = ["Sumfree", "CapGame", "ProjectiveCap", "RelativeConicArcs"]
+defaultTargets = [
+  "Sumfree",
+  "CapGame",
+  "ProjectiveCap",
+  "FiniteGeom",
+  "RepairCodes",
+  "RepairPorts",
+  "RelativeConicArcs",
+]
 
 [[require]]
 name = "mathlib"
@@ -14,9 +22,54 @@ name = "CapGame"
 
 [[lean_lib]]
 name = "ProjectiveCap"
+roots = [
+  "ProjectiveCap.Almost.OddEscape",
+  "ProjectiveCap.Binary",
+  "ProjectiveCap.CertCheck",
+  "ProjectiveCap.Certificate",
+  "ProjectiveCap.ConicLocalization",
+  "ProjectiveCap.EllipticMirror",
+  "ProjectiveCap.EscapeParity",
+  "ProjectiveCap.ExtensionCount",
+  "ProjectiveCap.FrameGridBridge",
+  "ProjectiveCap.Grid",
+  "ProjectiveCap.GridCounting",
+  "ProjectiveCap.GridGame",
+  "ProjectiveCap.GridMirror",
+  "ProjectiveCap.GridSeed",
+  "ProjectiveCap.IntrusionCalculus",
+  "ProjectiveCap.Mirror",
+  "ProjectiveCap.PlaneOutcome",
+  "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.Projective",
+  "ProjectiveCap.StableFacts",
+  "ProjectiveCap.Sym2ConicBridge",
+]
 
 [[lean_lib]]
 name = "FiniteGeom"
+roots = [
+  "FiniteGeom.AxisTwistedCubic",
+  "FiniteGeom.AxisTwistedCubicCircuits",
+  "FiniteGeom.BaerCompletion.BaerPlane",
+  "FiniteGeom.BaerCompletion.CollisionProfile",
+  "FiniteGeom.BaerCompletion.Obstruction",
+  "FiniteGeom.BaerCompletion.OrbitCounting",
+  "FiniteGeom.BaerCompletion.PairExtension",
+  "FiniteGeom.BaerCompletion.Secant",
+  "FiniteGeom.Code",
+  "FiniteGeom.CodeDuality",
+  "FiniteGeom.ColoredCompleteGraph",
+  "FiniteGeom.ColumnCode",
+  "FiniteGeom.Completion",
+  "FiniteGeom.EvalCode",
+  "FiniteGeom.Hypergraph",
+  "FiniteGeom.MomentCurve",
+  "FiniteGeom.ProjectiveAxisTwistedCubic",
+  "FiniteGeom.ProjectiveAxisTwistedCubicCircuits",
+  "FiniteGeom.Repair",
+  "FiniteGeom.Weight",
+]
 
 [[lean_lib]]
 name = "RepairCodes"
@@ -132,6 +185,7 @@ roots = [
   "RelativeConicArcs.Gates.ClebschBalancedSheets",
   "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
   "RelativeConicArcs.Gates.ClebschHyperplaneSquare",
+  "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
   "RelativeConicArcs.Gates.ClebschRigidityHuman",
   "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
   "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
@@ -139,7 +193,9 @@ roots = [
   "RelativeConicArcs.Gates.PRSPolarInductionRedundancySixSeven",
   "RelativeConicArcs.Gates.PRSRedundancyFive",
   "RelativeConicArcs.Gates.PRSStableComponents",
+  "RelativeConicArcs.InvolutiveOddUnit",
   "RelativeConicArcs.KleinFourOrbitCongruence",
+  "RelativeConicArcs.KneserPairEigenspace",
   "RelativeConicArcs.MatchingDesignRigidity",
   "RelativeConicArcs.Moments",
   "RelativeConicArcs.Nucleus",
@@ -158,6 +214,7 @@ roots = [
   "RelativeConicArcs.Plane",
   "RelativeConicArcs.ProjectiveBridge",
   "RelativeConicArcs.Q11Coding",
+  "RelativeConicArcs.Q11DyeAxioms",
   "RelativeConicArcs.Q11NonGRS",
   "RelativeConicArcs.Q11Residual",
   "RelativeConicArcs.Q11SemanticBase",

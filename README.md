@@ -6,10 +6,14 @@
 theory, and their interactions with algebra, combinatorics, and quantum
 information. It is the public formal companion to a paper programme covering:
 
-- rigidity and factorization phenomena around the Clebsch configuration;
-- arcs complete outside a prescribed conic;
-- deep holes of projective Reed–Solomon codes beyond redundancy four;
-- local-unitary rigidity of stabilizer AME states and MDS–CSS codes; and
+- [arithmetic and harmonic realizations of the Clebsch cubic](https://github.com/tavisrudd/clebsch-passages);
+- [rigidity](https://github.com/tavisrudd/clebsch-rigidity) and
+  [factorization](https://github.com/tavisrudd/clebsch-factorization)
+  phenomena around the Clebsch configuration;
+- [arcs complete outside a prescribed conic](https://github.com/tavisrudd/arcs-complete-outside-conic);
+- [deep holes of projective Reed–Solomon codes beyond redundancy four](https://github.com/tavisrudd/beyond4-prs);
+- [local-unitary rigidity of stabilizer AME states and MDS–CSS codes](https://github.com/tavisrudd/ame-lu);
+  and
 - exact transfer, reliability, and geometry of bounded repair ports.
 
 Each paper-facing release has an explicit import boundary, terminal-theorem
@@ -17,7 +21,7 @@ ledger, expected axiom sets, and content-addressed source manifest. Large
 finite classifications are kept in separately pinned certificate packages so
 that the main library remains readable and reviewable.
 
-## Released and candidate states
+## Release states
 
 The archived `v0.1.0` state is the reusable finite-geometry foundation. Its
 terminal claims establish:
@@ -52,12 +56,11 @@ in the separately versioned
 repository. See
 [`trust/ARCS_COMPLETE_OUTSIDE_CONIC.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC.md).
 
-The current local `v0.2.0` candidate further includes the complete
-human-scale boundaries for:
+The `v0.2.0` release further includes the complete human-scale boundaries for:
 
 - stabilizer AME states, MDS–CSS codes, and local-unitary rigidity;
 - projective Reed–Solomon deep holes through redundancy seven;
-- the chord-defect and small-field core of Clebsch rigidity; and
+- the chord-defect and small-field core of Clebsch rigidity;
 - the arithmetic-gluing, Hilbert-symmetry, and hyperplane-square mechanisms
   for Clebsch factorization; and
 - coefficient-port reconstruction, pointed transfer, reliability,
@@ -93,7 +96,8 @@ The repository pins Lean through `lean-toolchain`, Mathlib through
 `lakefile.toml` and `lake-manifest.json`, and the optional Nix development
 environment through `flake.lock`.
 
-With Nix:
+With Nix, a plain `lake build` elaborates all seven public libraries.  The
+following commands select the paper-facing terminals and axiom audits:
 
 ```sh
 nix develop
@@ -104,6 +108,8 @@ lake build CapGame.Affine ProjectiveCap.Binary \
   RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman \
   RelativeConicArcs.Gates.AMELUAggregateAxioms \
   RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
+  RelativeConicArcs.Q11DyeAxioms \
+  RelativeConicArcs.SixArcDefectBridge \
   RelativeConicArcs.Gates.ClebschRigidityHuman \
   RelativeConicArcs.Gates.ClebschArithmeticGluing \
   RelativeConicArcs.Gates.ClebschHilbertSymmetry \
@@ -114,10 +120,13 @@ lake env lean trust/ClebschPassagesAxiomAudit.lean
 lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
 ```
 
-Without Nix, install `elan`, then run the same three `lake` commands. The
+Without Nix, install `elan`, then run the same `lake` commands. The
 toolchain named in `lean-toolchain` is selected automatically. The axiom
-audits report only the standard axioms `propext`, `Classical.choice`, and
-`Quot.sound`; no project-local axiom is used.
+audits listed above report only the standard axioms `propext`,
+`Classical.choice`, and `Quot.sound`; no project-local axiom is used by those
+audited terminals. The separate `RelativeConicArcs.Q11DyeAxioms` boundary
+states two explicitly cited external classification inputs; see
+[`trust/CLEBSCH_RIGIDITY_HUMAN.md`](trust/CLEBSCH_RIGIDITY_HUMAN.md).
 
 On Linux, `nix develop .#fhs` is also available for systems that need an
 FHS-compatible shell. The default shell is available on x86-64 Linux, AArch64
@@ -130,7 +139,7 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 224-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 239-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   formal-companion closure added after `v0.1.0`.
@@ -139,14 +148,23 @@ Linux, and Apple Silicon macOS.
 - The remaining files under `trust/manifests/` preserve the separate AME–LU,
   PRS, Clebsch-rigidity-human, Clebsch-factorization, and complete-ports
   boundaries.
+- The projective-cap generated certificates are distributed as separate
+  [q=11](https://github.com/tavisrudd/finitegeom-projective-cap-q11-certificates)
+  and [q=13](https://github.com/tavisrudd/finitegeom-projective-cap-q13-certificates)
+  packages; their shared semantic checker is under `ProjectiveCap/`.
+- The generated q=25 tables are distributed in
+  [`finitegeom-q25-certificates`](https://github.com/tavisrudd/finitegeom-q25-certificates);
+  their human-readable completion and Baer-completion interfaces are under
+  `FiniteGeom/`.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 
 ## Citation
 
-Until the accompanying manuscript is deposited, cite this repository using
-[`CITATION.cff`](CITATION.cff). The preferred repository URL is
-<https://github.com/tavisrudd/finitegeom>.
+Cite this repository using [`CITATION.cff`](CITATION.cff) and the
+version-independent Zenodo DOI
+[`10.5281/zenodo.21650878`](https://doi.org/10.5281/zenodo.21650878). The
+preferred repository URL is <https://github.com/tavisrudd/finitegeom>.
 
 ## License
 
