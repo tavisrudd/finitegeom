@@ -14,9 +14,16 @@
     "Mathlib.Algebra.Module.Equiv.Basic",
     "Mathlib.Algebra.Module.LinearMap.Defs",
     "Mathlib.Algebra.MvPolynomial.Funext",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Polynomial.Div",
+    "Mathlib.Algebra.Polynomial.Eval.Coeff",
+    "Mathlib.Algebra.Polynomial.Eval.SMul",
     "Mathlib.Algebra.Polynomial.Roots",
     "Mathlib.Algebra.Ring.Parity",
     "Mathlib.Analysis.Asymptotics.Defs",
+    "Mathlib.Analysis.Calculus.Deriv.Add",
+    "Mathlib.Analysis.Calculus.Deriv.Basic",
+    "Mathlib.Analysis.Calculus.Deriv.Mul",
     "Mathlib.Analysis.Complex.Circle",
     "Mathlib.Analysis.Complex.Exponential",
     "Mathlib.Analysis.Normed.Module.Connected",
@@ -25,7 +32,9 @@
     "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
     "Mathlib.Combinatorics.Configuration",
     "Mathlib.Data.Complex.Basic",
+    "Mathlib.Data.ENat.Lattice",
     "Mathlib.Data.Fin.Tuple.Basic",
+    "Mathlib.Data.Finmap",
     "Mathlib.Data.Finset.Basic",
     "Mathlib.Data.Finset.Card",
     "Mathlib.Data.Finset.Powerset",
@@ -35,6 +44,7 @@
     "Mathlib.Data.Fintype.EquivFin",
     "Mathlib.Data.Fintype.Pi",
     "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.List.Fold",
     "Mathlib.Data.Matrix.Basic",
     "Mathlib.Data.Matrix.Mul",
     "Mathlib.Data.Nat.Choose.Basic",
@@ -46,6 +56,7 @@
     "Mathlib.FieldTheory.Finite.Basic",
     "Mathlib.FieldTheory.Finite.Trace",
     "Mathlib.FieldTheory.Finiteness",
+    "Mathlib.FieldTheory.Perfect",
     "Mathlib.GroupTheory.GroupAction.Quotient",
     "Mathlib.GroupTheory.GroupExtension.Basic",
     "Mathlib.GroupTheory.Perm.Cycle.Type",
@@ -55,7 +66,9 @@
     "Mathlib.LinearAlgebra.AffineSpace.FiniteDimensional",
     "Mathlib.LinearAlgebra.AffineSpace.Midpoint",
     "Mathlib.LinearAlgebra.Basis.Basic",
+    "Mathlib.LinearAlgebra.Basis.VectorSpace",
     "Mathlib.LinearAlgebra.BilinearForm.Orthogonal",
+    "Mathlib.LinearAlgebra.BilinearForm.Properties",
     "Mathlib.LinearAlgebra.Complex.FiniteDimensional",
     "Mathlib.LinearAlgebra.CrossProduct",
     "Mathlib.LinearAlgebra.Dimension.Constructions",
@@ -69,9 +82,12 @@
     "Mathlib.LinearAlgebra.Finsupp.Supported",
     "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
     "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.DotProduct",
+    "Mathlib.LinearAlgebra.Matrix.Dual",
     "Mathlib.LinearAlgebra.Matrix.Kronecker",
     "Mathlib.LinearAlgebra.Matrix.Nondegenerate",
     "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Matrix.ToLin",
     "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
     "Mathlib.LinearAlgebra.Pi",
     "Mathlib.LinearAlgebra.Projectivization.Action",
@@ -79,18 +95,22 @@
     "Mathlib.LinearAlgebra.Projectivization.Collinear",
     "Mathlib.LinearAlgebra.Projectivization.Subspace",
     "Mathlib.LinearAlgebra.Span.Basic",
+    "Mathlib.LinearAlgebra.Vandermonde",
     "Mathlib.Order.Lattice.Nat",
     "Mathlib.Order.LiminfLimsup",
     "Mathlib.RingTheory.MvPolynomial.Basic",
     "Mathlib.RingTheory.MvPolynomial.EulerIdentity",
     "Mathlib.RingTheory.MvPolynomial.Symmetric.FundamentalTheorem",
+    "Mathlib.RingTheory.Polynomial.Basic",
+    "Mathlib.RingTheory.Trace.Basic",
     "Mathlib.Tactic",
+    "Mathlib.Tactic.FinCases",
     "Mathlib.Topology.Algebra.Group.Quotient",
     "Mathlib.Topology.Instances.Matrix",
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 194,
+  "module_count": 224,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -108,7 +128,8 @@
     "RelativeConicArcs.Gates.PRSFoundation",
     "RelativeConicArcs.Gates.PRSPolarInductionRedundancySixSeven",
     "RelativeConicArcs.Gates.PRSRedundancyFive",
-    "RelativeConicArcs.Gates.PRSStableComponents"
+    "RelativeConicArcs.Gates.PRSStableComponents",
+    "RepairPorts.Gates.CompletePorts"
   ],
   "schema_version": 1,
   "sources": [
@@ -143,10 +164,82 @@
       "sha256": "821081adb9627ed2618c53212b35703fb409a93562ce2cbad83bd5f746e5a912"
     },
     {
+      "bytes": 13334,
+      "module": "FiniteGeom.AxisTwistedCubic",
+      "path": "FiniteGeom/AxisTwistedCubic.lean",
+      "sha256": "8a68e750bd4e33939736572d5397c342735978692602af164f58d9d5ae22c1e8"
+    },
+    {
+      "bytes": 28236,
+      "module": "FiniteGeom.AxisTwistedCubicCircuits",
+      "path": "FiniteGeom/AxisTwistedCubicCircuits.lean",
+      "sha256": "8f1a80de44827f97226b5825640956997147cbeb320d59e8c9c4c14208b6ebde"
+    },
+    {
       "bytes": 15555,
       "module": "FiniteGeom.Code",
       "path": "FiniteGeom/Code.lean",
       "sha256": "3e952d2f81ddb97f855f60ed5d0d4188d7e15a69fbc018403163bb1267681e55"
+    },
+    {
+      "bytes": 2380,
+      "module": "FiniteGeom.CodeDuality",
+      "path": "FiniteGeom/CodeDuality.lean",
+      "sha256": "4be0fed4104ff75629c6c30aac1c2e749137816d62c8b718f1595855bd72d4b8"
+    },
+    {
+      "bytes": 16061,
+      "module": "FiniteGeom.ColoredCompleteGraph",
+      "path": "FiniteGeom/ColoredCompleteGraph.lean",
+      "sha256": "3af41b990e82bc42bb6f1f5979ba2b34de5d8821822163e62fc6939a52c78331"
+    },
+    {
+      "bytes": 8499,
+      "module": "FiniteGeom.ColumnCode",
+      "path": "FiniteGeom/ColumnCode.lean",
+      "sha256": "d0240e7f8afbc7f2cebc4c273fee6994ccf8b014dabc8da269e9083668b50cd7"
+    },
+    {
+      "bytes": 8243,
+      "module": "FiniteGeom.EvalCode",
+      "path": "FiniteGeom/EvalCode.lean",
+      "sha256": "9122a7d7cdb0ccf8278e0bb5251f125c09ad169348b3bbe71a89f76bb209abcb"
+    },
+    {
+      "bytes": 44461,
+      "module": "FiniteGeom.Hypergraph",
+      "path": "FiniteGeom/Hypergraph.lean",
+      "sha256": "c5fc79b1d47d4394c269d3e7fdb89227452585831f01af670330511b024362c5"
+    },
+    {
+      "bytes": 9038,
+      "module": "FiniteGeom.MomentCurve",
+      "path": "FiniteGeom/MomentCurve.lean",
+      "sha256": "7e047fcf6de495b7ca31dd405ad48621f6cec4d648c40e6c3b0b8eb0f4967b14"
+    },
+    {
+      "bytes": 21724,
+      "module": "FiniteGeom.ProjectiveAxisTwistedCubic",
+      "path": "FiniteGeom/ProjectiveAxisTwistedCubic.lean",
+      "sha256": "5c421eaaa935309064b63dfef204b5d2def64767322ff048af8d856eefdcf8b7"
+    },
+    {
+      "bytes": 20349,
+      "module": "FiniteGeom.ProjectiveAxisTwistedCubicCircuits",
+      "path": "FiniteGeom/ProjectiveAxisTwistedCubicCircuits.lean",
+      "sha256": "2b958b54ffeedcf45140e60b64531487d32a379d32cf5078d18134325da8933d"
+    },
+    {
+      "bytes": 38604,
+      "module": "FiniteGeom.Repair",
+      "path": "FiniteGeom/Repair.lean",
+      "sha256": "4674cbe0e870951e4828b2d2417edc7305858c3c0f68e84dd27528e3fbbc59ab"
+    },
+    {
+      "bytes": 2114,
+      "module": "FiniteGeom.Weight",
+      "path": "FiniteGeom/Weight.lean",
+      "sha256": "398367706a96ad5d8786d0289dad4554d9a3d2d836c446aa77c45dfc09428fa6"
     },
     {
       "bytes": 9859,
@@ -1251,6 +1344,114 @@
       "module": "RelativeConicArcs.ZeroDefectConicInvariance",
       "path": "RelativeConicArcs/ZeroDefectConicInvariance.lean",
       "sha256": "33e0eda83d556af7cc0efd71c091ac09f41427ab95a633e2ba30a80d9df67ccc"
+    },
+    {
+      "bytes": 48154,
+      "module": "RepairCodes.AxisTwistedCubic",
+      "path": "RepairCodes/AxisTwistedCubic.lean",
+      "sha256": "e80fbebb8dac7024b786bd0ba2eda2fc60023b12ab506fed271310c9f27070f3"
+    },
+    {
+      "bytes": 6849,
+      "module": "RepairCodes.CodeInstance",
+      "path": "RepairCodes/CodeInstance.lean",
+      "sha256": "fc8b35e86ebdbf9a7691c5110cadf6dd122d14c1f43c597a24dd483afff2c582"
+    },
+    {
+      "bytes": 6484,
+      "module": "RepairCodes.OuterDual",
+      "path": "RepairCodes/OuterDual.lean",
+      "sha256": "dfed986de20f425ed37e4b9ee9f2e6a6677d9b094aff4b286dfb6c817fa3b82a"
+    },
+    {
+      "bytes": 72629,
+      "module": "RepairCodes.ProjectiveAxisTwistedCubic",
+      "path": "RepairCodes/ProjectiveAxisTwistedCubic.lean",
+      "sha256": "5a40e8beb9fc56af4e7fc8681d023549c8ec9759e52e79a4e954c9bb27531e1b"
+    },
+    {
+      "bytes": 18767,
+      "module": "RepairCodes.SeedLift",
+      "path": "RepairCodes/SeedLift.lean",
+      "sha256": "07f62f0df6c8330b24d78bbdd31f7ec737337cc0d155ede5e5ed569b945b4173"
+    },
+    {
+      "bytes": 4782,
+      "module": "RepairCodes.TraceDual",
+      "path": "RepairCodes/TraceDual.lean",
+      "sha256": "1154f08075e5a01d2a343665951f1d58869be5a7ffcdbca414a9605ae4e2f66c"
+    },
+    {
+      "bytes": 7029,
+      "module": "RepairCodes.Transfer",
+      "path": "RepairCodes/Transfer.lean",
+      "sha256": "7181a175f34ac029501e9e0262339e531f79bbd3b3769dfae6c4c4700698f162"
+    },
+    {
+      "bytes": 31587,
+      "module": "RepairCodes.WeightedStrictExample",
+      "path": "RepairCodes/WeightedStrictExample.lean",
+      "sha256": "758e7e2d80112ee8bd9e3599d45fa59466b2ae0aa7b4d65d87247bff5a18353c"
+    },
+    {
+      "bytes": 8251,
+      "module": "RepairCodes.WeightedTransfer",
+      "path": "RepairCodes/WeightedTransfer.lean",
+      "sha256": "34c6e1afbc7e51fdc1eb5f8d175e1f0c98431a567dbfd66bf0f2414137c96915"
+    },
+    {
+      "bytes": 53633,
+      "module": "RepairCodes.WeightedTransferExact",
+      "path": "RepairCodes/WeightedTransferExact.lean",
+      "sha256": "7ed3120e2cd919fa27688ae580c2923ad62f13a63a5f4134a8a9960bf22fe126"
+    },
+    {
+      "bytes": 9815,
+      "module": "RepairPorts.CoefficientPort",
+      "path": "RepairPorts/CoefficientPort.lean",
+      "sha256": "fd648db870dd6e235827f26c6db45bdfee8e0798277ab06eb4fe38d3b0dbd899"
+    },
+    {
+      "bytes": 57775,
+      "module": "RepairPorts.FunctionalCost",
+      "path": "RepairPorts/FunctionalCost.lean",
+      "sha256": "089fef8a5f4397aaf84d143c93b48f76d02226e1779b8a24e7f8185f25d59480"
+    },
+    {
+      "bytes": 3514,
+      "module": "RepairPorts.Gates.CompletePorts",
+      "path": "RepairPorts/Gates/CompletePorts.lean",
+      "sha256": "b5632e24a50ed9c52d479df308796d99b1a49071c90d29a347c645859a5556e7"
+    },
+    {
+      "bytes": 12163,
+      "module": "RepairPorts.MDSReconstruction",
+      "path": "RepairPorts/MDSReconstruction.lean",
+      "sha256": "c59fb636b5576c6af05c9d11a8773bc087af4fb0e906d46f90b0ce1bf931ced7"
+    },
+    {
+      "bytes": 9934,
+      "module": "RepairPorts.PointedTransfer",
+      "path": "RepairPorts/PointedTransfer.lean",
+      "sha256": "5897aa1f45cdb29e17352f9607254303645b66398dc24dae41ef950263b5c9fe"
+    },
+    {
+      "bytes": 11543,
+      "module": "RepairPorts.PointedTutte",
+      "path": "RepairPorts/PointedTutte.lean",
+      "sha256": "2aa8c3aff92a4da2e54319aa2000dcfb1e254adea946c4fce1f7383e66444b55"
+    },
+    {
+      "bytes": 15024,
+      "module": "RepairPorts.PositiveDensity",
+      "path": "RepairPorts/PositiveDensity.lean",
+      "sha256": "8c5d91c6db061bac5862808bc602d3fd1ae554e48ee39b7257ceab165a1f06b0"
+    },
+    {
+      "bytes": 33401,
+      "module": "RepairPorts.Reliability",
+      "path": "RepairPorts/Reliability.lean",
+      "sha256": "ef39af63f060bb2f9a3c813feab55cfd5a1bf6e684bbbd69cc9c5d999386a344"
     },
     {
       "bytes": 45498,

@@ -1,0 +1,58 @@
+import RepairPorts.MDSReconstruction
+import RepairPorts.PointedTutte
+import RepairPorts.PointedTransfer
+import RepairPorts.PositiveDensity
+import RepairPorts.Reliability
+
+/-!
+# Complete bounded repair-port theorem gate
+
+This import-only module exposes the paper-facing coefficient-port object, intrinsic reconstruction
+radius, standard-code duality bridge, MDS minimum-port reconstruction, exact pointed transfer, and
+the pointed rank-sum, finite reliability, and bounded-radius erasure calculi.  The strict weighted example is
+conditional only on the displayed regular Singer-action input.  No executable certificate or fiber
+enumerator occurs in these dependency closures.
+-/
+
+#print axioms FiniteGeom.dualCode_dualCode
+#print axioms FiniteGeom.dualCode_injective
+#print axioms RepairPorts.reconstructedCode_eq
+#print axioms RepairPorts.PointedCoefficientPortIso.reconstructsAt_iff
+#print axioms RepairPorts.PointedCoefficientPortIso.reconstructionRadius_eq
+#print axioms RepairPorts.HasMDSDualParameters.exists_normalized_word
+#print axioms RepairPorts.HasMDSDualParameters.repairHypergraph_eq_powersetCard
+#print axioms RepairPorts.HasMDSDualParameters.reconstructsAt
+#print axioms RepairPorts.HasMDSDualParameters.reconstructsAt_iff
+#print axioms RepairPorts.HasMDSDualParameters.reconstructionRadius_eq
+#print axioms RepairPorts.exactFunctionalStrata
+#print axioms RepairPorts.zeroFunctionalPointedNonembeddedCost_eq_closed
+#print axioms RepairPorts.pointedFunctionalTupleRealizationCost_eq
+#print axioms RepairPorts.nonzeroOuterPointedRealizationCost_eq_fiberCost
+#print axioms RepairPorts.coefficientPort_concatenatedCode_eq_image_pointed
+#print axioms RepairPorts.exactPointedConfinementAndTransfer
+#print axioms RepairPorts.representedTargets_density
+#print axioms RepairPorts.concatenatedRestrictedCode_parameters
+#print axioms RepairPorts.pointedConfinement_iff_zeroCost_of_outerDualDistance
+#print axioms RepairPorts.prescribedPorts_of_outerDualDistance
+#print axioms RepairPorts.eventually_pointedConfinement_iff_zeroCost
+#print axioms RepairPorts.eventually_prescribedPorts
+#print axioms RepairPorts.HasMDSDualParameters.pointedZeroFunctionalCost_eq
+#print axioms RepairPorts.eventually_mdsMinimumCoefficientFingerprints
+#print axioms RepairPorts.portReliability_delete_contract
+#print axioms RepairPorts.hasDerivAt_portReliability_update
+#print axioms RepairPorts.hasDerivAt_homogeneous_portReliability
+#print axioms RepairPorts.erasureFailureProbability_delete_contract
+#print axioms RepairPorts.noRepairProbability_eq_erasureFailure
+#print axioms RepairPorts.cheapestRepairRadiusProbability
+#print axioms RepairPorts.cheapestRepairRadiusProbability_eq_failure_sub
+#print axioms RepairPorts.elementaryPerspectiveSubsetEvaluation_eq_pointedTutte
+#print axioms RepairPorts.deletionContractionRankDifference_eq_successfulSetEnumerator
+#print axioms RepairPorts.portReliability_pair_homogeneous
+#print axioms RepairPorts.disjointTripleRepairs_reliability
+#print axioms RepairPorts.overlappingTripleRepairs_reliability
+#print axioms RepairPorts.disjointTripleRepairs_reliability_ne_overlapping
+#print axioms RepairPorts.blockerCount_eq_minimalBlockerCount_at_minimum
+#print axioms RepairPorts.coeff_blockerFailurePolynomial_at_minimum
+#print axioms RepairPorts.coeff_blockerFailurePolynomial_eq_zero_below_minimum
+#print axioms RepairPorts.blockerFailurePolynomial_eq_minimum_term_add_remainder
+#print axioms RepairCodes.projectiveAxisTwistedCubic_strict_weighted_transfer_of_regular_projective_action

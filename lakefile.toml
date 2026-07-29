@@ -19,4 +19,10 @@ name = "ProjectiveCap"
 name = "FiniteGeom"
 
 [[lean_lib]]
+name = "RepairCodes"
+
+[[lean_lib]]
+name = "RepairPorts"
+
+[[lean_lib]]
 name = "RelativeConicArcs"

@@ -31,3 +31,7 @@ spine = "areas/clebsch_rigidity_human.toml"
 [[area]]
 name = "clebsch_factorization"
 spine = "areas/clebsch_factorization.toml"
+
+[[area]]
+name = "complete_ports"
+spine = "areas/complete_ports.toml"

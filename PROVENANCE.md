@@ -4,7 +4,7 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-194-module library state. Per-area source and target manifests preserve the
+224-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build
@@ -95,3 +95,19 @@ The Clebsch rigidity target replaces the generated-data-consuming paper gate
 with `RelativeConicArcs.Gates.ClebschRigidityHuman`. The original complete
 paper gate is retained downstream in the separately versioned q11 certificate
 package.
+
+## Complete bounded repair ports
+
+The complete-ports boundary adds the finite-geometry and coding interfaces
+used by the coefficient-port construction, intrinsic reconstruction radius,
+MDS reconstruction, pointed transfer, reliability, and bounded-radius erasure
+calculus. It also includes the symbolic pointed rank-sum specialization and
+the radius-three overlap witness.
+
+The source and target closures are recorded separately in
+`trust/source-manifests/complete_ports.json` and
+`trust/manifests/complete_ports.json`. The source manifest records
+`RepairPorts.PointedTutte` as a second root at its source commit. The target
+gate imports that committed module and prints its six paper-facing terminals.
+Other target-only edits remove private workflow references from explanatory
+prose. No theorem statement is changed.

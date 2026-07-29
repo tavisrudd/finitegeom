@@ -47,7 +47,9 @@ outside a prescribed conic*. This boundary includes the general geometry,
 moment and reconstruction arguments, small-field witnesses, and the
 kernel-checked bound `8 ≤ rho_C(16) ≤ 9`. The generated exhaustive
 classification proving the exact value at order 16 is deliberately isolated
-in the separately versioned `finitegeom-q16-certificates` repository. See
+in the separately versioned
+[`finitegeom-q16-certificates`](https://github.com/tavisrudd/finitegeom-q16-certificates)
+repository. See
 [`trust/ARCS_COMPLETE_OUTSIDE_CONIC.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC.md).
 
 The current local `v0.2.0` candidate further includes the complete
@@ -57,11 +59,15 @@ human-scale boundaries for:
 - projective Reed–Solomon deep holes through redundancy seven;
 - the chord-defect and small-field core of Clebsch rigidity; and
 - the arithmetic-gluing, Hilbert-symmetry, and hyperplane-square mechanisms
-  for Clebsch factorization.
+  for Clebsch factorization; and
+- coefficient-port reconstruction, pointed transfer, reliability,
+  bounded-radius erasure calculus, and the pointed rank-sum specialization
+  for complete bounded repair ports.
 
-The generated Clebsch order-eleven orbit/action family remains in its
-downstream certificate package, just as the generated order-sixteen Arcs
-classification does.
+The generated Clebsch order-eleven orbit/action family remains in the
+downstream
+[`finitegeom-clebsch-q11-certificates`](https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates)
+package, just as the generated order-sixteen Arcs classification does.
 
 ## Foundation claim map
 
@@ -101,7 +107,8 @@ lake build CapGame.Affine ProjectiveCap.Binary \
   RelativeConicArcs.Gates.ClebschRigidityHuman \
   RelativeConicArcs.Gates.ClebschArithmeticGluing \
   RelativeConicArcs.Gates.ClebschHilbertSymmetry \
-  RelativeConicArcs.Gates.ClebschHyperplaneSquare
+  RelativeConicArcs.Gates.ClebschHyperplaneSquare \
+  RepairPorts.Gates.CompletePorts
 lake env lean trust/AxiomAudit.lean
 lake env lean trust/ClebschPassagesAxiomAudit.lean
 lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
@@ -118,18 +125,20 @@ Linux, and Apple Silicon macOS.
 
 ## Repository layout
 
-- `CapGame/`, `ProjectiveCap/`, `RelativeConicArcs/`, and `Sumfree/` contain
-  the reviewed Lean sources.
+- `CapGame/`, `FiniteGeom/`, `ProjectiveCap/`, `RelativeConicArcs/`,
+  `RepairCodes/`, `RepairPorts/`, and `Sumfree/` contain the reviewed Lean
+  sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 194-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 224-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   formal-companion closure added after `v0.1.0`.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
 - The remaining files under `trust/manifests/` preserve the separate AME–LU,
-  PRS, Clebsch-rigidity-human, and Clebsch-factorization boundaries.
+  PRS, Clebsch-rigidity-human, Clebsch-factorization, and complete-ports
+  boundaries.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 
