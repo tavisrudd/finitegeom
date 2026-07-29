@@ -4,7 +4,7 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-93-module library state. Per-area source and target manifests preserve the
+194-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build
@@ -77,3 +77,21 @@ The input and output sides of this split are recorded in
 changes expose four declarations required across module boundaries, document
 those declarations, and remove development-workflow prose without changing
 the mathematical statements.
+
+## Later human-scale paper boundaries
+
+The AME–LU, Beyond-4 PRS, Clebsch-rigidity-human, and Clebsch-factorization
+states are exact reviewed deltas over the preceding library state. Their
+source and target manifests live under `trust/source-manifests/` and
+`trust/manifests/`, and their observed terminal axiom sets are recorded under
+`trust/areas/`.
+
+The public AME–LU target replaces three uses of `native_decide` for small
+finite graph cardinalities with kernel-reduced `decide`, together with
+explicit resource bounds for that elaboration. This removes the three trusted
+native-evaluation axioms from the five affected terminal closures.
+
+The Clebsch rigidity target replaces the generated-data-consuming paper gate
+with `RelativeConicArcs.Gates.ClebschRigidityHuman`. The original complete
+paper gate is retained downstream in the separately versioned q11 certificate
+package.

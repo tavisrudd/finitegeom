@@ -1,0 +1,65 @@
+# Machine-readable paper trust boundary.
+
+schema_version = 1
+area = "clebsch_rigidity_human"
+manifest = "trust/CLEBSCH_RIGIDITY_HUMAN.md"
+
+owns = [
+  "RelativeConicArcs.Gates.ClebschRigidityHuman",
+]
+
+permitted_axioms = []
+
+[[gate]]
+module = "RelativeConicArcs.Gates.ClebschRigidityHuman"
+terminals = [
+  "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments",
+  "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula",
+  "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
+  "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five",
+  "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card",
+  "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order",
+  "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card",
+  "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra",
+]
+coverage_rule = "closure"
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

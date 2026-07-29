@@ -1,0 +1,123 @@
+{
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Algebra.MvPolynomial.Funext",
+    "Mathlib.RingTheory.MvPolynomial.Symmetric.FundamentalTheorem",
+    "Mathlib.Topology.Irreducible"
+  ],
+  "module_count": 17,
+  "roots": [
+    "RelativeConicArcs.Gates.PRSFoundation",
+    "RelativeConicArcs.Gates.PRSRedundancyFive",
+    "RelativeConicArcs.Gates.PRSPolarInductionRedundancySixSeven",
+    "RelativeConicArcs.Gates.PRSStableComponents",
+    "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
+    "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit"
+  ],
+  "schema_version": 1,
+  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
+  "sources": [
+    {
+      "bytes": 1416,
+      "module": "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
+      "path": "RelativeConicArcs/Gates/PRSBeyondRedundancyFour.lean",
+      "sha256": "076b20493db5c7920aeb0edc146d8ce41d1c99c425320674c5969f167c811f4a"
+    },
+    {
+      "bytes": 7546,
+      "module": "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
+      "path": "RelativeConicArcs/Gates/PRSBeyondRedundancyFourAxiomAudit.lean",
+      "sha256": "7b185c9d86d95671ddb79647033f128d6f86f78dbe780903d1b31f600440c040"
+    },
+    {
+      "bytes": 460,
+      "module": "RelativeConicArcs.Gates.PRSFoundation",
+      "path": "RelativeConicArcs/Gates/PRSFoundation.lean",
+      "sha256": "68a97515877f35bb5cb70be442b06cd8194ea98af0dd13c258ba610cac7c89f8"
+    },
+    {
+      "bytes": 626,
+      "module": "RelativeConicArcs.Gates.PRSPolarInductionRedundancySixSeven",
+      "path": "RelativeConicArcs/Gates/PRSPolarInductionRedundancySixSeven.lean",
+      "sha256": "144f8ea73445cd219fcdbb0f6913f4e30a7cb8ef852efa7fafc07954b3f7b489"
+    },
+    {
+      "bytes": 598,
+      "module": "RelativeConicArcs.Gates.PRSRedundancyFive",
+      "path": "RelativeConicArcs/Gates/PRSRedundancyFive.lean",
+      "sha256": "db56c6d7a27ec796b8ca57c195aa4c96577c7edbd079ac3a6ed593e7d02803a6"
+    },
+    {
+      "bytes": 731,
+      "module": "RelativeConicArcs.Gates.PRSStableComponents",
+      "path": "RelativeConicArcs/Gates/PRSStableComponents.lean",
+      "sha256": "192d9d6142b42182e9c4948809eb24691870710565876678498f6fd413be8eb1"
+    },
+    {
+      "bytes": 2561,
+      "module": "RelativeConicArcs.PRSContraction",
+      "path": "RelativeConicArcs/PRSContraction.lean",
+      "sha256": "24d03205b9b975370f2ad0ff4fae3360061c2722586070bfc40fab6e87703ec6"
+    },
+    {
+      "bytes": 16777,
+      "module": "RelativeConicArcs.PRSFoundation",
+      "path": "RelativeConicArcs/PRSFoundation.lean",
+      "sha256": "e59918efae499d0e4fddfcc37d6bde419c19d34570d6d6482269d5527d9fc2ed"
+    },
+    {
+      "bytes": 22568,
+      "module": "RelativeConicArcs.PRSPolarInduction",
+      "path": "RelativeConicArcs/PRSPolarInduction.lean",
+      "sha256": "4365114b79edc4d9b52e9bf6bda15476f57f1a346e30cffd3ed108252bec1435"
+    },
+    {
+      "bytes": 22673,
+      "module": "RelativeConicArcs.PRSRedundancyFive",
+      "path": "RelativeConicArcs/PRSRedundancyFive.lean",
+      "sha256": "b6d8ee2e752b8d97c96b7c80b66dbcef0e533a9c9cd40c69ec3a6d005fa07319"
+    },
+    {
+      "bytes": 10485,
+      "module": "RelativeConicArcs.PRSRedundancyFiveCertificate",
+      "path": "RelativeConicArcs/PRSRedundancyFiveCertificate.lean",
+      "sha256": "eed0bea42d0d4c0575808ac0744195e70f7eaf9ac6687f496d0d29ccd703a7d6"
+    },
+    {
+      "bytes": 2207,
+      "module": "RelativeConicArcs.PRSRedundancyFiveCertified",
+      "path": "RelativeConicArcs/PRSRedundancyFiveCertified.lean",
+      "sha256": "283066bdeb71c15f1607a6a35f75ccc93192adf249d40eed2d80deacb3e2e107"
+    },
+    {
+      "bytes": 15039,
+      "module": "RelativeConicArcs.PRSRedundancySixSeven",
+      "path": "RelativeConicArcs/PRSRedundancySixSeven.lean",
+      "sha256": "7994f16e56adfdac4f6b68a97095b11031077850c340893496239eecbdcce7ae"
+    },
+    {
+      "bytes": 8843,
+      "module": "RelativeConicArcs.PRSRedundancySixSevenCertificate",
+      "path": "RelativeConicArcs/PRSRedundancySixSevenCertificate.lean",
+      "sha256": "c24b116a7a3ec426a6eb54c1b5477ca677976ff775f71f82ea4df67bfc97efc0"
+    },
+    {
+      "bytes": 4480,
+      "module": "RelativeConicArcs.PRSSquarefreeMarkerDensity",
+      "path": "RelativeConicArcs/PRSSquarefreeMarkerDensity.lean",
+      "sha256": "b1bc111e97b8ee25a56ea8313960974a1e8b5cfae2ed350c6a02e5fe6b994b21"
+    },
+    {
+      "bytes": 14890,
+      "module": "RelativeConicArcs.PRSStableComponents",
+      "path": "RelativeConicArcs/PRSStableComponents.lean",
+      "sha256": "dfbf72ed8adbe79dc909e5dc55fbda2ac3436e322e4ed30fb36885f8cd89f6e4"
+    },
+    {
+      "bytes": 15613,
+      "module": "RelativeConicArcs.PRSUniformCoveringRadius",
+      "path": "RelativeConicArcs/PRSUniformCoveringRadius.lean",
+      "sha256": "c28f4102e744c227cd9c04697f68c0dfce1a93e7d7e3e94fe69c5932953ef8ad"
+    }
+  ]
+}

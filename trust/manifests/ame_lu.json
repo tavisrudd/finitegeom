@@ -1,0 +1,469 @@
+{
+  "external_imports": [
+    "Mathlib.Algebra.Exact.Basic",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Group.AddChar",
+    "Mathlib.Algebra.Module.Equiv.Basic",
+    "Mathlib.Algebra.Polynomial.Roots",
+    "Mathlib.Analysis.Complex.Circle",
+    "Mathlib.Analysis.Complex.Exponential",
+    "Mathlib.Analysis.Normed.Module.Connected",
+    "Mathlib.Analysis.Real.Sqrt",
+    "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+    "Mathlib.Combinatorics.Configuration",
+    "Mathlib.Data.Complex.Basic",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.FieldTheory.Finite.Trace",
+    "Mathlib.GroupTheory.GroupExtension.Basic",
+    "Mathlib.GroupTheory.Subgroup.Centralizer",
+    "Mathlib.InformationTheory.Hamming",
+    "Mathlib.LinearAlgebra.Basis.Basic",
+    "Mathlib.LinearAlgebra.BilinearForm.Orthogonal",
+    "Mathlib.LinearAlgebra.Complex.FiniteDimensional",
+    "Mathlib.LinearAlgebra.CrossProduct",
+    "Mathlib.LinearAlgebra.Dimension.Constructions",
+    "Mathlib.LinearAlgebra.Dimension.StrongRankCondition",
+    "Mathlib.LinearAlgebra.Dual.Lemmas",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+    "Mathlib.LinearAlgebra.Finsupp.Defs",
+    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+    "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Kronecker",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Projectivization.Cardinality",
+    "Mathlib.LinearAlgebra.Projectivization.Collinear",
+    "Mathlib.LinearAlgebra.Projectivization.Subspace",
+    "Mathlib.LinearAlgebra.Span.Basic",
+    "Mathlib.Order.Lattice.Nat",
+    "Mathlib.Tactic",
+    "Mathlib.Topology.Algebra.Group.Quotient",
+    "Mathlib.Topology.Instances.Matrix",
+    "Mathlib.Topology.Separation.Connected"
+  ],
+  "module_count": 68,
+  "roots": [
+    "RelativeConicArcs.Gates.AMELUAggregate",
+    "RelativeConicArcs.Gates.AMELUAggregateAxioms"
+  ],
+  "schema_version": 1,
+  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
+  "sources": [
+    {
+      "bytes": 23500,
+      "module": "CapGame.BuildGame",
+      "path": "CapGame/BuildGame.lean",
+      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
+    },
+    {
+      "bytes": 15555,
+      "module": "FiniteGeom.Code",
+      "path": "FiniteGeom/Code.lean",
+      "sha256": "3e952d2f81ddb97f855f60ed5d0d4188d7e15a69fbc018403163bb1267681e55"
+    },
+    {
+      "bytes": 51832,
+      "module": "ProjectiveCap.PlaneTransitivity",
+      "path": "ProjectiveCap/PlaneTransitivity.lean",
+      "sha256": "afd991554831800770798f20ac62e7466a22da80d0208b7303e8edbc7eb46cb5"
+    },
+    {
+      "bytes": 5083,
+      "module": "ProjectiveCap.Projective",
+      "path": "ProjectiveCap/Projective.lean",
+      "sha256": "3ff69261a041cbcf39a91b6e3d7a749d35f1cae21950d42d504d68433d1883bc"
+    },
+    {
+      "bytes": 52538,
+      "module": "RelativeConicArcs.AMELU.AutomorphismExactSequence",
+      "path": "RelativeConicArcs/AMELU/AutomorphismExactSequence.lean",
+      "sha256": "dd4bbb01567ca14e861a1fd0afed2233a91d79e9981f486233c8f971c948d0a8"
+    },
+    {
+      "bytes": 3591,
+      "module": "RelativeConicArcs.AMELU.CSS",
+      "path": "RelativeConicArcs/AMELU/CSS.lean",
+      "sha256": "1ef42d91d72f7940b7c985c0cf736bb0af93541f99101115269fe7c410cddb66"
+    },
+    {
+      "bytes": 15935,
+      "module": "RelativeConicArcs.AMELU.Definitions",
+      "path": "RelativeConicArcs/AMELU/Definitions.lean",
+      "sha256": "448250f26b854c9a591fcc8605508a24fd747919eed833b62df371d7ea7e29cf"
+    },
+    {
+      "bytes": 22157,
+      "module": "RelativeConicArcs.AMELU.DiagonalIsoduality",
+      "path": "RelativeConicArcs/AMELU/DiagonalIsoduality.lean",
+      "sha256": "c9a449582f3213ec08227b98321cac15e3ac2a2a6b234ca44b1a13ff10945fd4"
+    },
+    {
+      "bytes": 6064,
+      "module": "RelativeConicArcs.AMELU.DiagonalTensor",
+      "path": "RelativeConicArcs/AMELU/DiagonalTensor.lean",
+      "sha256": "3a127248d5f48ff9d4c344b26e07446568f04b8f2f5f5ff9bae29912b6116889"
+    },
+    {
+      "bytes": 15704,
+      "module": "RelativeConicArcs.AMELU.DiagonalTensorEquiv",
+      "path": "RelativeConicArcs/AMELU/DiagonalTensorEquiv.lean",
+      "sha256": "6dfb282679c58c5827ea9c36a12cc67345920c384a38a5017b8cef170e9a2e7a"
+    },
+    {
+      "bytes": 29657,
+      "module": "RelativeConicArcs.AMELU.Dictionary",
+      "path": "RelativeConicArcs/AMELU/Dictionary.lean",
+      "sha256": "67292ca7f120da8751879dae958c430d8eeab803549e0fb0b865abe41fa0f8dc"
+    },
+    {
+      "bytes": 33304,
+      "module": "RelativeConicArcs.AMELU.EncoderTransversal",
+      "path": "RelativeConicArcs/AMELU/EncoderTransversal.lean",
+      "sha256": "649fce7d6dd7d6a724fcea2d0485bfcb1d1f19bf37cd31d5cd7b0671d29ece89"
+    },
+    {
+      "bytes": 11271,
+      "module": "RelativeConicArcs.AMELU.ExtensionFieldPencil",
+      "path": "RelativeConicArcs/AMELU/ExtensionFieldPencil.lean",
+      "sha256": "ca4ceda48d67173fbee7d229c02e63885e9cf0624cf45a5b3e70b30fca54494a"
+    },
+    {
+      "bytes": 12000,
+      "module": "RelativeConicArcs.AMELU.FourCopyContraction",
+      "path": "RelativeConicArcs/AMELU/FourCopyContraction.lean",
+      "sha256": "79fa1dfba9bc977b04a6f992b45131b0d3761a569a341579264ad71e43a137bf"
+    },
+    {
+      "bytes": 7168,
+      "module": "RelativeConicArcs.AMELU.FourMarginalDiagonal",
+      "path": "RelativeConicArcs/AMELU/FourMarginalDiagonal.lean",
+      "sha256": "65e355e85faffa52e360ab787b83f5eaf3ed11882da92c2b3a08e569489fce1d"
+    },
+    {
+      "bytes": 9000,
+      "module": "RelativeConicArcs.AMELU.FourMarginalIntertwining",
+      "path": "RelativeConicArcs/AMELU/FourMarginalIntertwining.lean",
+      "sha256": "eec3faba3eded979512a4f91e64105a88a4054d8058c18c6618c81ba64f22328"
+    },
+    {
+      "bytes": 4879,
+      "module": "RelativeConicArcs.AMELU.GenericDefinitions",
+      "path": "RelativeConicArcs/AMELU/GenericDefinitions.lean",
+      "sha256": "93fce725d4841460b96c1bd6d8d4396f40cfa41b5165f51e1ac3235e6a549abd"
+    },
+    {
+      "bytes": 5945,
+      "module": "RelativeConicArcs.AMELU.GenericDiagonalTensor",
+      "path": "RelativeConicArcs/AMELU/GenericDiagonalTensor.lean",
+      "sha256": "7a066ccae0835ed334afb09ca5b9ec56d58f5102bec8b71beebe261cc0b35396"
+    },
+    {
+      "bytes": 19682,
+      "module": "RelativeConicArcs.AMELU.GenericLURigidity",
+      "path": "RelativeConicArcs/AMELU/GenericLURigidity.lean",
+      "sha256": "2455f69ca3858e47dff8f3c1a504ef71af43af848e428185ffa05250f85e8df2"
+    },
+    {
+      "bytes": 15373,
+      "module": "RelativeConicArcs.AMELU.GenericMDS",
+      "path": "RelativeConicArcs/AMELU/GenericMDS.lean",
+      "sha256": "a84f2212d4648ff67eab6adfbdc2fa194a4e00c04b046a628bc2df0e2118634f"
+    },
+    {
+      "bytes": 22156,
+      "module": "RelativeConicArcs.AMELU.GenericMarginal",
+      "path": "RelativeConicArcs/AMELU/GenericMarginal.lean",
+      "sha256": "10ad4e204a5526d50af19ccaff7066528241bbd2d2409dc4f441aff211bc8b24"
+    },
+    {
+      "bytes": 9649,
+      "module": "RelativeConicArcs.AMELU.GenericMarginalCovariance",
+      "path": "RelativeConicArcs/AMELU/GenericMarginalCovariance.lean",
+      "sha256": "a0c8b316d3f30ce975adce28773e588aa3821987aaf2fbbf64be0d9ab3ead38e"
+    },
+    {
+      "bytes": 5871,
+      "module": "RelativeConicArcs.AMELU.GenericPartyPermutation",
+      "path": "RelativeConicArcs/AMELU/GenericPartyPermutation.lean",
+      "sha256": "b9d7b72b87f980e44b54538676a4cfe33e798d4d882eab416649fbf5854b7be9"
+    },
+    {
+      "bytes": 14662,
+      "module": "RelativeConicArcs.AMELU.GenericSubsystemWeyl",
+      "path": "RelativeConicArcs/AMELU/GenericSubsystemWeyl.lean",
+      "sha256": "85a04e66bd35527035abc4b8fbaf0626c1aa05f43682fe036a56559577183e01"
+    },
+    {
+      "bytes": 23220,
+      "module": "RelativeConicArcs.AMELU.GenericTensorRigidity",
+      "path": "RelativeConicArcs/AMELU/GenericTensorRigidity.lean",
+      "sha256": "f9a93d80ef44989b61f80133d6f24ccbc30920de353e94c2716e53ba106d2073"
+    },
+    {
+      "bytes": 9451,
+      "module": "RelativeConicArcs.AMELU.HolonomyCentralizer",
+      "path": "RelativeConicArcs/AMELU/HolonomyCentralizer.lean",
+      "sha256": "54eb17b3cccba774a65bc18bd137cf278da1bc385e5eadd149fe3a4e8fa2fa1d"
+    },
+    {
+      "bytes": 2113,
+      "module": "RelativeConicArcs.AMELU.LUPencilClassification",
+      "path": "RelativeConicArcs/AMELU/LUPencilClassification.lean",
+      "sha256": "04d9c01e57abf0594136088f8641a4c7287e1c1eb38dccf3e558ce0a916af4a1"
+    },
+    {
+      "bytes": 4023,
+      "module": "RelativeConicArcs.AMELU.LURigidity",
+      "path": "RelativeConicArcs/AMELU/LURigidity.lean",
+      "sha256": "7eb1ae02bfbfe10d47d6d742e7ff0a699104a1536cd8052a9eca420f0611978b"
+    },
+    {
+      "bytes": 6334,
+      "module": "RelativeConicArcs.AMELU.LogicalPhase",
+      "path": "RelativeConicArcs/AMELU/LogicalPhase.lean",
+      "sha256": "92136ba399e53a3e133a1b310205b39debfcc3f7c4a8675156709414bb94bc3e"
+    },
+    {
+      "bytes": 11822,
+      "module": "RelativeConicArcs.AMELU.MDSShortening",
+      "path": "RelativeConicArcs/AMELU/MDSShortening.lean",
+      "sha256": "ca01a7032405034c02da2b01b2831ba256550b72dc90a49fc1e55a291d22ebf9"
+    },
+    {
+      "bytes": 6938,
+      "module": "RelativeConicArcs.AMELU.MarginalAxisRigidity",
+      "path": "RelativeConicArcs/AMELU/MarginalAxisRigidity.lean",
+      "sha256": "ba33e12ce2efb009a11388795cf0a7de85462bbdbaa4c2ed790913f86881dd75"
+    },
+    {
+      "bytes": 11085,
+      "module": "RelativeConicArcs.AMELU.MarginalMoment",
+      "path": "RelativeConicArcs/AMELU/MarginalMoment.lean",
+      "sha256": "63fe23c32bf9e3c5c78177390fd63b4c6ba15a8d8ecfa1306f784c70f88d5808"
+    },
+    {
+      "bytes": 15744,
+      "module": "RelativeConicArcs.AMELU.MarginalWeylExpansion",
+      "path": "RelativeConicArcs/AMELU/MarginalWeylExpansion.lean",
+      "sha256": "4667bc14a4cac24a54148468bf139f84ede1053257157d3f17fd01878b46b274"
+    },
+    {
+      "bytes": 18114,
+      "module": "RelativeConicArcs.AMELU.NonabelianExtensionInvariant",
+      "path": "RelativeConicArcs/AMELU/NonabelianExtensionInvariant.lean",
+      "sha256": "9877d69b592b0d1ee0abe14870863984d5313989eb804695a788d29146fec4ee"
+    },
+    {
+      "bytes": 7479,
+      "module": "RelativeConicArcs.AMELU.OrderedFourConjugation",
+      "path": "RelativeConicArcs/AMELU/OrderedFourConjugation.lean",
+      "sha256": "1e99f9b1b0901c10488d8cfe2824969b2a283defdef0e619f7b86d5de80406ec"
+    },
+    {
+      "bytes": 6279,
+      "module": "RelativeConicArcs.AMELU.PartialTraceCovariance",
+      "path": "RelativeConicArcs/AMELU/PartialTraceCovariance.lean",
+      "sha256": "696429e0e6ba4c43b6eaa111704971fae1bb01b4606bead28660173ce08063d3"
+    },
+    {
+      "bytes": 10431,
+      "module": "RelativeConicArcs.AMELU.PartyExtensionSplitting",
+      "path": "RelativeConicArcs/AMELU/PartyExtensionSplitting.lean",
+      "sha256": "c216d8ba95d032538254e5323066aaf2bf39973589fa8d9c05699e781c40ffff"
+    },
+    {
+      "bytes": 5336,
+      "module": "RelativeConicArcs.AMELU.PartyPermutation",
+      "path": "RelativeConicArcs/AMELU/PartyPermutation.lean",
+      "sha256": "c13bbaad506499b1aaeb63ee1b8954d3d62c8c7282b35575ecc9a609fc2c1eb0"
+    },
+    {
+      "bytes": 13812,
+      "module": "RelativeConicArcs.AMELU.PencilClassification",
+      "path": "RelativeConicArcs/AMELU/PencilClassification.lean",
+      "sha256": "5644d034eaa11f3092bf314abea1626dc0f7d20300d900a0fa028b74aeb45ae2"
+    },
+    {
+      "bytes": 35945,
+      "module": "RelativeConicArcs.AMELU.ProductUnitaryAutomorphismGroup",
+      "path": "RelativeConicArcs/AMELU/ProductUnitaryAutomorphismGroup.lean",
+      "sha256": "e6e5e431e6511d459edb1299b11d81d68c54ae1d825a39be2ebd3c18639efecf"
+    },
+    {
+      "bytes": 13981,
+      "module": "RelativeConicArcs.AMELU.ProductUnitarySymmetry",
+      "path": "RelativeConicArcs/AMELU/ProductUnitarySymmetry.lean",
+      "sha256": "0eb1956034aeee8e9df15e70f9e436fd4a1a8c87095d292a078df9de6eda6a81"
+    },
+    {
+      "bytes": 15324,
+      "module": "RelativeConicArcs.AMELU.ProductUnitarySymmetryTopology",
+      "path": "RelativeConicArcs/AMELU/ProductUnitarySymmetryTopology.lean",
+      "sha256": "a4fcb8897d09d6697bbd219fa96652af98f138ed641ee3c271e31263a9280c3d"
+    },
+    {
+      "bytes": 14724,
+      "module": "RelativeConicArcs.AMELU.ProjectiveClifford",
+      "path": "RelativeConicArcs/AMELU/ProjectiveClifford.lean",
+      "sha256": "2f44c1923f0c63230b4fd12ea47379636d1c734718a24536447f2288a343ed71"
+    },
+    {
+      "bytes": 33023,
+      "module": "RelativeConicArcs.AMELU.StabilizerAMERigidity",
+      "path": "RelativeConicArcs/AMELU/StabilizerAMERigidity.lean",
+      "sha256": "a38117c4d1c23cfd2f51a0f3af194c0f6a04c442255cb7f0c94c508e24aa748f"
+    },
+    {
+      "bytes": 20813,
+      "module": "RelativeConicArcs.AMELU.StabilizerAMESupport",
+      "path": "RelativeConicArcs/AMELU/StabilizerAMESupport.lean",
+      "sha256": "5c91ea4a0c10b540df4e3599d9ae77a752455c3bf0386f9263efde4c83f1832e"
+    },
+    {
+      "bytes": 22113,
+      "module": "RelativeConicArcs.AMELU.StabilizerDictionary",
+      "path": "RelativeConicArcs/AMELU/StabilizerDictionary.lean",
+      "sha256": "66028c81c880ee61ea30c63c0df04ea7c69b2c8a11384c4dfc845fb7151cc171"
+    },
+    {
+      "bytes": 9172,
+      "module": "RelativeConicArcs.AMELU.StateMarginalCovariance",
+      "path": "RelativeConicArcs/AMELU/StateMarginalCovariance.lean",
+      "sha256": "4401ec6c9fd2cf41f419d82f5c1451d7e79d1be94e1023fcb37b32620ea30775"
+    },
+    {
+      "bytes": 9622,
+      "module": "RelativeConicArcs.AMELU.SubsystemConjugation",
+      "path": "RelativeConicArcs/AMELU/SubsystemConjugation.lean",
+      "sha256": "6196a004c533ceacc6e6d73aa1117d1974a6ec3085151cb4ce6130f666169c87"
+    },
+    {
+      "bytes": 7011,
+      "module": "RelativeConicArcs.AMELU.SubsystemWeylBasis",
+      "path": "RelativeConicArcs/AMELU/SubsystemWeylBasis.lean",
+      "sha256": "0964c0d90ba58d8dd454e893b13d525c56f0348db3f70e58a00e70c6bb403503"
+    },
+    {
+      "bytes": 15570,
+      "module": "RelativeConicArcs.AMELU.TransportDivisor",
+      "path": "RelativeConicArcs/AMELU/TransportDivisor.lean",
+      "sha256": "70cd0db6d3026d0d0ae0ed39d78da8f9cc89aaa8f3d829b4583f07414fece42b"
+    },
+    {
+      "bytes": 6027,
+      "module": "RelativeConicArcs.AMELU.UnitaryConjugation",
+      "path": "RelativeConicArcs/AMELU/UnitaryConjugation.lean",
+      "sha256": "959b3e39d759a250fa20ba957c8c1df4f7561c20796de5015c0c8e24a73c6449"
+    },
+    {
+      "bytes": 6980,
+      "module": "RelativeConicArcs.AMELU.WeylBasis",
+      "path": "RelativeConicArcs/AMELU/WeylBasis.lean",
+      "sha256": "355376a7fe75f2c8bc185b505e7e182507c0f7f0bd1edb3ee60129e36ac54fcb"
+    },
+    {
+      "bytes": 8339,
+      "module": "RelativeConicArcs.Arc",
+      "path": "RelativeConicArcs/Arc.lean",
+      "sha256": "f683f6fe80891ea7f4da389fbef14890d34ee660e1e9b3b8f62a3ee60256a240"
+    },
+    {
+      "bytes": 28923,
+      "module": "RelativeConicArcs.CodingBridge",
+      "path": "RelativeConicArcs/CodingBridge.lean",
+      "sha256": "bf6ac29f91dce5425653494542b5e156302ff2be5914d5310379d5b97d960ed3"
+    },
+    {
+      "bytes": 21008,
+      "module": "RelativeConicArcs.Defect",
+      "path": "RelativeConicArcs/Defect.lean",
+      "sha256": "5caae34f785b5c37df05ed42c8c278dbf88e0ef98b6adf2d514716122f31ee2d"
+    },
+    {
+      "bytes": 3757,
+      "module": "RelativeConicArcs.Gates.AMELUAggregate",
+      "path": "RelativeConicArcs/Gates/AMELUAggregate.lean",
+      "sha256": "1d3cb87cb226f829292f4660bc04cbb94fad8f992458e6ead2d2b4a908e79912"
+    },
+    {
+      "bytes": 11394,
+      "module": "RelativeConicArcs.Gates.AMELUAggregateAxioms",
+      "path": "RelativeConicArcs/Gates/AMELUAggregateAxioms.lean",
+      "sha256": "40a67bdc4417a26447c64de690a629bd8a11f780023585662d79a9e1a41639dc"
+    },
+    {
+      "bytes": 391,
+      "module": "RelativeConicArcs.Gates.AMELUDefinitions",
+      "path": "RelativeConicArcs/Gates/AMELUDefinitions.lean",
+      "sha256": "8b0b71707af38019dd0c691d741e6904649557c547d3f2bd5a65e5fabd8a0fe3"
+    },
+    {
+      "bytes": 407,
+      "module": "RelativeConicArcs.Gates.AMELUDictionary",
+      "path": "RelativeConicArcs/Gates/AMELUDictionary.lean",
+      "sha256": "1f634cc20b233c8120a02f7829cdb719f26cc101b306d1d5d595c429f617958a"
+    },
+    {
+      "bytes": 537,
+      "module": "RelativeConicArcs.Gates.AMELULogicalPhaseFourCopy",
+      "path": "RelativeConicArcs/Gates/AMELULogicalPhaseFourCopy.lean",
+      "sha256": "6bc4fa709f8d3b17f1999a38e69196ac40659cf8dc53de7055f59edf68524bad"
+    },
+    {
+      "bytes": 532,
+      "module": "RelativeConicArcs.Gates.AMELUMarginalMoment",
+      "path": "RelativeConicArcs/Gates/AMELUMarginalMoment.lean",
+      "sha256": "dd9f152e8e672d9ef24f93c4201a3b866c6a4fb0d2a1c8f47d5b5f2671c9db7b"
+    },
+    {
+      "bytes": 408,
+      "module": "RelativeConicArcs.Gates.AMELUPencilClassification",
+      "path": "RelativeConicArcs/Gates/AMELUPencilClassification.lean",
+      "sha256": "1e3732cf4142eac6f182d5f07dd84b98136adfe56dbc9bccc1ceba93af4be2b8"
+    },
+    {
+      "bytes": 315,
+      "module": "RelativeConicArcs.Gates.AMELUStabilizerDictionary",
+      "path": "RelativeConicArcs/Gates/AMELUStabilizerDictionary.lean",
+      "sha256": "89c19b40510becef198e0fb9409df462372b6e62d0403550ff3e63d441f6e981"
+    },
+    {
+      "bytes": 328,
+      "module": "RelativeConicArcs.Gates.AMELUTransportDivisor",
+      "path": "RelativeConicArcs/Gates/AMELUTransportDivisor.lean",
+      "sha256": "3006156e4313495f52ee50c302d576d667ab1d40c396f90fbac9ccd1742d752e"
+    },
+    {
+      "bytes": 21208,
+      "module": "RelativeConicArcs.Moments",
+      "path": "RelativeConicArcs/Moments.lean",
+      "sha256": "5892d6448b919dffe5988502b014948831294247657b49a68e0aa228517305e8"
+    },
+    {
+      "bytes": 1625,
+      "module": "RelativeConicArcs.Plane",
+      "path": "RelativeConicArcs/Plane.lean",
+      "sha256": "4884204d8c0a1c219e969b72c6fa394abc28be3097c7eed6bed97e8f63c21ff5"
+    },
+    {
+      "bytes": 15281,
+      "module": "RelativeConicArcs.ProjectiveBridge",
+      "path": "RelativeConicArcs/ProjectiveBridge.lean",
+      "sha256": "423405930931867f62730ba3d2013012026f8a64db0af81d7b0ace6a43524a3f"
+    },
+    {
+      "bytes": 13261,
+      "module": "RelativeConicArcs.SyndromeGeometry",
+      "path": "RelativeConicArcs/SyndromeGeometry.lean",
+      "sha256": "0c49ee1527b10ec15ed84d07d0e0780d0f27df7776d048c04dd9d25d49e331b3"
+    }
+  ]
+}

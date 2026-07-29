@@ -15,3 +15,19 @@ spine = "areas/clebsch_passages.toml"
 [[area]]
 name = "arcs_complete_outside_conic_human"
 spine = "areas/arcs_complete_outside_conic_human.toml"
+
+[[area]]
+name = "ame_lu"
+spine = "areas/ame_lu.toml"
+
+[[area]]
+name = "prs_beyond_redundancy_four"
+spine = "areas/prs_beyond_redundancy_four.toml"
+
+[[area]]
+name = "clebsch_rigidity_human"
+spine = "areas/clebsch_rigidity_human.toml"
+
+[[area]]
+name = "clebsch_factorization"
+spine = "areas/clebsch_factorization.toml"

@@ -50,6 +50,19 @@ classification proving the exact value at order 16 is deliberately isolated
 in the separately versioned `finitegeom-q16-certificates` repository. See
 [`trust/ARCS_COMPLETE_OUTSIDE_CONIC.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC.md).
 
+The current local `v0.2.0` candidate further includes the complete
+human-scale boundaries for:
+
+- stabilizer AME states, MDS–CSS codes, and local-unitary rigidity;
+- projective Reed–Solomon deep holes through redundancy seven;
+- the chord-defect and small-field core of Clebsch rigidity; and
+- the arithmetic-gluing, Hilbert-symmetry, and hyperplane-square mechanisms
+  for Clebsch factorization.
+
+The generated Clebsch order-eleven orbit/action family remains in its
+downstream certificate package, just as the generated order-sixteen Arcs
+classification does.
+
 ## Foundation claim map
 
 | Manuscript role | Lean declaration |
@@ -82,7 +95,13 @@ lake exe cache get
 lake build CapGame.Affine ProjectiveCap.Binary \
   ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome \
   RelativeConicArcs.Gates.ClebschOrientationMechanisms \
-  RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman
+  RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman \
+  RelativeConicArcs.Gates.AMELUAggregateAxioms \
+  RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
+  RelativeConicArcs.Gates.ClebschRigidityHuman \
+  RelativeConicArcs.Gates.ClebschArithmeticGluing \
+  RelativeConicArcs.Gates.ClebschHilbertSymmetry \
+  RelativeConicArcs.Gates.ClebschHyperplaneSquare
 lake env lean trust/AxiomAudit.lean
 lake env lean trust/ClebschPassagesAxiomAudit.lean
 lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
@@ -103,12 +122,14 @@ Linux, and Apple Silicon macOS.
   the reviewed Lean sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 93-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 194-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   formal-companion closure added after `v0.1.0`.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
+- The remaining files under `trust/manifests/` preserve the separate AME–LU,
+  PRS, Clebsch-rigidity-human, and Clebsch-factorization boundaries.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 

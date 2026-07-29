@@ -1,0 +1,270 @@
+{
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Field.Basic",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Algebra.Module.LinearMap.Defs",
+    "Mathlib.Algebra.Ring.Parity",
+    "Mathlib.Combinatorics.Configuration",
+    "Mathlib.Data.Fin.Tuple.Basic",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Matrix.Basic",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.Nat.Choose.Sum",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.FieldTheory.Finite.Basic",
+    "Mathlib.GroupTheory.Perm.Sign",
+    "Mathlib.LinearAlgebra.CrossProduct",
+    "Mathlib.LinearAlgebra.Dimension.Constructions",
+    "Mathlib.LinearAlgebra.Dimension.Finite",
+    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+    "Mathlib.LinearAlgebra.Finsupp.Supported",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
+    "Mathlib.LinearAlgebra.Projectivization.Cardinality",
+    "Mathlib.LinearAlgebra.Projectivization.Collinear",
+    "Mathlib.LinearAlgebra.Projectivization.Subspace",
+    "Mathlib.RingTheory.MvPolynomial.Basic",
+    "Mathlib.RingTheory.MvPolynomial.EulerIdentity",
+    "Mathlib.Tactic"
+  ],
+  "module_count": 37,
+  "roots": [
+    "RelativeConicArcs.Gates.ClebschArithmeticGluing",
+    "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
+    "RelativeConicArcs.Gates.ClebschHyperplaneSquare"
+  ],
+  "schema_version": 1,
+  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
+  "sources": [
+    {
+      "bytes": 23500,
+      "module": "CapGame.BuildGame",
+      "path": "CapGame/BuildGame.lean",
+      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
+    },
+    {
+      "bytes": 37603,
+      "module": "ProjectiveCap.FrameGridBridge",
+      "path": "ProjectiveCap/FrameGridBridge.lean",
+      "sha256": "9d2451785655a171dca7aa8496ef50976e77bd4ef7f34ad3296c2bc42325d525"
+    },
+    {
+      "bytes": 5312,
+      "module": "ProjectiveCap.Grid",
+      "path": "ProjectiveCap/Grid.lean",
+      "sha256": "e0390eb4844a3a007fe8fe5d0b62ef37d680c8a476de1a68919e084335f2aec4"
+    },
+    {
+      "bytes": 4287,
+      "module": "ProjectiveCap.GridGame",
+      "path": "ProjectiveCap/GridGame.lean",
+      "sha256": "62a2ce2448ecf5a117125ad388dedf4337832258bd5abd5828be9c91b262610f"
+    },
+    {
+      "bytes": 2455,
+      "module": "ProjectiveCap.GridSeed",
+      "path": "ProjectiveCap/GridSeed.lean",
+      "sha256": "9bc43c6f469729ea9964c430905f2285703808c1a93afd39684a6f548f5c56fa"
+    },
+    {
+      "bytes": 51832,
+      "module": "ProjectiveCap.PlaneTransitivity",
+      "path": "ProjectiveCap/PlaneTransitivity.lean",
+      "sha256": "afd991554831800770798f20ac62e7466a22da80d0208b7303e8edbc7eb46cb5"
+    },
+    {
+      "bytes": 5083,
+      "module": "ProjectiveCap.Projective",
+      "path": "ProjectiveCap/Projective.lean",
+      "sha256": "3ff69261a041cbcf39a91b6e3d7a749d35f1cae21950d42d504d68433d1883bc"
+    },
+    {
+      "bytes": 19394,
+      "module": "ProjectiveCap.Sym2ConicBridge",
+      "path": "ProjectiveCap/Sym2ConicBridge.lean",
+      "sha256": "aa70d9c2524a00d7f239007b94165c16c4a3cc57f92f1bc6ec64002a76614529"
+    },
+    {
+      "bytes": 8339,
+      "module": "RelativeConicArcs.Arc",
+      "path": "RelativeConicArcs/Arc.lean",
+      "sha256": "f683f6fe80891ea7f4da389fbef14890d34ee660e1e9b3b8f62a3ee60256a240"
+    },
+    {
+      "bytes": 15500,
+      "module": "RelativeConicArcs.Certificate",
+      "path": "RelativeConicArcs/Certificate.lean",
+      "sha256": "1cbcf52f50e453269ce405a0cf6d9dbb3e8071db7d00d4ebbb55ca6c94f03292"
+    },
+    {
+      "bytes": 9155,
+      "module": "RelativeConicArcs.ClebschArithmeticGluing",
+      "path": "RelativeConicArcs/ClebschArithmeticGluing.lean",
+      "sha256": "85fb3094631b25be50c3e9b680d82fdf4e6650f82bca302a92574c0a32228c27"
+    },
+    {
+      "bytes": 40418,
+      "module": "RelativeConicArcs.ClebschArithmeticGluingData",
+      "path": "RelativeConicArcs/ClebschArithmeticGluingData.lean",
+      "sha256": "2ca60d94d0bab6238751dafd67f5b7088e93ae63683a3875bbfb804f88d98077"
+    },
+    {
+      "bytes": 35791,
+      "module": "RelativeConicArcs.ClebschBalancedSheets",
+      "path": "RelativeConicArcs/ClebschBalancedSheets.lean",
+      "sha256": "9f2f7958519ca4f7397e0895094fb96dab7d92c3737435ae640169d794f100b3"
+    },
+    {
+      "bytes": 16025,
+      "module": "RelativeConicArcs.ClebschBalancedSheetsB3",
+      "path": "RelativeConicArcs/ClebschBalancedSheetsB3.lean",
+      "sha256": "87963ebc12637ae2b5b5e709135cc32267aa06712f77e96d169d4c687403d14f"
+    },
+    {
+      "bytes": 20882,
+      "module": "RelativeConicArcs.ClebschBalancedSheetsH3",
+      "path": "RelativeConicArcs/ClebschBalancedSheetsH3.lean",
+      "sha256": "6d0a47c14dc35b7b648279252c6310256ddcf57a566f58d30d534141d0957aae"
+    },
+    {
+      "bytes": 14630,
+      "module": "RelativeConicArcs.ClebschConicMatchingQuotient",
+      "path": "RelativeConicArcs/ClebschConicMatchingQuotient.lean",
+      "sha256": "444e033a0e0e81ecf30cc6f2957eea406cd121ff371918bd96ba963a3d179450"
+    },
+    {
+      "bytes": 4658,
+      "module": "RelativeConicArcs.ClebschFactorizationB3",
+      "path": "RelativeConicArcs/ClebschFactorizationB3.lean",
+      "sha256": "cb86c5bf109d7c1527e89fb240ab056309f122bc1a382236954d8cbf33717c6c"
+    },
+    {
+      "bytes": 5519,
+      "module": "RelativeConicArcs.ClebschFactorizationData",
+      "path": "RelativeConicArcs/ClebschFactorizationData.lean",
+      "sha256": "36dd8ad78d23f0e5dbc5b94b8b08b66ec88d6f529b36bdcfbb9e72d7423f834d"
+    },
+    {
+      "bytes": 4670,
+      "module": "RelativeConicArcs.ClebschFactorizationH3",
+      "path": "RelativeConicArcs/ClebschFactorizationH3.lean",
+      "sha256": "a2e125505a0e42be799cb256005257e38a68ebc0b9c147bb65c36be7e226dd2c"
+    },
+    {
+      "bytes": 15692,
+      "module": "RelativeConicArcs.ClebschGateway",
+      "path": "RelativeConicArcs/ClebschGateway.lean",
+      "sha256": "24e786a37ad2dab7d91651e51d5dbb5427fc26bd9e22c6a54fddda97abc66fd8"
+    },
+    {
+      "bytes": 29145,
+      "module": "RelativeConicArcs.ClebschHarmonicQuotient",
+      "path": "RelativeConicArcs/ClebschHarmonicQuotient.lean",
+      "sha256": "2cdedcfa1115120f317b124fde3109081e703173f783b5d10795d91b30a1448f"
+    },
+    {
+      "bytes": 2961,
+      "module": "RelativeConicArcs.ClebschHilbertSymmetry",
+      "path": "RelativeConicArcs/ClebschHilbertSymmetry.lean",
+      "sha256": "5da049da27b3d74a7fb908ec2ae77938925b95c82f78568eb4ebbd9628759f56"
+    },
+    {
+      "bytes": 2371,
+      "module": "RelativeConicArcs.ClebschHyperplaneSquare",
+      "path": "RelativeConicArcs/ClebschHyperplaneSquare.lean",
+      "sha256": "887f4e4f8fc32d44beacf1882fd73274563c5b02e474a9c5ce038e5e88a4c534"
+    },
+    {
+      "bytes": 11115,
+      "module": "RelativeConicArcs.ClebschMomentTrade",
+      "path": "RelativeConicArcs/ClebschMomentTrade.lean",
+      "sha256": "aa15ed2a8cf84116792e3024ab96c1a674979d41f533fe617d98ac5571b32cf8"
+    },
+    {
+      "bytes": 6490,
+      "module": "RelativeConicArcs.ClebschSchemeChirality",
+      "path": "RelativeConicArcs/ClebschSchemeChirality.lean",
+      "sha256": "7deb3f0ce0cbfe7a56c71de5a9a0635adc157eb7b2fa5409cc6a88d72f07921c"
+    },
+    {
+      "bytes": 2374,
+      "module": "RelativeConicArcs.ClebschSchemeChiralityData",
+      "path": "RelativeConicArcs/ClebschSchemeChiralityData.lean",
+      "sha256": "b56b3d7b18428517da497b464c48791587300d31a6a808004ee64f9a2c1c3803"
+    },
+    {
+      "bytes": 28923,
+      "module": "RelativeConicArcs.CodingBridge",
+      "path": "RelativeConicArcs/CodingBridge.lean",
+      "sha256": "bf6ac29f91dce5425653494542b5e156302ff2be5914d5310379d5b97d960ed3"
+    },
+    {
+      "bytes": 23792,
+      "module": "RelativeConicArcs.Conic",
+      "path": "RelativeConicArcs/Conic.lean",
+      "sha256": "7e5cc2823c925d418660ab88e8753b76673cb35966e03cf86d7b4b1e33c7b6e4"
+    },
+    {
+      "bytes": 21008,
+      "module": "RelativeConicArcs.Defect",
+      "path": "RelativeConicArcs/Defect.lean",
+      "sha256": "5caae34f785b5c37df05ed42c8c278dbf88e0ef98b6adf2d514716122f31ee2d"
+    },
+    {
+      "bytes": 2817,
+      "module": "RelativeConicArcs.Gates.ClebschArithmeticGluing",
+      "path": "RelativeConicArcs/Gates/ClebschArithmeticGluing.lean",
+      "sha256": "0af02636b81d5003028764dc87ac58f125823329bcbb80f2257c4a03d619a9ca"
+    },
+    {
+      "bytes": 461,
+      "module": "RelativeConicArcs.Gates.ClebschBalancedSheets",
+      "path": "RelativeConicArcs/Gates/ClebschBalancedSheets.lean",
+      "sha256": "9ea2ba12de452fb6eef09f34d4c204c6e3bc9573f4b317108dea7fe3b714d5c8"
+    },
+    {
+      "bytes": 399,
+      "module": "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
+      "path": "RelativeConicArcs/Gates/ClebschHilbertSymmetry.lean",
+      "sha256": "0be6e0b36ede1ee9ebc7ade0abaa84694e8b45059a38b191d2074b943cedd620"
+    },
+    {
+      "bytes": 320,
+      "module": "RelativeConicArcs.Gates.ClebschHyperplaneSquare",
+      "path": "RelativeConicArcs/Gates/ClebschHyperplaneSquare.lean",
+      "sha256": "8b76e121f657f454c1727fc2018e0b535ff7125a08e381de1cecd259018fe450"
+    },
+    {
+      "bytes": 21208,
+      "module": "RelativeConicArcs.Moments",
+      "path": "RelativeConicArcs/Moments.lean",
+      "sha256": "5892d6448b919dffe5988502b014948831294247657b49a68e0aa228517305e8"
+    },
+    {
+      "bytes": 1625,
+      "module": "RelativeConicArcs.Plane",
+      "path": "RelativeConicArcs/Plane.lean",
+      "sha256": "4884204d8c0a1c219e969b72c6fa394abc28be3097c7eed6bed97e8f63c21ff5"
+    },
+    {
+      "bytes": 15281,
+      "module": "RelativeConicArcs.ProjectiveBridge",
+      "path": "RelativeConicArcs/ProjectiveBridge.lean",
+      "sha256": "423405930931867f62730ba3d2013012026f8a64db0af81d7b0ace6a43524a3f"
+    },
+    {
+      "bytes": 13261,
+      "module": "RelativeConicArcs.SyndromeGeometry",
+      "path": "RelativeConicArcs/SyndromeGeometry.lean",
+      "sha256": "0c49ee1527b10ec15ed84d07d0e0780d0f27df7776d048c04dd9d25d49e331b3"
+    }
+  ]
+}

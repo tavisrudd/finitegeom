@@ -16,4 +16,7 @@ name = "CapGame"
 name = "ProjectiveCap"
 
 [[lean_lib]]
+name = "FiniteGeom"
+
+[[lean_lib]]
 name = "RelativeConicArcs"

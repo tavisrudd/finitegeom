@@ -1,0 +1,196 @@
+{
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Algebra.Field.Basic",
+    "Mathlib.Combinatorics.Configuration",
+    "Mathlib.Data.Finset.Basic",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Fintype.Basic",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.Nat.Factorization.PrimePow",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.LinearAlgebra.CrossProduct",
+    "Mathlib.LinearAlgebra.Dimension.Constructions",
+    "Mathlib.LinearAlgebra.Finsupp.LinearCombination",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
+    "Mathlib.LinearAlgebra.Projectivization.Cardinality",
+    "Mathlib.LinearAlgebra.Projectivization.Collinear",
+    "Mathlib.LinearAlgebra.Projectivization.Subspace",
+    "Mathlib.Tactic"
+  ],
+  "module_count": 27,
+  "roots": [
+    "RelativeConicArcs.Gates.ClebschRigidityHuman"
+  ],
+  "schema_version": 1,
+  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
+  "sources": [
+    {
+      "bytes": 23500,
+      "module": "CapGame.BuildGame",
+      "path": "CapGame/BuildGame.lean",
+      "sha256": "a71e59f6d469f0a9c7ac7417340264e0a7507febbeb3873285c802d83b53c2de"
+    },
+    {
+      "bytes": 10058,
+      "module": "CapGame.GraphMirror",
+      "path": "CapGame/GraphMirror.lean",
+      "sha256": "7469f96b47f5d42f5d6613a7fef6f2f10dad230e07d931ae94a8c850d82dcd18"
+    },
+    {
+      "bytes": 4945,
+      "module": "CapGame.Mirror",
+      "path": "CapGame/Mirror.lean",
+      "sha256": "821081adb9627ed2618c53212b35703fb409a93562ce2cbad83bd5f746e5a912"
+    },
+    {
+      "bytes": 37603,
+      "module": "ProjectiveCap.FrameGridBridge",
+      "path": "ProjectiveCap/FrameGridBridge.lean",
+      "sha256": "9d2451785655a171dca7aa8496ef50976e77bd4ef7f34ad3296c2bc42325d525"
+    },
+    {
+      "bytes": 5312,
+      "module": "ProjectiveCap.Grid",
+      "path": "ProjectiveCap/Grid.lean",
+      "sha256": "e0390eb4844a3a007fe8fe5d0b62ef37d680c8a476de1a68919e084335f2aec4"
+    },
+    {
+      "bytes": 4287,
+      "module": "ProjectiveCap.GridGame",
+      "path": "ProjectiveCap/GridGame.lean",
+      "sha256": "62a2ce2448ecf5a117125ad388dedf4337832258bd5abd5828be9c91b262610f"
+    },
+    {
+      "bytes": 2455,
+      "module": "ProjectiveCap.GridSeed",
+      "path": "ProjectiveCap/GridSeed.lean",
+      "sha256": "9bc43c6f469729ea9964c430905f2285703808c1a93afd39684a6f548f5c56fa"
+    },
+    {
+      "bytes": 51832,
+      "module": "ProjectiveCap.PlaneTransitivity",
+      "path": "ProjectiveCap/PlaneTransitivity.lean",
+      "sha256": "afd991554831800770798f20ac62e7466a22da80d0208b7303e8edbc7eb46cb5"
+    },
+    {
+      "bytes": 5083,
+      "module": "ProjectiveCap.Projective",
+      "path": "ProjectiveCap/Projective.lean",
+      "sha256": "3ff69261a041cbcf39a91b6e3d7a749d35f1cae21950d42d504d68433d1883bc"
+    },
+    {
+      "bytes": 19394,
+      "module": "ProjectiveCap.Sym2ConicBridge",
+      "path": "ProjectiveCap/Sym2ConicBridge.lean",
+      "sha256": "aa70d9c2524a00d7f239007b94165c16c4a3cc57f92f1bc6ec64002a76614529"
+    },
+    {
+      "bytes": 8339,
+      "module": "RelativeConicArcs.Arc",
+      "path": "RelativeConicArcs/Arc.lean",
+      "sha256": "f683f6fe80891ea7f4da389fbef14890d34ee660e1e9b3b8f62a3ee60256a240"
+    },
+    {
+      "bytes": 15500,
+      "module": "RelativeConicArcs.Certificate",
+      "path": "RelativeConicArcs/Certificate.lean",
+      "sha256": "1cbcf52f50e453269ce405a0cf6d9dbb3e8071db7d00d4ebbb55ca6c94f03292"
+    },
+    {
+      "bytes": 7589,
+      "module": "RelativeConicArcs.ClebschChordDefect",
+      "path": "RelativeConicArcs/ClebschChordDefect.lean",
+      "sha256": "9b5a8db6168d089c0c83cbb67f945bd502df036cb779e542a12707aa5a77862c"
+    },
+    {
+      "bytes": 28923,
+      "module": "RelativeConicArcs.CodingBridge",
+      "path": "RelativeConicArcs/CodingBridge.lean",
+      "sha256": "bf6ac29f91dce5425653494542b5e156302ff2be5914d5310379d5b97d960ed3"
+    },
+    {
+      "bytes": 23792,
+      "module": "RelativeConicArcs.Conic",
+      "path": "RelativeConicArcs/Conic.lean",
+      "sha256": "7e5cc2823c925d418660ab88e8753b76673cb35966e03cf86d7b4b1e33c7b6e4"
+    },
+    {
+      "bytes": 21008,
+      "module": "RelativeConicArcs.Defect",
+      "path": "RelativeConicArcs/Defect.lean",
+      "sha256": "5caae34f785b5c37df05ed42c8c278dbf88e0ef98b6adf2d514716122f31ee2d"
+    },
+    {
+      "bytes": 1832,
+      "module": "RelativeConicArcs.Examples",
+      "path": "RelativeConicArcs/Examples.lean",
+      "sha256": "98e3e81c3b353e1c1e2436ae0ac78d7876b0497bdbbd6b5f2d98f43a8ff2d3b3"
+    },
+    {
+      "bytes": 8445,
+      "module": "RelativeConicArcs.FiniteFields",
+      "path": "RelativeConicArcs/FiniteFields.lean",
+      "sha256": "875aa9f878c70760d43235278dca88bd19fb3c90412c6c647812e46d5ffa5901"
+    },
+    {
+      "bytes": 1103,
+      "module": "RelativeConicArcs.Gates.ClebschRigidityHuman",
+      "path": "RelativeConicArcs/Gates/ClebschRigidityHuman.lean",
+      "sha256": "e00bc13d0dbed7b633d3fcaeddac8f242ea7fd3cbeb1b917c69e0a4dd0e602b6"
+    },
+    {
+      "bytes": 21208,
+      "module": "RelativeConicArcs.Moments",
+      "path": "RelativeConicArcs/Moments.lean",
+      "sha256": "5892d6448b919dffe5988502b014948831294247657b49a68e0aa228517305e8"
+    },
+    {
+      "bytes": 1625,
+      "module": "RelativeConicArcs.Plane",
+      "path": "RelativeConicArcs/Plane.lean",
+      "sha256": "4884204d8c0a1c219e969b72c6fa394abc28be3097c7eed6bed97e8f63c21ff5"
+    },
+    {
+      "bytes": 15281,
+      "module": "RelativeConicArcs.ProjectiveBridge",
+      "path": "RelativeConicArcs/ProjectiveBridge.lean",
+      "sha256": "423405930931867f62730ba3d2013012026f8a64db0af81d7b0ace6a43524a3f"
+    },
+    {
+      "bytes": 15898,
+      "module": "RelativeConicArcs.Q9Sylvester",
+      "path": "RelativeConicArcs/Q9Sylvester.lean",
+      "sha256": "02e06af5f3aa297d2cde2ba38628900fa73892ff9b93c134c7d160f724235bdf"
+    },
+    {
+      "bytes": 5545,
+      "module": "RelativeConicArcs.SixArcDefectBridge",
+      "path": "RelativeConicArcs/SixArcDefectBridge.lean",
+      "sha256": "1328f99e3ecf809242451bc7452c28baad3297dcbef08216c092e9788f469e19"
+    },
+    {
+      "bytes": 8764,
+      "module": "RelativeConicArcs.SmallKChordMoments",
+      "path": "RelativeConicArcs/SmallKChordMoments.lean",
+      "sha256": "92fb60e20790401d1730b165b4fcf043cf78e42a2aae71e45663de1d9c1f0af5"
+    },
+    {
+      "bytes": 18487,
+      "module": "RelativeConicArcs.SmallKGeometricBridge",
+      "path": "RelativeConicArcs/SmallKGeometricBridge.lean",
+      "sha256": "d78cb940373f546825d68b001f8d1f0e780eae99b36f1459fda80aeedad55e53"
+    },
+    {
+      "bytes": 13261,
+      "module": "RelativeConicArcs.SyndromeGeometry",
+      "path": "RelativeConicArcs/SyndromeGeometry.lean",
+      "sha256": "0c49ee1527b10ec15ed84d07d0e0780d0f27df7776d048c04dd9d25d49e331b3"
+    }
+  ]
+}
