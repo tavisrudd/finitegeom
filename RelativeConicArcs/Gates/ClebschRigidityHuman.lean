@@ -1,19 +1,28 @@
 import RelativeConicArcs.ClebschChordDefect
+import RelativeConicArcs.ClebschOrientationTwoGraph
 import RelativeConicArcs.Q9Sylvester
 import RelativeConicArcs.SmallKGeometricBridge
 
 /-!
 # Human-scale trust gate for Clebsch rigidity
 
-This gate checks the reusable chord-defect, small-arc, and order-nine
-mechanisms without importing the generated order-eleven orbit/action family.
-The downstream q11 certificate package imports this library and supplies the
-complete `ClebschRigidityTrust` paper gate.
+This gate checks the reusable chord-defect, orientation-two-graph, small-arc,
+and order-nine mechanisms without importing the generated order-eleven
+orbit/action family.  The downstream q11 certificate package imports this
+library and supplies the complete `ClebschRigidityTrust` paper gate.
 -/
 
 #print axioms RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments
 #print axioms RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula
 #print axioms RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.triangleProduct_switch
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.goldenMatrix_sq
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.goldenMatrix_pairBalance
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.principalBlock_mulVec_deletedRow
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.principalBlock_sq
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.supportCubic_add_const
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.supportCubic_eq_triangle_sum
+#print axioms RelativeConicArcs.ClebschOrientationTwoGraph.supportGradient_node
 #print axioms RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five
 #print axioms RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card
 #print axioms RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order

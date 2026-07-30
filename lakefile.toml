@@ -148,6 +148,7 @@ roots = [
   "RelativeConicArcs.ClebschHilbertSymmetry",
   "RelativeConicArcs.ClebschHyperplaneSquare",
   "RelativeConicArcs.ClebschMomentTrade",
+  "RelativeConicArcs.ClebschOrientationTwoGraph",
   "RelativeConicArcs.ClebschSchemeChirality",
   "RelativeConicArcs.ClebschSchemeChiralityData",
   "RelativeConicArcs.CodingBridge",
