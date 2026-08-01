@@ -4,7 +4,7 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-239-module library state. Per-area source and target manifests preserve the
+251-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build
@@ -124,3 +124,19 @@ The source and target closures are recorded separately in
 gate imports that committed module and prints its six paper-facing terminals.
 Other target-only edits remove private workflow references from explanatory
 prose. No theorem statement is changed.
+
+## Clebsch Passages structural companion
+
+Version 0.3 replaces the earlier three-module symbolic boundary with the
+13-module `RelativeConicArcs.Gates.ClebschPassages` closure.  The source and
+target manifests record the input and released bytes separately.  The target
+preparation changes only referee-facing prose: it removes mutable status and
+novelty language and states explicitly that the conference labels, face-axis
+kernel, and spinor interpretation still require the paper's geometric
+identifications.  No declaration name, type, or proof term is changed by that
+preparation.
+
+The release includes the 34-declaration gate, a matching axiom audit, and the
+five-row partial-coverage ledger in `trust/CLEBSCH_PASSAGES.md`.  Native
+decision remains confined to the finite objects listed by that ledger; no
+generated certificate or project-local axiom enters the closure.

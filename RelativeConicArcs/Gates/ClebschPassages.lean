@@ -1,11 +1,30 @@
-import RelativeConicArcs.Gates.ClebschPassages
+import RelativeConicArcs.QuadraticPinching
+import RelativeConicArcs.SplitQuadraticPinching
+import RelativeConicArcs.InvolutiveOddUnit
+import RelativeConicArcs.GoldenQuadraticCharacters
+import RelativeConicArcs.TightFrameConference
+import RelativeConicArcs.SignedEquiangularGram
+import RelativeConicArcs.ClebschGoldenConference
+import RelativeConicArcs.MarkedClebschBridge
+import RelativeConicArcs.KneserPairEigenspace
+import RelativeConicArcs.PetersenHarmonicKernel
+import RelativeConicArcs.ClebschInvariantCubic
+import RelativeConicArcs.ClebschPassagesCorrespondence
 
 /-!
-# Axiom audit for the Clebsch Passages structural companion
+# Gate: structural Clebsch passages
 
-This audit prints the exact 34-declaration structural boundary.  Native
-decision is confined to the finite computations disclosed by the imported
-gate; the geometric correspondences excluded there remain outside the claim.
+This is the public replay surface for the algebraic mechanisms used in
+*Arithmetic and harmonic realizations of the Clebsch cubic*.  The pinching,
+eigenspace, tight-frame, switching, and scalar-factor arguments are symbolic.
+Native decision is confined to the
+displayed finite conference/reflection matrices, one finite-field nonsquare
+check, and values of explicitly displayed finite vectors.
+
+The gate deliberately does not assert the geometric correspondence between
+Hitchin's spaces and these algebraic models, nor the integral
+Mukai--Umemura comparison.  Those inputs remain outside the formal trust
+claim.
 -/
 
 #print axioms RelativeConicArcs.QuadraticPinching.conductor_eq_ker

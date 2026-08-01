@@ -9,7 +9,7 @@ anti-invariant parts.  If an anti-invariant element `c` is a unit, multiplicatio
 by `c` identifies the invariant part with the anti-invariant part, so every
 element has a unique expression `a + c * b` with `a` and `b` invariant.
 
-The final theorem applies this mechanism after localizing away from `c ^ 2`.
+The localization theorem applies this mechanism after localizing away from `c ^ 2`.
 The localization and its involution are hypotheses; no construction of an
 involution by a localization universal property is used.
 -/
@@ -23,6 +23,20 @@ def Invariant (κ : R ≃+* R) := {x : R // κ x = x}
 
 /-- The elements negated by a ring automorphism. -/
 def AntiInvariant (κ : R ≃+* R) := {x : R // κ x = -x}
+
+/-- The product of two anti-invariant elements is invariant.  This is the
+intrinsic multiplication law behind a quadratic cover. -/
+theorem mul_invariant_of_antiInvariant (κ : R ≃+* R) {x y : R}
+    (hx : κ x = -x) (hy : κ y = -y) :
+    κ (x * y) = x * y := by
+  rw [map_mul, hx, hy]
+  ring
+
+/-- In particular, the square of an odd generator is the invariant branch
+parameter. -/
+theorem square_invariant_of_antiInvariant (κ : R ≃+* R) {c : R}
+    (hc : κ c = -c) : κ (c ^ 2) = c ^ 2 := by
+  simpa [pow_two] using mul_invariant_of_antiInvariant κ hc hc
 
 variable (κ : R ≃+* R) (hκ : Function.Involutive κ)
 

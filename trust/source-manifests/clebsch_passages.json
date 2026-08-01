@@ -14,40 +14,40 @@
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 16130,
+      "bytes": 16029,
       "module": "RelativeConicArcs.ClebschGoldenConference",
       "path": "RelativeConicArcs/ClebschGoldenConference.lean",
-      "sha256": "f60aeaf8f6a62df9669ef25d710dd0a4e796223377365a86a52a23c9be5e4138"
+      "sha256": "9a2cc1a46d68a3b08576cc7227dd044a8bfd7104f8e36ab5ca91e94c33cce7b2"
     },
     {
-      "bytes": 6072,
+      "bytes": 6090,
       "module": "RelativeConicArcs.ClebschInvariantCubic",
       "path": "RelativeConicArcs/ClebschInvariantCubic.lean",
-      "sha256": "869830e454beca7461d57bfef81dad6e45fd621e2d1e23fa9c4cd5fe805e605d"
+      "sha256": "1587594c3a63e4b866075c67cc5deac2e10bf00cd5708c9aaf39168bcd773bdd"
     },
     {
-      "bytes": 3719,
+      "bytes": 3725,
       "module": "RelativeConicArcs.ClebschPassagesCorrespondence",
       "path": "RelativeConicArcs/ClebschPassagesCorrespondence.lean",
-      "sha256": "77cd7324cf6fc7aaca83a286ed570fa78091a5a27f452b7ff2378a22f8259837"
+      "sha256": "a7f152ab5fad8cfe4847c7cffd5103eb1c4cdba749b2428ce0327408117f8e28"
     },
     {
-      "bytes": 4045,
+      "bytes": 4012,
       "module": "RelativeConicArcs.Gates.ClebschPassages",
       "path": "RelativeConicArcs/Gates/ClebschPassages.lean",
-      "sha256": "f750d53cb7ee3ebd0decde88281af63e19b1f1913f1624aaabb27b23ce7bc1fe"
+      "sha256": "c05e2ff9b9261977f07329148b122f1ff7e674763480909d0a4d5db1251461e9"
     },
     {
-      "bytes": 6420,
+      "bytes": 6426,
       "module": "RelativeConicArcs.GoldenQuadraticCharacters",
       "path": "RelativeConicArcs/GoldenQuadraticCharacters.lean",
-      "sha256": "0c24f40bf6189e26d0f052a7bf6acbbdd1a0ea219639a04feea8e0868e962eb1"
+      "sha256": "347c060643bd582d2776c18c0108b04731950278779b9d54807209dc5c7f0008"
     },
     {
-      "bytes": 8831,
+      "bytes": 8824,
       "module": "RelativeConicArcs.InvolutiveOddUnit",
       "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
-      "sha256": "c9f06ff7a227e9ce49a65adb84a073899544db887e3acf923d868de92ef382b0"
+      "sha256": "4c89dc3c2619fc4cd52e53d8c421f6f4cc234a026265d65c00ef2dbb6509f3b6"
     },
     {
       "bytes": 24986,
@@ -62,10 +62,10 @@
       "sha256": "30746ec72da8651bc8673b89d78f135632d37195b9c44ac5cca4f071808949ad"
     },
     {
-      "bytes": 5959,
+      "bytes": 5835,
       "module": "RelativeConicArcs.PetersenHarmonicKernel",
       "path": "RelativeConicArcs/PetersenHarmonicKernel.lean",
-      "sha256": "f265b5849d66f250610370921a62607ebe1443a9b153bda4d967be2d70878ea4"
+      "sha256": "77f2195247beccee65a548788c3c9c8efee01177a093ee6f468aa38f64272f2c"
     },
     {
       "bytes": 6345,

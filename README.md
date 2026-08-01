@@ -72,6 +72,15 @@ downstream
 [`finitegeom-clebsch-q11-certificates`](https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates)
 package, just as the generated order-sixteen Arcs classification does.
 
+The `v0.3.0` release adds the 13-module structural companion to *Arithmetic
+and harmonic realizations of the Clebsch cubic*.  It formalizes the paper's
+pinching, involutive-splitting, golden-character, conference, marked-sign,
+Petersen-kernel, and cubic-normalization mechanisms.  The gate records only
+partial mechanism coverage: the global incidence and chart identifications,
+face-axis geometry, spherical addition theorem, raw moment, and integral
+Mukai--Umemura comparison remain outside Lean.  See
+[`trust/CLEBSCH_PASSAGES.md`](trust/CLEBSCH_PASSAGES.md).
+
 ## Foundation claim map
 
 | Manuscript role | Lean declaration |
@@ -105,6 +114,7 @@ lake exe cache get
 lake build CapGame.Affine ProjectiveCap.Binary \
   ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome \
   RelativeConicArcs.Gates.ClebschOrientationMechanisms \
+  RelativeConicArcs.Gates.ClebschPassages \
   RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman \
   RelativeConicArcs.Gates.AMELUAggregateAxioms \
   RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
@@ -121,11 +131,13 @@ lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
 ```
 
 Without Nix, install `elan`, then run the same `lake` commands. The
-toolchain named in `lean-toolchain` is selected automatically. The axiom
-audits listed above report only the standard axioms `propext`,
-`Classical.choice`, and `Quot.sound`; no project-local axiom is used by those
-audited terminals. The separate `RelativeConicArcs.Q11DyeAxioms` boundary
-states two explicitly cited external classification inputs; see
+toolchain named in `lean-toolchain` is selected automatically. The Paper III
+audit additionally reports declaration-local native-decision axioms for the
+finite matrices, vectors, signs, and `F_11` leaf disclosed by its gate.  The
+other audits listed above report only `propext`, `Classical.choice`, and
+`Quot.sound`; no project-local axiom is used by those audited terminals. The
+separate `RelativeConicArcs.Q11DyeAxioms` boundary states two explicitly cited
+external classification inputs; see
 [`trust/CLEBSCH_RIGIDITY_HUMAN.md`](trust/CLEBSCH_RIGIDITY_HUMAN.md).
 
 On Linux, `nix develop .#fhs` is also available for systems that need an
@@ -139,10 +151,11 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 239-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 251-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
-  formal-companion closure added after `v0.1.0`.
+  symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
+  13-module structural closure.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
 - The remaining files under `trust/manifests/` preserve the separate AME–LU,

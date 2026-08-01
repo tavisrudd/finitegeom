@@ -1,13 +1,13 @@
 {
   "title": "finitegeom",
-  "description": "Lean 4 formalizations supporting papers on Clebsch geometry, arcs complete outside a prescribed conic, projective Reed\u2013Solomon deep holes, local-unitary rigidity of stabilizer AME states, and bounded repair ports. Version 0.1.0 establishes the shared finite-geometry foundation; version 0.2.0 adds the explicitly audited paper-facing theorem closures and shared human-readable interfaces for separately distributed finite certificates.",
+  "description": "Lean 4 formalizations supporting papers on Clebsch geometry, arcs complete outside a prescribed conic, projective Reed\u2013Solomon deep holes, local-unitary rigidity of stabilizer AME states, and bounded repair ports. Version 0.3.0 adds the structural formal companion for arithmetic and harmonic realizations of the Clebsch cubic, with its geometric correspondence boundary explicit.",
   "creators": [
     {
       "name": "Rudd, Tavis",
       "orcid": "0009-0003-6405-3275"
     }
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "access_right": "open",
   "license": "Apache-2.0",
   "upload_type": "software",
