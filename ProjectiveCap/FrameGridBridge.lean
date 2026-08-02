@@ -5,14 +5,16 @@ import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 import Mathlib.Tactic
 
 /-!
-# Frame-to-grid correspondence
+# Frame-to-grid bridge interface
 
-Fixing two projective directions identifies the complementary affine chart
-with a coordinate grid. Projective cap continuations containing the opening
-pair correspond exactly to grid caps: the two line pencils through the opening
-points become row and column restrictions, while all other projective
-collinearities become affine collinearities. A `FrameGridBridge` records this
-correspondence and transports legal moves and normal-play values.
+This module isolates the WP-1 proof obligation from the projective-cap plan.
+After two projective directions are fixed, the remaining affine chart should be
+equivalent to the residual grid game with the two burned parallel classes.
+
+The coordinate construction and validity bridge are proved in the standard
+coordinate model.  The game-theoretic consequence is isolated separately:
+normal-play values transport from the fixed projective residual to the residual
+grid game through any `FrameGridBridge`.
 -/
 
 open scoped LinearAlgebra.Projectivization
@@ -55,13 +57,16 @@ def projectiveFrame (B : FrameGridBridge K V A) : Finset (Point K V) :=
   B.fixed ∪ ((StandardResidualSeed (K := K)).map B.toAffine.toEmbedding).map B.project
 
 omit [Fintype K] [DecidableEq K] [Fintype A] [DecidableEq A] in
-private theorem fixedValid_image_iff_grid (B : FrameGridBridge K V A)
+theorem fixedValid_image_iff_grid (B : FrameGridBridge K V A)
     (S : Finset (GridPoint K)) :
     FixedValid B (S.map B.toAffine.toEmbedding) ↔ GridCap S :=
   B.valid_iff_grid S
 
-/-- A frame-grid bridge transports the normal-play value of every residual
-grid position to the corresponding fixed-prefix projective position. -/
+/--
+WP-1 game-value consequence: a completed frame-grid bridge transports the
+normal-play value of every residual grid position to the corresponding
+fixed-prefix projective residual position.
+-/
 theorem win_fixedValid_iff_grid (B : FrameGridBridge K V A)
     (S : Finset (GridPoint K)) :
     FiniteBuildGame.Win (FixedValid B) (S.map B.toAffine.toEmbedding) ↔
@@ -87,9 +92,8 @@ theorem isP_projectiveFrame_iff_standardResidualSeed (B : FrameGridBridge K V A)
       GridGame.IsP (K := K) (StandardResidualSeed (K := K)) :=
   isP_fixedValid_iff_grid B (StandardResidualSeed (K := K))
 
-/-- Existence of a frame-grid bridge from the standard residual grid into the
-given projective space. -/
-def ExistsFrameGridBridge : Prop :=
+/-- Statement target for WP-1: construct an affine-chart board and a bridge. -/
+def Statement : Prop :=
   Nonempty (FrameGridBridge K V (GridPoint K))
 
 end FrameGridBridge
@@ -102,26 +106,26 @@ variable {K : Type*} [Field K]
 /-- Coordinate model for the projective plane used by the residual-grid bridge. -/
 abbrev PlaneVec (K : Type*) := Fin 3 -> K
 
-private def rowDirectionVec : PlaneVec K :=
+def rowDirectionVec : PlaneVec K :=
   ![(1 : K), 0, 0]
 
-private def colDirectionVec : PlaneVec K :=
+def colDirectionVec : PlaneVec K :=
   ![(0 : K), 1, 0]
 
-private def affineVec (p : GridPoint K) : PlaneVec K :=
+def affineVec (p : GridPoint K) : PlaneVec K :=
   ![p.1, p.2, (1 : K)]
 
-private theorem rowDirectionVec_ne_zero : rowDirectionVec (K := K) ≠ 0 := by
+theorem rowDirectionVec_ne_zero : rowDirectionVec (K := K) ≠ 0 := by
   intro h
   have h0 := congrFun h 0
   simp [rowDirectionVec] at h0
 
-private theorem colDirectionVec_ne_zero : colDirectionVec (K := K) ≠ 0 := by
+theorem colDirectionVec_ne_zero : colDirectionVec (K := K) ≠ 0 := by
   intro h
   have h1 := congrFun h 1
   simp [colDirectionVec] at h1
 
-private theorem affineVec_ne_zero (p : GridPoint K) : affineVec (K := K) p ≠ 0 := by
+theorem affineVec_ne_zero (p : GridPoint K) : affineVec (K := K) p ≠ 0 := by
   intro h
   have h2 := congrFun h 2
   simp [affineVec] at h2
@@ -138,7 +142,7 @@ def colDirection : Point K (PlaneVec K) :=
 def affinePoint (p : GridPoint K) : Point K (PlaneVec K) :=
   Projectivization.mk K (affineVec (K := K) p) (affineVec_ne_zero p)
 
-private theorem rowDirection_ne_colDirection :
+theorem rowDirection_ne_colDirection :
     rowDirection (K := K) ≠ colDirection (K := K) := by
   intro h
   obtain ⟨a, ha⟩ := (Projectivization.mk_eq_mk_iff' K
@@ -150,7 +154,7 @@ private theorem rowDirection_ne_colDirection :
   have h0 := congrFun ha 0
   simp [rowDirectionVec, colDirectionVec, ha0] at h0
 
-private theorem affinePoint_ne_rowDirection (p : GridPoint K) :
+theorem affinePoint_ne_rowDirection (p : GridPoint K) :
     affinePoint (K := K) p ≠ rowDirection (K := K) := by
   intro h
   obtain ⟨a, ha⟩ := (Projectivization.mk_eq_mk_iff' K
@@ -159,7 +163,7 @@ private theorem affinePoint_ne_rowDirection (p : GridPoint K) :
   have h2 := congrFun ha 2
   simp [affineVec, rowDirectionVec] at h2
 
-private theorem affinePoint_ne_colDirection (p : GridPoint K) :
+theorem affinePoint_ne_colDirection (p : GridPoint K) :
     affinePoint (K := K) p ≠ colDirection (K := K) := by
   intro h
   obtain ⟨a, ha⟩ := (Projectivization.mk_eq_mk_iff' K
@@ -168,7 +172,7 @@ private theorem affinePoint_ne_colDirection (p : GridPoint K) :
   have h2 := congrFun ha 2
   simp [affineVec, colDirectionVec] at h2
 
-private theorem affinePoint_injective : Function.Injective (affinePoint (K := K)) := by
+theorem affinePoint_injective : Function.Injective (affinePoint (K := K)) := by
   intro p q hpq
   obtain ⟨a, ha⟩ := (Projectivization.mk_eq_mk_iff' K
     (affineVec (K := K) p) (affineVec (K := K) q)
@@ -193,8 +197,6 @@ def affineEmbedding : GridPoint K ↪ Point K (PlaneVec K) where
   toFun := affinePoint (K := K)
   inj' := affinePoint_injective (K := K)
 
-/-- Three nonzero coordinate vectors represent collinear projective points
-exactly when the determinant of the matrix with those vectors as rows is zero. -/
 theorem mk_collinear_iff_det_eq_zero {x y z : PlaneVec K}
     (hx : x ≠ 0) (hy : y ≠ 0) (hz : z ≠ 0) :
     Projective.Collinear K (PlaneVec K)
@@ -242,31 +244,31 @@ theorem mk_collinear_iff_det_eq_zero {x y z : PlaneVec K}
       fin_cases i <;> rfl
     exact (Projective.collinear_iff_dependent (K := K) (V := PlaneVec K)).mpr hdep
 
-private theorem det_rowDirection_affine_affine (p q : GridPoint K) :
+theorem det_rowDirection_affine_affine (p q : GridPoint K) :
     Matrix.det ![rowDirectionVec (K := K), affineVec (K := K) p,
       affineVec (K := K) q] = p.2 - q.2 := by
   rw [Matrix.det_fin_three]
   simp [rowDirectionVec, affineVec]
 
-private theorem det_colDirection_affine_affine (p q : GridPoint K) :
+theorem det_colDirection_affine_affine (p q : GridPoint K) :
     Matrix.det ![colDirectionVec (K := K), affineVec (K := K) p,
       affineVec (K := K) q] = q.1 - p.1 := by
   rw [Matrix.det_fin_three]
   simp [colDirectionVec, affineVec]
   ring
 
-private theorem det_rowDirection_colDirection_affine (p : GridPoint K) :
+theorem det_rowDirection_colDirection_affine (p : GridPoint K) :
     Matrix.det ![rowDirectionVec (K := K), colDirectionVec (K := K),
       affineVec (K := K) p] = 1 := by
   rw [Matrix.det_fin_three]
   simp [rowDirectionVec, colDirectionVec, affineVec]
 
-private theorem det_rowDirection_colDirection_vec (v : PlaneVec K) :
+theorem det_rowDirection_colDirection_vec (v : PlaneVec K) :
     Matrix.det ![rowDirectionVec (K := K), colDirectionVec (K := K), v] = v 2 := by
   rw [Matrix.det_fin_three]
   simp [rowDirectionVec, colDirectionVec]
 
-private theorem collinear_row_col_mk_of_coord2_eq_zero {v : PlaneVec K} (hv : v ≠ 0)
+theorem collinear_row_col_mk_of_coord2_eq_zero {v : PlaneVec K} (hv : v ≠ 0)
     (h2 : v 2 = 0) :
     Projective.Collinear K (PlaneVec K) (rowDirection (K := K))
       (colDirection (K := K)) (Projectivization.mk K v hv) := by
@@ -277,7 +279,7 @@ private theorem collinear_row_col_mk_of_coord2_eq_zero {v : PlaneVec K} (hv : v 
   rw [mk_collinear_iff_det_eq_zero rowDirectionVec_ne_zero colDirectionVec_ne_zero hv,
     det_rowDirection_colDirection_vec, h2]
 
-private theorem point_eq_affine_or_collinear_row_col
+theorem point_eq_affine_or_collinear_row_col
     (x : Point K (PlaneVec K)) :
     (∃ p : GridPoint K, x = affinePoint (K := K) p) ∨
       Projective.Collinear K (PlaneVec K) (rowDirection (K := K))
@@ -300,7 +302,7 @@ private theorem point_eq_affine_or_collinear_row_col
         · field_simp [h2]
         · field_simp [h2]
 
-private theorem det_affine_affine_affine (p q r : GridPoint K) :
+theorem det_affine_affine_affine (p q r : GridPoint K) :
     Matrix.det ![affineVec (K := K) p, affineVec (K := K) q,
       affineVec (K := K) r] =
       (q.1 - p.1) * (r.2 - p.2) - (q.2 - p.2) * (r.1 - p.1) := by
@@ -308,7 +310,7 @@ private theorem det_affine_affine_affine (p q r : GridPoint K) :
   simp [affineVec]
   ring
 
-private theorem collinear_rowDirection_affine_iff (p q : GridPoint K) :
+theorem collinear_rowDirection_affine_iff (p q : GridPoint K) :
     Projective.Collinear K (PlaneVec K) (rowDirection (K := K))
       (affinePoint (K := K) p) (affinePoint (K := K) q) ↔ p.2 = q.2 := by
   change Projective.Collinear K (PlaneVec K)
@@ -319,7 +321,7 @@ private theorem collinear_rowDirection_affine_iff (p q : GridPoint K) :
     (affineVec_ne_zero q), det_rowDirection_affine_affine]
   exact sub_eq_zero
 
-private theorem collinear_colDirection_affine_iff (p q : GridPoint K) :
+theorem collinear_colDirection_affine_iff (p q : GridPoint K) :
     Projective.Collinear K (PlaneVec K) (colDirection (K := K))
       (affinePoint (K := K) p) (affinePoint (K := K) q) ↔ p.1 = q.1 := by
   change Projective.Collinear K (PlaneVec K)
@@ -331,7 +333,7 @@ private theorem collinear_colDirection_affine_iff (p q : GridPoint K) :
   rw [sub_eq_zero]
   exact eq_comm
 
-private theorem not_collinear_row_col_affine (p : GridPoint K) :
+theorem not_collinear_row_col_affine (p : GridPoint K) :
     ¬ Projective.Collinear K (PlaneVec K) (rowDirection (K := K))
       (colDirection (K := K)) (affinePoint (K := K) p) := by
   intro hcol
@@ -340,7 +342,7 @@ private theorem not_collinear_row_col_affine (p : GridPoint K) :
     (by simpa [rowDirection, colDirection, affinePoint] using hcol)
   simp [det_rowDirection_colDirection_affine] at hdet
 
-private theorem collinear_affine_iff_grid (p q r : GridPoint K) :
+theorem collinear_affine_iff_grid (p q r : GridPoint K) :
     Projective.Collinear K (PlaneVec K) (affinePoint (K := K) p)
       (affinePoint (K := K) q) (affinePoint (K := K) r) ↔
       ProjectiveCap.Collinear (K := K) p q r := by
@@ -362,19 +364,19 @@ variable [DecidableEq (Point K (PlaneVec K))]
 def fixedDirections : Finset (Point K (PlaneVec K)) :=
   ({rowDirection (K := K), colDirection (K := K)} : Finset (Point K (PlaneVec K)))
 
-private theorem rowDirection_mem_fixedDirections :
+theorem rowDirection_mem_fixedDirections :
     rowDirection (K := K) ∈ fixedDirections (K := K) := by
   simp [fixedDirections]
 
-private theorem colDirection_mem_fixedDirections :
+theorem colDirection_mem_fixedDirections :
     colDirection (K := K) ∈ fixedDirections (K := K) := by
   simp [fixedDirections]
 
-private theorem fixedDirections_card :
+theorem fixedDirections_card :
     (fixedDirections (K := K)).card = 2 := by
   simp [fixedDirections, rowDirection_ne_colDirection]
 
-private theorem insert_affine_fixed_union_image [DecidableEq K] {S : Finset (GridPoint K)}
+theorem insert_affine_fixed_union_image [DecidableEq K] {S : Finset (GridPoint K)}
     (p : GridPoint K) :
     insert (affinePoint (K := K) p)
         (fixedDirections (K := K) ∪ S.map (affineEmbedding (K := K))) =
@@ -383,11 +385,11 @@ private theorem insert_affine_fixed_union_image [DecidableEq K] {S : Finset (Gri
   simp [Finset.map_insert, affineEmbedding]
 
 omit [DecidableEq (Point K (PlaneVec K))] in
-private theorem affinePoint_mem_map {S : Finset (GridPoint K)} {p : GridPoint K} (hp : p ∈ S) :
+theorem affinePoint_mem_map {S : Finset (GridPoint K)} {p : GridPoint K} (hp : p ∈ S) :
     affinePoint (K := K) p ∈ S.map (affineEmbedding (K := K)) := by
   exact Finset.mem_map.mpr ⟨p, hp, rfl⟩
 
-private theorem mem_fixed_union_image_cases [DecidableEq K] {S : Finset (GridPoint K)}
+theorem mem_fixed_union_image_cases [DecidableEq K] {S : Finset (GridPoint K)}
     {x : Point K (PlaneVec K)}
     (hx : x ∈ fixedDirections (K := K) ∪ S.map (affineEmbedding (K := K))) :
     x = rowDirection (K := K) ∨ x = colDirection (K := K) ∨
@@ -401,7 +403,7 @@ private theorem mem_fixed_union_image_cases [DecidableEq K] {S : Finset (GridPoi
   · rcases Finset.mem_map.mp himage with ⟨p, hp, hpx⟩
     exact Or.inr (Or.inr ⟨p, hp, hpx.symm⟩)
 
-private theorem fixedDirections_disjoint_affineImage [DecidableEq K]
+theorem fixedDirections_disjoint_affineImage [DecidableEq K]
     (S : Finset (GridPoint K)) :
     Disjoint (fixedDirections (K := K)) (S.map (affineEmbedding (K := K))) := by
   rw [Finset.disjoint_left]
@@ -417,8 +419,6 @@ private theorem fixedDirections_disjoint_affineImage [DecidableEq K]
       simpa [affineEmbedding] using hpx.trans hcol
     exact affinePoint_ne_colDirection (K := K) p hpCol
 
-/-- The fixed opening pair and an affine image are disjoint, so the cardinality
-of their union is the affine cardinality plus two. -/
 theorem fixed_union_affine_image_card [DecidableEq K]
     (S : Finset (GridPoint K)) :
     (fixedDirections (K := K) ∪ S.map (affineEmbedding (K := K))).card =
@@ -427,7 +427,7 @@ theorem fixed_union_affine_image_card [DecidableEq K]
     fixedDirections_card (K := K), Finset.card_map]
 
 omit [DecidableEq (Point K (PlaneVec K))] in
-private theorem projectiveCollinear_congr_set {a b c a' b' c' : Point K (PlaneVec K)}
+theorem projectiveCollinear_congr_set {a b c a' b' c' : Point K (PlaneVec K)}
     (hset : ({a, b, c} : Set (Point K (PlaneVec K))) = {a', b', c'}) :
     Projective.Collinear K (PlaneVec K) a b c ↔
       Projective.Collinear K (PlaneVec K) a' b' c' := by
@@ -435,7 +435,7 @@ private theorem projectiveCollinear_congr_set {a b c a' b' c' : Point K (PlaneVe
   rw [hset]
 
 omit [DecidableEq (Point K (PlaneVec K))] in
-private theorem not_collinear_row_affine_affine {S : Finset (GridPoint K)}
+theorem not_collinear_row_affine_affine {S : Finset (GridPoint K)}
     (hS : GridCap (K := K) S) {p q : GridPoint K}
     (hp : p ∈ S) (hq : q ∈ S) (hpq : p ≠ q) :
     ¬ Projective.Collinear K (PlaneVec K) (rowDirection (K := K))
@@ -445,7 +445,7 @@ private theorem not_collinear_row_affine_affine {S : Finset (GridPoint K)}
   exact hpq (hS.1.2 hp hq heq)
 
 omit [DecidableEq (Point K (PlaneVec K))] in
-private theorem not_collinear_col_affine_affine {S : Finset (GridPoint K)}
+theorem not_collinear_col_affine_affine {S : Finset (GridPoint K)}
     (hS : GridCap (K := K) S) {p q : GridPoint K}
     (hp : p ∈ S) (hq : q ∈ S) (hpq : p ≠ q) :
     ¬ Projective.Collinear K (PlaneVec K) (colDirection (K := K))
@@ -455,7 +455,7 @@ private theorem not_collinear_col_affine_affine {S : Finset (GridPoint K)}
   exact hpq (hS.1.1 hp hq heq)
 
 omit [DecidableEq (Point K (PlaneVec K))] in
-private theorem not_collinear_affine_affine_affine {S : Finset (GridPoint K)}
+theorem not_collinear_affine_affine_affine {S : Finset (GridPoint K)}
     (hS : GridCap (K := K) S) {p q r : GridPoint K}
     (hp : p ∈ S) (hq : q ∈ S) (hr : r ∈ S)
     (hpq : p ≠ q) (hpr : p ≠ r) (hqr : q ≠ r) :
@@ -465,7 +465,7 @@ private theorem not_collinear_affine_affine_affine {S : Finset (GridPoint K)}
   exact hS.2 hp hq hr hpq hpr hqr
     ((collinear_affine_iff_grid (K := K) p q r).mp hcol)
 
-private theorem gridCap_of_projectiveCap [DecidableEq K] {S : Finset (GridPoint K)}
+theorem gridCap_of_projectiveCap [DecidableEq K] {S : Finset (GridPoint K)}
     (hcap : Cap K (PlaneVec K)
       (fixedDirections (K := K) ∪ S.map (affineEmbedding (K := K)))) :
     GridCap (K := K) S := by
@@ -540,8 +540,6 @@ private theorem gridCap_of_projectiveCap [DecidableEq K] {S : Finset (GridPoint 
       (fun hqrPoint => hqr ((affinePoint_injective (K := K)) hqrPoint))
       ((collinear_affine_iff_grid (K := K) p q r).mpr hgrid)
 
-/-- A residual grid cap maps to a projective cap after adjoining the fixed
-opening pair. -/
 theorem projectiveCap_of_gridCap [DecidableEq K] {S : Finset (GridPoint K)}
     (hS : GridCap (K := K) S) :
     Cap K (PlaneVec K)
@@ -793,8 +791,10 @@ theorem isP_fixedDirections_iff_grid [Fintype K] [DecidableEq K]
       GridGame.IsP (K := K) S :=
   not_congr (win_fixedDirections_iff_grid S)
 
-/-- In standard coordinates, adjoining the two direction points converts the
-projective cap condition exactly into the residual grid-cap condition. -/
+/--
+Concrete coordinate bridge for WP-1: the projective cap condition with the two
+direction points adjoined is exactly the residual grid cap condition.
+-/
 def ValidityStatement [Fintype K] [DecidableEq K] : Prop :=
   ∀ S : Finset (GridPoint K),
     Cap K (PlaneVec K) (fixedDirections (K := K) ∪ S.map (affineEmbedding (K := K))) ↔
@@ -819,10 +819,9 @@ noncomputable def bridgeOfValidity [Fintype K] [DecidableEq K]
     intro S
     simpa using h S
 
-/-- The coordinate validity equivalence supplies a frame-grid bridge. -/
-theorem existsFrameGridBridge_of_validity [Fintype K] [DecidableEq K]
+theorem statement_of_validity [Fintype K] [DecidableEq K]
     (h : ValidityStatement (K := K)) :
-    ExistsFrameGridBridge (K := K) (V := PlaneVec K) := by
+    Statement (K := K) (V := PlaneVec K) := by
   exact ⟨bridgeOfValidity (K := K) h⟩
 
 /-- The standard coordinate frame-grid bridge. -/
@@ -830,10 +829,10 @@ noncomputable def coordinateBridge [Fintype K] [DecidableEq K] :
     FrameGridBridge K (PlaneVec K) (GridPoint K) :=
   bridgeOfValidity (K := K) (validityStatement (K := K))
 
-/-- A frame-grid bridge exists in the standard coordinate projective plane. -/
-theorem existsFrameGridBridge_standardCoordinates [Fintype K] [DecidableEq K] :
-    ExistsFrameGridBridge (K := K) (V := PlaneVec K) :=
-  existsFrameGridBridge_of_validity (K := K) (validityStatement (K := K))
+/-- WP-1 completed in the standard coordinate projective plane. -/
+theorem coordinateStatement [Fintype K] [DecidableEq K] :
+    Statement (K := K) (V := PlaneVec K) :=
+  statement_of_validity (K := K) (validityStatement (K := K))
 
 end Coordinate
 end FrameGridBridge

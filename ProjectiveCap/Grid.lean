@@ -6,11 +6,13 @@ import Mathlib.Data.Finset.Basic
 /-!
 # Grid caps for the residual `PG(2,q)` game
 
-The residual board after the opening projective pair is an affine grid over
-the coordinate field. Its legal positions are partial permutations—at most
-one selected cell in each row and column—with no three affine-collinear
-cells. This module defines those conditions and proves their elementary
-structural properties.
+This file starts the stable formalization layer for the projective-cap notes.
+It models the post-opening residual as an affine grid over a field: legal
+positions are partial permutations with no three affine-collinear cells.
+
+The heavier finite-field count `q^2 - 9q + 21` is not stated here yet; this file
+only fixes vocabulary and proves the subset monotonicity lemmas that later
+counting and game-value statements should reuse.
 -/
 
 namespace ProjectiveCap
@@ -109,28 +111,27 @@ instance instDecidableGridCap {K : Type*} [Field K] [Fintype K] [DecidableEq K]
   infer_instance
 
 omit [Field K] in
-private theorem rowSparse_mono {S T : Finset (GridPoint K)}
+theorem rowSparse_mono {S T : Finset (GridPoint K)}
     (hST : S ⊆ T) (hT : RowSparse T) : RowSparse S := by
   intro p q hp hq heq
   exact hT (hST hp) (hST hq) heq
 
 omit [Field K] in
-private theorem colSparse_mono {S T : Finset (GridPoint K)}
+theorem colSparse_mono {S T : Finset (GridPoint K)}
     (hST : S ⊆ T) (hT : ColSparse T) : ColSparse S := by
   intro p q hp hq heq
   exact hT (hST hp) (hST hq) heq
 
 omit [Field K] in
-private theorem partialPermutation_mono {S T : Finset (GridPoint K)}
+theorem partialPermutation_mono {S T : Finset (GridPoint K)}
     (hST : S ⊆ T) (hT : PartialPermutation T) : PartialPermutation S :=
   ⟨rowSparse_mono hST hT.1, colSparse_mono hST hT.2⟩
 
-private theorem affineCap_mono {S T : Finset (GridPoint K)}
+theorem affineCap_mono {S T : Finset (GridPoint K)}
     (hST : S ⊆ T) (hT : AffineCap T) : AffineCap S := by
   intro a b c ha hb hc hab hac hbc
   exact hT (hST ha) (hST hb) (hST hc) hab hac hbc
 
-/-- Every subset of a residual grid cap is a residual grid cap. -/
 theorem gridCap_mono {S T : Finset (GridPoint K)}
     (hST : S ⊆ T) (hT : GridCap T) : GridCap S :=
   ⟨partialPermutation_mono hST hT.1, affineCap_mono hST hT.2⟩

@@ -29,13 +29,11 @@ variable {K V : Type*} [Field K] [AddCommGroup V] [Module K V]
 
 /-! ## Points versus representative vectors -/
 
-private theorem comp_rep_triple (a b c : Point K V) :
+theorem comp_rep_triple (a b c : Point K V) :
     Projectivization.rep ∘ ![a, b, c] = ![a.rep, b.rep, c.rep] := by
   ext i
   fin_cases i <;> rfl
 
-/-- Three projective points are independent exactly when chosen nonzero
-representatives are linearly independent. -/
 theorem independent_triple_iff {a b c : Point K V} :
     Independent ![a, b, c] ↔ LinearIndependent K ![a.rep, b.rep, c.rep] := by
   rw [independent_iff, comp_rep_triple]
@@ -57,7 +55,7 @@ theorem independent_triple_of_li {x y z : V} (hx : x ≠ 0) (hy : y ≠ 0) (hz :
 
 /-! ## Pair and permutation sublemmas for linear independence -/
 
-private theorem li_sub01 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
+theorem li_sub01 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     LinearIndependent K ![x, y] := by
   have h2 := h.comp ![0, 1] (by decide)
   have hcomp : ![x, y, z] ∘ ![(0 : Fin 3), 1] = ![x, y] := by
@@ -65,7 +63,7 @@ private theorem li_sub01 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     fin_cases i <;> rfl
   rwa [hcomp] at h2
 
-private theorem li_sub02 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
+theorem li_sub02 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     LinearIndependent K ![x, z] := by
   have h2 := h.comp ![0, 2] (by decide)
   have hcomp : ![x, y, z] ∘ ![(0 : Fin 3), 2] = ![x, z] := by
@@ -73,7 +71,7 @@ private theorem li_sub02 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     fin_cases i <;> rfl
   rwa [hcomp] at h2
 
-private theorem li_sub12 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
+theorem li_sub12 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     LinearIndependent K ![y, z] := by
   have h2 := h.comp ![1, 2] (by decide)
   have hcomp : ![x, y, z] ∘ ![(1 : Fin 3), 2] = ![y, z] := by
@@ -81,7 +79,6 @@ private theorem li_sub12 {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     fin_cases i <;> rfl
   rwa [hcomp] at h2
 
-/-- Cyclically rotating a linearly independent triple preserves linear independence. -/
 theorem li_rotate {x y z : V} (h : LinearIndependent K ![x, y, z]) :
     LinearIndependent K ![z, x, y] := by
   have h2 := h.comp ![2, 0, 1] (by decide)
@@ -112,7 +109,7 @@ theorem mk_ne_of_li_pair {v : V} (hv : v ≠ 0) {p : Point K V}
 
 /-! ## Collinearity versus linear dependence -/
 
-private theorem dependent_of_collinear {a b c : Point K V}
+theorem dependent_of_collinear {a b c : Point K V}
     (h : Collinear K V a b c) : Dependent ![a, b, c] := by
   rw [dependent_iff_not_independent]
   intro hindep
@@ -146,7 +143,7 @@ theorem mem_projectivization_of_rep_mem {s : Submodule K V} {p : Point K V}
     Submodule.span_singleton_le_iff_mem]
   exact h
 
-private theorem collinear_of_dependent {a b c : Point K V}
+theorem collinear_of_dependent {a b c : Point K V}
     (h : Dependent ![a, b, c]) : Collinear K V a b c := by
   classical
   by_cases hab : a = b
@@ -203,20 +200,14 @@ private theorem collinear_of_dependent {a b c : Point K V}
     · exact Submodule.mem_span_of_mem (by simp)
     · exact hcmem
 
-/-- Three projective points are collinear exactly when their representatives
-are linearly dependent. -/
 theorem collinear_iff_dependent {a b c : Point K V} :
     Collinear K V a b c ↔ Dependent ![a, b, c] :=
   ⟨dependent_of_collinear, collinear_of_dependent⟩
 
-/-- Three projective points are noncollinear exactly when their chosen
-representatives are linearly independent. -/
 theorem not_collinear_iff_independent {a b c : Point K V} :
     ¬ Collinear K V a b c ↔ Independent ![a, b, c] := by
   rw [collinear_iff_dependent, ← independent_iff_not_dependent]
 
-/-- A representative of a point collinear with two distinct projective points
-lies in the span of representatives of those two points. -/
 theorem rep_mem_span_pair_of_collinear {a b c : Point K V} (hab : a ≠ b)
     (hcol : Collinear K V a b c) :
     c.rep ∈ Submodule.span K {a.rep, b.rep} := by
@@ -235,8 +226,6 @@ theorem rep_mem_span_pair_of_collinear {a b c : Point K V} (hab : a ≠ b)
   refine ⟨hpair, ?_⟩
   rwa [Matrix.range_cons_cons_empty]
 
-/-- If two points are each collinear with the same distinct projective pair,
-then the four points lie on that pair's projective line. -/
 theorem collinear_of_collinear_pair {a b c d : Point K V} (hab : a ≠ b)
     (hc : Collinear K V a b c) (hd : Collinear K V a b d) :
     Collinear K V a c d := by
@@ -282,24 +271,24 @@ def mapLinearEquiv (g : V ≃ₗ[K] W) : Point K V ≃ Point K W where
     rw [Projectivization.map_mk, Projectivization.map_mk]
     simp
 
-private theorem mapLinearEquiv_mk (g : V ≃ₗ[K] W) {v : V} (hv : v ≠ 0) :
+theorem mapLinearEquiv_mk (g : V ≃ₗ[K] W) {v : V} (hv : v ≠ 0) :
     mapLinearEquiv g (Projectivization.mk K v hv) =
       Projectivization.mk K (g v) (by simp [hv]) := by
   simp [mapLinearEquiv, Projectivization.map_mk]
 
-@[simp] private theorem mapLinearEquiv_symm_eq (g : V ≃ₗ[K] W) :
+@[simp] theorem mapLinearEquiv_symm_eq (g : V ≃ₗ[K] W) :
     (mapLinearEquiv g).symm = mapLinearEquiv g.symm :=
   rfl
 
-@[simp] private theorem mapLinearEquiv_symm_apply (g : V ≃ₗ[K] W) (p : Point K V) :
+@[simp] theorem mapLinearEquiv_symm_apply (g : V ≃ₗ[K] W) (p : Point K V) :
     mapLinearEquiv g.symm (mapLinearEquiv g p) = p := by
   exact (mapLinearEquiv g).symm_apply_apply p
 
-@[simp] private theorem mapLinearEquiv_apply_symm (g : V ≃ₗ[K] W) (p : Point K W) :
+@[simp] theorem mapLinearEquiv_apply_symm (g : V ≃ₗ[K] W) (p : Point K W) :
     mapLinearEquiv g (mapLinearEquiv g.symm p) = p := by
   exact (mapLinearEquiv g).apply_symm_apply p
 
-private theorem independent_triple_mapLinearEquiv (g : V ≃ₗ[K] W) {a b c : Point K V}
+theorem independent_triple_mapLinearEquiv (g : V ≃ₗ[K] W) {a b c : Point K V}
     (h : Independent ![a, b, c]) :
     Independent ![mapLinearEquiv g a, mapLinearEquiv g b, mapLinearEquiv g c] := by
   have hli : LinearIndependent K ![a.rep, b.rep, c.rep] := independent_triple_iff.mp h
@@ -322,7 +311,7 @@ private theorem independent_triple_mapLinearEquiv (g : V ≃ₗ[K] W) {a b c : P
   rw [hconv a, hconv b, hconv c]
   exact hpts
 
-private theorem collinear_mapLinearEquiv (g : V ≃ₗ[K] W) {a b c : Point K V} :
+theorem collinear_mapLinearEquiv (g : V ≃ₗ[K] W) {a b c : Point K V} :
     Collinear K W (mapLinearEquiv g a) (mapLinearEquiv g b) (mapLinearEquiv g c) ↔
       Collinear K V a b c := by
   rw [← not_iff_not, not_collinear_iff_independent, not_collinear_iff_independent]
@@ -354,7 +343,7 @@ theorem cap_image_mapLinearEquiv [DecidableEq (Point K V)] [DecidableEq (Point K
         simpa using hcol
       exact (collinear_mapLinearEquiv g).mp hcol')
 
-private theorem cap_map_mapLinearEquiv [DecidableEq (Point K V)] [DecidableEq (Point K W)]
+theorem cap_map_mapLinearEquiv [DecidableEq (Point K V)] [DecidableEq (Point K W)]
     (g : V ≃ₗ[K] W) (S : Finset (Point K V)) :
     Cap K W (S.map (mapLinearEquiv g).toEmbedding) ↔ Cap K V S := by
   constructor
@@ -368,8 +357,6 @@ private theorem cap_map_mapLinearEquiv [DecidableEq (Point K V)] [DecidableEq (P
     rwa [htwice] at hback
   · exact cap_image_mapLinearEquiv g
 
-/-- A projective map induced by a linear equivalence transports cap-game
-P-positions. -/
 theorem isP_mapLinearEquiv [Fintype (Point K V)] [DecidableEq (Point K V)]
     [Fintype (Point K W)] [DecidableEq (Point K W)]
     (g : V ≃ₗ[K] W) (S : Finset (Point K V)) :
@@ -395,24 +382,22 @@ def mapEquiv (g : V ≃ₗ[K] V) : Point K V ≃ Point K V where
     rw [Projectivization.map_mk, Projectivization.map_mk]
     simp
 
-/-- The projective map induced by a linear equivalence sends the class of
-`v` to the class of `g v`. -/
 theorem mapEquiv_mk (g : V ≃ₗ[K] V) {v : V} (hv : v ≠ 0) :
     mapEquiv g (Projectivization.mk K v hv) =
       Projectivization.mk K (g v) (by simp [hv]) := by
   simp [mapEquiv, Projectivization.map_mk]
 
-@[simp] private theorem mapEquiv_symm_eq (g : V ≃ₗ[K] V) :
+@[simp] theorem mapEquiv_symm_eq (g : V ≃ₗ[K] V) :
     (mapEquiv g).symm = mapEquiv g.symm :=
   rfl
 
-@[simp] private theorem mapEquiv_symm_mapEquiv (g : V ≃ₗ[K] V) (p : Point K V) :
+@[simp] theorem mapEquiv_symm_mapEquiv (g : V ≃ₗ[K] V) (p : Point K V) :
     mapEquiv g.symm (mapEquiv g p) = p := by
   induction p using Projectivization.ind with | h v hv =>
   rw [mapEquiv_mk, mapEquiv_mk]
   simp
 
-@[simp] private theorem mapEquiv_mapEquiv_symm (g : V ≃ₗ[K] V) (p : Point K V) :
+@[simp] theorem mapEquiv_mapEquiv_symm (g : V ≃ₗ[K] V) (p : Point K V) :
     mapEquiv g (mapEquiv g.symm p) = p := by
   induction p using Projectivization.ind with | h v hv =>
   rw [mapEquiv_mk, mapEquiv_mk]
@@ -433,7 +418,7 @@ theorem mapEquiv_eq_of_rep_eq (g : V ≃ₗ[K] V) {p q : Point K V}
   conv_rhs => rw [← Projectivization.mk_rep q]
   exact mapEquiv_mk_eq_mk p.rep_nonzero q.rep_nonzero h
 
-private theorem independent_triple_map (g : V ≃ₗ[K] V) {a b c : Point K V}
+theorem independent_triple_map (g : V ≃ₗ[K] V) {a b c : Point K V}
     (h : Independent ![a, b, c]) :
     Independent ![mapEquiv g a, mapEquiv g b, mapEquiv g c] := by
   have hli : LinearIndependent K ![a.rep, b.rep, c.rep] := independent_triple_iff.mp h
@@ -456,8 +441,6 @@ private theorem independent_triple_map (g : V ≃ₗ[K] V) {a b c : Point K V}
   rw [hconv' a, hconv' b, hconv' c]
   exact hpts
 
-/-- Projective collinearity is preserved and reflected by an induced linear
-equivalence. -/
 theorem collinear_mapEquiv (g : V ≃ₗ[K] V) {a b c : Point K V} :
     Collinear K V (mapEquiv g a) (mapEquiv g b) (mapEquiv g c) ↔
       Collinear K V a b c := by
@@ -497,7 +480,7 @@ theorem cap_map_mapEquiv [DecidableEq (Point K V)] (g : V ≃ₗ[K] V)
 
 /-! ## Caps from triple independence -/
 
-private theorem cap_of_forall_triple [DecidableEq (Point K V)] {S : Finset (Point K V)}
+theorem cap_of_forall_triple [DecidableEq (Point K V)] {S : Finset (Point K V)}
     (h : ∀ T : Finset (Point K V), T ⊆ S -> T.card = 3 ->
       ¬ IsCollinear (T : Set (Point K V))) :
     Cap K V S := by
@@ -604,7 +587,7 @@ theorem cap_quad_of_independent [DecidableEq (Point K V)] {p1 p2 p3 p4 : Point K
 
 /-! ## Independence with the coordinate-sum vector -/
 
-private theorem li_with_sum12 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
+theorem li_with_sum12 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
     LinearIndependent K ![v1, v2, v1 + v2 + v3] := by
   rw [Fintype.linearIndependent_iff] at h ⊢
   intro g hg
@@ -630,7 +613,7 @@ private theorem li_with_sum12 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, 
   · exact hz1
   · exact e2
 
-private theorem li_with_sum13 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
+theorem li_with_sum13 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
     LinearIndependent K ![v1, v3, v1 + v2 + v3] := by
   rw [Fintype.linearIndependent_iff] at h ⊢
   intro g hg
@@ -656,7 +639,7 @@ private theorem li_with_sum13 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, 
   · exact hz1
   · exact e1
 
-private theorem li_with_sum23 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
+theorem li_with_sum23 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
     LinearIndependent K ![v2, v3, v1 + v2 + v3] := by
   rw [Fintype.linearIndependent_iff] at h ⊢
   intro g hg
@@ -682,7 +665,6 @@ private theorem li_with_sum23 {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, 
   · exact hz1
   · exact e0
 
-/-- The sum of three linearly independent vectors is nonzero. -/
 theorem sum_ne_zero_of_li {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3]) :
     v1 + v2 + v3 ≠ 0 := by
   intro hzero
@@ -696,7 +678,7 @@ theorem sum_ne_zero_of_li {v1 v2 v3 : V} (h : LinearIndependent K ![v1, v2, v3])
 
 /-! ## Basis extension in rank three -/
 
-private theorem exists_cons_li (hrank : finrank K V = 3) {n : ℕ} (hn : n < 3)
+theorem exists_cons_li (hrank : finrank K V = 3) {n : ℕ} (hn : n < 3)
     (f : Fin n → V) (hf : LinearIndependent K f) :
     ∃ w : V, LinearIndependent K (Matrix.vecCons w f) := by
   have hspan : Submodule.span K (Set.range f) ≠ ⊤ := by
@@ -726,7 +708,7 @@ theorem capTransitive_of_mapEquiv {S T : Finset (Point K V)} (g : V ≃ₗ[K] V)
         S.map e.toEmbedding = T :=
   ⟨mapEquiv g, fun U => cap_map_mapEquiv g U, hmap⟩
 
-private theorem capTransitiveStatement_one (hrank : finrank K V = 3) :
+theorem capTransitiveStatement_one (hrank : finrank K V = 3) :
     CapTransitiveStatement (K := K) (V := V) 1 := by
   intro S T _hS _hT hSk hTk
   obtain ⟨p, rfl⟩ := Finset.card_eq_one.mp hSk
@@ -761,7 +743,7 @@ private theorem capTransitiveStatement_one (hrank : finrank K V = 3) :
     show ((mapEquiv g).toEmbedding p) = mapEquiv g p from rfl,
     mapEquiv_eq_of_rep_eq g hg]
 
-private theorem capTransitiveStatement_two (hrank : finrank K V = 3) :
+theorem capTransitiveStatement_two (hrank : finrank K V = 3) :
     CapTransitiveStatement (K := K) (V := V) 2 := by
   intro S T _hS _hT hSk hTk
   obtain ⟨p, q, hpq, rfl⟩ := Finset.card_eq_two.mp hSk
@@ -804,7 +786,7 @@ private theorem capTransitiveStatement_two (hrank : finrank K V = 3) :
     show ((mapEquiv g).toEmbedding q) = mapEquiv g q from rfl,
     mapEquiv_eq_of_rep_eq g hgp, mapEquiv_eq_of_rep_eq g hgq]
 
-private theorem capTransitiveStatement_three (hrank : finrank K V = 3) :
+theorem capTransitiveStatement_three (hrank : finrank K V = 3) :
     CapTransitiveStatement (K := K) (V := V) 3 := by
   intro S T hS hT hSk hTk
   obtain ⟨p, q, r, hpq, hpr, hqr, rfl⟩ := Finset.card_eq_three.mp hSk
@@ -952,7 +934,7 @@ theorem quad_normal_form (hrank : finrank K V = 3) {p1 p2 p3 p4 : Point K V}
   · show a 0 • p1.rep + a 1 • p2.rep + a 2 • p3.rep = p4.rep
     exact hsum
 
-private theorem capTransitiveStatement_four (hrank : finrank K V = 3) :
+theorem capTransitiveStatement_four (hrank : finrank K V = 3) :
     CapTransitiveStatement (K := K) (V := V) 4 := by
   intro S T hS hT hSk hTk
   obtain ⟨p4, S3, hp4, rfl, hS3⟩ := Finset.card_eq_succ.mp hSk
@@ -1022,7 +1004,7 @@ section Extendability
 
 variable [DecidableEq (Point K V)]
 
-private theorem cap_extendable (hrank : finrank K V = 3) :
+theorem cap_extendable (hrank : finrank K V = 3) :
     ∀ S : Finset (Point K V), Cap K V S -> S.card ≤ 3 ->
       ∃ x : Point K V, FiniteBuildGame.Move (Cap K V) S x := by
   have hnontriv : Nontrivial V := Module.nontrivial_of_finrank_pos

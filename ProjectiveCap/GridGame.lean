@@ -23,8 +23,6 @@ noncomputable def LegalExtensions (S : Finset (GridPoint K)) : Finset (GridPoint
 abbrev Move (S : Finset (GridPoint K)) (x : GridPoint K) : Prop :=
   FiniteBuildGame.Move (GridCap (K := K)) S x
 
-/-- Membership in the legal-extension set is equivalent to freshness and
-preservation of the residual grid-cap condition. -/
 theorem mem_legalExtensions {S : Finset (GridPoint K)} {x : GridPoint K} :
     x ∈ LegalExtensions (K := K) S ↔ x ∉ S ∧ GridCap (insert x S) :=
   FiniteBuildGame.mem_legalExtensions
@@ -57,14 +55,13 @@ noncomputable def BadExtensions (S : Finset (GridPoint K)) : Finset (GridPoint K
   classical
   exact (LegalExtensions (K := K) S).filter fun p => ¬ IsP (K := K) (insert p S)
 
-/-- An escape extension is a legal move whose child is a P-position. -/
 theorem mem_escapeExtensions {S : Finset (GridPoint K)} {p : GridPoint K} :
     p ∈ EscapeExtensions (K := K) S ↔
       p ∈ LegalExtensions (K := K) S ∧ IsP (K := K) (insert p S) := by
   classical
   simp [EscapeExtensions]
 
-private theorem mem_badExtensions {S : Finset (GridPoint K)} {p : GridPoint K} :
+theorem mem_badExtensions {S : Finset (GridPoint K)} {p : GridPoint K} :
     p ∈ BadExtensions (K := K) S ↔
       p ∈ LegalExtensions (K := K) S ∧ ¬ IsP (K := K) (insert p S) := by
   classical

@@ -72,6 +72,14 @@ downstream
 [`finitegeom-clebsch-q11-certificates`](https://github.com/tavisrudd/finitegeom-clebsch-q11-certificates)
 package, just as the generated order-sixteen Arcs classification does.
 
+The current forward state adds the reusable Paper I proof spine: affine-prism
+line bounds, the antipodal orientation cover, golden orbital and determinant
+pencil, trace dual and ordinary nodes, structural `S5/A5` recovery, and the
+rational and integral commutants.  The commutant classification uses an
+explicit proposition-valued interface for the classical conjugate `3+3'`
+decomposition and Schur--Galois descent; golden equivariance and integral
+descent are kernel checked.
+
 The `v0.3.0` release adds the 13-module structural companion to *Arithmetic
 and harmonic realizations of the Clebsch cubic*.  It formalizes the paper's
 pinching, involutive-splitting, golden-character, conference, marked-sign,
@@ -151,7 +159,7 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 251-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 273-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding

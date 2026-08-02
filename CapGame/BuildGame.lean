@@ -22,8 +22,6 @@ noncomputable def LegalExtensions (Valid : Finset α -> Prop) (S : Finset α) : 
   classical
   exact Finset.univ.filter (fun x => Move Valid S x)
 
-/-- An element belongs to the finite legal-extension set exactly when it is a
-legal move from the current position. -/
 theorem mem_legalExtensions {Valid : Finset α -> Prop} {S : Finset α} {x : α} :
     x ∈ LegalExtensions Valid S ↔ Move Valid S x := by
   classical
@@ -61,8 +59,6 @@ decreasing_by
 def IsP (Valid : Finset α -> Prop) (S : Finset α) : Prop :=
   ¬ Win Valid S
 
-/-- A finite normal-play position is winning exactly when it has a legal move
-to a nonwinning child. -/
 theorem win_iff_exists_move {Valid : Finset α -> Prop} {S : Finset α} :
     Win Valid S ↔ ∃ x : α, Move Valid S x ∧ ¬ Win Valid (insert x S) := by
   rw [Win.eq_def]
@@ -173,8 +169,10 @@ decreasing_by
 /--
 One row of a parsed reply book: at the current node, if the mover plays
 `mover`, the responder plays `reply` and the certificate continues at `child`.
-The child is represented by its position, so the validity predicate below can
-state the game-rule obligations without depending on a serialization format.
+
+The native certificate files store the same triple as an `R` record, with the
+child represented by a node id.  The Lean scaffold keeps the child position
+itself so the semantic checker can state the game-rule obligations directly.
 -/
 structure ReplyBookRow (α : Type*) where
   mover : α
@@ -183,11 +181,11 @@ structure ReplyBookRow (α : Type*) where
 deriving DecidableEq
 
 /--
-A semantic reply-book directed acyclic graph.
+A parsed reply-book DAG, abstracting over the concrete file node ids.
 
 `Node` is the set of certified P-nodes and `Row S r` says that row `r` occurs
-at node `S`. The representation separates the game-theoretic certificate from
-any external encoding of node identifiers.
+at node `S`.  This is intentionally semantic rather than parser-specific: a
+future parser/checker only has to prove `ValidFor`.
 -/
 structure ReplyBookDAG (α : Type*) where
   root : Finset α
@@ -424,8 +422,6 @@ decreasing_by
     rw [hcard]
     omega
 
-/-- Previous-player positions are invariant under a board equivalence that
-preserves the validity predicate on every finite position. -/
 theorem isP_map {Valid : Finset α -> Prop} (e : α ≃ α)
     (hValid : ∀ S : Finset α, Valid (S.map e.toEmbedding) ↔ Valid S)
     (S : Finset α) : IsP Valid (S.map e.toEmbedding) ↔ IsP Valid S :=
@@ -489,7 +485,6 @@ decreasing_by
     rw [hcard]
     omega
 
-/-- A bijection preserving the validity predicate transports P-positions. -/
 theorem isP_equiv {β : Type*} [Fintype β] [DecidableEq β]
     {Validα : Finset α -> Prop} {Validβ : Finset β -> Prop} (e : α ≃ β)
     (hValid : ∀ S : Finset α, Validβ (S.map e.toEmbedding) ↔ Validα S)

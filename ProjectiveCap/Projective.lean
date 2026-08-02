@@ -31,13 +31,11 @@ def Cap (S : Finset (Point K V)) : Prop :=
 
 variable {K V}
 
-/-- Every subset of a projective cap is a projective cap. -/
 theorem cap_mono {S T : Finset (Point K V)} (hST : S ⊆ T) (hT : Cap K V T) :
     Cap K V S := by
   intro a b c ha hb hc hab hac hbc
   exact hT (hST ha) (hST hb) (hST hc) hab hac hbc
 
-/-- Every set of at most two projective points is a cap. -/
 theorem cap_of_card_le_two {S : Finset (Point K V)} [DecidableEq (Point K V)]
     (hcard : S.card ≤ 2) : Cap K V S := by
   intro a b c ha hb hc hab hac hbc hcol
@@ -53,16 +51,14 @@ theorem cap_of_card_le_two {S : Finset (Point K V)} [DecidableEq (Point K V)]
   have hle := Finset.card_le_card hsub
   omega
 
-/-- The empty set of projective points is a cap. -/
 @[simp] theorem cap_empty [DecidableEq (Point K V)] :
     Cap K V (∅ : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by simp)
 
-@[simp] private theorem cap_singleton [DecidableEq (Point K V)] (a : Point K V) :
+@[simp] theorem cap_singleton [DecidableEq (Point K V)] (a : Point K V) :
     Cap K V ({a} : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by simp)
 
-/-- Any pair of projective points is a cap. -/
 theorem cap_pair [DecidableEq (Point K V)] (a b : Point K V) :
     Cap K V ({a, b} : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by
@@ -76,8 +72,6 @@ variable [Fintype (Point K V)] [DecidableEq (Point K V)]
 noncomputable def LegalExtensions (S : Finset (Point K V)) : Finset (Point K V) :=
   FiniteBuildGame.LegalExtensions (Cap K V) S
 
-/-- Membership in the projective legal-extension set is equivalent to
-freshness and preservation of the cap condition. -/
 theorem mem_legalExtensions {S : Finset (Point K V)} {x : Point K V} :
     x ∈ LegalExtensions (K := K) (V := V) S ↔
       x ∉ S ∧ Cap K V (insert x S) :=

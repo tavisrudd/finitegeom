@@ -7,11 +7,10 @@ import Mathlib.Tactic.Ring
 /-!
 # The order-six golden conference matrix
 
-This module fixes the integral symmetric conference matrix used as the
-coordinate model for six labelled axes.  It proves its square, the covariance
-of its triangle products under diagonal sign changes, and the four-point
-identity satisfied by triangle products of any symmetric signed matrix.  No
-geometric identification of the labels with axes is asserted here.
+This module fixes the integral symmetric conference matrix on six labelled
+axes.  It proves its square, the covariance of its triangle products under
+diagonal sign changes, and the four-point identity satisfied by triangle
+products of any symmetric signed matrix.
 
 The two explicit integer tables are checked by native decision in the pinned
 Lean runtime.  The structural switching, four-point, and base-change statements
