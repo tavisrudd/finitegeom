@@ -17,6 +17,10 @@ name = "arcs_complete_outside_conic_human"
 spine = "areas/arcs_complete_outside_conic_human.toml"
 
 [[area]]
+name = "arcs_complete_outside_conic_additions"
+spine = "areas/arcs_complete_outside_conic_additions.toml"
+
+[[area]]
 name = "ame_lu"
 spine = "areas/ame_lu.toml"
 

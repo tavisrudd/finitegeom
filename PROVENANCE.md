@@ -88,6 +88,15 @@ changes expose four declarations required across module boundaries, document
 those declarations, and remove development-workflow prose without changing
 the mathematical statements.
 
+The later human-scale supplement adds the matching-packing defect transfer and
+the upper-witness checks at orders 13, 17, and 19 from monorepo commit
+`29c8946c9eb017fc79dc3c63dc58f350b54cd29a`. Its 33-module source and target
+closures are recorded in the corresponding
+`arcs_complete_outside_conic_additions.json` manifests. The only differing
+module is `ProjectiveCap.Sym2ConicBridge`, where the public target retains the
+previously reviewed removal of development-workflow prose; no declaration
+differs.
+
 ## Later human-scale paper boundaries
 
 The AME–LU, Beyond-4 PRS, Clebsch-rigidity-human, and Clebsch-factorization

@@ -55,6 +55,11 @@ in the separately versioned
 [`finitegeom-q16-certificates`](https://github.com/tavisrudd/finitegeom-q16-certificates)
 repository. See
 [`trust/ARCS_COMPLETE_OUTSIDE_CONIC.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC.md).
+The separate
+[`trust/ARCS_COMPLETE_OUTSIDE_CONIC_ADDITIONS.md`](trust/ARCS_COMPLETE_OUTSIDE_CONIC_ADDITIONS.md)
+records the matching-packing defect transfer and the kernel-checked upper
+witnesses at orders 13, 17, and 19. Their exhaustive lower classifications
+remain external computations.
 
 The `v0.2.0` release further includes the complete human-scale boundaries for:
 
@@ -124,6 +129,7 @@ lake build CapGame.Affine ProjectiveCap.Binary \
   RelativeConicArcs.Gates.ClebschOrientationMechanisms \
   RelativeConicArcs.Gates.ClebschPassages \
   RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman \
+  RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions \
   RelativeConicArcs.Gates.AMELUAggregateAxioms \
   RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
   RelativeConicArcs.Q11DyeAxioms \
@@ -136,6 +142,7 @@ lake build CapGame.Affine ProjectiveCap.Binary \
 lake env lean trust/AxiomAudit.lean
 lake env lean trust/ClebschPassagesAxiomAudit.lean
 lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
+lake env lean trust/ArcsCompleteOutsideConicAdditionsAxiomAudit.lean
 ```
 
 Without Nix, install `elan`, then run the same `lake` commands. The
