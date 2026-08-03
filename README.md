@@ -173,6 +173,10 @@ Linux, and Apple Silicon macOS.
   13-module structural closure.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
+- `trust/manifests/clebsch_support_cubic_orientation.json` records the golden
+  orientation boundary of the Clebsch support cubic, including the antipodal
+  cover, the determinant pencil, the cross-golden trace dual, and the six
+  ordinary nodes.
 - The remaining files under `trust/manifests/` preserve the separate AME–LU,
   PRS, Clebsch-rigidity-human, Clebsch-factorization, and complete-ports
   boundaries.

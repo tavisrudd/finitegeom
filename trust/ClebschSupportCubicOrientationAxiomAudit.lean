@@ -1,0 +1,38 @@
+import RelativeConicArcs.PaperIOrientationSpine
+
+/-!
+# Axiom audit for the golden orientation of the Clebsch support cubic
+
+This audit prints the axioms of the orientation terminals exported with the
+golden orientation boundary of the Clebsch support cubic: the antipodal cover
+and its self-paired orbitals, the signed orbital square identities, the
+triangle holonomy and two-graph identities, the determinant pencil, the
+cross-golden trace dual, the singular locus and ordinary-node type of the
+determinantal cubic, the `S₅` and `A₅` stabilizer boundary, and the rational
+and integral commutants.
+-/
+
+#print axioms RelativeConicArcs.PaperIOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive
+#print axioms RelativeConicArcs.PaperIOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive
+#print axioms RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B
+#print axioms RelativeConicArcs.PaperIOrientationCover.antipodalQuotient_fiber_card_two
+#print axioms RelativeConicArcs.PaperIOrientationCover.fiveOrbital_one_mem_each_other_fiber
+#print axioms RelativeConicArcs.PaperIOrientationCover.fiveOrbitals_selfPaired
+#print axioms RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal
+#print axioms RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic
+#print axioms RelativeConicArcs.PaperIOrientationHolonomy.fourPoint_twoGraph_identity
+#print axioms RelativeConicArcs.PaperIOrientationHolonomy.pairBalance_iff_sq_five
+#print axioms RelativeConicArcs.PaperIOrientationHolonomy.supportCubic_translation_invariant
+#print axioms RelativeConicArcs.PaperIOrientationHolonomy.supportSign_eq_triangleProduct
+#print axioms RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval
+#print axioms RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses
+#print axioms RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes
+#print axioms RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame
+#print axioms RelativeConicArcs.PaperIOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck
+#print axioms RelativeConicArcs.PaperIOrientationPentagon.signedOrbitalMatrix_sq
+#print axioms RelativeConicArcs.PaperIOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff
+#print axioms RelativeConicArcs.PaperIOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine
+#print axioms RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_index_two
+#print axioms RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5
+#print axioms RelativeConicArcs.PaperIOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5
+#print axioms RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic

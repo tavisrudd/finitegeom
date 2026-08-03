@@ -1335,10 +1335,10 @@
       "sha256": "a748239bb8f2152f9ecb59aeb73aac4ab9a359b4e26f6e50a9a96592298938c4"
     },
     {
-      "bytes": 7662,
+      "bytes": 13494,
       "module": "RelativeConicArcs.PaperIOrientationNodes",
       "path": "RelativeConicArcs/PaperIOrientationNodes.lean",
-      "sha256": "8ac2fd63ffafac57a4ab6fdd6455209c46449771458d6e49d6fa5e37048bf1d7"
+      "sha256": "05f2b6acb2ceb058bdff5fb4701b664d2dea2cde2896b57ea6129ac854660063"
     },
     {
       "bytes": 9250,
@@ -1371,10 +1371,10 @@
       "sha256": "a07592ba08325baf1bf34f82d50b8171e8d041d6d54b4175191edd3a8f09380e"
     },
     {
-      "bytes": 14912,
+      "bytes": 13276,
       "module": "RelativeConicArcs.PaperIOrientationTraceDual",
       "path": "RelativeConicArcs/PaperIOrientationTraceDual.lean",
-      "sha256": "1de82f89e3a8867b511f1e690caa88c747ff237bc4ee3e694ed63aaf2f01f8bb"
+      "sha256": "2381261465e1a9eed96b1b6322365da0c926e40f93d943bb59c0b28857d38910"
     },
     {
       "bytes": 5959,

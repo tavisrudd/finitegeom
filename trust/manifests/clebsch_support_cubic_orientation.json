@@ -1,0 +1,159 @@
+{
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Matrix.Basis",
+    "Mathlib.Data.Matrix.Mul",
+    "Mathlib.GroupTheory.Coset.Card",
+    "Mathlib.GroupTheory.DoubleCoset",
+    "Mathlib.GroupTheory.IndexNormal",
+    "Mathlib.GroupTheory.SpecificGroups.Alternating",
+    "Mathlib.GroupTheory.SpecificGroups.Alternating.Simple",
+    "Mathlib.GroupTheory.SpecificGroups.Dihedral",
+    "Mathlib.LinearAlgebra.BilinearForm.Orthogonal",
+    "Mathlib.LinearAlgebra.Matrix.Adjugate",
+    "Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Notation",
+    "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+    "Mathlib.LinearAlgebra.Matrix.Trace",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "module_count": 21,
+  "roots": [
+    "RelativeConicArcs.PaperIOrientationSpine"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 16029,
+      "module": "RelativeConicArcs.ClebschGoldenConference",
+      "path": "RelativeConicArcs/ClebschGoldenConference.lean",
+      "sha256": "9a2cc1a46d68a3b08576cc7227dd044a8bfd7104f8e36ab5ca91e94c33cce7b2"
+    },
+    {
+      "bytes": 4738,
+      "module": "RelativeConicArcs.ClebschTwoGraph",
+      "path": "RelativeConicArcs/ClebschTwoGraph.lean",
+      "sha256": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089"
+    },
+    {
+      "bytes": 27548,
+      "module": "RelativeConicArcs.GoldenCubicNodeElimination",
+      "path": "RelativeConicArcs/GoldenCubicNodeElimination.lean",
+      "sha256": "9694282f23f54f03099b4a7163defa0f74b551e625a44a4a4ccd3273c63445e6"
+    },
+    {
+      "bytes": 3421,
+      "module": "RelativeConicArcs.GoldenCubicNodeHessians",
+      "path": "RelativeConicArcs/GoldenCubicNodeHessians.lean",
+      "sha256": "a3effa0741e41f73d45c2b8842f6d6870e78bf262748b6cbe4295448ad17d0b8"
+    },
+    {
+      "bytes": 9991,
+      "module": "RelativeConicArcs.GoldenCubicNodes",
+      "path": "RelativeConicArcs/GoldenCubicNodes.lean",
+      "sha256": "dc1a284d8f9189465a89ba1434de4fd958dcd1e825b8e39366dda38e7867970b"
+    },
+    {
+      "bytes": 3463,
+      "module": "RelativeConicArcs.GoldenCubicNodesBase",
+      "path": "RelativeConicArcs/GoldenCubicNodesBase.lean",
+      "sha256": "58abe53dfe1ac3ee27f53130c88925df9a8967b38f1864325b4af2cc5fb89db8"
+    },
+    {
+      "bytes": 3566,
+      "module": "RelativeConicArcs.GoldenMatchingCubics",
+      "path": "RelativeConicArcs/GoldenMatchingCubics.lean",
+      "sha256": "e16a8e173049bc21afd615ecf23b3da176ce5cd1bd3b217c1872c1ec67b291a5"
+    },
+    {
+      "bytes": 5509,
+      "module": "RelativeConicArcs.GoldenMatchingJacobianBase",
+      "path": "RelativeConicArcs/GoldenMatchingJacobianBase.lean",
+      "sha256": "0443295b616f7824a7742f60ae5322da1f87eaa21653b2f0f84d5dd35eb0f9f1"
+    },
+    {
+      "bytes": 24986,
+      "module": "RelativeConicArcs.KneserPairEigenspace",
+      "path": "RelativeConicArcs/KneserPairEigenspace.lean",
+      "sha256": "eb2c89c22be925a62345746d0d3bf6a639ccd6fe5562859365875bbe3c1c03e6"
+    },
+    {
+      "bytes": 4494,
+      "module": "RelativeConicArcs.MarkedClebschBridge",
+      "path": "RelativeConicArcs/MarkedClebschBridge.lean",
+      "sha256": "30746ec72da8651bc8673b89d78f135632d37195b9c44ac5cca4f071808949ad"
+    },
+    {
+      "bytes": 7939,
+      "module": "RelativeConicArcs.PaperIOrientationCommutant",
+      "path": "RelativeConicArcs/PaperIOrientationCommutant.lean",
+      "sha256": "5c49bc3c272e0cc9f40f2f1e797dee000e03bbfe8cdaee873f379f16daee6c6b"
+    },
+    {
+      "bytes": 11177,
+      "module": "RelativeConicArcs.PaperIOrientationCover",
+      "path": "RelativeConicArcs/PaperIOrientationCover.lean",
+      "sha256": "6fb214e13ae9a107127210376f21b81d223a50a6bb965fbe1b3b0ad9356f73b2"
+    },
+    {
+      "bytes": 32075,
+      "module": "RelativeConicArcs.PaperIOrientationDeterminant",
+      "path": "RelativeConicArcs/PaperIOrientationDeterminant.lean",
+      "sha256": "30bbf1e927b95861eb91d83e526a1ab6853ed6da29444296b5fbf7685745bed3"
+    },
+    {
+      "bytes": 6632,
+      "module": "RelativeConicArcs.PaperIOrientationHolonomy",
+      "path": "RelativeConicArcs/PaperIOrientationHolonomy.lean",
+      "sha256": "a748239bb8f2152f9ecb59aeb73aac4ab9a359b4e26f6e50a9a96592298938c4"
+    },
+    {
+      "bytes": 13494,
+      "module": "RelativeConicArcs.PaperIOrientationNodes",
+      "path": "RelativeConicArcs/PaperIOrientationNodes.lean",
+      "sha256": "05f2b6acb2ceb058bdff5fb4701b664d2dea2cde2896b57ea6129ac854660063"
+    },
+    {
+      "bytes": 9250,
+      "module": "RelativeConicArcs.PaperIOrientationPentagon",
+      "path": "RelativeConicArcs/PaperIOrientationPentagon.lean",
+      "sha256": "a1b79e9380d0f845f113bd6f31332a5defb03bdc7dc96495182f2cbbd66bd5dc"
+    },
+    {
+      "bytes": 1185,
+      "module": "RelativeConicArcs.PaperIOrientationSpine",
+      "path": "RelativeConicArcs/PaperIOrientationSpine.lean",
+      "sha256": "46728cfcd5118f244c186ae039d13d7074693c6fe6091027f6e70bf650ddf25b"
+    },
+    {
+      "bytes": 4430,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetry",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetry.lean",
+      "sha256": "ddd258d0a705546840269c10920de526bc53f64dc6661d8bcee1301b0fbe7243"
+    },
+    {
+      "bytes": 10827,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetryCore",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetryCore.lean",
+      "sha256": "819c50f268d3c60dfa4a053b132ee6ef4fdb3d05537caa93f6d76ab223073414"
+    },
+    {
+      "bytes": 16430,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetryGenerators",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetryGenerators.lean",
+      "sha256": "a07592ba08325baf1bf34f82d50b8171e8d041d6d54b4175191edd3a8f09380e"
+    },
+    {
+      "bytes": 13276,
+      "module": "RelativeConicArcs.PaperIOrientationTraceDual",
+      "path": "RelativeConicArcs/PaperIOrientationTraceDual.lean",
+      "sha256": "2381261465e1a9eed96b1b6322365da0c926e40f93d943bb59c0b28857d38910"
+    }
+  ]
+}
