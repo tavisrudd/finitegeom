@@ -151,6 +151,62 @@ theorem witness_deepHole_counts
   subst hq hdirections hleadersPerCoset hcodeCard hcosets hleaders hwords
   norm_num
 
+/-! ### Discharging the numerical inputs
+
+The three numerical inputs of the preceding theorem are not themselves arithmetic: each is
+supplied by a structural fact about the code or the plane.  The lemmas here discharge the two that
+are purely combinatorial, and record the third in the form in which the conic supplies it. -/
+
+/-- A length-six code has exactly twenty three-element coordinate supports.
+
+For a six-arc the three columns indexed by such a support are linearly independent, so a
+maximum-distance coset has exactly one minimum-weight leader on each of them; this is the source
+of the leader count per coset. -/
+theorem card_threeElementSupports :
+    (Finset.univ.powersetCard 3 : Finset (Finset (Fin 6))).card = 20 := by
+  rw [Finset.card_powersetCard, Finset.card_univ, Fintype.card_fin]
+  rfl
+
+/-- A code of dimension three over the field of `q` elements has `q ^ 3` words, so each coset of
+it contains that many received words. -/
+theorem card_dimensionThree (q : ℕ) [NeZero q] :
+    Fintype.card (Fin 3 → ZMod q) = q ^ 3 := by
+  simp
+
+/-- At order eleven a nonsingular conic has twelve rational points.
+
+The uncovered set of the Clebsch hexagon at that order is exactly the conic, so the number of
+maximum-distance projective directions is the conic's point count. -/
+theorem conicPoints_at_order_eleven {q directions : ℕ} (hq : q = 11)
+    (hd : directions = q + 1) : directions = 12 := by
+  subst hq; omega
+
+/-- The deep-hole counts of the six-arc code of length six and dimension three over the field of
+eleven elements, with the leader count per coset and the code cardinality replaced by the
+structural facts that discharge them.
+
+The remaining hypotheses are that the coset count is the number of directions times `q - 1`, that
+minimum-weight leaders of a maximum-distance coset correspond to three-element coordinate
+supports, that cosets carry as many received words as the code has elements, and that the
+directions are the rational points of the conic. -/
+theorem witness_deepHole_counts_of_structure
+    {q directions cosets leadersPerCoset leaders codeCard words : ℕ}
+    (hq : q = 11)
+    (hd : directions = q + 1)
+    (hcosets : cosets = directions * (q - 1))
+    (hleadersPerCoset :
+      leadersPerCoset = (Finset.univ.powersetCard 3 : Finset (Finset (Fin 6))).card)
+    (hleaders : leaders = cosets * leadersPerCoset)
+    (hcodeCard : codeCard = 11 ^ 3)
+    (hwords : words = cosets * codeCard) :
+    cosets = 120 ∧ leaders = 2400 ∧ words = 159720 := by
+  have hdir : directions = 12 := conicPoints_at_order_eleven hq hd
+  rw [card_threeElementSupports] at hleadersPerCoset
+  have hc : cosets = 120 := by rw [hcosets, hdir, hq]
+  have hl : leaders = 2400 := by rw [hleaders, hc, hleadersPerCoset]
+  have hw : words = 159720 := by rw [hwords, hc, hcodeCard]; norm_num
+  exact ⟨hc, hl, hw⟩
+
 end DeepHoleCounts
 
 #print axioms uncovered_eq_zero_iff
@@ -158,6 +214,10 @@ end DeepHoleCounts
 #print axioms orders_of_uncovered_eq_conic_card
 #print axioms uncovered_card_at_order_nineteen
 #print axioms witness_deepHole_counts
+#print axioms card_threeElementSupports
+#print axioms card_dimensionThree
+#print axioms conicPoints_at_order_eleven
+#print axioms witness_deepHole_counts_of_structure
 
 end ClebschFamilyRegimes
 
