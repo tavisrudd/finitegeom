@@ -160,6 +160,18 @@ theorem golden_not_mem_sqrtFive_range :
   obtain ⟨d, hd⟩ := (mem_sqrtFive_range_iff 0 1).mp h
   omega
 
+#print axioms allOnes_apply
+#print axioms map_sub_one_eq_allOnes
+#print axioms triangleProduct_cast_eq_one
+#print axioms allOnes_mul_self_eq_zero
+#print axioms allOnes_rank
+#print axioms map_sub_one_sq_eq_zero_and_rank
+#print axioms X_sq_sub_five_eq_sq
+#print axioms adjoinRootEquiv
+#print axioms mem_sqrtFive_range_iff
+#print axioms two_mul_mem_sqrtFive_range
+#print axioms golden_not_mem_sqrtFive_range
+
 end GoldenOrderConductorTwo
 
 end RelativeConicArcs
