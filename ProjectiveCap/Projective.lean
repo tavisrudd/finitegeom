@@ -1,12 +1,25 @@
-import CapGame.BuildGame
 import Mathlib.LinearAlgebra.Projectivization.Collinear
 
 /-!
-# Projective cap achievement game
+# Caps in a projective space
 
-This is the projective analogue of `CapGame.Affine`: positions are finite
-sets of points of projective space with no three selected points on a projective
-line, and moves add one point while preserving that predicate.
+Let `K` be a field and `V` a `K`-vector space.  The points of the associated
+projective space are the elements of `Projectivization K V`, i.e. the nonzero
+vectors of `V` up to scalar multiplication.
+
+This module fixes the basic vocabulary used throughout: `Point K V` for a
+projective point, the ternary predicate `Collinear K V a b c` saying that the
+set `{a, b, c}` lies on a projective line (Mathlib's
+`Projectivization.IsCollinear`), and `Cap K V S` saying that the finite set of
+points `S` is a *cap*: no three pairwise distinct members of `S` are collinear.
+Note that `Collinear` is stated for an unordered triple with no distinctness
+assumption, so a repeated point is collinear with anything; the distinctness
+hypotheses are carried explicitly by `Cap`.
+
+The lemmas here record that the cap property is inherited by subsets and that
+every set of at most two points is a cap.  Nothing in this module refers to a
+game; the achievement game played on these caps is in
+`ProjectiveCap.ProjectiveCapGame`.
 -/
 
 open scoped LinearAlgebra.Projectivization
@@ -31,11 +44,17 @@ def Cap (S : Finset (Point K V)) : Prop :=
 
 variable {K V}
 
+/-- The cap property is inherited by subsets: if no three pairwise distinct points
+of the finite set `T` of projective points are collinear, the same holds for every
+`S ⊆ T`. -/
 theorem cap_mono {S T : Finset (Point K V)} (hST : S ⊆ T) (hT : Cap K V T) :
     Cap K V S := by
   intro a b c ha hb hc hab hac hbc
   exact hT (hST ha) (hST hb) (hST hc) hab hac hbc
 
+/-- A finite set of at most two projective points is a cap, vacuously: three
+pairwise distinct members of `S` would span a three-element subset of `S`, forcing
+`2 < S.card`. -/
 theorem cap_of_card_le_two {S : Finset (Point K V)} [DecidableEq (Point K V)]
     (hcard : S.card ≤ 2) : Cap K V S := by
   intro a b c ha hb hc hab hac hbc hcol
@@ -51,73 +70,24 @@ theorem cap_of_card_le_two {S : Finset (Point K V)} [DecidableEq (Point K V)]
   have hle := Finset.card_le_card hsub
   omega
 
+/-- The empty set of projective points is a cap. -/
 @[simp] theorem cap_empty [DecidableEq (Point K V)] :
     Cap K V (∅ : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by simp)
 
+/-- A one-point set of projective points is a cap: it contains no three pairwise
+distinct points. -/
 @[simp] theorem cap_singleton [DecidableEq (Point K V)] (a : Point K V) :
     Cap K V ({a} : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by simp)
 
+/-- A set consisting of two projective points `a` and `b`, not assumed distinct, is
+a cap: it has at most two elements, so it contains no three pairwise distinct
+points at all. -/
 theorem cap_pair [DecidableEq (Point K V)] (a b : Point K V) :
     Cap K V ({a, b} : Finset (Point K V)) :=
   cap_of_card_le_two (K := K) (V := V) (by
     by_cases h : a = b <;> simp [h])
-
-section Game
-
-variable [Fintype (Point K V)] [DecidableEq (Point K V)]
-
-/-- Legal projective cap-game extensions. -/
-noncomputable def LegalExtensions (S : Finset (Point K V)) : Finset (Point K V) :=
-  FiniteBuildGame.LegalExtensions (Cap K V) S
-
-theorem mem_legalExtensions {S : Finset (Point K V)} {x : Point K V} :
-    x ∈ LegalExtensions (K := K) (V := V) S ↔
-      x ∉ S ∧ Cap K V (insert x S) :=
-  FiniteBuildGame.mem_legalExtensions
-
-/-- Normal-play projective cap-game win predicate. -/
-abbrev Win (S : Finset (Point K V)) : Prop :=
-  FiniteBuildGame.Win (Cap K V) S
-
-/-- Target statement for the projective conjecture: the empty projective game is P. -/
-def InitialPStatement : Prop :=
-  FiniteBuildGame.IsP (Cap K V) (∅ : Finset (Point K V))
-
-/-- Single-orbit transitivity of cap-preserving point permutations on one size
-layer of cap positions.  For `k ≤ 4` this is the game-facing form of
-`PGL`-transitivity on points, pairs, triangles, and frames. -/
-def CapTransitiveStatement (k : ℕ) : Prop :=
-  ∀ ⦃S T : Finset (Point K V)⦄, Cap K V S -> Cap K V T ->
-    S.card = k -> T.card = k ->
-      ∃ e : Point K V ≃ Point K V,
-        (∀ U : Finset (Point K V), Cap K V (U.map e.toEmbedding) ↔ Cap K V U) ∧
-          S.map e.toEmbedding = T
-
-/--
-Frame reduction, game-theoretic half: single-orbit transitivity at sizes
-`1..4` plus extendability below size `4` collapse the projective conjecture to
-the value of a single frame position.  The four transitivity hypotheses and
-the extendability hypothesis are the remaining geometric obligations.
--/
-theorem initialPStatement_iff_isP_frame
-    (h1 : CapTransitiveStatement (K := K) (V := V) 1)
-    (h2 : CapTransitiveStatement (K := K) (V := V) 2)
-    (h3 : CapTransitiveStatement (K := K) (V := V) 3)
-    (h4 : CapTransitiveStatement (K := K) (V := V) 4)
-    (hext : ∀ S : Finset (Point K V), Cap K V S -> S.card ≤ 3 ->
-      ∃ x : Point K V, FiniteBuildGame.Move (Cap K V) S x)
-    {F : Finset (Point K V)} (hF : Cap K V F) (hFcard : F.card = 4) :
-    (InitialPStatement (K := K) (V := V) ↔ FiniteBuildGame.IsP (Cap K V) F) :=
-  FiniteBuildGame.isP_empty_iff_isP_of_frame_chain
-    (FiniteBuildGame.sizeValueConstant_of_transitive h1)
-    (FiniteBuildGame.sizeValueConstant_of_transitive h2)
-    (FiniteBuildGame.sizeValueConstant_of_transitive h3)
-    (FiniteBuildGame.sizeValueConstant_of_transitive h4)
-    hext (cap_empty (K := K) (V := V)) hF hFcard
-
-end Game
 
 end Projective
 end ProjectiveCap

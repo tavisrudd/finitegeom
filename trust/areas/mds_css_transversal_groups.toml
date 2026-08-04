@@ -1,0 +1,640 @@
+# Trust boundary for diagonal isoduality and transversal clifford groups of mds--css codes: formal boundary.
+
+schema_version = 1
+area = "mds_css_transversal_groups"
+manifest = "trust/MDS_CSS_TRANSVERSAL_GROUPS.md"
+
+owns = [
+  "FiniteGeom.Code",
+  "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.Projective",
+  "RelativeConicArcs.AMELU.AutomorphismExactSequence",
+  "RelativeConicArcs.AMELU.CSS",
+  "RelativeConicArcs.AMELU.Definitions",
+  "RelativeConicArcs.AMELU.DiagonalIsoduality",
+  "RelativeConicArcs.AMELU.DiagonalTensor",
+  "RelativeConicArcs.AMELU.DiagonalTensorEquiv",
+  "RelativeConicArcs.AMELU.Dictionary",
+  "RelativeConicArcs.AMELU.EncoderTransversal",
+  "RelativeConicArcs.AMELU.ExtensionFieldPencil",
+  "RelativeConicArcs.AMELU.FourCopyContraction",
+  "RelativeConicArcs.AMELU.FourMarginalDiagonal",
+  "RelativeConicArcs.AMELU.FourMarginalIntertwining",
+  "RelativeConicArcs.AMELU.GenericDefinitions",
+  "RelativeConicArcs.AMELU.GenericDiagonalTensor",
+  "RelativeConicArcs.AMELU.GenericLURigidity",
+  "RelativeConicArcs.AMELU.GenericMDS",
+  "RelativeConicArcs.AMELU.GenericMarginal",
+  "RelativeConicArcs.AMELU.GenericMarginalCovariance",
+  "RelativeConicArcs.AMELU.GenericPartyPermutation",
+  "RelativeConicArcs.AMELU.GenericSubsystemWeyl",
+  "RelativeConicArcs.AMELU.GenericTensorRigidity",
+  "RelativeConicArcs.AMELU.LUPencilClassification",
+  "RelativeConicArcs.AMELU.LURigidity",
+  "RelativeConicArcs.AMELU.LogicalPhase",
+  "RelativeConicArcs.AMELU.MDSShortening",
+  "RelativeConicArcs.AMELU.MarginalAxisRigidity",
+  "RelativeConicArcs.AMELU.MarginalMoment",
+  "RelativeConicArcs.AMELU.MarginalWeylExpansion",
+  "RelativeConicArcs.AMELU.NonabelianExtensionInvariant",
+  "RelativeConicArcs.AMELU.OrderedFourConjugation",
+  "RelativeConicArcs.AMELU.PartialTraceCovariance",
+  "RelativeConicArcs.AMELU.PartyExtensionSplitting",
+  "RelativeConicArcs.AMELU.PartyPermutation",
+  "RelativeConicArcs.AMELU.PencilClassification",
+  "RelativeConicArcs.AMELU.ProductUnitaryAutomorphismGroup",
+  "RelativeConicArcs.AMELU.ProductUnitarySymmetry",
+  "RelativeConicArcs.AMELU.ProductUnitarySymmetryTopology",
+  "RelativeConicArcs.AMELU.ProjectiveClifford",
+  "RelativeConicArcs.AMELU.StabilizerDictionary",
+  "RelativeConicArcs.AMELU.StateMarginalCovariance",
+  "RelativeConicArcs.AMELU.SubsystemConjugation",
+  "RelativeConicArcs.AMELU.SubsystemWeylBasis",
+  "RelativeConicArcs.AMELU.SyndromeGeometry",
+  "RelativeConicArcs.AMELU.TransportDivisor",
+  "RelativeConicArcs.AMELU.UnitaryConjugation",
+  "RelativeConicArcs.AMELU.WeylBasis",
+  "RelativeConicArcs.Arc",
+  "RelativeConicArcs.CodingBridge",
+  "RelativeConicArcs.Defect",
+  "RelativeConicArcs.Gates.AMELUDefinitions",
+  "RelativeConicArcs.Gates.AMELUDictionary",
+  "RelativeConicArcs.Gates.AMELUExtensionFieldPencil",
+  "RelativeConicArcs.Gates.AMELULogicalPhaseFourCopy",
+  "RelativeConicArcs.Gates.AMELUMarginalMoment",
+  "RelativeConicArcs.Gates.AMELUPartyExtensionSplitting",
+  "RelativeConicArcs.Gates.AMELUPencilClassification",
+  "RelativeConicArcs.Gates.AMELUStabilizerDictionary",
+  "RelativeConicArcs.Gates.AMELUTransportDivisor",
+  "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
+  "RelativeConicArcs.Moments",
+  "RelativeConicArcs.Plane",
+  "RelativeConicArcs.ProjectiveBridge",
+  "RelativeConicArcs.SyndromeGeometry",
+]
+
+permitted_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "RelativeConicArcs.AMELU.card_marginalTriples._native.native_decide.ax_1_1", "RelativeConicArcs.AMELU.card_perfectMatchings._native.native_decide.ax_1_1", "propext"]
+
+[[gate]]
+module = "RelativeConicArcs.Gates.MDSCSSTransversalGeometry"
+terminals = [
+  "GroupExtension.Splitting.semidirectProductEquiv",
+  "GroupExtension.factorSet_change",
+  "GroupExtension.factorSet_trivializable_iff_splitting",
+  "RelativeConicArcs.AMELU.GenericDiagonalDuality.diagonalMultiplierBilinForm_eq_zero",
+  "RelativeConicArcs.AMELU.TransportCycleCoverInputs.axial_det_factor",
+  "RelativeConicArcs.AMELU.TransportCycleCoverInputs.negativeSigned_det_factor",
+  "RelativeConicArcs.AMELU.TransportCycleCoverInputs.positiveSigned_det_factor",
+  "RelativeConicArcs.AMELU.TransportOrbitGeometryInputs.card_axial_union_negative",
+  "RelativeConicArcs.AMELU.TransportOrbitGeometryInputs.card_axial_union_positive",
+  "RelativeConicArcs.AMELU.TransportRankBridgeInputs.matchingRank_eq_twentyOne_of_transportRank_eq_nine",
+  "RelativeConicArcs.AMELU.TransportRankBridgeInputs.matchingRank_eq_twenty_of_transportRank_eq_eight",
+  "RelativeConicArcs.AMELU.admitted_nonGRS_map_iff",
+  "RelativeConicArcs.AMELU.admitted_nonGRS_pencil_classified_by_z",
+  "RelativeConicArcs.AMELU.affineSpecialLinearOrder_seven",
+  "RelativeConicArcs.AMELU.axialCyclePolynomial_factor",
+  "RelativeConicArcs.AMELU.card_marginalStars",
+  "RelativeConicArcs.AMELU.card_marginalTriples",
+  "RelativeConicArcs.AMELU.card_perfectMatchings",
+  "RelativeConicArcs.AMELU.contractionMatchingRank_normalizeContractionPattern",
+  "RelativeConicArcs.AMELU.contractionRankOrbitSum_permuteContractionPattern",
+  "RelativeConicArcs.AMELU.cssLabelSpace_isPauliLagrangian",
+  "RelativeConicArcs.AMELU.diagonalDualityMultiplierSpace_finrank_eq_zero_or_one",
+  "RelativeConicArcs.AMELU.diagonalDualityNullity_fixedPartyProjectiveTransversal_dichotomy",
+  "RelativeConicArcs.AMELU.diagonalDuality_existsUnique_unit_smul_eq",
+  "RelativeConicArcs.AMELU.diagonalDuality_multiplier_ratio_eq",
+  "RelativeConicArcs.AMELU.diagonalMultiplierSpace_finrank_le_one",
+  "RelativeConicArcs.AMELU.diagonalMultiplierSpace_self_eq_span_one",
+  "RelativeConicArcs.AMELU.diagonalMultiplier_ne_zero_at",
+  "RelativeConicArcs.AMELU.diagonallyIsodual_fixedPartyProjectiveTransversal_dichotomy",
+  "RelativeConicArcs.AMELU.encoderConversion_inverseTranspose_and_physical_isClifford",
+  "RelativeConicArcs.AMELU.encoderConversion_inverseTranspose_chosenLeg",
+  "RelativeConicArcs.AMELU.encoderConversion_logical_and_physical_isClifford",
+  "RelativeConicArcs.AMELU.equalPhaseState_hasMinimalComputationalSupport",
+  "RelativeConicArcs.AMELU.existsUnique_arcSyndrome_supported_on_three",
+  "RelativeConicArcs.AMELU.existsUnique_arcSyndrome_weight_three_on_support",
+  "RelativeConicArcs.AMELU.exists_pauliLabel_pairing_eq_dual",
+  "RelativeConicArcs.AMELU.fixedPartyKernel_eq_specialLinear_or_splitTorus",
+  "RelativeConicArcs.AMELU.fixedPartyProjectiveTransversal_eq_affineSpecialLinear_or_splitTorus",
+  "RelativeConicArcs.AMELU.genericCSSLabel_lowerDualityShear",
+  "RelativeConicArcs.AMELU.genericCSSLabel_upperDualityShear",
+  "RelativeConicArcs.AMELU.genericDiagonalDualityOfMultiplier",
+  "RelativeConicArcs.AMELU.genericLocallyUnitaryEquivalent_equalPhaseState_implies_genericLocallyCliffordEquivalent",
+  "RelativeConicArcs.AMELU.genericPartyPermutationExtension_splits_iff",
+  "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_associativity",
+  "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_change",
+  "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_trivializable_iff_splits",
+  "RelativeConicArcs.AMELU.genericPartyPermutationGroupExtensionSplitting",
+  "RelativeConicArcs.AMELU.genericPartyPermutationSemidirectProductEquiv",
+  "RelativeConicArcs.AMELU.genericPartyPermutation_natCard",
+  "RelativeConicArcs.AMELU.grs_projectiveTransversal_eq_affineSpecialLinear",
+  "RelativeConicArcs.AMELU.isAME_equalPhaseState_arcKernel",
+  "RelativeConicArcs.AMELU.isAME_equalPhaseState_iff_isMDSCode634",
+  "RelativeConicArcs.AMELU.isDiagonallyIsodual_iff_finrank_eq_one",
+  "RelativeConicArcs.AMELU.isMDSCode2m_oneLegQuantumMDSParameters",
+  "RelativeConicArcs.AMELU.isMDSCode634_arcKernel",
+  "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_admitted_nonGRS_pencil_iff_pencilZ_eq",
+  "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_equalPhaseState_implies_locallyCliffordEquivalent",
+  "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_equalPhaseState_implies_locallyCliffordEquivalent_from_generic",
+  "RelativeConicArcs.AMELU.map_pencilA",
+  "RelativeConicArcs.AMELU.map_pencilB",
+  "RelativeConicArcs.AMELU.map_pencilGRSQuartic",
+  "RelativeConicArcs.AMELU.map_pencilZ",
+  "RelativeConicArcs.AMELU.mem_cssSupportedLabelSpace_iff_support_subset",
+  "RelativeConicArcs.AMELU.negativeSignedCyclePolynomial_factor",
+  "RelativeConicArcs.AMELU.not_isDiagonallyIsodual_iff_finrank_eq_zero",
+  "RelativeConicArcs.AMELU.not_locallyUnitaryEquivalent_of_ten_vs_atMostSix_concurrences",
+  "RelativeConicArcs.AMELU.offDiagonalBlock_fixedPartyProjectiveTransversal_eq_affineSpecialLinear",
+  "RelativeConicArcs.AMELU.oneLegQuantumMDSParameters_singletonEquality",
+  "RelativeConicArcs.AMELU.pauliSymplecticToDual_injective",
+  "RelativeConicArcs.AMELU.pencilFrameRatio_crossDifference",
+  "RelativeConicArcs.AMELU.pencilFrameRatio_eq_iff",
+  "RelativeConicArcs.AMELU.pencilGalePairing_multiplier",
+  "RelativeConicArcs.AMELU.pencilGalePairing_multiplier_zero_iff",
+  "RelativeConicArcs.AMELU.pencilZ_eq_iff_samePencilYOrbit",
+  "RelativeConicArcs.AMELU.positiveSignedCyclePolynomial_factor",
+  "RelativeConicArcs.AMELU.projectivelyEquivalent_equalPhaseState_locallyCliffordEquivalent",
+  "RelativeConicArcs.AMELU.q13_zFour_not_locallyUnitaryEquivalent_zTwelve",
+  "RelativeConicArcs.AMELU.rankFourMultiplicity_eq_sixty_add_concurrency",
+  "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_axial_of_charSeven",
+  "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_three_factors",
+  "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_z",
+  "RelativeConicArcs.AMELU.signedTransportFactor_sub_two_mul_axial",
+  "RelativeConicArcs.AMELU.splitTorusWeylBlock_isSpecialLinear",
+  "RelativeConicArcs.AMELU.splitTorusWeylBlock_mul_self",
+  "RelativeConicArcs.AMELU.splitTorusWeylBlock_mul_splitTorusBlock",
+  "RelativeConicArcs.AMELU.stateInnerProduct_translatedEqualPhaseState_eq_zero",
+  "RelativeConicArcs.AMELU.supportedArcSyndrome_bijective_of_card_three",
+  "RelativeConicArcs.AMELU.tensorWeylAction_X_equalPhaseState_eq_translated",
+  "RelativeConicArcs.AMELU.tensorWeylAction_Z_translatedEqualPhaseState",
+  "RelativeConicArcs.AMELU.tensorWeylAction_equalPhaseState_of_mem_cssLabelSpace",
+  "RelativeConicArcs.AMELU.translatedEqualPhaseState_eq_iff",
+  "RelativeConicArcs.AMELU.twistedPencilGaleDivisor_refl",
+  "RelativeConicArcs.AMELU.twistedPencil_sectors_disjoint",
+]
+coverage_rule = "closure"
+
+[[terminal]]
+declaration = "GroupExtension.Splitting.semidirectProductEquiv"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "GroupExtension.factorSet_change"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "GroupExtension.factorSet_trivializable_iff_splitting"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.GenericDiagonalDuality.diagonalMultiplierBilinForm_eq_zero"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportCycleCoverInputs.axial_det_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportCycleCoverInputs.negativeSigned_det_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportCycleCoverInputs.positiveSigned_det_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportOrbitGeometryInputs.card_axial_union_negative"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportOrbitGeometryInputs.card_axial_union_positive"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportRankBridgeInputs.matchingRank_eq_twentyOne_of_transportRank_eq_nine"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.TransportRankBridgeInputs.matchingRank_eq_twenty_of_transportRank_eq_eight"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.admitted_nonGRS_map_iff"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.admitted_nonGRS_pencil_classified_by_z"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.affineSpecialLinearOrder_seven"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.axialCyclePolynomial_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.card_marginalStars"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.card_marginalTriples"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalTriples._native.native_decide.ax_1_1", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.card_perfectMatchings"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_perfectMatchings._native.native_decide.ax_1_1", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.contractionMatchingRank_normalizeContractionPattern"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.contractionRankOrbitSum_permuteContractionPattern"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.cssLabelSpace_isPauliLagrangian"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalDualityMultiplierSpace_finrank_eq_zero_or_one"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalDualityNullity_fixedPartyProjectiveTransversal_dichotomy"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalDuality_existsUnique_unit_smul_eq"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalDuality_multiplier_ratio_eq"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalMultiplierSpace_finrank_le_one"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalMultiplierSpace_self_eq_span_one"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonalMultiplier_ne_zero_at"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.diagonallyIsodual_fixedPartyProjectiveTransversal_dichotomy"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.encoderConversion_inverseTranspose_and_physical_isClifford"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.encoderConversion_inverseTranspose_chosenLeg"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.encoderConversion_logical_and_physical_isClifford"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.equalPhaseState_hasMinimalComputationalSupport"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.existsUnique_arcSyndrome_supported_on_three"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.existsUnique_arcSyndrome_weight_three_on_support"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.exists_pauliLabel_pairing_eq_dual"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.fixedPartyKernel_eq_specialLinear_or_splitTorus"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.fixedPartyProjectiveTransversal_eq_affineSpecialLinear_or_splitTorus"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericCSSLabel_lowerDualityShear"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericCSSLabel_upperDualityShear"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericDiagonalDualityOfMultiplier"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericLocallyUnitaryEquivalent_equalPhaseState_implies_genericLocallyCliffordEquivalent"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationExtension_splits_iff"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_associativity"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_change"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationFactorSet_trivializable_iff_splits"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationGroupExtensionSplitting"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutationSemidirectProductEquiv"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.genericPartyPermutation_natCard"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.grs_projectiveTransversal_eq_affineSpecialLinear"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.isAME_equalPhaseState_arcKernel"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.isAME_equalPhaseState_iff_isMDSCode634"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.isDiagonallyIsodual_iff_finrank_eq_one"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.isMDSCode2m_oneLegQuantumMDSParameters"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.isMDSCode634_arcKernel"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_admitted_nonGRS_pencil_iff_pencilZ_eq"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_equalPhaseState_implies_locallyCliffordEquivalent"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.locallyUnitaryEquivalent_equalPhaseState_implies_locallyCliffordEquivalent_from_generic"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.map_pencilA"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.map_pencilB"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.map_pencilGRSQuartic"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.map_pencilZ"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.mem_cssSupportedLabelSpace_iff_support_subset"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.negativeSignedCyclePolynomial_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.not_isDiagonallyIsodual_iff_finrank_eq_zero"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.not_locallyUnitaryEquivalent_of_ten_vs_atMostSix_concurrences"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.offDiagonalBlock_fixedPartyProjectiveTransversal_eq_affineSpecialLinear"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.oneLegQuantumMDSParameters_singletonEquality"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pauliSymplecticToDual_injective"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pencilFrameRatio_crossDifference"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pencilFrameRatio_eq_iff"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pencilGalePairing_multiplier"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pencilGalePairing_multiplier_zero_iff"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.pencilZ_eq_iff_samePencilYOrbit"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.positiveSignedCyclePolynomial_factor"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.projectivelyEquivalent_equalPhaseState_locallyCliffordEquivalent"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.q13_zFour_not_locallyUnitaryEquivalent_zTwelve"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.rankFourMultiplicity_eq_sixty_add_concurrency"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_axial_of_charSeven"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_three_factors"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_z"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.signedTransportFactor_sub_two_mul_axial"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.splitTorusWeylBlock_isSpecialLinear"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.splitTorusWeylBlock_mul_self"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.splitTorusWeylBlock_mul_splitTorusBlock"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.stateInnerProduct_translatedEqualPhaseState_eq_zero"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.supportedArcSyndrome_bijective_of_card_three"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.tensorWeylAction_X_equalPhaseState_eq_translated"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.tensorWeylAction_Z_translatedEqualPhaseState"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.tensorWeylAction_equalPhaseState_of_mem_cssLabelSpace"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.translatedEqualPhaseState_eq_iff"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.twistedPencilGaleDivisor_refl"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.AMELU.twistedPencil_sectors_disjoint"
+gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

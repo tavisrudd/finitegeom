@@ -24,7 +24,7 @@ matrices or projective coordinates.
 The terminal separator says that ten common concurrent matchings on one side
 and at most six on the other forbid local-unitary equivalence whenever local
 unitaries preserve the rank-four marginal multiplicity.  The three finite
-graph cardinalities are exhaustively discharged by kernel reduction; the
+graph cardinalities are exhaustively discharged by `native_decide`; the
 structural reduction and arithmetic separator are ordinary kernel-checked
 proofs.  There is no generated certificate, project-specific axiom, or
 admitted declaration.
@@ -33,9 +33,6 @@ admitted declaration.
 namespace RelativeConicArcs.AMELU
 
 open Finset
-
-set_option maxRecDepth 100000
-set_option maxHeartbeats 20000000
 
 /-- An edge of the complete graph on the six parties. -/
 abbrev OmittedPair := {e : Finset Party // e.card = 2}
@@ -65,17 +62,17 @@ instance (E : MarginalTriple) : Decidable (IsPerfectMatching E) :=
 
 /-- The 455 unordered triples of four-party marginals. -/
 theorem card_marginalTriples : Fintype.card MarginalTriple = 455 := by
-  decide
+  native_decide
 
 /-- Exactly 60 triples of omitted pairs are three-edge stars. -/
 theorem card_marginalStars :
     (Finset.univ.filter IsMarginalStar).card = 60 := by
-  decide
+  native_decide
 
 /-- Exactly 15 triples of omitted pairs are perfect matchings. -/
 theorem card_perfectMatchings :
     (Finset.univ.filter IsPerfectMatching).card = 15 := by
-  decide
+  native_decide
 
 /-- A three-edge star cannot be a perfect matching. -/
 theorem marginalStar_not_perfectMatching (E : MarginalTriple)
