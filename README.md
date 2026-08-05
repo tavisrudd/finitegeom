@@ -166,7 +166,7 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 286-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 274-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
@@ -177,12 +177,6 @@ Linux, and Apple Silicon macOS.
   orientation boundary of the Clebsch support cubic, including the antipodal
   cover, the determinant pencil, the cross-golden trace dual, and the six
   ordinary nodes.
-- `trust/manifests/clebsch_six_arc_concurrence.json` records the separate
-  six-arc triple-concurrence boundary: the ten-point bound over any field in
-  which two is invertible, the chord-matching bijection and one-factorization of
-  the equality case, the golden normal form and the golden root it forces, and
-  the order-eleven identification with the displayed witness.  It shares no
-  module with the orientation boundary above.
 - `trust/manifests/mds_css_transversal_groups.json` records the diagonal
   isoduality boundary: the multiplier line and nullity test, the exact
   fixed-party transversal logical group it selects, the admitted-pencil

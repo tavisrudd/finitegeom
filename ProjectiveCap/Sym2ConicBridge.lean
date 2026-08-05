@@ -4,45 +4,41 @@ import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
 import Mathlib.Tactic
 
 /-!
-# The Veronese conic and the symmetric-square collineation
+# Full-`PGL` on-conic orbit bridge via the symmetric square
 
-Let `K` be a field, `Line K = Fin 2 → K`, and `Plane K = Fin 3 → K`, with
-projective points `Projectivization K (Line K)` and `Projectivization K (Plane K)`.
+A projective-line transformation `M ∈ GL(2,K)` induces, through its symmetric
+square, a plane collineation preserving the Veronese conic and realizing the
+Möbius action on conic parameters.  Composing this construction with the
+cap-game transport theorems shows that on-conic follower states related by
+such a projectivity have equal game value.  The transported game object is the
+whole unordered cap, so no choice of distinguished pair is required.
 
-This module builds the degree-two Veronese parametrization of a conic in the
-projective plane and shows that it is equivariant for the action of `GL(2, K)`
-on the line and the action of its symmetric square on the plane. Concretely,
-identifying plane coordinates with the quadratic monomials
-`(X, Y, Z) = (u², uv, v²)`:
+## Construction (in coordinates)
 
-* `veronese (u, v) = (u², uv, v²)`, the Veronese map `Line K → Plane K`, and its
-  projectivization `veronesePoint`, which is injective and lands on the conic;
-* `conicForm (X, Y, Z) = Y² − XZ`, whose zero locus `OnConic` is that conic;
-* `sym2Mat M`, the `3 × 3` symmetric-square matrix of a `2 × 2` matrix `M`, and
-  the induced maps `sym2Equiv hM`, `lineEquiv hM`, and the plane collineation
-  `sym2Collineation hM`, defined when `IsUnit M.det`.
+* `Line := Fin 2 → K`, `Plane := Fin 3 → K` with quadratic coordinates
+  `(X, Y, Z) = (u², uv, v²)`.
+* `veronese (u, v) = (u², uv, v²)` — the degree-2 Veronese map `Line → Plane`.
+* `conicForm (X, Y, Z) = Y² − XZ` — the Veronese conic is its zero locus.
+* `sym2Mat M` — the `3×3` symmetric-square matrix of `M`.  The three core facts
+  are *polynomial identities*, hence hold in every characteristic:
+    - `sym2Mat M *ᵥ veronese v = veronese (M *ᵥ v)`      (equivariance),
+    - `conicForm (sym2Mat M *ᵥ w) = (M.det)² * conicForm w`  (relative invariant),
+    - `(sym2Mat M).det = (M.det)³`                        (invertibility).
 
-Three polynomial identities carry the module, and being identities they hold in
-every characteristic:
+Because the conic form is a *relative* invariant with multiplier `(det M)²`, the
+conic `{conicForm = 0}` is preserved exactly, in all characteristics.  (The
+characteristic-2 geometry of the conic is degenerate — Frobenius-strange — but
+that never affects this bridge: `sym2Mat M` is still invertible and still fixes
+the zero locus, which is all the value-transport argument uses.)
 
-* `sym2Mat_mulVec_veronese`: `sym2Mat M *ᵥ veronese v = veronese (M *ᵥ v)`;
-* `conicForm_sym2Mat_mulVec`: `conicForm (sym2Mat M *ᵥ w) = (M.det)² * conicForm w`,
-  so `conicForm` is a relative invariant with multiplier `(det M)²` and the conic
-  `{conicForm = 0}` is preserved exactly;
-* `sym2Mat_det`: `(sym2Mat M).det = (M.det)³`, so `sym2Mat M` is invertible
-  whenever `M` is.
+## Value transport
 
-In characteristic two the conic itself is degenerate — its tangent lines are
-concurrent — but that does not enter here: `sym2Mat M` is still invertible and
-still fixes the zero locus, which is all the statements below use.
-
-The terminal geometric statement is `sym2Collineation_veronesePoint`, the
-realization of the Möbius action: the collineation moves the point with conic
-parameter `p` to the point with parameter `lineEquiv hM p`. Its consequence
-`sym2Collineation_image_veronesePoint` transfers a whole on-conic cap.
-
-Nothing here refers to a game. The transport of cap-game values along
-`sym2Collineation` is in `ProjectiveCap.Sym2ConicBridgeGame`.
+`onconic_value_bridge`: for a parameter set `σ ⊆ P¹`, the on-conic cap
+`σ.image veronesePoint` and the on-conic cap of the Möbius-transformed parameters
+have the same normal-play value.  Its proof composes the Möbius realization
+`sym2Collineation_veronesePoint` (geometry) with `sym2Collineation_isP_transport`
+(game).  The generic transport lemmas assert collineation invariance; the
+Veronese equivariance theorem supplies the additional on-conic content.
 -/
 
 open scoped LinearAlgebra.Projectivization
@@ -70,9 +66,6 @@ def veronese (v : Line K) : Plane K :=
 def conicForm (w : Plane K) : K :=
   w 1 ^ 2 - w 0 * w 2
 
-/-- The Veronese image of any line vector satisfies the conic equation: with
-`(X, Y, Z) = (u², uv, v²)` one has `Y² - XZ = 0`. This is a polynomial identity, so
-it holds in every characteristic. -/
 @[simp] theorem conicForm_veronese (v : Line K) : conicForm (veronese v) = 0 := by
   simp only [conicForm, veronese, Matrix.cons_val_zero, Matrix.cons_val_one,
     Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons]
@@ -159,8 +152,6 @@ noncomputable def sym2Equiv {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det) :
     Plane K ≃ₗ[K] Plane K :=
   (sym2Mat M).toLinearEquiv' (sym2Invertible hM)
 
-/-- The plane automorphism attached to an invertible `2 × 2` matrix `M` acts by
-matrix-vector multiplication by the symmetric-square matrix of `M`. -/
 theorem sym2Equiv_apply {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det)
     (w : Plane K) : sym2Equiv hM w = sym2Mat M *ᵥ w := by
   have h2 := LinearMap.congr_fun
@@ -173,8 +164,6 @@ noncomputable def lineEquiv {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det) :
     Line K ≃ₗ[K] Line K :=
   M.toLinearEquiv' (Matrix.invertibleOfIsUnitDet _ hM)
 
-/-- The line automorphism attached to an invertible `2 × 2` matrix `M` acts by
-matrix-vector multiplication by `M`. -/
 theorem lineEquiv_apply {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det)
     (v : Line K) : lineEquiv hM v = M *ᵥ v := by
   have h2 := LinearMap.congr_fun
@@ -194,9 +183,6 @@ noncomputable def sym2Collineation {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M
 def OnConic (p : Projective.Point K (Plane K)) : Prop :=
   conicForm p.rep = 0
 
-/-- The conic form `Y² - XZ` is homogeneous of degree two: rescaling a plane vector
-by `c` multiplies its value by `c²`. This is why vanishing of the form depends only
-on the projective point and not on the chosen representative. -/
 theorem conicForm_smul (c : K) (w : Plane K) :
     conicForm (c • w) = c ^ 2 * conicForm w := by
   simp only [conicForm, Pi.smul_apply, smul_eq_mul]
@@ -235,8 +221,6 @@ theorem veronesePoint_mk (v : Line K) (hv : v ≠ 0) :
   refine ⟨c ^ 2, ?_⟩
   rw [← hc, Units.smul_def, Units.smul_def, veronese_smul, Units.val_pow_eq_pow_val]
 
-/-- Every Veronese point lies on the conic: the image `[u² : uv : v²]` of a point of
-the projective line satisfies `Y² - XZ = 0`. -/
 theorem veronesePoint_onConic (p : Projective.Point K (Line K)) :
     OnConic (veronesePoint p) := by
   induction p using Projectivization.ind with
@@ -300,8 +284,6 @@ noncomputable def veronesePointEmb :
     Projective.Point K (Line K) ↪ Projective.Point K (Plane K) :=
   ⟨veronesePoint, veronesePoint_injective⟩
 
-/-- The embedding of the projective line into the projective plane agrees with the
-Veronese point map on every point. -/
 @[simp] theorem veronesePointEmb_apply (p : Projective.Point K (Line K)) :
     veronesePointEmb p = veronesePoint p := rfl
 
@@ -341,15 +323,45 @@ theorem onConic_sym2Collineation {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.d
       · exact h2
     · intro h; rw [h, mul_zero]
 
+/-! ## Generic value transport under the Sym² collineation
+
+These are the game-theoretic half.  They carry **no on-conic content on their
+own**: they are the instantiation of the linear-collineation transport
+(`PlaneTransitivity.cap_map_mapEquiv` + `FiniteBuildGame.isP_map`) at the
+particular collineation `sym2Collineation hM`, and the same shape holds for any
+`g : Plane ≃ₗ[K] Plane`.  The on-conic orbit bridge below feeds them the geometry
+half so the composed statement is genuinely about the Veronese conic. -/
+
 variable [Fintype (Projective.Point K (Plane K))]
   [DecidableEq (Projective.Point K (Plane K))]
 
-/-! ## Compatibility of the collineation with the Veronese parametrization
+/-- Two plane cap positions related by the Sym² collineation of a line map with
+invertible determinant have the same normal-play `IsP` value. -/
+theorem sym2Collineation_isP_transport {M : Matrix (Fin 2) (Fin 2) K}
+    (hM : IsUnit M.det) {S T : Finset (Projective.Point K (Plane K))}
+    (hST : S.map (sym2Collineation hM).toEmbedding = T) :
+    FiniteBuildGame.IsP (Projective.Cap K (Plane K)) S ↔
+      FiniteBuildGame.IsP (Projective.Cap K (Plane K)) T := by
+  subst hST
+  exact (FiniteBuildGame.isP_map (sym2Collineation hM)
+    (fun U => Projective.cap_map_mapEquiv (sym2Equiv hM) U) S).symm
 
-The lemma below is the geometry that makes a full-`PGL(2, K)` line map act on
-on-conic caps through its conic parameters: pushing the on-conic cap of a
-parameter set through the symmetric-square collineation gives exactly the
-on-conic cap of the Möbius-transformed parameter set. -/
+/-- Win-value form of the generic transport. -/
+theorem sym2Collineation_win_transport {M : Matrix (Fin 2) (Fin 2) K}
+    (hM : IsUnit M.det) {S T : Finset (Projective.Point K (Plane K))}
+    (hST : S.map (sym2Collineation hM).toEmbedding = T) :
+    FiniteBuildGame.Win (Projective.Cap K (Plane K)) S ↔
+      FiniteBuildGame.Win (Projective.Cap K (Plane K)) T := by
+  subst hST
+  exact (FiniteBuildGame.win_map (sym2Collineation hM)
+    (fun U => Projective.cap_map_mapEquiv (sym2Equiv hM) U) S).symm
+
+/-! ## The on-conic full-`PGL` orbit bridge
+
+The following results compose the Möbius realization
+`sym2Collineation_veronesePoint` with generic game transport. Thus a full
+`PGL(2,q)` line map acting on the conic parameters transports the whole
+on-conic follower game. -/
 
 variable [DecidableEq (Projective.Point K (Line K))]
 
@@ -367,11 +379,41 @@ theorem sym2Collineation_image_veronesePoint {M : Matrix (Fin 2) (Fin 2) K}
   simp only [Function.comp_apply, Equiv.coe_toEmbedding]
   exact sym2Collineation_veronesePoint hM p
 
+/--
+**On-conic full-`PGL(2,q)` orbit bridge.**
+
+For any parameter set `σ ⊆ P¹`, the on-conic cap `σ.image veronesePoint` — the
+cap on the Veronese conic carried by those conic parameters, i.e. the six-point
+cap of an on-conic four-cell follower state when `σ` is its parameter set — has the
+same normal-play value as the on-conic cap of the Möbius-transformed parameters
+`mapEquiv (lineEquiv hM) '' σ`.
+
+The proof composes the Möbius realization `sym2Collineation_veronesePoint`
+(geometry) with `sym2Collineation_isP_transport` (game).  Hence two parameter
+sets in the same full-`PGL(2,q)` orbit yield equal residual game value, with no
+burned-pair residue — the parameter set is the entire game datum.
+-/
+theorem onconic_value_bridge {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det)
+    (σ : Finset (Projective.Point K (Line K))) :
+    FiniteBuildGame.IsP (Projective.Cap K (Plane K)) (σ.image veronesePoint) ↔
+      FiniteBuildGame.IsP (Projective.Cap K (Plane K))
+        ((σ.image (Projective.mapEquiv (lineEquiv hM))).image veronesePoint) :=
+  sym2Collineation_isP_transport hM (sym2Collineation_image_veronesePoint hM σ)
+
+/-- Win-value form of the on-conic orbit bridge. -/
+theorem onconic_win_bridge {M : Matrix (Fin 2) (Fin 2) K} (hM : IsUnit M.det)
+    (σ : Finset (Projective.Point K (Line K))) :
+    FiniteBuildGame.Win (Projective.Cap K (Plane K)) (σ.image veronesePoint) ↔
+      FiniteBuildGame.Win (Projective.Cap K (Plane K))
+        ((σ.image (Projective.mapEquiv (lineEquiv hM))).image veronesePoint) :=
+  sym2Collineation_win_transport hM (sym2Collineation_image_veronesePoint hM σ)
+
 omit [Fintype (Projective.Point K (Plane K))]
   [DecidableEq (Projective.Point K (Line K))] in
-/-- The Veronese image of a finite set of conic parameters has exactly one point per
-parameter: since the Veronese point map is injective, a parameter set of size `k`
-yields a set of `k` distinct points on the conic. -/
+/-- The on-conic cap of a parameter set has exactly one point per parameter: the
+Veronese embedding keeps the points distinct, so a size-`k` parameter set yields a
+`k`-point cap (e.g. an on-conic S4 state's six conic parameters give six distinct
+points). -/
 theorem card_image_veronesePoint (σ : Finset (Projective.Point K (Line K))) :
     (σ.image veronesePoint).card = σ.card :=
   Finset.card_image_of_injective σ veronesePoint_injective
