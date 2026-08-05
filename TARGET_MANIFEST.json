@@ -126,7 +126,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 275,
+  "module_count": 286,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -1354,6 +1354,72 @@
       "module": "RelativeConicArcs.PRSUniformCoveringRadius",
       "path": "RelativeConicArcs/PRSUniformCoveringRadius.lean",
       "sha256": "c28f4102e744c227cd9c04697f68c0dfce1a93e7d7e3e94fe69c5932953ef8ad"
+    },
+    {
+      "bytes": 7939,
+      "module": "RelativeConicArcs.PaperIOrientationCommutant",
+      "path": "RelativeConicArcs/PaperIOrientationCommutant.lean",
+      "sha256": "5c49bc3c272e0cc9f40f2f1e797dee000e03bbfe8cdaee873f379f16daee6c6b"
+    },
+    {
+      "bytes": 11177,
+      "module": "RelativeConicArcs.PaperIOrientationCover",
+      "path": "RelativeConicArcs/PaperIOrientationCover.lean",
+      "sha256": "6fb214e13ae9a107127210376f21b81d223a50a6bb965fbe1b3b0ad9356f73b2"
+    },
+    {
+      "bytes": 32075,
+      "module": "RelativeConicArcs.PaperIOrientationDeterminant",
+      "path": "RelativeConicArcs/PaperIOrientationDeterminant.lean",
+      "sha256": "30bbf1e927b95861eb91d83e526a1ab6853ed6da29444296b5fbf7685745bed3"
+    },
+    {
+      "bytes": 6632,
+      "module": "RelativeConicArcs.PaperIOrientationHolonomy",
+      "path": "RelativeConicArcs/PaperIOrientationHolonomy.lean",
+      "sha256": "a748239bb8f2152f9ecb59aeb73aac4ab9a359b4e26f6e50a9a96592298938c4"
+    },
+    {
+      "bytes": 13494,
+      "module": "RelativeConicArcs.PaperIOrientationNodes",
+      "path": "RelativeConicArcs/PaperIOrientationNodes.lean",
+      "sha256": "05f2b6acb2ceb058bdff5fb4701b664d2dea2cde2896b57ea6129ac854660063"
+    },
+    {
+      "bytes": 9250,
+      "module": "RelativeConicArcs.PaperIOrientationPentagon",
+      "path": "RelativeConicArcs/PaperIOrientationPentagon.lean",
+      "sha256": "a1b79e9380d0f845f113bd6f31332a5defb03bdc7dc96495182f2cbbd66bd5dc"
+    },
+    {
+      "bytes": 1185,
+      "module": "RelativeConicArcs.PaperIOrientationSpine",
+      "path": "RelativeConicArcs/PaperIOrientationSpine.lean",
+      "sha256": "46728cfcd5118f244c186ae039d13d7074693c6fe6091027f6e70bf650ddf25b"
+    },
+    {
+      "bytes": 4430,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetry",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetry.lean",
+      "sha256": "ddd258d0a705546840269c10920de526bc53f64dc6661d8bcee1301b0fbe7243"
+    },
+    {
+      "bytes": 10827,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetryCore",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetryCore.lean",
+      "sha256": "819c50f268d3c60dfa4a053b132ee6ef4fdb3d05537caa93f6d76ab223073414"
+    },
+    {
+      "bytes": 16430,
+      "module": "RelativeConicArcs.PaperIOrientationSymmetryGenerators",
+      "path": "RelativeConicArcs/PaperIOrientationSymmetryGenerators.lean",
+      "sha256": "a07592ba08325baf1bf34f82d50b8171e8d041d6d54b4175191edd3a8f09380e"
+    },
+    {
+      "bytes": 13276,
+      "module": "RelativeConicArcs.PaperIOrientationTraceDual",
+      "path": "RelativeConicArcs/PaperIOrientationTraceDual.lean",
+      "sha256": "2381261465e1a9eed96b1b6322365da0c926e40f93d943bb59c0b28857d38910"
     },
     {
       "bytes": 5959,
