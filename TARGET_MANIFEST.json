@@ -125,7 +125,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 277,
+  "module_count": 274,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -424,10 +424,10 @@
       "sha256": "59dca7f9ff37099de529899d433237e190bf4b226ffdafd2db7cd03f2e526d3a"
     },
     {
-      "bytes": 19394,
+      "bytes": 19419,
       "module": "ProjectiveCap.Sym2ConicBridge",
       "path": "ProjectiveCap/Sym2ConicBridge.lean",
-      "sha256": "aa70d9c2524a00d7f239007b94165c16c4a3cc57f92f1bc6ec64002a76614529"
+      "sha256": "d8f8080b2f926915acdc4f374f037c2c50124711695945b3f6cbc423764b5de5"
     },
     {
       "bytes": 52538,
@@ -1570,28 +1570,10 @@
       "sha256": "1e4840b6200e767ad2e2e69b35e44b38477e0b7d875fa6d4a764199c4a6eecc9"
     },
     {
-      "bytes": 88754,
-      "module": "RelativeConicArcs.Q16CertificateLevels",
-      "path": "RelativeConicArcs/Q16CertificateLevels.lean",
-      "sha256": "568be2fa296466c059a9cdcefcb4f830a861a1dba18e6a69eab29eb07872cfc1"
-    },
-    {
       "bytes": 38616,
       "module": "RelativeConicArcs.Q16Classification",
       "path": "RelativeConicArcs/Q16Classification.lean",
       "sha256": "c032ae7bdc7f95b0a5d964632eaaa8088027be3926586cf05a914674b29b6b6d"
-    },
-    {
-      "bytes": 14568,
-      "module": "RelativeConicArcs.Q16Reduction",
-      "path": "RelativeConicArcs/Q16Reduction.lean",
-      "sha256": "dd43309cfccfe513a1bf7dc1c66339353adb35177cb32c74e062f4e1894bf141"
-    },
-    {
-      "bytes": 4586,
-      "module": "RelativeConicArcs.Q16StepKernel",
-      "path": "RelativeConicArcs/Q16StepKernel.lean",
-      "sha256": "ba413f7657e962fd95dc4c94fe757fb48eba864b1d1f2957341d6227ad9eafba"
     },
     {
       "bytes": 15898,

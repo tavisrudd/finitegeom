@@ -166,7 +166,7 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 277-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 274-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
