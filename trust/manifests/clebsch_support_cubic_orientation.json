@@ -25,15 +25,15 @@
   ],
   "module_count": 21,
   "roots": [
-    "RelativeConicArcs.PaperIOrientationSpine"
+    "RelativeConicArcs.SupportOrientationSpine"
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 16029,
+      "bytes": 17856,
       "module": "RelativeConicArcs.ClebschGoldenConference",
       "path": "RelativeConicArcs/ClebschGoldenConference.lean",
-      "sha256": "9a2cc1a46d68a3b08576cc7227dd044a8bfd7104f8e36ab5ca91e94c33cce7b2"
+      "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
     },
     {
       "bytes": 4738,
@@ -90,70 +90,70 @@
       "sha256": "30746ec72da8651bc8673b89d78f135632d37195b9c44ac5cca4f071808949ad"
     },
     {
-      "bytes": 7939,
-      "module": "RelativeConicArcs.PaperIOrientationCommutant",
-      "path": "RelativeConicArcs/PaperIOrientationCommutant.lean",
-      "sha256": "5c49bc3c272e0cc9f40f2f1e797dee000e03bbfe8cdaee873f379f16daee6c6b"
+      "bytes": 8009,
+      "module": "RelativeConicArcs.SupportOrientationCommutant",
+      "path": "RelativeConicArcs/SupportOrientationCommutant.lean",
+      "sha256": "0e8260da2a8cd3ae5b00ebaeb52adbab7e06f85607ee2885b028fb72784b46c3"
     },
     {
-      "bytes": 11177,
-      "module": "RelativeConicArcs.PaperIOrientationCover",
-      "path": "RelativeConicArcs/PaperIOrientationCover.lean",
-      "sha256": "6fb214e13ae9a107127210376f21b81d223a50a6bb965fbe1b3b0ad9356f73b2"
+      "bytes": 11179,
+      "module": "RelativeConicArcs.SupportOrientationCover",
+      "path": "RelativeConicArcs/SupportOrientationCover.lean",
+      "sha256": "37f08cbddcf8b958e4f7c853c55b7ecf1dfd03d193392489d3b4978209bc37a6"
     },
     {
-      "bytes": 32075,
-      "module": "RelativeConicArcs.PaperIOrientationDeterminant",
-      "path": "RelativeConicArcs/PaperIOrientationDeterminant.lean",
-      "sha256": "30bbf1e927b95861eb91d83e526a1ab6853ed6da29444296b5fbf7685745bed3"
+      "bytes": 32101,
+      "module": "RelativeConicArcs.SupportOrientationDeterminant",
+      "path": "RelativeConicArcs/SupportOrientationDeterminant.lean",
+      "sha256": "aad907edd41f63e18bf16e070a48683f4eb3ae19c520a7d9194cf48e40692a6b"
     },
     {
-      "bytes": 6632,
-      "module": "RelativeConicArcs.PaperIOrientationHolonomy",
-      "path": "RelativeConicArcs/PaperIOrientationHolonomy.lean",
-      "sha256": "a748239bb8f2152f9ecb59aeb73aac4ab9a359b4e26f6e50a9a96592298938c4"
+      "bytes": 6628,
+      "module": "RelativeConicArcs.SupportOrientationHolonomy",
+      "path": "RelativeConicArcs/SupportOrientationHolonomy.lean",
+      "sha256": "4815017c2c3175b849d7b1c8bb277750d573ff51197e499248bf900a176dd745"
     },
     {
-      "bytes": 13494,
-      "module": "RelativeConicArcs.PaperIOrientationNodes",
-      "path": "RelativeConicArcs/PaperIOrientationNodes.lean",
-      "sha256": "05f2b6acb2ceb058bdff5fb4701b664d2dea2cde2896b57ea6129ac854660063"
+      "bytes": 13502,
+      "module": "RelativeConicArcs.SupportOrientationNodes",
+      "path": "RelativeConicArcs/SupportOrientationNodes.lean",
+      "sha256": "6bfae60f7d60b2014ea7237cb8eca5cf4676f356f31b48257cec7885efbaf67b"
     },
     {
-      "bytes": 9250,
-      "module": "RelativeConicArcs.PaperIOrientationPentagon",
-      "path": "RelativeConicArcs/PaperIOrientationPentagon.lean",
-      "sha256": "a1b79e9380d0f845f113bd6f31332a5defb03bdc7dc96495182f2cbbd66bd5dc"
+      "bytes": 9246,
+      "module": "RelativeConicArcs.SupportOrientationPentagon",
+      "path": "RelativeConicArcs/SupportOrientationPentagon.lean",
+      "sha256": "ced85e3b80d1c1a46875d04340faa3d33fe9e114f2375feff6b9f93f798c7c1d"
     },
     {
-      "bytes": 1185,
-      "module": "RelativeConicArcs.PaperIOrientationSpine",
-      "path": "RelativeConicArcs/PaperIOrientationSpine.lean",
-      "sha256": "46728cfcd5118f244c186ae039d13d7074693c6fe6091027f6e70bf650ddf25b"
+      "bytes": 1194,
+      "module": "RelativeConicArcs.SupportOrientationSpine",
+      "path": "RelativeConicArcs/SupportOrientationSpine.lean",
+      "sha256": "cf43afe21ab3df98fa58fb6bddb0c52494781c5d814fc9bc34bef0c482f2b717"
     },
     {
-      "bytes": 4430,
-      "module": "RelativeConicArcs.PaperIOrientationSymmetry",
-      "path": "RelativeConicArcs/PaperIOrientationSymmetry.lean",
-      "sha256": "ddd258d0a705546840269c10920de526bc53f64dc6661d8bcee1301b0fbe7243"
+      "bytes": 4435,
+      "module": "RelativeConicArcs.SupportOrientationSymmetry",
+      "path": "RelativeConicArcs/SupportOrientationSymmetry.lean",
+      "sha256": "406ace9e07464c832ad4bcfb9982d7255d86d2079bc4f12529439089e7b62eb4"
     },
     {
-      "bytes": 10827,
-      "module": "RelativeConicArcs.PaperIOrientationSymmetryCore",
-      "path": "RelativeConicArcs/PaperIOrientationSymmetryCore.lean",
-      "sha256": "819c50f268d3c60dfa4a053b132ee6ef4fdb3d05537caa93f6d76ab223073414"
+      "bytes": 10832,
+      "module": "RelativeConicArcs.SupportOrientationSymmetryCore",
+      "path": "RelativeConicArcs/SupportOrientationSymmetryCore.lean",
+      "sha256": "fcc8b4fed9c1505e89b9f23d0756d3ee1712d84c29e2935d55808429632ae354"
     },
     {
-      "bytes": 16430,
-      "module": "RelativeConicArcs.PaperIOrientationSymmetryGenerators",
-      "path": "RelativeConicArcs/PaperIOrientationSymmetryGenerators.lean",
-      "sha256": "a07592ba08325baf1bf34f82d50b8171e8d041d6d54b4175191edd3a8f09380e"
+      "bytes": 16434,
+      "module": "RelativeConicArcs.SupportOrientationSymmetryGenerators",
+      "path": "RelativeConicArcs/SupportOrientationSymmetryGenerators.lean",
+      "sha256": "2bfadbc8efb4eea01f487b1d0abf4b924cee1ec682aad36f697fd6926995ebb6"
     },
     {
-      "bytes": 13276,
-      "module": "RelativeConicArcs.PaperIOrientationTraceDual",
-      "path": "RelativeConicArcs/PaperIOrientationTraceDual.lean",
-      "sha256": "2381261465e1a9eed96b1b6322365da0c926e40f93d943bb59c0b28857d38910"
+      "bytes": 13549,
+      "module": "RelativeConicArcs.SupportOrientationTraceDual",
+      "path": "RelativeConicArcs/SupportOrientationTraceDual.lean",
+      "sha256": "56d7b9ba214900fd7817f3f420afeaad0f2b2d6419104e6c55ded9c099cd4532"
     }
   ]
 }
