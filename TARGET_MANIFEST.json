@@ -126,7 +126,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 286,
+  "module_count": 275,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -151,7 +151,6 @@
     "RelativeConicArcs.OddSixArcPrismExtraction",
     "RelativeConicArcs.PaperIOrientationSpine",
     "RelativeConicArcs.SixArcConcurrenceSpine",
-    "RelativeConicArcs.SupportOrientationSpine",
     "RepairPorts.Gates.CompletePorts"
   ],
   "schema_version": 1,
@@ -829,10 +828,10 @@
       "sha256": "24e786a37ad2dab7d91651e51d5dbb5427fc26bd9e22c6a54fddda97abc66fd8"
     },
     {
-      "bytes": 17856,
+      "bytes": 16029,
       "module": "RelativeConicArcs.ClebschGoldenConference",
       "path": "RelativeConicArcs/ClebschGoldenConference.lean",
-      "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
+      "sha256": "9a2cc1a46d68a3b08576cc7227dd044a8bfd7104f8e36ab5ca91e94c33cce7b2"
     },
     {
       "bytes": 29145,
@@ -1643,72 +1642,6 @@
       "module": "RelativeConicArcs.SplitQuadraticPinching",
       "path": "RelativeConicArcs/SplitQuadraticPinching.lean",
       "sha256": "d46ec97de2670ef0d34873843a8d2821d532d4a00c56e6ebb829fd8c44def6f2"
-    },
-    {
-      "bytes": 8009,
-      "module": "RelativeConicArcs.SupportOrientationCommutant",
-      "path": "RelativeConicArcs/SupportOrientationCommutant.lean",
-      "sha256": "0e8260da2a8cd3ae5b00ebaeb52adbab7e06f85607ee2885b028fb72784b46c3"
-    },
-    {
-      "bytes": 11179,
-      "module": "RelativeConicArcs.SupportOrientationCover",
-      "path": "RelativeConicArcs/SupportOrientationCover.lean",
-      "sha256": "37f08cbddcf8b958e4f7c853c55b7ecf1dfd03d193392489d3b4978209bc37a6"
-    },
-    {
-      "bytes": 32101,
-      "module": "RelativeConicArcs.SupportOrientationDeterminant",
-      "path": "RelativeConicArcs/SupportOrientationDeterminant.lean",
-      "sha256": "aad907edd41f63e18bf16e070a48683f4eb3ae19c520a7d9194cf48e40692a6b"
-    },
-    {
-      "bytes": 6628,
-      "module": "RelativeConicArcs.SupportOrientationHolonomy",
-      "path": "RelativeConicArcs/SupportOrientationHolonomy.lean",
-      "sha256": "4815017c2c3175b849d7b1c8bb277750d573ff51197e499248bf900a176dd745"
-    },
-    {
-      "bytes": 13502,
-      "module": "RelativeConicArcs.SupportOrientationNodes",
-      "path": "RelativeConicArcs/SupportOrientationNodes.lean",
-      "sha256": "6bfae60f7d60b2014ea7237cb8eca5cf4676f356f31b48257cec7885efbaf67b"
-    },
-    {
-      "bytes": 9246,
-      "module": "RelativeConicArcs.SupportOrientationPentagon",
-      "path": "RelativeConicArcs/SupportOrientationPentagon.lean",
-      "sha256": "ced85e3b80d1c1a46875d04340faa3d33fe9e114f2375feff6b9f93f798c7c1d"
-    },
-    {
-      "bytes": 1194,
-      "module": "RelativeConicArcs.SupportOrientationSpine",
-      "path": "RelativeConicArcs/SupportOrientationSpine.lean",
-      "sha256": "cf43afe21ab3df98fa58fb6bddb0c52494781c5d814fc9bc34bef0c482f2b717"
-    },
-    {
-      "bytes": 4435,
-      "module": "RelativeConicArcs.SupportOrientationSymmetry",
-      "path": "RelativeConicArcs/SupportOrientationSymmetry.lean",
-      "sha256": "406ace9e07464c832ad4bcfb9982d7255d86d2079bc4f12529439089e7b62eb4"
-    },
-    {
-      "bytes": 10832,
-      "module": "RelativeConicArcs.SupportOrientationSymmetryCore",
-      "path": "RelativeConicArcs/SupportOrientationSymmetryCore.lean",
-      "sha256": "fcc8b4fed9c1505e89b9f23d0756d3ee1712d84c29e2935d55808429632ae354"
-    },
-    {
-      "bytes": 16434,
-      "module": "RelativeConicArcs.SupportOrientationSymmetryGenerators",
-      "path": "RelativeConicArcs/SupportOrientationSymmetryGenerators.lean",
-      "sha256": "2bfadbc8efb4eea01f487b1d0abf4b924cee1ec682aad36f697fd6926995ebb6"
-    },
-    {
-      "bytes": 13549,
-      "module": "RelativeConicArcs.SupportOrientationTraceDual",
-      "path": "RelativeConicArcs/SupportOrientationTraceDual.lean",
-      "sha256": "56d7b9ba214900fd7817f3f420afeaad0f2b2d6419104e6c55ded9c099cd4532"
     },
     {
       "bytes": 13729,

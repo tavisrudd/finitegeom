@@ -7,33 +7,15 @@ import Mathlib.Tactic.Ring
 /-!
 # The order-six golden conference matrix
 
-This module fixes one explicit matrix `C`: the symmetric zero-diagonal matrix
-of order six with entries `±1` off the diagonal satisfying `C * C = 5 • 1`,
-displayed in the row and column order `0, 1, 2, 3, 4, 5` of `Fin 6`.  It proves
-that conference equation over `ℤ` and over every commutative ring reached by
-the entrywise integer cast; the invariance of the triangle products
-`C i j * C j k * C k i` under conjugation by a diagonal matrix whose entries
-square to one; the translation invariance of the oriented triangle cubic along
-the all-ones vector; the reversal of that cubic under negation of the matrix;
-and the four-point identity satisfied by the triangle products of an arbitrary
-symmetric matrix whose off-diagonal entries square to one, at four pairwise
-distinct labels.
+This module fixes the integral symmetric conference matrix on six labelled
+axes.  It proves its square, the covariance of its triangle products under
+diagonal sign changes, and the four-point identity satisfied by triangle
+products of any symmetric signed matrix.
 
-Every claim about the explicit integer table is finite and is discharged by
-kernel reduction alone: the symmetry `Cᵀ = C`, the vanishing diagonal, the unit
-squares of the off-diagonal entries, the square `C * C = 5 • 1`, and the twenty
-oriented triangle signs.  The matrix identities are reduced entrywise by
-`Matrix.ext`, their thirty-six index pairs are enumerated by `Fin` case
-analysis, and each resulting integer equation is decided by the kernel; for the
-square this evaluates the six-term row-column sum at each pair.  The twenty
-triangle signs are decided as a single closed conjunction of integer equations.
-Each of these is an exhaustive check of its entire finite index domain, not a
-sample.  No compiled evaluation, generated data, imported certificate, or
-external assumption enters this module, so its results rest only on `propext`,
-`Classical.choice`, and `Quot.sound`.
-
-The switching, pair-balance, four-point, cubic-reversal, and base-change
-statements are symbolic proofs valid over an arbitrary commutative ring.
+The two explicit integer tables are checked by native decision in the pinned
+Lean runtime.  The structural switching, four-point, and base-change statements
+are symbolic proofs over a commutative ring.  They use no generated data or
+external assumptions.
 -/
 
 namespace RelativeConicArcs
@@ -42,9 +24,8 @@ namespace ClebschGoldenConference
 open Matrix
 open scoped Matrix
 
-/-- The symmetric integral matrix of order six with vanishing diagonal, entries
-`±1` off the diagonal, and square `5 • 1`.  The row and column order is
-`0, 1, 2, 3, 4, 5`. -/
+/-- The symmetric integral conference matrix attached to the six labelled
+golden axes.  The row and column order is `0, 1, 2, 3, 4, 5`. -/
 def conferenceMatrix : Matrix (Fin 6) (Fin 6) ℤ :=
   !![0,  1,  1,  1, -1, -1;
      1,  0, -1, -1, -1, -1;
@@ -53,24 +34,22 @@ def conferenceMatrix : Matrix (Fin 6) (Fin 6) ℤ :=
     -1, -1,  1, -1,  0, -1;
     -1, -1, -1,  1, -1,  0]
 
-/-- The displayed matrix is symmetric. -/
+/-- The golden conference matrix is symmetric. -/
 theorem conferenceMatrix_transpose : conferenceMatrix.transpose = conferenceMatrix := by
-  ext i j
-  fin_cases i <;> fin_cases j <;> decide
+  native_decide
 
-/-- The diagonal of the displayed matrix vanishes. -/
+/-- The diagonal of the golden conference matrix vanishes. -/
 theorem conferenceMatrix_apply_self (i : Fin 6) : conferenceMatrix i i = 0 := by
   fin_cases i <;> rfl
 
-/-- Every off-diagonal entry of the displayed matrix squares to one. -/
+/-- Every off-diagonal entry of the golden conference matrix squares to one. -/
 theorem conferenceMatrix_apply_sq (i j : Fin 6) (hij : i ≠ j) :
     conferenceMatrix i j * conferenceMatrix i j = 1 := by
   fin_cases i <;> fin_cases j <;> simp_all [conferenceMatrix]
 
 /-- The conference equation `C² = 5I` over the integers. -/
 theorem conferenceMatrix_sq : conferenceMatrix * conferenceMatrix = 5 • (1 : Matrix (Fin 6) (Fin 6) ℤ) := by
-  ext i j
-  fin_cases i <;> fin_cases j <;> decide
+  native_decide
 
 /-- The same labelled conference matrix over a target ring, obtained by
 mapping its integral entries. -/
@@ -109,9 +88,8 @@ def switchMatrix {R : Type*} [Mul R] (d : Fin 6 → R)
     (C : Matrix (Fin 6) (Fin 6) R) : Matrix (Fin 6) (Fin 6) R :=
   fun i j => d i * C i j * d j
 
-/-- The triangle product carried by three ordered labels.  The labels are
-written in cyclic order; invariance under permuting them is not proved here and
-is not used. -/
+/-- The triangle product carried by three ordered labels.  For a symmetric
+matrix it depends only on the underlying three-element set. -/
 def triangleSign {R : Type*} [Mul R] (C : Matrix (Fin 6) (Fin 6) R)
     (i j k : Fin 6) : R :=
   C i j * C j k * C k i
@@ -160,22 +138,17 @@ theorem conference_triangleSigns :
     triangleSign conferenceMatrix 2 3 5 = -1 ∧
     triangleSign conferenceMatrix 2 4 5 = 1 ∧
     triangleSign conferenceMatrix 3 4 5 = 1 := by
-  decide
+  native_decide
 
-/-- Transport of one integral triangle sign along the entrywise cast: if the
-triangle product of the integral conference matrix on the ordered labels
-`i, j, k` equals `z`, then the corresponding product for the base-changed
-matrix equals the image of `z` in `R`. -/
 private theorem cast_conference_triangleSign (R : Type*) [CommRing R]
     (i j k : Fin 6) (z : ℤ) (h : triangleSign conferenceMatrix i j k = z) :
     triangleSign (conferenceMatrixOver R) i j k = (z : R) := by
   simpa [triangleSign, conferenceMatrixOver] using
     congrArg (Int.castRingHom R) h
 
-/-- Sum of the triangle signs through an ordered pair of labels, taken over all
-six labels.  When the matrix has vanishing diagonal the terms with `k = i` and
-`k = j` vanish, so this agrees with the sum over the four remaining labels; for
-a general matrix the two differ. -/
+/-- Sum of the triangle signs through an ordered pair of labels.  Terms with
+repeated labels may be retained because a conference matrix has zero
+diagonal. -/
 def pairTriangleSum {R : Type*} [CommRing R]
     (C : Matrix (Fin 6) (Fin 6) R) (i j : Fin 6) : R :=
   ∑ k, triangleSign C i j k
@@ -217,8 +190,8 @@ theorem pairTriangleSum_eq_zero {R : Type*} [CommRing R]
     _ = C i j * (a • (1 : Matrix (Fin 6) (Fin 6) R)) i j := by rw [hsq]
     _ = 0 := by simp [hij]
 
-/-- Conversely, pair balance together with symmetry, a vanishing diagonal, and
-unit off-diagonal squares forces the conference square. -/
+/-- Conversely, pair balance together with the signed symmetric matrix axioms
+forces the conference square. -/
 theorem sq_eq_five_of_pairTriangleSum_eq_zero {R : Type*} [CommRing R]
     (C : Matrix (Fin 6) (Fin 6) R)
     (hsymm : C.transpose = C)
