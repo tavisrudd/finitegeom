@@ -15,167 +15,167 @@ owns = [
   "RelativeConicArcs.GoldenMatchingJacobianBase",
   "RelativeConicArcs.KneserPairEigenspace",
   "RelativeConicArcs.MarkedClebschBridge",
-  "RelativeConicArcs.PaperIOrientationCommutant",
-  "RelativeConicArcs.PaperIOrientationCover",
-  "RelativeConicArcs.PaperIOrientationDeterminant",
-  "RelativeConicArcs.PaperIOrientationHolonomy",
-  "RelativeConicArcs.PaperIOrientationNodes",
-  "RelativeConicArcs.PaperIOrientationPentagon",
-  "RelativeConicArcs.PaperIOrientationSpine",
-  "RelativeConicArcs.PaperIOrientationSymmetry",
-  "RelativeConicArcs.PaperIOrientationSymmetryCore",
-  "RelativeConicArcs.PaperIOrientationSymmetryGenerators",
-  "RelativeConicArcs.PaperIOrientationTraceDual",
+  "RelativeConicArcs.SupportOrientationCommutant",
+  "RelativeConicArcs.SupportOrientationCover",
+  "RelativeConicArcs.SupportOrientationDeterminant",
+  "RelativeConicArcs.SupportOrientationHolonomy",
+  "RelativeConicArcs.SupportOrientationNodes",
+  "RelativeConicArcs.SupportOrientationPentagon",
+  "RelativeConicArcs.SupportOrientationSpine",
+  "RelativeConicArcs.SupportOrientationSymmetry",
+  "RelativeConicArcs.SupportOrientationSymmetryCore",
+  "RelativeConicArcs.SupportOrientationSymmetryGenerators",
+  "RelativeConicArcs.SupportOrientationTraceDual",
 ]
 
 permitted_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[gate]]
-module = "RelativeConicArcs.PaperIOrientationSpine"
+module = "RelativeConicArcs.SupportOrientationSpine"
 terminals = [
-  "RelativeConicArcs.PaperIOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive",
-  "RelativeConicArcs.PaperIOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive",
-  "RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B",
-  "RelativeConicArcs.PaperIOrientationCover.antipodalQuotient_fiber_card_two",
-  "RelativeConicArcs.PaperIOrientationCover.fiveOrbital_one_mem_each_other_fiber",
-  "RelativeConicArcs.PaperIOrientationCover.fiveOrbitals_selfPaired",
-  "RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal",
-  "RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic",
-  "RelativeConicArcs.PaperIOrientationHolonomy.fourPoint_twoGraph_identity",
-  "RelativeConicArcs.PaperIOrientationHolonomy.pairBalance_iff_sq_five",
-  "RelativeConicArcs.PaperIOrientationHolonomy.supportCubic_translation_invariant",
-  "RelativeConicArcs.PaperIOrientationHolonomy.supportSign_eq_triangleProduct",
-  "RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval",
-  "RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses",
-  "RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes",
-  "RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame",
-  "RelativeConicArcs.PaperIOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck",
-  "RelativeConicArcs.PaperIOrientationPentagon.signedOrbitalMatrix_sq",
-  "RelativeConicArcs.PaperIOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff",
-  "RelativeConicArcs.PaperIOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine",
-  "RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_index_two",
-  "RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5",
-  "RelativeConicArcs.PaperIOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5",
-  "RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic",
+  "RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive",
+  "RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive",
+  "RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator",
+  "RelativeConicArcs.SupportOrientationCover.antipodalQuotient_fiber_card_two",
+  "RelativeConicArcs.SupportOrientationCover.fiveOrbital_one_mem_each_other_fiber",
+  "RelativeConicArcs.SupportOrientationCover.fiveOrbitals_selfPaired",
+  "RelativeConicArcs.SupportOrientationDeterminant.det_signedOrbital_add_diagonal",
+  "RelativeConicArcs.SupportOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic",
+  "RelativeConicArcs.SupportOrientationHolonomy.fourPoint_twoGraph_identity",
+  "RelativeConicArcs.SupportOrientationHolonomy.pairBalance_iff_sq_five",
+  "RelativeConicArcs.SupportOrientationHolonomy.supportCubic_translation_invariant",
+  "RelativeConicArcs.SupportOrientationHolonomy.supportSign_eq_triangleProduct",
+  "RelativeConicArcs.SupportOrientationNodes.derivative_crossGoldenDeterminantLine_eval",
+  "RelativeConicArcs.SupportOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses",
+  "RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes",
+  "RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame",
+  "RelativeConicArcs.SupportOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck",
+  "RelativeConicArcs.SupportOrientationPentagon.signedOrbitalMatrix_sq",
+  "RelativeConicArcs.SupportOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff",
+  "RelativeConicArcs.SupportOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine",
+  "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_index_two",
+  "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5",
+  "RelativeConicArcs.SupportOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5",
+  "RelativeConicArcs.SupportOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic",
 ]
 coverage_rule = "closure"
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCover.antipodalQuotient_fiber_card_two"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCover.antipodalQuotient_fiber_card_two"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCover.fiveOrbital_one_mem_each_other_fiber"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCover.fiveOrbital_one_mem_each_other_fiber"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationCover.fiveOrbitals_selfPaired"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationCover.fiveOrbitals_selfPaired"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationDeterminant.det_signedOrbital_add_diagonal"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationHolonomy.fourPoint_twoGraph_identity"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.fourPoint_twoGraph_identity"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationHolonomy.pairBalance_iff_sq_five"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.pairBalance_iff_sq_five"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationHolonomy.supportCubic_translation_invariant"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.supportCubic_translation_invariant"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationHolonomy.supportSign_eq_triangleProduct"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.supportSign_eq_triangleProduct"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationNodes.derivative_crossGoldenDeterminantLine_eval"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationPentagon.signedOrbitalMatrix_sq"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationPentagon.signedOrbitalMatrix_sq"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_index_two"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_index_two"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic"
-gates = ["RelativeConicArcs.PaperIOrientationSpine"]
+declaration = "RelativeConicArcs.SupportOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic"
+gates = ["RelativeConicArcs.SupportOrientationSpine"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

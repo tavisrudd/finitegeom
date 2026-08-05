@@ -5,7 +5,7 @@ This boundary records the orientation mechanisms accompanying Tavis Rudd,
 syndrome locus* (DOI 10.5281/zenodo.21652792).
 
 The exact project-local closure is rooted at
-`RelativeConicArcs.PaperIOrientationSpine`
+`RelativeConicArcs.SupportOrientationSpine`
 and consists of:
 
 - `RelativeConicArcs.ClebschGoldenConference`
@@ -18,17 +18,17 @@ and consists of:
 - `RelativeConicArcs.GoldenMatchingJacobianBase`
 - `RelativeConicArcs.KneserPairEigenspace`
 - `RelativeConicArcs.MarkedClebschBridge`
-- `RelativeConicArcs.PaperIOrientationCommutant`
-- `RelativeConicArcs.PaperIOrientationCover`
-- `RelativeConicArcs.PaperIOrientationDeterminant`
-- `RelativeConicArcs.PaperIOrientationHolonomy`
-- `RelativeConicArcs.PaperIOrientationNodes`
-- `RelativeConicArcs.PaperIOrientationPentagon`
-- `RelativeConicArcs.PaperIOrientationSpine`
-- `RelativeConicArcs.PaperIOrientationSymmetry`
-- `RelativeConicArcs.PaperIOrientationSymmetryCore`
-- `RelativeConicArcs.PaperIOrientationSymmetryGenerators`
-- `RelativeConicArcs.PaperIOrientationTraceDual`
+- `RelativeConicArcs.SupportOrientationCommutant`
+- `RelativeConicArcs.SupportOrientationCover`
+- `RelativeConicArcs.SupportOrientationDeterminant`
+- `RelativeConicArcs.SupportOrientationHolonomy`
+- `RelativeConicArcs.SupportOrientationNodes`
+- `RelativeConicArcs.SupportOrientationPentagon`
+- `RelativeConicArcs.SupportOrientationSpine`
+- `RelativeConicArcs.SupportOrientationSymmetry`
+- `RelativeConicArcs.SupportOrientationSymmetryCore`
+- `RelativeConicArcs.SupportOrientationSymmetryGenerators`
+- `RelativeConicArcs.SupportOrientationTraceDual`
 
 ## Formal correspondence
 
@@ -48,11 +48,18 @@ two conditional on the explicit classical splitting interface named in the
 exported spine module.
 
 The companion does not prove the deep-hole syndrome classification, the
-code--arc dictionary, the decoder stratification, the ten-point Brianchon
-bound and its equality classification, or the small-arc exclusions.  Those
-results are established in the accompanying paper by ordinary mathematical
-proof, cited literature, or exact certificate computation, and the generated
-finite tables supporting them are distributed separately.
+code--arc dictionary, the decoder stratification, or the small-arc exclusions.
+Those results are established in the accompanying paper by ordinary
+mathematical proof, cited literature, or exact certificate computation, and the
+generated finite tables supporting them are distributed separately.
+
+The ten-point bound on the triple-concurrence points of a six-arc and the
+classification of the arcs attaining it are also outside this boundary.  They
+are proved in the separate six-arc concurrence boundary distributed alongside
+it, which shares no module and no terminal with this one: that development is
+plane incidence geometry of six points and their fifteen chords, while this one
+concerns the antipodal cover, determinant pencil, and singular locus of a cubic
+threefold.
 
 ## Trust boundary
 
@@ -70,27 +77,27 @@ Source and candidate bytes are recorded in
 
 ## Terminals
 
-- `RelativeConicArcs.PaperIOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive`
-- `RelativeConicArcs.PaperIOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive`
-- `RelativeConicArcs.PaperIOrientationCommutant.oddModule_rationalCommutant_eq_adjoin_B`
-- `RelativeConicArcs.PaperIOrientationCover.antipodalQuotient_fiber_card_two`
-- `RelativeConicArcs.PaperIOrientationCover.fiveOrbital_one_mem_each_other_fiber`
-- `RelativeConicArcs.PaperIOrientationCover.fiveOrbitals_selfPaired`
-- `RelativeConicArcs.PaperIOrientationDeterminant.det_signedOrbital_add_diagonal`
-- `RelativeConicArcs.PaperIOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic`
-- `RelativeConicArcs.PaperIOrientationHolonomy.fourPoint_twoGraph_identity`
-- `RelativeConicArcs.PaperIOrientationHolonomy.pairBalance_iff_sq_five`
-- `RelativeConicArcs.PaperIOrientationHolonomy.supportCubic_translation_invariant`
-- `RelativeConicArcs.PaperIOrientationHolonomy.supportSign_eq_triangleProduct`
-- `RelativeConicArcs.PaperIOrientationNodes.derivative_crossGoldenDeterminantLine_eval`
-- `RelativeConicArcs.PaperIOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses`
-- `RelativeConicArcs.PaperIOrientationNodes.supportCubic_framePoints_ordinaryNodes`
-- `RelativeConicArcs.PaperIOrientationNodes.supportCubic_singularLocus_eq_frame`
-- `RelativeConicArcs.PaperIOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck`
-- `RelativeConicArcs.PaperIOrientationPentagon.signedOrbitalMatrix_sq`
-- `RelativeConicArcs.PaperIOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff`
-- `RelativeConicArcs.PaperIOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine`
-- `RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_index_two`
-- `RelativeConicArcs.PaperIOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5`
-- `RelativeConicArcs.PaperIOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5`
-- `RelativeConicArcs.PaperIOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic`
+- `RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive`
+- `RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive`
+- `RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator`
+- `RelativeConicArcs.SupportOrientationCover.antipodalQuotient_fiber_card_two`
+- `RelativeConicArcs.SupportOrientationCover.fiveOrbital_one_mem_each_other_fiber`
+- `RelativeConicArcs.SupportOrientationCover.fiveOrbitals_selfPaired`
+- `RelativeConicArcs.SupportOrientationDeterminant.det_signedOrbital_add_diagonal`
+- `RelativeConicArcs.SupportOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic`
+- `RelativeConicArcs.SupportOrientationHolonomy.fourPoint_twoGraph_identity`
+- `RelativeConicArcs.SupportOrientationHolonomy.pairBalance_iff_sq_five`
+- `RelativeConicArcs.SupportOrientationHolonomy.supportCubic_translation_invariant`
+- `RelativeConicArcs.SupportOrientationHolonomy.supportSign_eq_triangleProduct`
+- `RelativeConicArcs.SupportOrientationNodes.derivative_crossGoldenDeterminantLine_eval`
+- `RelativeConicArcs.SupportOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses`
+- `RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes`
+- `RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame`
+- `RelativeConicArcs.SupportOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck`
+- `RelativeConicArcs.SupportOrientationPentagon.signedOrbitalMatrix_sq`
+- `RelativeConicArcs.SupportOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff`
+- `RelativeConicArcs.SupportOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine`
+- `RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_index_two`
+- `RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5`
+- `RelativeConicArcs.SupportOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5`
+- `RelativeConicArcs.SupportOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic`
