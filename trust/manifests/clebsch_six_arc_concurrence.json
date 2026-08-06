@@ -158,10 +158,10 @@
       "sha256": "14a6b0b267adce28aa1394bdb765de2ceb3df8ba6e8fe6ee7a85ce014ae3f35e"
     },
     {
-      "bytes": 3274,
+      "bytes": 3284,
       "module": "RelativeConicArcs.SixArcConcurrenceSpine",
       "path": "RelativeConicArcs/SixArcConcurrenceSpine.lean",
-      "sha256": "ffa85ea1b6907f02411ced5949dd6c5565448d3614ff95bac2921fe0f25c1a79"
+      "sha256": "f49763f7bc5ed7e296302abbbddee3980b90b78250fd5371165a444159368e72"
     },
     {
       "bytes": 18723,
