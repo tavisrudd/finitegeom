@@ -59,7 +59,7 @@ closure.
 `DECLARATION_VISIBILITY.tsv` records the 269 undocumented, module-local proof
 declarations kept private so they do not become an accidental public API.
 
-## Clebsch Passages formal-companion state
+## Clebsch Passages formal-artifact state
 
 The state following `v0.1.0` adds three exact, unmodified Lean sources:
 
@@ -134,7 +134,7 @@ gate imports that committed module and prints its six paper-facing terminals.
 Other target-only edits remove private workflow references from explanatory
 prose. No theorem statement is changed.
 
-## Clebsch Passages structural companion
+## Clebsch Passages structural area
 
 Version 0.3 replaces the earlier three-module symbolic boundary with the
 13-module `RelativeConicArcs.Gates.ClebschPassages` closure.  The source and

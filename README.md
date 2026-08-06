@@ -4,7 +4,7 @@
 
 `finitegeom` is a Lean 4 formalization library for finite geometry, coding
 theory, and their interactions with algebra, combinatorics, and quantum
-information. It is the public formal companion to a paper programme covering:
+information. It is the public Lean development for a paper programme covering:
 
 - [arithmetic and harmonic realizations of the Clebsch cubic](https://github.com/tavisrudd/clebsch-passages);
 - [rigidity](https://github.com/tavisrudd/clebsch-rigidity) and
@@ -85,7 +85,7 @@ explicit proposition-valued interface for the classical conjugate `3+3'`
 decomposition and Schur--Galois descent; golden equivariance and integral
 descent are kernel checked.
 
-The `v0.3.0` release adds the 13-module structural companion to *Arithmetic
+The `v0.3.0` release adds the 13-module structural area for *Arithmetic
 and harmonic realizations of the Clebsch cubic*.  It formalizes the paper's
 pinching, involutive-splitting, golden-character, conference, marked-sign,
 Petersen-kernel, and cubic-normalization mechanisms.  The gate records only
