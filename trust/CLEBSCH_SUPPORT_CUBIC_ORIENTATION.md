@@ -47,7 +47,7 @@ and computes the rational and integral commutants of the odd module, the last
 two conditional on the explicit classical splitting interface named in the
 exported spine module.
 
-The companion does not prove the deep-hole syndrome classification, the
+This formal artifact does not prove the deep-hole syndrome classification, the
 code--arc dictionary, the decoder stratification, or the small-arc exclusions.
 Those results are established in the accompanying paper by ordinary
 mathematical proof, cited literature, or exact certificate computation, and the
