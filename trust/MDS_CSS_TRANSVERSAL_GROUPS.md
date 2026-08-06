@@ -1,8 +1,8 @@
 # Diagonal isoduality and transversal Clifford groups of MDS--CSS codes: formal boundary
 
-This boundary records the formal companion to Tavis Rudd, *Diagonal Isoduality
+This boundary records the formal artifact accompanying Tavis Rudd, *Diagonal Isoduality
 and Transversal Clifford Groups of MDS--CSS Codes* (DOI
-10.5281/zenodo.21766797).  Its scope is exactly that manuscript; the companion
+10.5281/zenodo.21766797).  Its scope is exactly that manuscript; this artifact
 paper on local-unitary rigidity and quantitative rounding for stabilizer
 absolutely maximally entangled states keeps its own separate boundary.
 
@@ -109,7 +109,7 @@ Each derives its conclusion from a structure whose fields state geometric
 propagation, orbit-recognition, or finite-certificate facts that the closure
 does not prove.
 
-The companion does not prove the arbitrary-additive stabilizer rigidity
+This formal artifact does not prove the arbitrary-additive stabilizer rigidity
 theorem, the transversal Clifford no-go, the Pauli phase-correction lemma, or
 the minimum-support atlas; the manuscript cites those from its companion paper.
 The finite ranks, orbit counts, and party-extension complements consumed by the
