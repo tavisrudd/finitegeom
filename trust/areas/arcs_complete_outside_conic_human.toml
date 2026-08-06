@@ -1,311 +1,376 @@
-# Trust spine for the human-scale arcs-outside-a-conic library.
+# Trust boundary for arcs complete outside a prescribed conic: human library boundary.
 
 schema_version = 1
 area = "arcs_complete_outside_conic_human"
 manifest = "trust/ARCS_COMPLETE_OUTSIDE_CONIC.md"
 
 owns = [
-  "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman",
+  "CapGame.BuildGame",
+  "CapGame.GraphMirror",
+  "CapGame.Mirror",
+  "ProjectiveCap.Grid",
+  "ProjectiveCap.PlaneAffineChart",
+  "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.Projective",
+  "ProjectiveCap.Sym2ConicBridge",
+  "RelativeConicArcs.Affine",
+  "RelativeConicArcs.Arc",
+  "RelativeConicArcs.Asymptotic",
+  "RelativeConicArcs.Averaging",
+  "RelativeConicArcs.Certificate",
+  "RelativeConicArcs.CodingBridge",
+  "RelativeConicArcs.Conic",
+  "RelativeConicArcs.ConicSecantInvolution",
+  "RelativeConicArcs.Defect",
+  "RelativeConicArcs.EqualityConsequences",
+  "RelativeConicArcs.EvaluationObstruction",
+  "RelativeConicArcs.ExampleChecks.Q11",
+  "RelativeConicArcs.ExampleChecks.Q16",
+  "RelativeConicArcs.ExampleChecks.Q16Arc",
+  "RelativeConicArcs.ExampleChecks.Q16Coverage",
+  "RelativeConicArcs.ExampleChecks.Q16CoverageA",
+  "RelativeConicArcs.ExampleChecks.Q16CoverageB",
+  "RelativeConicArcs.ExampleChecks.Q16CoverageC",
+  "RelativeConicArcs.ExampleChecks.Q16CoverageD",
+  "RelativeConicArcs.ExampleChecks.Q16CoverageTail",
+  "RelativeConicArcs.ExampleChecks.Q16Disjoint",
+  "RelativeConicArcs.ExampleChecks.Q5",
+  "RelativeConicArcs.ExampleChecks.Q8",
+  "RelativeConicArcs.ExampleChecks.Q9",
+  "RelativeConicArcs.Examples",
+  "RelativeConicArcs.FiniteFields",
+  "RelativeConicArcs.Gates.ArcsCompleteOutsideConic",
+  "RelativeConicArcs.KleinFourOrbitCongruence",
+  "RelativeConicArcs.MatchingDesignRigidity",
+  "RelativeConicArcs.Moments",
+  "RelativeConicArcs.Nucleus",
+  "RelativeConicArcs.OddSixArcLineBound",
+  "RelativeConicArcs.ParametrizedHoles",
+  "RelativeConicArcs.Plane",
+  "RelativeConicArcs.ProjectiveBridge",
+  "RelativeConicArcs.Q11Coding",
+  "RelativeConicArcs.Q11NonGRS",
+  "RelativeConicArcs.Q11Residual",
+  "RelativeConicArcs.Q11SemanticBase",
+  "RelativeConicArcs.Q11SemanticDistribution",
+  "RelativeConicArcs.Q11SemanticIndexCases",
+  "RelativeConicArcs.Q11SemanticLeaders",
+  "RelativeConicArcs.Q11SemanticOneAvoidance",
+  "RelativeConicArcs.Q11SemanticOneRep",
+  "RelativeConicArcs.Q11SemanticPairAvoidance",
+  "RelativeConicArcs.Q11SemanticPairRep",
+  "RelativeConicArcs.Q11SemanticPairRepA",
+  "RelativeConicArcs.Q11SemanticPairRepB",
+  "RelativeConicArcs.Q11SemanticPairRepC",
+  "RelativeConicArcs.Q11SemanticPairRepD",
+  "RelativeConicArcs.Q11SemanticRayData",
+  "RelativeConicArcs.Q11SemanticSpectrum",
+  "RelativeConicArcs.Q11SemanticSynthesis",
+  "RelativeConicArcs.Q11SemanticTwoRep",
+  "RelativeConicArcs.Q11SemanticTwoRepA",
+  "RelativeConicArcs.Q11SemanticTwoRepB",
+  "RelativeConicArcs.Q11SemanticTwoRepC",
+  "RelativeConicArcs.Q11SemanticTwoRepD",
+  "RelativeConicArcs.QuadraticLineTriangleObstruction",
+  "RelativeConicArcs.Results",
+  "RelativeConicArcs.SyndromeGeometry",
+  "RelativeConicArcs.TangentPairFourGroup",
+  "RelativeConicArcs.UncoveredLocusReconstruction",
+  "RelativeConicArcs.ZeroDefectConicInvariance",
 ]
 
-permitted_axioms = []
+permitted_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[gate]]
-module = "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"
+module = "RelativeConicArcs.Gates.ArcsCompleteOutsideConic"
 terminals = [
-  "RelativeConicArcs.Conic.completeOutside_bound_general",
-  "RelativeConicArcs.Conic.NonsingularConic.finite_lower_bound",
-  "RelativeConicArcs.pointIndex_le_half_card",
-  "RelativeConicArcs.first_secant_moment",
-  "RelativeConicArcs.second_secant_moment",
-  "RelativeConicArcs.scaledDefect_eq_remainders",
-  "RelativeConicArcs.scaledDefect_eq_zero_iff",
-  "RelativeConicArcs.coverage_bound",
-  "RelativeConicArcs.uncovered_bound",
-  "RelativeConicArcs.stability_bound",
-  "RelativeConicArcs.completeAffine_bound",
-  "RelativeConicArcs.completeAffine_bound_eq_iff",
-  "RelativeConicArcs.Conic.rhoC_explicit_additive_lower_bound",
-  "RelativeConicArcs.Conic.eventually_lt_centered",
   "RelativeConicArcs.Averaging.exists_completeOutside_of_completeArc",
-  "RelativeConicArcs.Averaging.rhoC_le_t2",
   "RelativeConicArcs.Averaging.rhoC_le_of_kimVuBound",
-  "RelativeConicArcs.linesAboveUncoveredThreshold_eq_secants",
-  "RelativeConicArcs.verticesOfLineFamily_secants_eq",
-  "RelativeConicArcs.canonical_reconstruction",
-  "RelativeConicArcs.eq_of_ordinaryUncovered_eq",
-  "RelativeConicArcs.stabilizes_iff_stabilizes_ordinaryUncovered",
-  "RelativeConicArcs.disjoint_arcPairs_existsUnique_concurrence",
-  "RelativeConicArcs.concurrence_matching_injective",
-  "RelativeConicArcs.concurrenceCenter_pointIndex_eq_half",
-  "RelativeConicArcs.concurrenceCenters_card_mul_choose_half",
-  "RelativeConicArcs.concurrenceCenters_card_eq_quotient",
-  "RelativeConicArcs.concurrenceCentersOnPair_card_mul_sub_one",
-  "RelativeConicArcs.concurrenceCentersOnPair_card_eq_quotient",
-  "RelativeConicArcs.two_mul_badConcurrenceEdgeCount_le",
-  "RelativeConicArcs.exists_secantDeletionSet",
-  "RelativeConicArcs.scaledDefect_eq_zero_or_half_sub_two_le",
-  "RelativeConicArcs.completeAffine_equality_order",
-  "RelativeConicArcs.even_completeOutside_zeroDefect_order_spectrum",
-  "RelativeConicArcs.odd_completeOutside_zeroDefect_order_spectrum",
-  "RelativeConicArcs.odd_standardConic_zeroDefect_charTwo_order",
-  "RelativeConicArcs.TangentPairFourGroup.no_upper_even_equality_branch",
-  "RelativeConicArcs.TangentPairFourGroup.even_standardConic_zeroDefect_charTwo_order",
-  "RelativeConicArcs.eq_zero_of_evaluationMap_injective",
-  "RelativeConicArcs.evaluation_eq_zero_of_eq_sum",
-  "RelativeConicArcs.ternaryQuadratic_eq_zero_of_standardLine_and_offLineTriangle",
-  "RelativeConicArcs.Certificate.rawArc_iff_projectiveCap",
+  "RelativeConicArcs.Averaging.rhoC_le_t2",
   "RelativeConicArcs.Certificate.check_sound",
-  "RelativeConicArcs.Examples.rhoC_ZMod5",
-  "RelativeConicArcs.Examples.rho_points_ZMod5",
+  "RelativeConicArcs.Certificate.rawArc_iff_projectiveCap",
+  "RelativeConicArcs.Conic.NonsingularConic.finite_lower_bound",
+  "RelativeConicArcs.Conic.completeOutside_bound_general",
+  "RelativeConicArcs.Conic.eventually_lt_centered",
+  "RelativeConicArcs.Conic.rhoC_explicit_additive_lower_bound",
   "RelativeConicArcs.Examples.rhoC_GF8",
   "RelativeConicArcs.Examples.rhoC_GF9",
   "RelativeConicArcs.Examples.rhoC_ZMod11",
-  "RelativeConicArcs.Examples.rhoC_GF16_bounds",
+  "RelativeConicArcs.Examples.rhoC_ZMod5",
+  "RelativeConicArcs.Examples.rho_points_ZMod5",
+  "RelativeConicArcs.TangentPairFourGroup.even_standardConic_zeroDefect_charTwo_order",
+  "RelativeConicArcs.TangentPairFourGroup.no_upper_even_equality_branch",
+  "RelativeConicArcs.canonical_reconstruction",
+  "RelativeConicArcs.completeAffine_bound",
+  "RelativeConicArcs.completeAffine_bound_eq_iff",
+  "RelativeConicArcs.completeAffine_equality_order",
+  "RelativeConicArcs.concurrenceCenter_pointIndex_eq_half",
+  "RelativeConicArcs.concurrenceCentersOnPair_card_eq_quotient",
+  "RelativeConicArcs.concurrenceCentersOnPair_card_mul_sub_one",
+  "RelativeConicArcs.concurrenceCenters_card_eq_quotient",
+  "RelativeConicArcs.concurrenceCenters_card_mul_choose_half",
+  "RelativeConicArcs.concurrence_matching_injective",
+  "RelativeConicArcs.coverage_bound",
+  "RelativeConicArcs.disjoint_arcPairs_existsUnique_concurrence",
+  "RelativeConicArcs.eq_of_ordinaryUncovered_eq",
+  "RelativeConicArcs.eq_zero_of_evaluationMap_injective",
+  "RelativeConicArcs.evaluation_eq_zero_of_eq_sum",
+  "RelativeConicArcs.even_completeOutside_zeroDefect_order_spectrum",
+  "RelativeConicArcs.exists_secantDeletionSet",
+  "RelativeConicArcs.first_secant_moment",
+  "RelativeConicArcs.linesAboveUncoveredThreshold_eq_secants",
+  "RelativeConicArcs.odd_completeOutside_zeroDefect_order_spectrum",
+  "RelativeConicArcs.odd_standardConic_zeroDefect_charTwo_order",
+  "RelativeConicArcs.pointIndex_le_half_card",
+  "RelativeConicArcs.scaledDefect_eq_remainders",
+  "RelativeConicArcs.scaledDefect_eq_zero_iff",
+  "RelativeConicArcs.scaledDefect_eq_zero_or_half_sub_two_le",
+  "RelativeConicArcs.second_secant_moment",
+  "RelativeConicArcs.stability_bound",
+  "RelativeConicArcs.stabilizes_iff_stabilizes_ordinaryUncovered",
+  "RelativeConicArcs.ternaryQuadratic_eq_zero_of_standardLine_and_offLineTriangle",
+  "RelativeConicArcs.two_mul_badConcurrenceEdgeCount_le",
+  "RelativeConicArcs.uncovered_bound",
+  "RelativeConicArcs.verticesOfLineFamily_secants_eq",
 ]
 coverage_rule = "closure"
 
 [[terminal]]
-declaration = "RelativeConicArcs.Conic.completeOutside_bound_general"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.Conic.NonsingularConic.finite_lower_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.pointIndex_le_half_card"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.first_secant_moment"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.second_secant_moment"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.scaledDefect_eq_remainders"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.scaledDefect_eq_zero_iff"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.coverage_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.uncovered_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.stability_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.completeAffine_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.completeAffine_bound_eq_iff"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.Conic.rhoC_explicit_additive_lower_bound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.Conic.eventually_lt_centered"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
 declaration = "RelativeConicArcs.Averaging.exists_completeOutside_of_completeArc"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.Averaging.rhoC_le_t2"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Averaging.rhoC_le_of_kimVuBound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.linesAboveUncoveredThreshold_eq_secants"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.verticesOfLineFamily_secants_eq"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.canonical_reconstruction"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.eq_of_ordinaryUncovered_eq"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.stabilizes_iff_stabilizes_ordinaryUncovered"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.disjoint_arcPairs_existsUnique_concurrence"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrence_matching_injective"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrenceCenter_pointIndex_eq_half"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrenceCenters_card_mul_choose_half"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrenceCenters_card_eq_quotient"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrenceCentersOnPair_card_mul_sub_one"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.concurrenceCentersOnPair_card_eq_quotient"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.two_mul_badConcurrenceEdgeCount_le"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.exists_secantDeletionSet"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.scaledDefect_eq_zero_or_half_sub_two_le"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.completeAffine_equality_order"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.even_completeOutside_zeroDefect_order_spectrum"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.odd_completeOutside_zeroDefect_order_spectrum"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.odd_standardConic_zeroDefect_charTwo_order"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.TangentPairFourGroup.no_upper_even_equality_branch"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.TangentPairFourGroup.even_standardConic_zeroDefect_charTwo_order"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.eq_zero_of_evaluationMap_injective"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.evaluation_eq_zero_of_eq_sum"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.ternaryQuadratic_eq_zero_of_standardLine_and_offLineTriangle"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.Certificate.rawArc_iff_projectiveCap"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+declaration = "RelativeConicArcs.Averaging.rhoC_le_t2"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Certificate.check_sound"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.Examples.rhoC_ZMod5"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+declaration = "RelativeConicArcs.Certificate.rawArc_iff_projectiveCap"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.Examples.rho_points_ZMod5"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+declaration = "RelativeConicArcs.Conic.NonsingularConic.finite_lower_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Conic.completeOutside_bound_general"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Conic.eventually_lt_centered"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Conic.rhoC_explicit_additive_lower_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Examples.rhoC_GF8"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Examples.rhoC_GF9"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Examples.rhoC_ZMod11"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.Examples.rhoC_GF16_bounds"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman"]
+declaration = "RelativeConicArcs.Examples.rhoC_ZMod5"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.rho_points_ZMod5"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.TangentPairFourGroup.even_standardConic_zeroDefect_charTwo_order"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.TangentPairFourGroup.no_upper_even_equality_branch"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.canonical_reconstruction"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.completeAffine_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.completeAffine_bound_eq_iff"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.completeAffine_equality_order"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrenceCenter_pointIndex_eq_half"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrenceCentersOnPair_card_eq_quotient"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrenceCentersOnPair_card_mul_sub_one"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrenceCenters_card_eq_quotient"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrenceCenters_card_mul_choose_half"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.concurrence_matching_injective"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.coverage_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.disjoint_arcPairs_existsUnique_concurrence"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.eq_of_ordinaryUncovered_eq"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.eq_zero_of_evaluationMap_injective"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.evaluation_eq_zero_of_eq_sum"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.even_completeOutside_zeroDefect_order_spectrum"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.exists_secantDeletionSet"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.first_secant_moment"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.linesAboveUncoveredThreshold_eq_secants"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.odd_completeOutside_zeroDefect_order_spectrum"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.odd_standardConic_zeroDefect_charTwo_order"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.pointIndex_le_half_card"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.scaledDefect_eq_remainders"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.scaledDefect_eq_zero_iff"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.scaledDefect_eq_zero_or_half_sub_two_le"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.second_secant_moment"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.stability_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.stabilizes_iff_stabilizes_ordinaryUncovered"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ternaryQuadratic_eq_zero_of_standardLine_and_offLineTriangle"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.two_mul_badConcurrenceEdgeCount_le"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.uncovered_bound"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.verticesOfLineFamily_secants_eq"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConic"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

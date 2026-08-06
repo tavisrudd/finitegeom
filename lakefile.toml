@@ -24,6 +24,8 @@ name = "CapGame"
 name = "ProjectiveCap"
 roots = [
   "CapGame.BuildGame",
+  "CapGame.GraphMirror",
+  "CapGame.Mirror",
   "ProjectiveCap.Almost.OddEscape",
   "ProjectiveCap.Binary",
   "ProjectiveCap.CertCheck",
@@ -186,6 +188,7 @@ roots = [
   "RelativeConicArcs.FrameCoordinates",
   "RelativeConicArcs.Gates.AMELUExtensionFieldPencil",
   "RelativeConicArcs.Gates.AMELUPartyExtensionSplitting",
+  "RelativeConicArcs.Gates.ArcsCompleteOutsideConic",
   "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
   "RelativeConicArcs.GoldenHexagonNormalForm",
   "RelativeConicArcs.GoldenQuadraticCharacters",
@@ -232,6 +235,7 @@ roots = [
   "RelativeConicArcs.OddSixArcAffinePrism",
   "RelativeConicArcs.OddSixArcLineBound",
   "RelativeConicArcs.OddSixArcPrismExtraction",
+  "RelativeConicArcs.ParametrizedHoles",
   "RelativeConicArcs.PetersenHarmonicKernel",
   "RelativeConicArcs.PRSContraction",
   "RelativeConicArcs.PRSFoundation",

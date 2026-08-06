@@ -24,11 +24,11 @@ def q5FrameMatrix : Matrix (Fin 3) (Fin 3) (ZMod 5) :=
 def q5DisplayedQuadratic (v : Vec (ZMod 5)) : ZMod 5 :=
   v 0 ^ 2 + v 1 ^ 2 + v 2 ^ 2 + v 0 * v 1 + v 0 * v 2 + v 1 * v 2
 
-/-- The four standard frame vectors in the order used by the witness. -/
+/-- The four standard frame vectors, in the order used by the frame witness below. -/
 def q5StandardFrameVectors : List (Vec (ZMod 5)) :=
   [v5 1 0 0, v5 0 1 0, v5 0 0 1, v5 1 1 1]
 
-/-- A projective four-frame transported to the standard conic `XZ - Y² = 0` by
+/-- The projective four-frame, transported to the standard conic `XZ - Y² = 0` by
 the matrix with rows `(1,2,3)`, `(0,1,3)`, `(3,2,4)`.  That matrix has determinant `2` over
 `ZMod 5`; pulling back the standard equation gives a nonzero scalar multiple of the displayed
 quadratic `X² + Y² + Z² + XY + XZ + YZ`. -/
@@ -62,7 +62,7 @@ theorem q5FrameMatrix_maps_frame :
     q5StandardFrameVectors.map (q5FrameMatrix *ᵥ ·) = q5FrameWitness.map Subtype.val := by
   decide
 
-/-- Kernel verification that the transported frame is an arc, is disjoint from the
+/-- Strict-kernel verification that the transported frame is an arc, is disjoint from the
 standard conic, and covers every projective point outside it. -/
 theorem q5_frame_check : check (K := ZMod 5) q5FrameWitness = true := by decide
 

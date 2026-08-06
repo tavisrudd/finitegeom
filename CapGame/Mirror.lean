@@ -18,7 +18,6 @@ def MirrorInvariant (σ : α ≃ α) (S : Finset α) : Prop :=
   S.map σ.toEmbedding = S
 
 omit [Fintype α] [DecidableEq α] in
-/-- A mirror-invariant finite set contains the image of each of its elements. -/
 theorem apply_mem_of_mirrorInvariant {σ : α ≃ α} {S : Finset α}
     (hS : MirrorInvariant σ S) {x : α} (hx : x ∈ S) : σ x ∈ S := by
   unfold MirrorInvariant at hS
@@ -26,8 +25,6 @@ theorem apply_mem_of_mirrorInvariant {σ : α ≃ α} {S : Finset α}
   exact Finset.mem_map.mpr ⟨x, hx, rfl⟩
 
 omit [Fintype α] [DecidableEq α] in
-/-- For an involutive mirror, membership of the image in an invariant set
-implies membership of the original element. -/
 theorem mem_of_apply_mem_mirrorInvariant {σ : α ≃ α}
     (hσ : ∀ x : α, σ (σ x) = x) {S : Finset α}
     (hS : MirrorInvariant σ S) {x : α} (hx : σ x ∈ S) : x ∈ S := by
@@ -47,7 +44,7 @@ def MirrorStepGood (Valid : Finset α -> Prop) (σ : α ≃ α) (S : Finset α) 
   ∀ x : α, Move Valid S x -> Move Valid (insert x S) (σ x)
 
 omit [Fintype α] in
-private theorem mirrorInvariant_insert_pair {σ : α ≃ α} (hσ : ∀ x : α, σ (σ x) = x)
+theorem mirrorInvariant_insert_pair {σ : α ≃ α} (hσ : ∀ x : α, σ (σ x) = x)
     {S : Finset α} (hS : MirrorInvariant σ S) (x : α) :
     MirrorInvariant σ (insert (σ x) (insert x S)) := by
   classical

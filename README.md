@@ -166,11 +166,16 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 289-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 291-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
   13-module structural closure.
+- `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
+  the human boundary for arcs complete outside a prescribed conic, including the
+  averaging and packing bounds, the small-order witnesses, the step and
+  reduction semantics, and the game-free order-eleven residual dictionary.  The
+  exhaustive order-sixteen families are not part of it.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
 - `trust/manifests/clebsch_support_cubic_orientation.json` records the golden
