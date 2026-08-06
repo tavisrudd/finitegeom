@@ -1,9 +1,9 @@
 import RelativeConicArcs.Gates.ArcsCompleteOutsideConic
 
 /-!
-# Axiom audit for the human Arcs boundary
+# Axiom audit for the Arcs boundary
 
-This audit prints the axioms of the terminals exported with the human-scale
+This audit prints the axioms of the terminals exported with the
 boundary for arcs complete outside a prescribed conic: the averaging and
 packing bounds, the small-order witnesses and their normalizations, the
 step and reduction semantics, and the game-free order-eleven residual

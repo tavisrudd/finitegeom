@@ -82,8 +82,8 @@ checker semantics needed by the order-16 classification. The public
 leaf families belong to the downstream `finitegeom-q16-certificates` package.
 
 The input and output sides of this split are recorded in
-`trust/source-manifests/arcs_complete_outside_conic_human.json` and
-`trust/manifests/arcs_complete_outside_conic_human.json`. The target-only
+`trust/source-manifests/arcs_complete_outside_conic.json` and
+`trust/manifests/arcs_complete_outside_conic.json`. The target-only
 changes expose four declarations required across module boundaries, document
 those declarations, and remove development-workflow prose without changing
 the mathematical statements.

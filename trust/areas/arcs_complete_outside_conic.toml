@@ -1,7 +1,7 @@
-# Trust boundary for arcs complete outside a prescribed conic: human library boundary.
+# Trust boundary for arcs complete outside a prescribed conic: library boundary.
 
 schema_version = 1
-area = "arcs_complete_outside_conic_human"
+area = "arcs_complete_outside_conic"
 manifest = "trust/ARCS_COMPLETE_OUTSIDE_CONIC.md"
 
 owns = [

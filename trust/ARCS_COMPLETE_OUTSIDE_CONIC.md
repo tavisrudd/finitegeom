@@ -1,6 +1,6 @@
-# Arcs complete outside a prescribed conic: human library boundary
+# Arcs complete outside a prescribed conic: library boundary
 
-This boundary records the human-scale library accompanying the manuscript
+This boundary records the library accompanying the manuscript
 *Arcs complete outside a prescribed conic*: the reusable plane geometry, the
 asymptotic and averaging arguments, the small-field witnesses, the order-sixteen
 classification definitions, and the kernel-checked step and reduction semantics.
@@ -123,8 +123,8 @@ reads it directly from the terminal it appears in.
 
 The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `propext`.
 Source and candidate bytes are recorded in
-`trust/source-manifests/arcs_complete_outside_conic_human.json` and
-`trust/manifests/arcs_complete_outside_conic_human.json`.
+`trust/source-manifests/arcs_complete_outside_conic.json` and
+`trust/manifests/arcs_complete_outside_conic.json`.
 
 ## Terminals
 

@@ -13,8 +13,8 @@ name = "clebsch_passages"
 spine = "areas/clebsch_passages.toml"
 
 [[area]]
-name = "arcs_complete_outside_conic_human"
-spine = "areas/arcs_complete_outside_conic_human.toml"
+name = "arcs_complete_outside_conic"
+spine = "areas/arcs_complete_outside_conic.toml"
 
 [[area]]
 name = "arcs_complete_outside_conic_additions"
