@@ -109,6 +109,7 @@
     "Mathlib.LinearAlgebra.Projectivization.Cardinality",
     "Mathlib.LinearAlgebra.Projectivization.Collinear",
     "Mathlib.LinearAlgebra.Projectivization.Subspace",
+    "Mathlib.LinearAlgebra.QuadraticForm.IsometryEquiv",
     "Mathlib.LinearAlgebra.Span.Basic",
     "Mathlib.LinearAlgebra.Vandermonde",
     "Mathlib.Order.Lattice.Nat",
@@ -127,7 +128,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 291,
+  "module_count": 299,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -143,6 +144,7 @@
     "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
     "RelativeConicArcs.Gates.ClebschPassages",
     "RelativeConicArcs.Gates.ClebschRigidityHuman",
+    "RelativeConicArcs.Gates.ClebschRigidityTrust",
     "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
@@ -843,10 +845,16 @@
       "sha256": "a2e125505a0e42be799cb256005257e38a68ebc0b9c147bb65c36be7e226dd2c"
     },
     {
-      "bytes": 15692,
+      "bytes": 16254,
       "module": "RelativeConicArcs.ClebschGateway",
       "path": "RelativeConicArcs/ClebschGateway.lean",
-      "sha256": "24e786a37ad2dab7d91651e51d5dbb5427fc26bd9e22c6a54fddda97abc66fd8"
+      "sha256": "c91e85fce72635a98b6e8b2cbecd887866145decfe163b20d9af911046e56b4b"
+    },
+    {
+      "bytes": 4970,
+      "module": "RelativeConicArcs.ClebschGatewayQ11Extension",
+      "path": "RelativeConicArcs/ClebschGatewayQ11Extension.lean",
+      "sha256": "501c1a378d0f1596d4830504c4cb1b6bd7c584791ee695d68647c8818c067890"
     },
     {
       "bytes": 17856,
@@ -1167,6 +1175,12 @@
       "sha256": "6f72d1c3d7ff502210766d3d6d1f2af91fb3cf166c13b6b70c67e2a87dc64648"
     },
     {
+      "bytes": 7394,
+      "module": "RelativeConicArcs.Gates.ClebschRigidityTrust",
+      "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
+      "sha256": "8dfca9f0db641507a439fe4719482e08f35bb490df0b6a599fb7cb2cbac030e1"
+    },
+    {
       "bytes": 7147,
       "module": "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
       "path": "RelativeConicArcs/Gates/MDSCSSTransversalGeometry.lean",
@@ -1299,10 +1313,10 @@
       "sha256": "21ae7510c98fa2e0a5c2c9f42945761755fc6b3651e6b119c6d96b066ad5ce0b"
     },
     {
-      "bytes": 11437,
+      "bytes": 11438,
       "module": "RelativeConicArcs.OddSixArcAffinePrism",
       "path": "RelativeConicArcs/OddSixArcAffinePrism.lean",
-      "sha256": "89b120ca53a5fdb3bfa380bd864bb2035e40fdbb32f0f80d895f2f34af372f5b"
+      "sha256": "0d05dc6e667898b6730ba46f24289a27046c3a136522655da61be4605d9b1150"
     },
     {
       "bytes": 24774,
@@ -1311,10 +1325,10 @@
       "sha256": "2f070b461d24000692d11e39a33307f523e9d15b62cb6edfe72853ec129aa7f7"
     },
     {
-      "bytes": 23572,
+      "bytes": 23783,
       "module": "RelativeConicArcs.OddSixArcPrismExtraction",
       "path": "RelativeConicArcs/OddSixArcPrismExtraction.lean",
-      "sha256": "6ce95c2e905bbee71f3e2ad8597344c656ae18666f48bf7b16830146735c4b26"
+      "sha256": "2bd6270ebc64fef121bfee59e1a52165865d1ae9b06dee962b8dce98d79483cf"
     },
     {
       "bytes": 2561,
@@ -1407,10 +1421,22 @@
       "sha256": "c4145e6d728dcf3b1a81f7080f51e4a1774dec10f78b9e1458e726f75d6fe412"
     },
     {
-      "bytes": 4916,
+      "bytes": 4917,
       "module": "RelativeConicArcs.ProjectiveTripleNormalization",
       "path": "RelativeConicArcs/ProjectiveTripleNormalization.lean",
-      "sha256": "ca980108a893fb5347314e2e93e099bede5e7989b1c7ef2895c24a48061fcb08"
+      "sha256": "5f51bcf9f4756bbe69196b65e6aff628df92990136c6965658d4202d87039d40"
+    },
+    {
+      "bytes": 13186,
+      "module": "RelativeConicArcs.Q11BrianchonPetersen",
+      "path": "RelativeConicArcs/Q11BrianchonPetersen.lean",
+      "sha256": "08fc334fcf11ef6aa7059b8cbef4fdfe40b4a221d2f01091041ff6df4d6d3f4d"
+    },
+    {
+      "bytes": 14312,
+      "module": "RelativeConicArcs.Q11CodeRigidityBridge",
+      "path": "RelativeConicArcs/Q11CodeRigidityBridge.lean",
+      "sha256": "96515c666f5d108fa1f152cfd6b45bc65648b713b89849d8921ad91371f0d57a"
     },
     {
       "bytes": 15237,
@@ -1419,10 +1445,22 @@
       "sha256": "8878c534db5192e9a9b412363378f61f3cac73e67e04b6d60dc0b1b02c697b89"
     },
     {
-      "bytes": 2577,
+      "bytes": 14115,
+      "module": "RelativeConicArcs.Q11DecodingSynthesis",
+      "path": "RelativeConicArcs/Q11DecodingSynthesis.lean",
+      "sha256": "5ef74a255532a6e7fd11509241f1454c876110f07bf9f66f4d280c19c29a18b6"
+    },
+    {
+      "bytes": 4329,
       "module": "RelativeConicArcs.Q11DyeAxioms",
       "path": "RelativeConicArcs/Q11DyeAxioms.lean",
-      "sha256": "5dc4fd1e42c9f807a65311ca5b7b07cda94bcf1ec7978d3d6807254200729a7f"
+      "sha256": "aa506d63185dbab2b3bd5abbe35e7fef64e49e9e883ee7db28f33b1b7f2efd77"
+    },
+    {
+      "bytes": 2595,
+      "module": "RelativeConicArcs.Q11DyeConsequences",
+      "path": "RelativeConicArcs/Q11DyeConsequences.lean",
+      "sha256": "8bc3e41e6a206e58f79a9553d30927f7eb5b7f9fc85fd4315d97b7948d1a8c4a"
     },
     {
       "bytes": 10997,
@@ -1441,6 +1479,12 @@
       "module": "RelativeConicArcs.Q11Residual",
       "path": "RelativeConicArcs/Q11Residual.lean",
       "sha256": "848caed50d6a419b7d8706aaa90abe9f829ff74452ebf7d86edf21206e9f6ab5"
+    },
+    {
+      "bytes": 1853,
+      "module": "RelativeConicArcs.Q11RigiditySpine",
+      "path": "RelativeConicArcs/Q11RigiditySpine.lean",
+      "sha256": "c848ca34174519dd6dd7f7fe90d62599511d74370e44b33e5c83d91f156ddc97"
     },
     {
       "bytes": 4401,
@@ -1633,6 +1677,12 @@
       "module": "RelativeConicArcs.SixArcDefectBridge",
       "path": "RelativeConicArcs/SixArcDefectBridge.lean",
       "sha256": "1328f99e3ecf809242451bc7452c28baad3297dcbef08216c092e9788f469e19"
+    },
+    {
+      "bytes": 5645,
+      "module": "RelativeConicArcs.SixArcDegenerateConicExclusion",
+      "path": "RelativeConicArcs/SixArcDegenerateConicExclusion.lean",
+      "sha256": "eedcfc2e5c409735c130587cf66efcca5fdfa1fb14964c5d58906ca905cc0ba2"
     },
     {
       "bytes": 18723,

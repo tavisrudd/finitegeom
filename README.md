@@ -166,7 +166,12 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `TARGET_MANIFEST.json` content-addresses the complete 291-module reviewed
+- `trust/manifests/clebsch_rigidity_human.json` content-addresses the human
+  boundary for deep-hole rigidity of the Clebsch hexagon code, including the
+  coding dictionary, the decoding synthesis, the rigidity spine and its bridge
+  to the code, and the chord defect.  The exhaustive order-eleven orbit families
+  are not part of it.
+- `TARGET_MANIFEST.json` content-addresses the complete 299-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding

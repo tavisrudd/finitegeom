@@ -1,65 +1,398 @@
-# Machine-readable paper trust boundary.
+# Trust boundary for deep-hole rigidity of the clebsch hexagon code: human library boundary.
 
 schema_version = 1
 area = "clebsch_rigidity_human"
 manifest = "trust/CLEBSCH_RIGIDITY_HUMAN.md"
 
 owns = [
-  "RelativeConicArcs.Gates.ClebschRigidityHuman",
+  "CapGame.BuildGame",
+  "CapGame.GraphMirror",
+  "CapGame.Mirror",
+  "ProjectiveCap.Grid",
+  "ProjectiveCap.PlaneAffineChart",
+  "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.Projective",
+  "ProjectiveCap.Sym2ConicBridge",
+  "RelativeConicArcs.Arc",
+  "RelativeConicArcs.Certificate",
+  "RelativeConicArcs.ClebschChordDefect",
+  "RelativeConicArcs.ClebschGateway",
+  "RelativeConicArcs.ClebschGatewayQ11Extension",
+  "RelativeConicArcs.ClebschGoldenConference",
+  "RelativeConicArcs.ClebschTwoGraph",
+  "RelativeConicArcs.CodingBridge",
+  "RelativeConicArcs.Conic",
+  "RelativeConicArcs.Defect",
+  "RelativeConicArcs.ExampleChecks.Q11",
+  "RelativeConicArcs.Examples",
+  "RelativeConicArcs.FiniteFields",
+  "RelativeConicArcs.FrameCoordinates",
+  "RelativeConicArcs.Gates.ClebschRigidityTrust",
+  "RelativeConicArcs.GoldenCubicNodeElimination",
+  "RelativeConicArcs.GoldenCubicNodeHessians",
+  "RelativeConicArcs.GoldenCubicNodes",
+  "RelativeConicArcs.GoldenCubicNodesBase",
+  "RelativeConicArcs.GoldenHexagonNormalForm",
+  "RelativeConicArcs.GoldenMatchingCubics",
+  "RelativeConicArcs.GoldenMatchingJacobianBase",
+  "RelativeConicArcs.KneserPairEigenspace",
+  "RelativeConicArcs.MarkedClebschBridge",
+  "RelativeConicArcs.Moments",
+  "RelativeConicArcs.OddSixArcAffinePrism",
+  "RelativeConicArcs.OddSixArcLineBound",
+  "RelativeConicArcs.OddSixArcPrismExtraction",
+  "RelativeConicArcs.ParametrizedHoles",
+  "RelativeConicArcs.Plane",
+  "RelativeConicArcs.ProjectiveBridge",
+  "RelativeConicArcs.ProjectiveTripleNormalization",
+  "RelativeConicArcs.Q11BrianchonPetersen",
+  "RelativeConicArcs.Q11CodeRigidityBridge",
+  "RelativeConicArcs.Q11Coding",
+  "RelativeConicArcs.Q11DecodingSynthesis",
+  "RelativeConicArcs.Q11DyeAxioms",
+  "RelativeConicArcs.Q11DyeConsequences",
+  "RelativeConicArcs.Q11GoldenHexagonWitness",
+  "RelativeConicArcs.Q11Residual",
+  "RelativeConicArcs.Q11RigiditySpine",
+  "RelativeConicArcs.Q11SemanticBase",
+  "RelativeConicArcs.Q11SemanticDistribution",
+  "RelativeConicArcs.Q11SemanticIndexCases",
+  "RelativeConicArcs.Q11SemanticLeaders",
+  "RelativeConicArcs.Q11SemanticOneAvoidance",
+  "RelativeConicArcs.Q11SemanticOneRep",
+  "RelativeConicArcs.Q11SemanticPairAvoidance",
+  "RelativeConicArcs.Q11SemanticPairRep",
+  "RelativeConicArcs.Q11SemanticPairRepA",
+  "RelativeConicArcs.Q11SemanticPairRepB",
+  "RelativeConicArcs.Q11SemanticPairRepC",
+  "RelativeConicArcs.Q11SemanticPairRepD",
+  "RelativeConicArcs.Q11SemanticRayData",
+  "RelativeConicArcs.Q11SemanticSpectrum",
+  "RelativeConicArcs.Q11SemanticSynthesis",
+  "RelativeConicArcs.Q11SemanticTwoRep",
+  "RelativeConicArcs.Q11SemanticTwoRepA",
+  "RelativeConicArcs.Q11SemanticTwoRepB",
+  "RelativeConicArcs.Q11SemanticTwoRepC",
+  "RelativeConicArcs.Q11SemanticTwoRepD",
+  "RelativeConicArcs.Q9Sylvester",
+  "RelativeConicArcs.QuadrangleDiagonal",
+  "RelativeConicArcs.SixArcChordMatchings",
+  "RelativeConicArcs.SixArcConcurrence",
+  "RelativeConicArcs.SixArcConcurrenceBound",
+  "RelativeConicArcs.SixArcDefectBridge",
+  "RelativeConicArcs.SixArcDegenerateConicExclusion",
+  "RelativeConicArcs.SixArcGoldenNormalForm",
+  "RelativeConicArcs.SixArcHexagonalOrder",
+  "RelativeConicArcs.SixArcOneFactorization",
+  "RelativeConicArcs.SixVertexOneFactorization",
+  "RelativeConicArcs.SmallKChordMoments",
+  "RelativeConicArcs.SmallKGeometricBridge",
+  "RelativeConicArcs.SupportOrientationCommutant",
+  "RelativeConicArcs.SupportOrientationCover",
+  "RelativeConicArcs.SupportOrientationDeterminant",
+  "RelativeConicArcs.SupportOrientationHolonomy",
+  "RelativeConicArcs.SupportOrientationNodes",
+  "RelativeConicArcs.SupportOrientationPentagon",
+  "RelativeConicArcs.SupportOrientationSpine",
+  "RelativeConicArcs.SupportOrientationSymmetry",
+  "RelativeConicArcs.SupportOrientationSymmetryCore",
+  "RelativeConicArcs.SupportOrientationSymmetryGenerators",
+  "RelativeConicArcs.SupportOrientationTraceDual",
+  "RelativeConicArcs.SyndromeGeometry",
 ]
 
-permitted_axioms = []
+permitted_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[gate]]
-module = "RelativeConicArcs.Gates.ClebschRigidityHuman"
+module = "RelativeConicArcs.Gates.ClebschRigidityTrust"
 terminals = [
   "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments",
   "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula",
   "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card",
+  "RelativeConicArcs.ClebschDye.deepHoleLocus_rigidifies_witnessCode",
+  "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic",
+  "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_planeConic",
+  "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic",
+  "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card",
+  "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card",
+  "RelativeConicArcs.ClebschDye.sixArc_uncovered_card_le_twelve_of_subset_planeQuadraticLocus",
+  "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts",
+  "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound",
+  "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree",
+  "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports",
+  "RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic",
+  "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact",
+  "RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three",
+  "RelativeConicArcs.Examples.Q11Coding.witness_mds_columns",
+  "RelativeConicArcs.OddSixArcPrismExtraction.sixArc_uncoveredOnLine_card_le_order_sub_five",
   "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five",
-  "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card",
-  "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order",
   "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card",
+  "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order",
+  "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card",
   "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra",
+  "RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive",
+  "RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive",
+  "RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator",
+  "RelativeConicArcs.SupportOrientationCover.antipodalQuotient_fiber_card_two",
+  "RelativeConicArcs.SupportOrientationCover.fiveOrbital_one_mem_each_other_fiber",
+  "RelativeConicArcs.SupportOrientationCover.fiveOrbitals_selfPaired",
+  "RelativeConicArcs.SupportOrientationDeterminant.det_signedOrbital_add_diagonal",
+  "RelativeConicArcs.SupportOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic",
+  "RelativeConicArcs.SupportOrientationHolonomy.fourPoint_twoGraph_identity",
+  "RelativeConicArcs.SupportOrientationHolonomy.pairBalance_iff_sq_five",
+  "RelativeConicArcs.SupportOrientationHolonomy.supportCubic_translation_invariant",
+  "RelativeConicArcs.SupportOrientationHolonomy.supportSign_eq_triangleProduct",
+  "RelativeConicArcs.SupportOrientationNodes.derivative_crossGoldenDeterminantLine_eval",
+  "RelativeConicArcs.SupportOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses",
+  "RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes",
+  "RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame",
+  "RelativeConicArcs.SupportOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck",
+  "RelativeConicArcs.SupportOrientationPentagon.signedOrbitalMatrix_sq",
+  "RelativeConicArcs.SupportOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff",
+  "RelativeConicArcs.SupportOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine",
+  "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_index_two",
+  "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5",
+  "RelativeConicArcs.SupportOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5",
+  "RelativeConicArcs.SupportOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic",
 ]
 coverage_rule = "closure"
 
 [[terminal]]
 declaration = "RelativeConicArcs.ClebschChordDefect.chordDefect_identity_of_moments"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.ClebschChordDefect.clebsch_uncovered_formula"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.ClebschChordDefect.orders_of_clebsch_uncovered_conic_card"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.deepHoleLocus_rigidifies_witnessCode"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_conic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.isClebschHexagon_of_uncovered_subset_planeConic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.sixArc_cards_of_uncovered_subset_conic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.ClebschDye.sixArc_uncovered_card_le_twelve_of_subset_planeQuadraticLocus"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.Examples.Q11Coding.witness_mds_columns"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.OddSixArcPrismExtraction.sixArc_uncoveredOnLine_card_le_order_sub_five"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.Q9Sylvester.distanceTwo_clique_number_five"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.SmallKGeometricBridge.fiveArc_not_conic_card"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_conic_card_order"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallKGeometricBridge.fourArc_uncovered_card"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.SmallKGeometricBridge.sevenArc_primePower_conic_card_spectra"
-gates = ["RelativeConicArcs.Gates.ClebschRigidityHuman"]
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCover.antipodalQuotient_fiber_card_two"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCover.fiveOrbital_one_mem_each_other_fiber"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationCover.fiveOrbitals_selfPaired"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationDeterminant.det_signedOrbital_add_diagonal"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationDeterminant.determinantPencil_oddPart_eq_supportCubic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.fourPoint_twoGraph_identity"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.pairBalance_iff_sq_five"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.supportCubic_translation_invariant"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationHolonomy.supportSign_eq_triangleProduct"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationNodes.derivative_crossGoldenDeterminantLine_eval"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationNodes.singularPoints_crossGoldenDeterminant_eq_axisClasses"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationPentagon.orbitalDifference_sq_eq_ten_one_sub_deck"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationPentagon.signedOrbitalMatrix_sq"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.mem_orientedSupportCubicStabilizer_iff"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.mem_supportCubicProjectiveStabilizer_iff_cubicLine"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_index_two"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.orientedSupportCubic_stabilizer_equiv_A5"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationSymmetry.supportCubic_projectiveStabilizer_equiv_S5"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SupportOrientationTraceDual.det_crossGoldenBlock_eq_neg_supportCubic"
+gates = ["RelativeConicArcs.Gates.ClebschRigidityTrust"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
