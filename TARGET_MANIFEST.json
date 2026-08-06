@@ -42,6 +42,7 @@
     "Mathlib.Data.Fintype.Basic",
     "Mathlib.Data.Fintype.BigOperators",
     "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Defs",
     "Mathlib.Data.Fintype.EquivFin",
     "Mathlib.Data.Fintype.Pi",
     "Mathlib.Data.Fintype.Prod",
@@ -126,7 +127,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 286,
+  "module_count": 289,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -739,6 +740,24 @@
       "sha256": "220a62cba94bac13b43d13363e4654ec3b07357c5e650f884df7469a9443c048"
     },
     {
+      "bytes": 32968,
+      "module": "RelativeConicArcs.AlignedFamilyFaithfulness",
+      "path": "RelativeConicArcs/AlignedFamilyFaithfulness.lean",
+      "sha256": "1e7670f2533c172afa37acf3fd081b3467bd010dd4306960060099d0ad21ed56"
+    },
+    {
+      "bytes": 8534,
+      "module": "RelativeConicArcs.AlignedQueryFamily",
+      "path": "RelativeConicArcs/AlignedQueryFamily.lean",
+      "sha256": "1b7dfc9171f244495996209594bdfeb78a11134100af74611dacf3fb295f63ce"
+    },
+    {
+      "bytes": 24843,
+      "module": "RelativeConicArcs.AlignedTwoGraph",
+      "path": "RelativeConicArcs/AlignedTwoGraph.lean",
+      "sha256": "62942c1ab50568ad5603b99a2d381f017ed874e091a454100bf46ef276bc2fcd"
+    },
+    {
       "bytes": 9297,
       "module": "RelativeConicArcs.Arc",
       "path": "RelativeConicArcs/Arc.lean",
@@ -853,10 +872,10 @@
       "sha256": "887f4e4f8fc32d44beacf1882fd73274563c5b02e474a9c5ce038e5e88a4c534"
     },
     {
-      "bytes": 6072,
+      "bytes": 6555,
       "module": "RelativeConicArcs.ClebschInvariantCubic",
       "path": "RelativeConicArcs/ClebschInvariantCubic.lean",
-      "sha256": "869830e454beca7461d57bfef81dad6e45fd621e2d1e23fa9c4cd5fe805e605d"
+      "sha256": "3647783f1c7fcec39d311618a4f37c1b293ce064b9621c257b099869ad0f23f7"
     },
     {
       "bytes": 11115,
@@ -871,10 +890,10 @@
       "sha256": "4af948c498b21433546f71029ee0f20ee2e2851991febf2d386a14c04be9464c"
     },
     {
-      "bytes": 3719,
+      "bytes": 3725,
       "module": "RelativeConicArcs.ClebschPassagesCorrespondence",
       "path": "RelativeConicArcs/ClebschPassagesCorrespondence.lean",
-      "sha256": "77cd7324cf6fc7aaca83a286ed570fa78091a5a27f452b7ff2378a22f8259837"
+      "sha256": "a7f152ab5fad8cfe4847c7cffd5103eb1c4cdba749b2428ce0327408117f8e28"
     },
     {
       "bytes": 6490,
@@ -1129,10 +1148,10 @@
       "sha256": "07b715d6426e3f8543c29f9db25d5037ac34cbb8e3e5e97317a2a0b23069e9bd"
     },
     {
-      "bytes": 4045,
+      "bytes": 7169,
       "module": "RelativeConicArcs.Gates.ClebschPassages",
       "path": "RelativeConicArcs/Gates/ClebschPassages.lean",
-      "sha256": "f750d53cb7ee3ebd0decde88281af63e19b1f1913f1624aaabb27b23ce7bc1fe"
+      "sha256": "361740f1fb6b805bbb5d03688ab918b2cf7e5dd72546775a87ea4f1bfbcb104a"
     },
     {
       "bytes": 1839,
@@ -1225,16 +1244,16 @@
       "sha256": "0443295b616f7824a7742f60ae5322da1f87eaa21653b2f0f84d5dd35eb0f9f1"
     },
     {
-      "bytes": 6420,
+      "bytes": 7633,
       "module": "RelativeConicArcs.GoldenQuadraticCharacters",
       "path": "RelativeConicArcs/GoldenQuadraticCharacters.lean",
-      "sha256": "0c24f40bf6189e26d0f052a7bf6acbbdd1a0ea219639a04feea8e0868e962eb1"
+      "sha256": "e91dc033c8269385018c0f8eae8d28df635e606a59083ccb242cfd88dec1842e"
     },
     {
-      "bytes": 8831,
+      "bytes": 8824,
       "module": "RelativeConicArcs.InvolutiveOddUnit",
       "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
-      "sha256": "c9f06ff7a227e9ce49a65adb84a073899544db887e3acf923d868de92ef382b0"
+      "sha256": "4c89dc3c2619fc4cd52e53d8c421f6f4cc234a026265d65c00ef2dbb6509f3b6"
     },
     {
       "bytes": 4437,
@@ -1357,10 +1376,10 @@
       "sha256": "c28f4102e744c227cd9c04697f68c0dfce1a93e7d7e3e94fe69c5932953ef8ad"
     },
     {
-      "bytes": 5959,
+      "bytes": 6251,
       "module": "RelativeConicArcs.PetersenHarmonicKernel",
       "path": "RelativeConicArcs/PetersenHarmonicKernel.lean",
-      "sha256": "f265b5849d66f250610370921a62607ebe1443a9b153bda4d967be2d70878ea4"
+      "sha256": "146b96027caad330cfea9c16b2236957faf9e23110aebd9f5e1dfc48f1d18841"
     },
     {
       "bytes": 1894,

@@ -9,17 +9,38 @@ import RelativeConicArcs.MarkedClebschBridge
 import RelativeConicArcs.KneserPairEigenspace
 import RelativeConicArcs.PetersenHarmonicKernel
 import RelativeConicArcs.ClebschInvariantCubic
+import RelativeConicArcs.AlignedTwoGraph
+import RelativeConicArcs.AlignedFamilyFaithfulness
+import RelativeConicArcs.AlignedQueryFamily
 import RelativeConicArcs.ClebschPassagesCorrespondence
 
 /-!
 # Gate: structural Clebsch passages
 
-This is the public replay surface for the algebraic mechanisms used in
-*Arithmetic and harmonic realizations of the Clebsch cubic*.  The pinching,
-eigenspace, tight-frame, switching, and scalar-factor arguments are symbolic.
-Native decision is confined to the
-displayed finite conference/reflection matrices, one finite-field nonsquare
-check, and values of explicitly displayed finite vectors.
+This is the public replay surface for the algebraic mechanisms used in the
+current Clebsch paper.  The pinching, eigenspace, tight-frame, switching,
+aligned-design faithfulness, and scalar-factor arguments are symbolic.
+No compiled evaluation enters this gate.  Every terminal printed below
+depends only on `propext`, `Classical.choice` and `Quot.sound`, and six
+depend on no axiom at all.  The order-six conference matrix is kernel-checked
+in `ClebschGoldenConference`; both bounds behind the triangle Ramsey equality
+on six labelled points, and the aligned anchor they produce, are proved here.
+Aligned-design faithfulness is proved for every two-graph on a finite point set
+with at least seven points: the aligned four-sets determine the two-graph up to
+one global complement bit.
+
+The finite steps use three methods.  Kernel `decide` takes the displayed
+reflection matrices entrywise, the finite-field nonsquare witness over the
+eleven residues, and the two aligned two-graph classifiers over their 16,384
+and eight cases.  `norm_num` takes the marked fixed vector sum, its third
+elementary symmetric value, the two reflection-vector norms and the
+identification of each displayed integral reflection with the rational
+reflection formula; these are rewriting procedures producing kernel-checked
+terms, not evaluations of a `Decidable` instance.  One determinant falls to
+cofactor expansion.  The third-outside-point elimination, the normalization of
+an arbitrary two-graph onto that classifier, the extension from seven points to
+larger point sets, and the count of the tests meeting a fixed four-point anchor
+in at least two points are symbolic.
 
 The gate deliberately does not assert the geometric correspondence between
 Hitchin's spaces and these algebraic models, nor the integral
@@ -54,6 +75,28 @@ claim.
 #print axioms RelativeConicArcs.ClebschInvariantCubic.exists_smul_markedFixedVector
 #print axioms RelativeConicArcs.ClebschInvariantCubic.eq_gauntCoefficient_mul_sigmaThree
 #print axioms RelativeConicArcs.ClebschInvariantCubic.gauntCoefficient_factorization
+#print axioms RelativeConicArcs.AlignedTwoGraph.aligned_complement_iff
+#print axioms RelativeConicArcs.AlignedTwoGraph.triangle_eq_rooted_xor
+#print axioms RelativeConicArcs.AlignedTwoGraph.alignedAnchor_of_ramseyTriple
+#print axioms RelativeConicArcs.AlignedTwoGraph.exists_monochromatic_triple
+#print axioms RelativeConicArcs.AlignedTwoGraph.no_monochromatic_triple_five
+#print axioms RelativeConicArcs.AlignedTwoGraph.exists_alignedAnchor
+#print axioms RelativeConicArcs.AlignedTwoGraph.anchorSignature_eq_false_iff_balanced
+#print axioms RelativeConicArcs.AlignedTwoGraph.pairSignature_classification
+#print axioms RelativeConicArcs.AlignedTwoGraph.threePairOutcomes_eliminate_swaps
+#print axioms RelativeConicArcs.AlignedTwoGraph.normalizedSevenSignature_injective
+#print axioms RelativeConicArcs.AlignedTwoGraph.global_agreement_of_common_seven_restrictions
+#print axioms RelativeConicArcs.AlignedTwoGraph.calibratedTriangle_forces_no_complement
+#print axioms RelativeConicArcs.AlignedTwoGraph.signing_eq_up_to_switching_and_negation
+#print axioms RelativeConicArcs.AlignedTwoGraph.det_fourSigningMatrix_eq_three_sub_two_cycleSum
+#print axioms RelativeConicArcs.AlignedTwoGraph.selectedQueryCount_eq
+#print axioms RelativeConicArcs.AlignedTwoGraph.sixPointAnchor_testCount
+#print axioms RelativeConicArcs.AlignedTwoGraph.aligned_xorBit_iff
+#print axioms RelativeConicArcs.AlignedTwoGraph.normalizedAnchor_of_aligned
+#print axioms RelativeConicArcs.AlignedTwoGraph.sevenPoint_agreement
+#print axioms RelativeConicArcs.AlignedTwoGraph.exists_complementBit_on_seven
+#print axioms RelativeConicArcs.AlignedTwoGraph.exists_complementBit_of_alignedFamily_eq
+#print axioms RelativeConicArcs.AlignedTwoGraph.card_selectedQueryFamily
 #print axioms RelativeConicArcs.ClebschPassagesCorrespondence.chartBranch_square
 #print axioms RelativeConicArcs.ClebschPassagesCorrespondence.chartConductor_eq_branchIdeal
 #print axioms RelativeConicArcs.ClebschPassagesCorrespondence.goldenRoot_structural_package

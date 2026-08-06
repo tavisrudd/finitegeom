@@ -11,8 +11,8 @@ known to lie on the Clebsch invariant line.
 
 The normalized cubic is `σ₃(y)=(1/3)∑ᵢ yᵢ³`.  Its value on the primitive
 fixed vector is `20`.  Consequently one exact value of any cubic on the
-`σ₃` line fixes its scalar.  The coefficient declarations separate the
-universal degree-six Wigner factor from the marked Petersen restriction factor and
+`σ₃` line fixes its scalar.  The final declarations separate the universal
+degree-six Wigner factor from the marked Petersen restriction factor and
 verify their product; they do not replace the hypothesis that the cubic lies
 on the invariant line.
 -/
@@ -35,12 +35,18 @@ theorem sigmaThree_smul (c : ℚ) (y : Fin 5 → ℚ) :
 
 /-- The primitive marked vector lies in the standard sum-zero module. -/
 theorem markedFixedVector_sum : ∑ i, markedFixedVector i = 0 := by
-  native_decide
+  norm_num [markedFixedVector, Fin.sum_univ_five, Matrix.cons_val_zero,
+    Matrix.cons_val_one, Matrix.head_cons, Matrix.cons_val_succ, Matrix.cons_val_two,
+      Matrix.cons_val_three, Matrix.cons_val_four, Matrix.tail_cons,
+      Matrix.head_fin_const]
 
 /-- The normalized Clebsch cubic takes value twenty on the primitive marked
 fixed vector. -/
 theorem sigmaThree_markedFixedVector : sigmaThree markedFixedVector = 20 := by
-  native_decide
+  norm_num [sigmaThree, markedFixedVector, Fin.sum_univ_five,
+    Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.head_cons, Matrix.cons_val_succ,
+    Matrix.cons_val_two, Matrix.cons_val_three, Matrix.cons_val_four,
+    Matrix.tail_cons]
 
 /-- The sum-zero parameter of the normalized chart point `xyz`. -/
 def normalizedMarkedVector : Fin 5 → ℚ :=
@@ -140,8 +146,8 @@ theorem gauntCoefficient_factorization :
       -wignerSixFactor * petersenRestrictionFactor := by
   norm_num [wignerSixFactor, petersenRestrictionFactor]
 
-/-- The denominators in the Condon--Shortley conversion reduce to
-`46189/13` and `27*13²`. -/
+/-- The apparently new denominators in the Condon--Shortley conversion are
+the reductions `46189/13` and `27*13²`. -/
 theorem condonShortley_denominators :
     (3553 : ℕ) = 46189 / 13 ∧ (4563 : ℕ) = 27 * 13 ^ 2 := by
   norm_num

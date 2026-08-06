@@ -9,7 +9,7 @@ anti-invariant parts.  If an anti-invariant element `c` is a unit, multiplicatio
 by `c` identifies the invariant part with the anti-invariant part, so every
 element has a unique expression `a + c * b` with `a` and `b` invariant.
 
-The localization theorem applies this mechanism after localizing away from `c ^ 2`.
+The final theorem applies this mechanism after localizing away from `c ^ 2`.
 The localization and its involution are hypotheses; no construction of an
 involution by a localization universal property is used.
 -/

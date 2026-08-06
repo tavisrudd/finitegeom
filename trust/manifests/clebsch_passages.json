@@ -1,53 +1,82 @@
 {
   "external_imports": [
     "Mathlib",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.Defs",
     "Mathlib.Data.Matrix.Mul",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
     "Mathlib.LinearAlgebra.Matrix.Notation",
     "Mathlib.Tactic.FinCases",
     "Mathlib.Tactic.NormNum",
     "Mathlib.Tactic.Ring"
   ],
-  "module_count": 13,
+  "module_count": 17,
   "roots": [
     "RelativeConicArcs.Gates.ClebschPassages"
   ],
   "schema_version": 1,
   "sources": [
     {
-      "bytes": 16130,
+      "bytes": 32968,
+      "module": "RelativeConicArcs.AlignedFamilyFaithfulness",
+      "path": "RelativeConicArcs/AlignedFamilyFaithfulness.lean",
+      "sha256": "1e7670f2533c172afa37acf3fd081b3467bd010dd4306960060099d0ad21ed56"
+    },
+    {
+      "bytes": 8534,
+      "module": "RelativeConicArcs.AlignedQueryFamily",
+      "path": "RelativeConicArcs/AlignedQueryFamily.lean",
+      "sha256": "1b7dfc9171f244495996209594bdfeb78a11134100af74611dacf3fb295f63ce"
+    },
+    {
+      "bytes": 24843,
+      "module": "RelativeConicArcs.AlignedTwoGraph",
+      "path": "RelativeConicArcs/AlignedTwoGraph.lean",
+      "sha256": "62942c1ab50568ad5603b99a2d381f017ed874e091a454100bf46ef276bc2fcd"
+    },
+    {
+      "bytes": 17856,
       "module": "RelativeConicArcs.ClebschGoldenConference",
       "path": "RelativeConicArcs/ClebschGoldenConference.lean",
-      "sha256": "f60aeaf8f6a62df9669ef25d710dd0a4e796223377365a86a52a23c9be5e4138"
+      "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
     },
     {
-      "bytes": 6072,
+      "bytes": 6555,
       "module": "RelativeConicArcs.ClebschInvariantCubic",
       "path": "RelativeConicArcs/ClebschInvariantCubic.lean",
-      "sha256": "869830e454beca7461d57bfef81dad6e45fd621e2d1e23fa9c4cd5fe805e605d"
+      "sha256": "3647783f1c7fcec39d311618a4f37c1b293ce064b9621c257b099869ad0f23f7"
     },
     {
-      "bytes": 3719,
+      "bytes": 3725,
       "module": "RelativeConicArcs.ClebschPassagesCorrespondence",
       "path": "RelativeConicArcs/ClebschPassagesCorrespondence.lean",
-      "sha256": "77cd7324cf6fc7aaca83a286ed570fa78091a5a27f452b7ff2378a22f8259837"
+      "sha256": "a7f152ab5fad8cfe4847c7cffd5103eb1c4cdba749b2428ce0327408117f8e28"
     },
     {
-      "bytes": 4045,
+      "bytes": 4738,
+      "module": "RelativeConicArcs.ClebschTwoGraph",
+      "path": "RelativeConicArcs/ClebschTwoGraph.lean",
+      "sha256": "f17562813c992c291f02e28231aab66c654e89826292fd55071818f0edcf2089"
+    },
+    {
+      "bytes": 7169,
       "module": "RelativeConicArcs.Gates.ClebschPassages",
       "path": "RelativeConicArcs/Gates/ClebschPassages.lean",
-      "sha256": "f750d53cb7ee3ebd0decde88281af63e19b1f1913f1624aaabb27b23ce7bc1fe"
+      "sha256": "361740f1fb6b805bbb5d03688ab918b2cf7e5dd72546775a87ea4f1bfbcb104a"
     },
     {
-      "bytes": 6420,
+      "bytes": 7633,
       "module": "RelativeConicArcs.GoldenQuadraticCharacters",
       "path": "RelativeConicArcs/GoldenQuadraticCharacters.lean",
-      "sha256": "0c24f40bf6189e26d0f052a7bf6acbbdd1a0ea219639a04feea8e0868e962eb1"
+      "sha256": "e91dc033c8269385018c0f8eae8d28df635e606a59083ccb242cfd88dec1842e"
     },
     {
-      "bytes": 8831,
+      "bytes": 8824,
       "module": "RelativeConicArcs.InvolutiveOddUnit",
       "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
-      "sha256": "c9f06ff7a227e9ce49a65adb84a073899544db887e3acf923d868de92ef382b0"
+      "sha256": "4c89dc3c2619fc4cd52e53d8c421f6f4cc234a026265d65c00ef2dbb6509f3b6"
     },
     {
       "bytes": 24986,
@@ -62,10 +91,10 @@
       "sha256": "30746ec72da8651bc8673b89d78f135632d37195b9c44ac5cca4f071808949ad"
     },
     {
-      "bytes": 5959,
+      "bytes": 6251,
       "module": "RelativeConicArcs.PetersenHarmonicKernel",
       "path": "RelativeConicArcs/PetersenHarmonicKernel.lean",
-      "sha256": "f265b5849d66f250610370921a62607ebe1443a9b153bda4d967be2d70878ea4"
+      "sha256": "146b96027caad330cfea9c16b2236957faf9e23110aebd9f5e1dfc48f1d18841"
     },
     {
       "bytes": 6345,

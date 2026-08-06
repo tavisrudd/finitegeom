@@ -77,7 +77,7 @@ theorem markedValue_determines_gauntCoefficient
       F y = (-784000 / 1247103 : ℚ) * sigmaThree y :=
   eq_gauntCoefficient_mul_sigmaThree hline hmarked
 
-/-- The Gaunt coefficient splits into the universal Wigner factor and
+/-- The final Gaunt coefficient splits into the universal Wigner factor and
 the marked Petersen restriction factor. -/
 theorem gauntCoefficient_has_two_structural_factors :
     (-784000 / 1247103 : ℚ) =
