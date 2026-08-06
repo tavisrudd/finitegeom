@@ -197,7 +197,7 @@ Linux, and Apple Silicon macOS.
   redundancy-six and seven synthesis interfaces, and the covering-radius
   threshold bridges.  Its synthesis theorems are conditional, carrying their
   geometric and literature inputs as explicit hypotheses.
-- `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 314-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
