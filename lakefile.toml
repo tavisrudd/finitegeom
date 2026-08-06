@@ -55,7 +55,9 @@ roots = [
   "ProjectiveCap.PlaneAffineChart",
   "ProjectiveCap.PlaneOutcome",
   "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.PlaneTransitivityGame",
   "ProjectiveCap.Projective",
+  "ProjectiveCap.ProjectiveCapGame",
   "ProjectiveCap.StableFacts",
   "ProjectiveCap.Sym2ConicBridge",
 ]

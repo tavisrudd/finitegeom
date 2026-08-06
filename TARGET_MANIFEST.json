@@ -136,7 +136,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 317,
+  "module_count": 319,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -432,10 +432,22 @@
       "sha256": "c4e2bc648b9b6a10f3f8a1769027a00a09f30177764713b7e9411b0d28c62b3a"
     },
     {
+      "bytes": 19329,
+      "module": "ProjectiveCap.PlaneTransitivityGame",
+      "path": "ProjectiveCap/PlaneTransitivityGame.lean",
+      "sha256": "1e9f470f7f30dc74c3b26cd1dcd51bd45b3f01158f27d0c09bb554e55d1b0097"
+    },
+    {
       "bytes": 3723,
       "module": "ProjectiveCap.Projective",
       "path": "ProjectiveCap/Projective.lean",
       "sha256": "e8c2bacdf93f05be2e1c9e3682de247e0d3bc844758db1faa7510f1a97c1477f"
+    },
+    {
+      "bytes": 4018,
+      "module": "ProjectiveCap.ProjectiveCapGame",
+      "path": "ProjectiveCap/ProjectiveCapGame.lean",
+      "sha256": "efb6491e202b297689deccf32a1b5a566612999506c9fce2f8a4971d3d26788e"
     },
     {
       "bytes": 2356,

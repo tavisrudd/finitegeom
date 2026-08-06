@@ -1,4 +1,5 @@
 import ProjectiveCap.PlaneTransitivity
+import ProjectiveCap.PlaneTransitivityGame
 import ProjectiveCap.GridGame
 import ProjectiveCap.GridSeed
 import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
