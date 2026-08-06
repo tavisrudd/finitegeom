@@ -1,10 +1,10 @@
 import RelativeConicArcs.Gates.ClebschRigidityTrust
 
 /-!
-# Axiom audit for the human Clebsch rigidity boundary
+# Axiom audit for the Clebsch rigidity boundary
 
-This audit prints the axioms of the terminals exported with the human-scale
-rigidity boundary for the Clebsch hexagon code: the coding dictionary, the
+This audit prints the axioms of the terminals exported with the rigidity
+boundary for the Clebsch hexagon code: the coding dictionary, the
 decoding synthesis, the rigidity spine and its bridge to the code, the chord
 defect, the order-nine Sylvester configuration, and the specialized six-arc
 statements attributed to the literature.

@@ -1,8 +1,8 @@
-# Trust boundary for deep-hole rigidity of the clebsch hexagon code: human library boundary.
+# Trust boundary for deep-hole rigidity of the clebsch hexagon code: library boundary.
 
 schema_version = 1
-area = "clebsch_rigidity_human"
-manifest = "trust/CLEBSCH_RIGIDITY_HUMAN.md"
+area = "clebsch_rigidity"
+manifest = "trust/CLEBSCH_RIGIDITY.md"
 
 owns = [
   "CapGame.BuildGame",
@@ -45,11 +45,11 @@ owns = [
   "RelativeConicArcs.Plane",
   "RelativeConicArcs.ProjectiveBridge",
   "RelativeConicArcs.ProjectiveTripleNormalization",
+  "RelativeConicArcs.Q11BrianchonClassification",
   "RelativeConicArcs.Q11BrianchonPetersen",
   "RelativeConicArcs.Q11CodeRigidityBridge",
   "RelativeConicArcs.Q11Coding",
   "RelativeConicArcs.Q11DecodingSynthesis",
-  "RelativeConicArcs.Q11DyeAxioms",
   "RelativeConicArcs.Q11DyeConsequences",
   "RelativeConicArcs.Q11GoldenHexagonWitness",
   "RelativeConicArcs.Q11Residual",

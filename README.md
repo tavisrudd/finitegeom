@@ -128,20 +128,20 @@ lake build CapGame.Affine ProjectiveCap.Binary \
   ProjectiveCap.EllipticMirror ProjectiveCap.PlaneOutcome \
   RelativeConicArcs.Gates.ClebschOrientationMechanisms \
   RelativeConicArcs.Gates.ClebschPassages \
-  RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman \
+  RelativeConicArcs.Gates.ArcsCompleteOutsideConic \
   RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions \
   RelativeConicArcs.Gates.AMELUAggregateAxioms \
   RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit \
-  RelativeConicArcs.Q11DyeAxioms \
+  RelativeConicArcs.Q11BrianchonClassification \
   RelativeConicArcs.SixArcDefectBridge \
-  RelativeConicArcs.Gates.ClebschRigidityHuman \
+  RelativeConicArcs.Gates.ClebschRigidityTrust \
   RelativeConicArcs.Gates.ClebschArithmeticGluing \
   RelativeConicArcs.Gates.ClebschHilbertSymmetry \
   RelativeConicArcs.Gates.ClebschHyperplaneSquare \
   RepairPorts.Gates.CompletePorts
 lake env lean trust/AxiomAudit.lean
 lake env lean trust/ClebschPassagesAxiomAudit.lean
-lake env lean trust/ArcsCompleteOutsideConicHumanAxiomAudit.lean
+lake env lean trust/ArcsCompleteOutsideConicAxiomAudit.lean
 lake env lean trust/ArcsCompleteOutsideConicAdditionsAxiomAudit.lean
 ```
 
@@ -151,9 +151,9 @@ audit additionally reports declaration-local native-decision axioms for the
 finite matrices, vectors, signs, and `F_11` leaf disclosed by its gate.  The
 other audits listed above report only `propext`, `Classical.choice`, and
 `Quot.sound`; no project-local axiom is used by those audited terminals. The
-separate `RelativeConicArcs.Q11DyeAxioms` boundary states two explicitly cited
-external classification inputs; see
-[`trust/CLEBSCH_RIGIDITY_HUMAN.md`](trust/CLEBSCH_RIGIDITY_HUMAN.md).
+`RelativeConicArcs.Q11BrianchonClassification` boundary proves the ten-point
+Brianchon bound and its equality classification at order eleven; see
+[`trust/CLEBSCH_RIGIDITY.md`](trust/CLEBSCH_RIGIDITY.md).
 
 On Linux, `nix develop .#fhs` is also available for systems that need an
 FHS-compatible shell. The default shell is available on x86-64 Linux, AArch64
@@ -166,7 +166,7 @@ Linux, and Apple Silicon macOS.
   sources.
 - `trust/` contains the claim boundary, terminal ledger, and reproducible
   axiom audit.
-- `trust/manifests/clebsch_rigidity_human.json` content-addresses the human
+- `trust/manifests/clebsch_rigidity.json` content-addresses the
   boundary for deep-hole rigidity of the Clebsch hexagon code, including the
   coding dictionary, the decoding synthesis, the rigidity spine and its bridge
   to the code, and the chord defect.  The exhaustive order-eleven orbit families
@@ -197,7 +197,7 @@ Linux, and Apple Silicon macOS.
   redundancy-six and seven synthesis interfaces, and the covering-radius
   threshold bridges.  Its synthesis theorems are conditional, carrying their
   geometric and literature inputs as explicit hypotheses.
-- `TARGET_MANIFEST.json` content-addresses the complete 319-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 320-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding

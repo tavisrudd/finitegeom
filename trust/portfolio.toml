@@ -29,8 +29,8 @@ name = "prs_beyond_redundancy_four"
 spine = "areas/prs_beyond_redundancy_four.toml"
 
 [[area]]
-name = "clebsch_rigidity_human"
-spine = "areas/clebsch_rigidity_human.toml"
+name = "clebsch_rigidity"
+spine = "areas/clebsch_rigidity.toml"
 
 [[area]]
 name = "clebsch_factorization"

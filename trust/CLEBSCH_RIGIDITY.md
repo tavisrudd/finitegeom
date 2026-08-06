@@ -1,6 +1,6 @@
-# Deep-hole rigidity of the Clebsch hexagon code: human library boundary
+# Deep-hole rigidity of the Clebsch hexagon code: library boundary
 
-This boundary records the human-scale library behind the rigidity and decoding
+This boundary records the library behind the rigidity and decoding
 results for the Clebsch hexagon code: the coding dictionary, the decoding
 synthesis, the rigidity spine and its bridge to the code, the chord defect, the
 order-nine Sylvester configuration, the small-order geometric bridge, and the
@@ -55,11 +55,11 @@ and consists of:
 - `RelativeConicArcs.Plane`
 - `RelativeConicArcs.ProjectiveBridge`
 - `RelativeConicArcs.ProjectiveTripleNormalization`
+- `RelativeConicArcs.Q11BrianchonClassification`
 - `RelativeConicArcs.Q11BrianchonPetersen`
 - `RelativeConicArcs.Q11CodeRigidityBridge`
 - `RelativeConicArcs.Q11Coding`
 - `RelativeConicArcs.Q11DecodingSynthesis`
-- `RelativeConicArcs.Q11DyeAxioms`
 - `RelativeConicArcs.Q11DyeConsequences`
 - `RelativeConicArcs.Q11GoldenHexagonWitness`
 - `RelativeConicArcs.Q11Residual`
@@ -120,14 +120,14 @@ stratification, the rigidity spine and the bridge carrying it to the code, and
 the chord-defect estimate the rigidity argument consumes.
 
 Two statements about six-arcs attaining the ten-point triple-concurrence bound
-are recorded in `RelativeConicArcs.Q11DyeAxioms`, specialized to order eleven.
+are recorded in `RelativeConicArcs.Q11BrianchonClassification`, specialized to
+order eleven.
 They appear as the ten-point count of Section 2.2, page 275 and Theorem 1(ii),
 page 275 of R. H. Dye, *Hexagons, conics, `A₅` and `PSL₂(K)`*, Journal of the
 London Mathematical Society (2) 44 (1991), 270--286,
 doi:10.1112/jlms/s2-44.2.270, which is cited as their antecedent.  Both are
-theorems of this library rather than assumptions: they are proved from the
-general-field six-arc concurrence development at their own quantifier range and
-specialized here.
+theorems of this library: they are proved from the general-field six-arc
+concurrence development at their own quantifier range and specialized here.
 
 The order-eleven orbit enumeration itself is not proved here.  The statements
 that quantify over the enumerated orbits are supplied by the external
@@ -143,8 +143,8 @@ assumed, so no result in this boundary rests on them as trusted input.
 
 The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `propext`.
 Source and candidate bytes are recorded in
-`trust/source-manifests/clebsch_rigidity_human.json` and
-`trust/manifests/clebsch_rigidity_human.json`.
+`trust/source-manifests/clebsch_rigidity.json` and
+`trust/manifests/clebsch_rigidity.json`.
 
 ## Terminals
 

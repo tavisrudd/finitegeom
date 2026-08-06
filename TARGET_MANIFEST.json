@@ -1482,6 +1482,12 @@
       "sha256": "5f51bcf9f4756bbe69196b65e6aff628df92990136c6965658d4202d87039d40"
     },
     {
+      "bytes": 4336,
+      "module": "RelativeConicArcs.Q11BrianchonClassification",
+      "path": "RelativeConicArcs/Q11BrianchonClassification.lean",
+      "sha256": "4845fcb2c7b9224b6725e021926d7a987fd3e65e0590e0b7db8a04d82d20058a"
+    },
+    {
       "bytes": 13186,
       "module": "RelativeConicArcs.Q11BrianchonPetersen",
       "path": "RelativeConicArcs/Q11BrianchonPetersen.lean",
@@ -1506,16 +1512,10 @@
       "sha256": "5ef74a255532a6e7fd11509241f1454c876110f07bf9f66f4d280c19c29a18b6"
     },
     {
-      "bytes": 4329,
-      "module": "RelativeConicArcs.Q11DyeAxioms",
-      "path": "RelativeConicArcs/Q11DyeAxioms.lean",
-      "sha256": "aa506d63185dbab2b3bd5abbe35e7fef64e49e9e883ee7db28f33b1b7f2efd77"
-    },
-    {
-      "bytes": 2595,
+      "bytes": 2680,
       "module": "RelativeConicArcs.Q11DyeConsequences",
       "path": "RelativeConicArcs/Q11DyeConsequences.lean",
-      "sha256": "8bc3e41e6a206e58f79a9553d30927f7eb5b7f9fc85fd4315d97b7948d1a8c4a"
+      "sha256": "f4f693ea80ad3c60f9a50fe5f76c656e229aa5fe6d7726a9f37e505a55e8f7d5"
     },
     {
       "bytes": 10997,
@@ -1536,10 +1536,10 @@
       "sha256": "848caed50d6a419b7d8706aaa90abe9f829ff74452ebf7d86edf21206e9f6ab5"
     },
     {
-      "bytes": 1853,
+      "bytes": 1905,
       "module": "RelativeConicArcs.Q11RigiditySpine",
       "path": "RelativeConicArcs/Q11RigiditySpine.lean",
-      "sha256": "c848ca34174519dd6dd7f7fe90d62599511d74370e44b33e5c83d91f156ddc97"
+      "sha256": "14282f419f114a82bd12258fc6c1e6169b0e640ea90547a28b89e7b187082ff3"
     },
     {
       "bytes": 4401,
@@ -1728,10 +1728,10 @@
       "sha256": "ffa85ea1b6907f02411ced5949dd6c5565448d3614ff95bac2921fe0f25c1a79"
     },
     {
-      "bytes": 5545,
+      "bytes": 5606,
       "module": "RelativeConicArcs.SixArcDefectBridge",
       "path": "RelativeConicArcs/SixArcDefectBridge.lean",
-      "sha256": "1328f99e3ecf809242451bc7452c28baad3297dcbef08216c092e9788f469e19"
+      "sha256": "8ab4288c06208db4c6a2892f17bf2e552c5aa2a9e82f914f44295ea0b6461543"
     },
     {
       "bytes": 5645,

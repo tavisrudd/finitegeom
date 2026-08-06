@@ -4,7 +4,7 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-319-module library state. Per-area source and target manifests preserve the
+320-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build
@@ -111,12 +111,13 @@ explicit resource bounds for that elaboration. This removes the three trusted
 native-evaluation axioms from the five affected terminal closures.
 
 The Clebsch rigidity target replaces the generated-data-consuming paper gate
-with `RelativeConicArcs.Gates.ClebschRigidityHuman`. The original complete
-paper gate is retained downstream in the separately versioned q11 certificate
-package. The main library retains `RelativeConicArcs.Q11DyeAxioms`, the
-human-readable boundary for the two explicitly cited consequences of Dye's
-1991 classification required by `RelativeConicArcs.SixArcDefectBridge`; the
-generated order-eleven orbit/action family remains downstream.
+with `RelativeConicArcs.Gates.ClebschRigidityTrust`. The gate over the
+enumerated order-eleven families is retained downstream in the separately
+versioned q11 certificate package. The main library retains
+`RelativeConicArcs.Q11BrianchonClassification`, which proves the ten-point
+Brianchon bound and its equality classification at order eleven for
+`RelativeConicArcs.SixArcDefectBridge`; the generated order-eleven
+orbit/action family remains downstream.
 
 ## Complete bounded repair ports
 
