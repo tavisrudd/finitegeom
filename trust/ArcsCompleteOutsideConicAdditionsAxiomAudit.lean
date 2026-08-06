@@ -1,38 +1,34 @@
 import RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions
 
 /-!
-# Axiom audit for the human-scale arcs supplement
+# Axiom audit for the packing bounds and small odd-order witnesses
 
-This audit covers the matching-packing defect transfer and the explicit upper witnesses over fields
-of orders thirteen, seventeen, and nineteen.  No exhaustive lower-bound classification or generated
-order-sixteen certificate family is imported.
+This audit prints the axioms of the terminals exported with this boundary: the
+matching and clique packing statements, the scaled-defect bounds in both
+deficiency forms, and the normalizations and kernel-checked witness predicates
+at orders thirteen, seventeen, and nineteen.
 -/
 
+#print axioms RelativeConicArcs.CliquePacking.exists_decomposition_of_card_leave_eq_choose
 #print axioms RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique
-#print axioms
-  RelativeConicArcs.CliquePacking.exists_decomposition_of_card_leave_eq_choose
-#print axioms RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks
-#print axioms RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect
-#print axioms RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency
-#print axioms RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect
-#print axioms
-  RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency
-#print axioms
-  RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition
-#print axioms
-  RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition
-
-#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det
-#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det
-#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps
-#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_conicForm
+#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det
+#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_conicForm
+#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det
+#print axioms RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q13_check
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q17_check
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_check
-#print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_complete
+#print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod13_le_eight
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod17_le_nine
 #print axioms RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod19_le_ten
+#print axioms RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks
+#print axioms RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect
+#print axioms RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect
+#print axioms RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition
+#print axioms RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition
+#print axioms RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency
+#print axioms RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency

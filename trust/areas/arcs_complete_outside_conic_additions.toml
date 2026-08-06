@@ -1,48 +1,73 @@
-# Machine-readable trust boundary for the human-scale arcs supplement.
+# Trust boundary for matching-packing bounds and small odd-order witnesses: formal boundary.
 
 schema_version = 1
 area = "arcs_complete_outside_conic_additions"
 manifest = "trust/ARCS_COMPLETE_OUTSIDE_CONIC_ADDITIONS.md"
 
 owns = [
+  "CapGame.BuildGame",
+  "ProjectiveCap.Grid",
+  "ProjectiveCap.PlaneAffineChart",
+  "ProjectiveCap.PlaneTransitivity",
+  "ProjectiveCap.Projective",
+  "ProjectiveCap.Sym2ConicBridge",
+  "RelativeConicArcs.Arc",
+  "RelativeConicArcs.Certificate",
+  "RelativeConicArcs.CliquePackingCompletion",
+  "RelativeConicArcs.Conic",
+  "RelativeConicArcs.Defect",
   "RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions",
+  "RelativeConicArcs.MatchingDesignRigidity",
+  "RelativeConicArcs.MatchingPackingCompletionBridge",
+  "RelativeConicArcs.MatchingPackingDefect",
+  "RelativeConicArcs.MatchingPackingDefectBridge",
+  "RelativeConicArcs.Moments",
+  "RelativeConicArcs.Plane",
+  "RelativeConicArcs.ProjectiveBridge",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessData",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ13",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ17",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19Basic",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageA",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageB",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageC",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageD",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageE",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageTail",
+  "RelativeConicArcs.SmallOddRelativeConicWitnesses",
 ]
 
-permitted_axioms = []
+permitted_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[gate]]
 module = "RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"
 terminals = [
-  "RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique",
   "RelativeConicArcs.CliquePacking.exists_decomposition_of_card_leave_eq_choose",
-  "RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks",
-  "RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect",
-  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency",
-  "RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect",
-  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency",
-  "RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition",
-  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition",
-  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det",
-  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det",
-  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps",
-  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps",
+  "RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique",
   "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_conicForm",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps",
   "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_conicForm",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det",
+  "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.q13_check",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.q17_check",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_check",
-  "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_complete",
+  "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod13_le_eight",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod17_le_nine",
   "RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod19_le_ten",
+  "RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks",
+  "RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect",
+  "RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect",
+  "RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition",
+  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition",
+  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency",
+  "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency",
 ]
 coverage_rule = "closure"
-
-[[terminal]]
-declaration = "RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.CliquePacking.exists_decomposition_of_card_leave_eq_choose"
@@ -50,57 +75,7 @@ gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps"
-gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
-expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
-
-[[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps"
+declaration = "RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique"
 gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
@@ -110,7 +85,27 @@ gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
 declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_conicForm"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps"
 gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
@@ -130,12 +125,12 @@ gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage"
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_complete"
 gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
-declaration = "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_complete"
+declaration = "RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage"
 gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
@@ -151,5 +146,40 @@ expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod19_le_ten"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency"
+gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
+
+[[terminal]]
+declaration = "RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency"
 gates = ["RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions"]
 expected_axioms = ["Classical.choice", "Quot.sound", "propext"]

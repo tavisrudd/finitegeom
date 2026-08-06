@@ -4,7 +4,7 @@
 the foundational release by module name, relative path, byte count, and
 SHA-256. The release applies the reviewed transformations below.
 `TARGET_MANIFEST.json` independently content-addresses the complete reviewed
-299-module library state. Per-area source and target manifests preserve the
+316-module library state. Per-area source and target manifests preserve the
 exact boundaries of later additions.
 
 These records document the release boundary; neither manifest is a build

@@ -1,39 +1,104 @@
-# Arcs complete outside a prescribed conic: human-scale supplement
+# Matching-packing bounds and small odd-order witnesses: formal boundary
 
-`RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions` checks two additions to the formal
-boundary of *Arcs complete outside a prescribed conic*.
+This boundary records two human-scale additions to the formal theory of arcs
+complete outside a prescribed conic, accompanying the manuscript of that name.
 
-The matching-packing terminals prove that maximum-index concurrence centers give an edge-disjoint
-packing by maximum-matching cliques.  A packing one block short necessarily completes, so failure
-of the exact matching design forces block deficiency at least two.  The geometric bridge transfers
-that deficiency to the integer-normalized prescribed-hole defect.
+The first is a maximum-matching packing argument: failure of an exact matching
+design forces a two-block deficiency, which in turn gives a quantitative bound
+on the prescribed-hole defect.  The second is a set of explicit relative-conic
+witnesses over the fields of orders thirteen, seventeen, and nineteen.
 
-The finite witness terminals check explicit arcs over fields of orders thirteen, seventeen, and
-nineteen.  Lean verifies the two normalization maps and conic pullbacks, all three relative-conic
-certificates, the upper bounds eight, nine, and ten, and ordinary completeness of the ten-point
-order-nineteen witness.  These are kernel-reduced certificate checks.
+The exact project-local closure is rooted at
+`RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions`
+and consists of:
 
-The exhaustive classifications giving the matching lower bounds are external computations.  Thus
-Lean proves
+- `CapGame.BuildGame`
+- `ProjectiveCap.Grid`
+- `ProjectiveCap.PlaneAffineChart`
+- `ProjectiveCap.PlaneTransitivity`
+- `ProjectiveCap.Projective`
+- `ProjectiveCap.Sym2ConicBridge`
+- `RelativeConicArcs.Arc`
+- `RelativeConicArcs.Certificate`
+- `RelativeConicArcs.CliquePackingCompletion`
+- `RelativeConicArcs.Conic`
+- `RelativeConicArcs.Defect`
+- `RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions`
+- `RelativeConicArcs.MatchingDesignRigidity`
+- `RelativeConicArcs.MatchingPackingCompletionBridge`
+- `RelativeConicArcs.MatchingPackingDefect`
+- `RelativeConicArcs.MatchingPackingDefectBridge`
+- `RelativeConicArcs.Moments`
+- `RelativeConicArcs.Plane`
+- `RelativeConicArcs.ProjectiveBridge`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ13`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ17`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19Basic`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageA`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageB`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageC`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageD`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageE`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessQ19CoverageTail`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses`
 
-```text
-rhoC (ZMod 13) <= 8
-rhoC (ZMod 17) <= 9
-rhoC (ZMod 19) <= 10
-```
+## Formal correspondence
 
-but this gate does not prove the corresponding exact equalities.  It also makes no claim about the
-priority citation, a general `(k,n)`-arc identity, the order-eleven affine search, or the proposed
-classification of realizable matching designs.
+The packing half develops matching and clique packings of the secant structure.
+It proves that a one-block-short leave is a clique, that a decomposition exists
+once the leave has the cardinality the binomial count predicts, and that the bad
+concurrence edge count together with the maximum block number bounds the scaled
+defect.  The deficiency estimates are then transported to the two forms the
+manuscript uses, one through the matching-packing deficiency and one through the
+maximum concurrence-block deficiency.
 
-The gate has 23 terminals.  Their expected axiom sets are recorded individually in
-`trust/areas/arcs_complete_outside_conic_additions.toml`; no project-local axiom is permitted.  The
-33-module source and target closures are content-addressed in
+The witness half exhibits, for each of the orders thirteen, seventeen, and
+nineteen, a normalized configuration together with kernel-checked proofs of its
+determinant, its mapping behaviour, and its conic form, and then checks the arc,
+disjointness, and coverage conditions by kernel reduction.
+
+The witnesses establish upper bounds alone: eight, nine, and ten at the three
+orders.  The matching lower bounds come from exhaustive classifications that are
+external computations, are not declarations of this closure, and are not claimed
+by any terminal here.
+
+## Trust boundary
+
+Every terminal is a kernel proof, and every finite witness predicate is checked
+by kernel reduction rather than native evaluation.  The closure contains no user
+axiom, unsafe declaration, admitted proof, imported external certificate data,
+or generated certificate family, and the trust registry permits no axiom in this
+area.
+
+The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `propext`.
+Source and candidate bytes are recorded in
 `trust/source-manifests/arcs_complete_outside_conic_additions.json` and
-`trust/manifests/arcs_complete_outside_conic_additions.json`.  The target retains the previously
-documented removal of private workflow references from `ProjectiveCap.Sym2ConicBridge`; this prose
-change alters no declaration.
+`trust/manifests/arcs_complete_outside_conic_additions.json`.
 
-The generated q16 transition, row, and leaf families are absent from this closure.  The base human
-library and the separately pinned `finitegeom-q16-certificates` package retain their existing trust
-boundaries.
+## Terminals
+
+- `RelativeConicArcs.CliquePacking.exists_decomposition_of_card_leave_eq_choose`
+- `RelativeConicArcs.MatchingPacking.oneBlockShort_leave_isClique`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_conicForm`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_det`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q13Normalization_maps`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_conicForm`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_det`
+- `RelativeConicArcs.SmallOddRelativeConicWitnessData.q17Normalization_maps`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.q13_check`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.q17_check`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_check`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_complete`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.q19_ordinaryCoverage`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod13_le_eight`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod17_le_nine`
+- `RelativeConicArcs.SmallOddRelativeConicWitnesses.rhoC_ZMod19_le_ten`
+- `RelativeConicArcs.badConcurrenceEdgeCount_add_maximumBlocks`
+- `RelativeConicArcs.matchingPackingDeficiency_le_scaledDefect`
+- `RelativeConicArcs.maximumConcurrenceBlockDeficiency_le_scaledDefect`
+- `RelativeConicArcs.two_le_maximumConcurrenceBlockDeficiency_of_no_decomposition`
+- `RelativeConicArcs.two_mul_half_le_scaledDefect_of_no_disjointness_decomposition`
+- `RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_matchingPackingDeficiency`
+- `RelativeConicArcs.two_mul_half_le_scaledDefect_of_two_le_maximumConcurrenceBlockDeficiency`

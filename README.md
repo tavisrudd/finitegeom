@@ -171,7 +171,12 @@ Linux, and Apple Silicon macOS.
   coding dictionary, the decoding synthesis, the rigidity spine and its bridge
   to the code, and the chord defect.  The exhaustive order-eleven orbit families
   are not part of it.
-- `TARGET_MANIFEST.json` content-addresses the complete 299-module reviewed
+- `trust/manifests/arcs_complete_outside_conic_additions.json` content-addresses
+  the packing and witness additions to the Arcs boundary: the matching-packing
+  deficiency bounds on the scaled defect, and the kernel-checked relative-conic
+  witnesses at orders thirteen, seventeen, and nineteen, which establish the
+  upper bounds alone.
+- `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
