@@ -16,16 +16,26 @@ rev = "571b8a8e54219b4d393f75f4b8653fac08197fcc"
 
 [[lean_lib]]
 name = "Sumfree"
+roots = [
+  "Sumfree.Game",
+  "Sumfree.MirrorLemmas",
+  "Sumfree.Nonzero",
+  "Sumfree.RankCounts",
+]
 
 [[lean_lib]]
 name = "CapGame"
+roots = [
+  "CapGame.Affine",
+  "CapGame.BuildGame",
+  "CapGame.Embedding",
+  "CapGame.GraphMirror",
+  "CapGame.Mirror",
+]
 
 [[lean_lib]]
 name = "ProjectiveCap"
 roots = [
-  "CapGame.BuildGame",
-  "CapGame.GraphMirror",
-  "CapGame.Mirror",
   "ProjectiveCap.Almost.OddEscape",
   "ProjectiveCap.Binary",
   "ProjectiveCap.CertCheck",
@@ -77,9 +87,31 @@ roots = [
 
 [[lean_lib]]
 name = "RepairCodes"
+roots = [
+  "RepairCodes.AxisTwistedCubic",
+  "RepairCodes.CodeInstance",
+  "RepairCodes.OuterDual",
+  "RepairCodes.ProjectiveAxisTwistedCubic",
+  "RepairCodes.SeedLift",
+  "RepairCodes.TraceDual",
+  "RepairCodes.Transfer",
+  "RepairCodes.WeightedStrictExample",
+  "RepairCodes.WeightedTransfer",
+  "RepairCodes.WeightedTransferExact",
+]
 
 [[lean_lib]]
 name = "RepairPorts"
+roots = [
+  "RepairPorts.CoefficientPort",
+  "RepairPorts.FunctionalCost",
+  "RepairPorts.Gates.CompletePorts",
+  "RepairPorts.MDSReconstruction",
+  "RepairPorts.PointedTransfer",
+  "RepairPorts.PointedTutte",
+  "RepairPorts.PositiveDensity",
+  "RepairPorts.Reliability",
+]
 
 [[lean_lib]]
 name = "RelativeConicArcs"
@@ -332,22 +364,4 @@ roots = [
   "RelativeConicArcs.TightFrameConference",
   "RelativeConicArcs.UncoveredLocusReconstruction",
   "RelativeConicArcs.ZeroDefectConicInvariance",
-  "RepairCodes.AxisTwistedCubic",
-  "RepairCodes.CodeInstance",
-  "RepairCodes.OuterDual",
-  "RepairCodes.ProjectiveAxisTwistedCubic",
-  "RepairCodes.SeedLift",
-  "RepairCodes.TraceDual",
-  "RepairCodes.Transfer",
-  "RepairCodes.WeightedStrictExample",
-  "RepairCodes.WeightedTransfer",
-  "RepairCodes.WeightedTransferExact",
-  "RepairPorts.CoefficientPort",
-  "RepairPorts.FunctionalCost",
-  "RepairPorts.Gates.CompletePorts",
-  "RepairPorts.MDSReconstruction",
-  "RepairPorts.PointedTransfer",
-  "RepairPorts.PointedTutte",
-  "RepairPorts.PositiveDensity",
-  "RepairPorts.Reliability",
 ]
