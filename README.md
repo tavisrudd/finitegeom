@@ -181,6 +181,11 @@ Linux, and Apple Silicon macOS.
   radius, the standard-code duality bridge, minimum-port reconstruction for
   maximum distance separable codes, exact pointed transfer, and the erasure
   calculus in its finite reliability and bounded-radius forms.
+- `trust/manifests/ame_lu.json` content-addresses the stabilizer-AME rigidity
+  boundary: the stabilizer dictionary and exact shortening, the arbitrary-arity
+  diagonal-axis theorem, the transition atlases and intertwining criterion, the
+  local-unitary to local-Clifford rigidity terminal, and the equal-phase MDS--CSS
+  specialization.  Every terminal in it is a kernel proof.
 - `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module

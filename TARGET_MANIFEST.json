@@ -609,10 +609,10 @@
       "sha256": "ba33e12ce2efb009a11388795cf0a7de85462bbdbaa4c2ed790913f86881dd75"
     },
     {
-      "bytes": 11040,
+      "bytes": 11287,
       "module": "RelativeConicArcs.AMELU.MarginalMoment",
       "path": "RelativeConicArcs/AMELU/MarginalMoment.lean",
-      "sha256": "7c4694e22871cde777964f1b4dabecd628ee72b6163a23b795a69202a1777264"
+      "sha256": "719ee8821956be05d58cca381d3b81a73ca555116d86ddf3365a23fa3120c8da"
     },
     {
       "bytes": 15744,
@@ -1065,10 +1065,10 @@
       "sha256": "db04687e7e35fe0d0c8d08add45826d6581967282d687df4223b973cfb53e805"
     },
     {
-      "bytes": 3757,
+      "bytes": 3856,
       "module": "RelativeConicArcs.Gates.AMELUAggregate",
       "path": "RelativeConicArcs/Gates/AMELUAggregate.lean",
-      "sha256": "1d3cb87cb226f829292f4660bc04cbb94fad8f992458e6ead2d2b4a908e79912"
+      "sha256": "6bba1603e94072a6e3e43b4b70764bc2a5c31be497d97254151c5424bf30ce18"
     },
     {
       "bytes": 11394,
