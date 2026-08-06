@@ -128,7 +128,7 @@ extensionality, choice, and quotient soundness.  The closure contains no
 generated certificate, imported external data, user axiom, unsafe declaration,
 or admitted proof.
 
-The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1`, `RelativeConicArcs.AMELU.card_marginalTriples._native.native_decide.ax_1_1`, `RelativeConicArcs.AMELU.card_perfectMatchings._native.native_decide.ax_1_1`, `propext`.
+The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `propext`.
 Source and candidate bytes are recorded in
 `trust/source-manifests/mds_css_transversal_groups.json` and
 `trust/manifests/mds_css_transversal_groups.json`.

@@ -73,7 +73,7 @@ owns = [
   "RelativeConicArcs.SyndromeGeometry",
 ]
 
-permitted_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "RelativeConicArcs.AMELU.card_marginalTriples._native.native_decide.ax_1_1", "RelativeConicArcs.AMELU.card_perfectMatchings._native.native_decide.ax_1_1", "propext"]
+permitted_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[gate]]
 module = "RelativeConicArcs.Gates.MDSCSSTransversalGeometry"
@@ -252,17 +252,17 @@ expected_axioms = ["Quot.sound", "propext"]
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.card_marginalStars"
 gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
-expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.card_marginalTriples"
 gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
-expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalTriples._native.native_decide.ax_1_1", "propext"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.card_perfectMatchings"
 gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
-expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_perfectMatchings._native.native_decide.ax_1_1", "propext"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.contractionMatchingRank_normalizeContractionPattern"
@@ -502,7 +502,7 @@ expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.not_locallyUnitaryEquivalent_of_ten_vs_atMostSix_concurrences"
 gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
-expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.offDiagonalBlock_fixedPartyProjectiveTransversal_eq_affineSpecialLinear"
@@ -562,7 +562,7 @@ expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.rankFourMultiplicity_eq_sixty_add_concurrency"
 gates = ["RelativeConicArcs.Gates.MDSCSSTransversalGeometry"]
-expected_axioms = ["Classical.choice", "Quot.sound", "RelativeConicArcs.AMELU.card_marginalStars._native.native_decide.ax_1_1", "propext"]
+expected_axioms = ["Classical.choice", "Quot.sound", "propext"]
 
 [[terminal]]
 declaration = "RelativeConicArcs.AMELU.reducedTransportDivisor_eq_zero_iff_axial_of_charSeven"
