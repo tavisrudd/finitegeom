@@ -131,7 +131,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 316,
+  "module_count": 314,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -141,13 +141,11 @@
     "RelativeConicArcs.Gates.AMELUAggregateAxioms",
     "RelativeConicArcs.Gates.ArcsCompleteOutsideConic",
     "RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions",
-    "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman",
     "RelativeConicArcs.Gates.ClebschArithmeticGluing",
     "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
     "RelativeConicArcs.Gates.ClebschHyperplaneSquare",
     "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
     "RelativeConicArcs.Gates.ClebschPassages",
-    "RelativeConicArcs.Gates.ClebschRigidityHuman",
     "RelativeConicArcs.Gates.ClebschRigidityTrust",
     "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
@@ -157,7 +155,6 @@
     "RelativeConicArcs.Gates.PRSRedundancyFive",
     "RelativeConicArcs.Gates.PRSStableComponents",
     "RelativeConicArcs.OddSixArcPrismExtraction",
-    "RelativeConicArcs.PaperIOrientationSpine",
     "RelativeConicArcs.SixArcConcurrenceSpine",
     "RelativeConicArcs.SupportOrientationSpine",
     "RepairPorts.Gates.CompletePorts"
@@ -1143,12 +1140,6 @@
       "sha256": "2b794c094f1e6fc5fc2ed1b4c9f75b6a3e450accb29d81993cd1dea2e425f088"
     },
     {
-      "bytes": 3985,
-      "module": "RelativeConicArcs.Gates.ArcsCompleteOutsideConicHuman",
-      "path": "RelativeConicArcs/Gates/ArcsCompleteOutsideConicHuman.lean",
-      "sha256": "bdbda97ea3fcc6727a4acdf414b640117e72444c1b0020c274b6e88bde079fd7"
-    },
-    {
       "bytes": 2817,
       "module": "RelativeConicArcs.Gates.ClebschArithmeticGluing",
       "path": "RelativeConicArcs/Gates/ClebschArithmeticGluing.lean",
@@ -1183,12 +1174,6 @@
       "module": "RelativeConicArcs.Gates.ClebschPassages",
       "path": "RelativeConicArcs/Gates/ClebschPassages.lean",
       "sha256": "361740f1fb6b805bbb5d03688ab918b2cf7e5dd72546775a87ea4f1bfbcb104a"
-    },
-    {
-      "bytes": 1839,
-      "module": "RelativeConicArcs.Gates.ClebschRigidityHuman",
-      "path": "RelativeConicArcs/Gates/ClebschRigidityHuman.lean",
-      "sha256": "6f72d1c3d7ff502210766d3d6d1f2af91fb3cf166c13b6b70c67e2a87dc64648"
     },
     {
       "bytes": 7394,
