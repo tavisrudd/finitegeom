@@ -5,29 +5,17 @@
     "Mathlib.RingTheory.MvPolynomial.Symmetric.FundamentalTheorem",
     "Mathlib.Topology.Irreducible"
   ],
-  "module_count": 17,
+  "module_count": 16,
   "roots": [
-    "RelativeConicArcs.Gates.PRSFoundation",
-    "RelativeConicArcs.Gates.PRSRedundancyFive",
-    "RelativeConicArcs.Gates.PRSPolarInductionRedundancySixSeven",
-    "RelativeConicArcs.Gates.PRSStableComponents",
-    "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
-    "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit"
+    "RelativeConicArcs.Gates.PRSBeyondRedundancyFour"
   ],
   "schema_version": 1,
-  "source_commit": "10d1941a3683d100548436a77d030a69d61347a0",
   "sources": [
     {
       "bytes": 1416,
       "module": "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
       "path": "RelativeConicArcs/Gates/PRSBeyondRedundancyFour.lean",
       "sha256": "076b20493db5c7920aeb0edc146d8ce41d1c99c425320674c5969f167c811f4a"
-    },
-    {
-      "bytes": 7546,
-      "module": "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
-      "path": "RelativeConicArcs/Gates/PRSBeyondRedundancyFourAxiomAudit.lean",
-      "sha256": "7b185c9d86d95671ddb79647033f128d6f86f78dbe780903d1b31f600440c040"
     },
     {
       "bytes": 460,

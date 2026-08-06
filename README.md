@@ -191,6 +191,12 @@ Linux, and Apple Silicon macOS.
   orders five, seven and eleven, the Coxeter-square orbits, the exact projective
   stabilizer and orbit theorems, and the bounded split and fused trichotomy.  It
   asserts no all-prime statement.
+- `trust/manifests/prs_beyond_redundancy_four.json` content-addresses the
+  projective Reed--Solomon boundary above redundancy four: the Hankel-kernel and
+  coding interfaces, the redundancy-five algebra, coherent polar contraction, the
+  redundancy-six and seven synthesis interfaces, and the covering-radius
+  threshold bridges.  Its synthesis theorems are conditional, carrying their
+  geometric and literature inputs as explicit hypotheses.
 - `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
