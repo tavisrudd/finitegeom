@@ -5,20 +5,20 @@ import Mathlib.LinearAlgebra.Pi
 import FiniteGeom.Code
 
 /-!
-# Reed–Solomon evaluation codes and the MDS distance bound
+# Reed–Solomon / evaluation codes and the MDS distance lower bound (`FiniteGeom` base)
 
-The distance lower bound here complements the Singleton upper bound
-`FiniteGeom.Code.singleton_bound`.
+The distance **lower**-bound tool for the coding development — the direction that Singleton
+(`FiniteGeom.Code.singleton_bound`, an *upper* bound) does not supply and that the real
+min-distance claims (the `q = 9` seed, the uniform `q = 3^h` family) turn on.
 
 The mathematical heart is one classical fact: a nonzero polynomial of degree `< k` vanishes
 at fewer than `k` of the `n` distinct evaluation points (`card_eval_zero_le_natDegree`), so
 its evaluation vector has Hamming weight `≥ n - (k-1)`. Packaged as the **Reed–Solomon code**
 `rsCode pts k` (evaluations of `degreeLT k` polynomials at `n` distinct points), this gives
-`n - (k-1) ≤ d(rsCode pts k)` (`rsCode_minDist_ge`). The theorem `finrank_rsCode` supplies the
-dimension, and `rsCode_isMDS` combines both bounds to prove the MDS equality.
+`n - (k-1) ≤ d(rsCode pts k)` (`rsCode_minDist_ge`). Combined with `singleton_bound` this is the
+MDS property; the equality direction (needing `finrank (rsCode) = k`) is a later job.
 
-The proofs use finite polynomial algebra and kernel reduction; no generated certificate or native
-evaluation occurs.
+Pure finite algebra, no imported input; every result `#print axioms`-clean.
 -/
 
 namespace FiniteGeom

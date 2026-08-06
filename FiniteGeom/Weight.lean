@@ -3,14 +3,15 @@ import Mathlib.Data.Fintype.Card
 import Mathlib.Algebra.Order.BigOperators.Group.Finset
 
 /-!
-# q-ary weight counting lemmas
+# q-ary weight counting lemmas (shared `FiniteGeom` base)
 
-Self-contained arithmetic used by the concatenation transfer lemma
-`RepairCodes.Transfer` and by completion-distance arguments based on `δ_x = τ`.
+Minimal, self-contained arithmetic used by the concatenation transfer lemma
+(`RepairCodes.Transfer`) and, later, by the completion-core `δ_x = τ` layer.
 
 These are pure `Finset` / `ℕ` bounds: the number of coordinates carrying a
 nonzero (resp. `≥ d`) weight is controlled by the total weight. No field or
-code structure appears here; those structures enter only in importing modules.
+code structure appears here — that lives in the libraries that cite these
+lemmas — which is why this is the shared base of the formalization plan.
 -/
 
 namespace FiniteGeom

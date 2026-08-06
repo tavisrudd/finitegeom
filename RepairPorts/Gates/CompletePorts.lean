@@ -9,7 +9,7 @@ import RepairPorts.Reliability
 
 This import-only module exposes the paper-facing coefficient-port object, intrinsic reconstruction
 radius, standard-code duality bridge, MDS minimum-port reconstruction, exact pointed transfer, and
-the pointed rank-sum, finite reliability, and bounded-radius erasure calculi.  The strict weighted example is
+the finite reliability and bounded-radius erasure calculus.  The strict weighted example is
 conditional only on the displayed regular Singer-action input.  No executable certificate or fiber
 enumerator occurs in these dependency closures.
 -/

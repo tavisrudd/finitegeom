@@ -3,10 +3,10 @@ import FiniteGeom.Code
 import Mathlib.LinearAlgebra.Matrix.ToLin
 
 /-!
-# Instantiating the transfer interface from a concrete code
+# Discharging the transfer interface's *algebraic* fields from the code layer (`RepairCodes` Phase 1)
 
-This module shows how a concrete `𝔽_q` code discharges the finite algebraic fields of
-`ConcatDualWord`. It supplies the inner-code half with
+Plan §5 decision 1 (abstract-first) is not finished until a concrete `𝔽_q` code discharges the
+`ConcatDualWord` fields that are finite/algebraic. This file supplies the inner-code half with
 the constructor `ofInnerCode`; `RepairCodes.OuterDual` proves the outer-code half directly.
 
 Given a concrete inner code `I : Submodule 𝔽 (κ → 𝔽)` and its coordinate blocks
@@ -24,8 +24,8 @@ functional `a ↦ ⟪e a, w⟫`.  Its vanishing is equivalent to `w ∈ I⊥`; t
 surjectivity of `e`, with no trace theorem.  A field-trace coefficient is merely coordinates for
 this dual functional after choosing a perfect trace pairing.
 
-`ofInnerCodeFunctional` leaves `houter` as a named argument because an outer code is not part of
-its data. `RepairCodes.OuterDual` supplies it from concatenation orthogonality plus a declared
+`ofInnerCodeFunctional` leaves `houter` as a named argument because this file does not yet carry
+an outer code. `RepairCodes.OuterDual` supplies it from concatenation orthogonality plus a declared
 functional-dual distance, with no trace-coordinate theorem or imported axiom.
 -/
 
@@ -115,9 +115,10 @@ noncomputable def ofInnerCodeFunctional
   exact ofInnerCode I w (fun j => blockFunctional I e (w j)) dO s
     (fun j => blockFunctional_eq_zero_iff I e (w j)) houter htot hsO
 
-/-- Instantiated against a concrete inner code, the transfer lemma states that under the two weight
+/-- Instantiated against a real inner code, the transfer lemma still fires: under the two weight
 bounds, every block is inner-dual and at most one is nonzero. Only the outer trace inputs remain
-to be supplied for a specific code. -/
+to be supplied for a specific code — this is the code-backed replacement for `Q9Seed`'s toy
+witness. -/
 theorem transfer_ofInnerCode
     (I : Submodule 𝔽 (κ → 𝔽))
     (w : ι → (κ → 𝔽)) (beta : ι → O) (dO s : ℕ)

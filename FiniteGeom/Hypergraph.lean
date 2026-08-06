@@ -3,10 +3,12 @@ import Mathlib.Data.Fintype.Card
 import Mathlib.Order.Lattice.Nat
 
 /-!
-# Hypergraph matching `ν` and transversal `τ`
+# Hypergraph matching `ν` and transversal `τ` (shared `FiniteGeom` base)
 
-A hypergraph is represented by its edge set `H : Finset (Finset V)`; for a locally
-repairable code, the edges are the recovery sets of a coordinate. We define the matching
+The minimal `Finset`-of-`Finset` hypergraph layer used by the locally recoverable
+code development. A
+hypergraph is its edge set `H : Finset (Finset V)` — in the LRC application the
+edges are the recovery/repair sets of a coordinate. We define the matching
 number `ν(H)` (largest set of pairwise-disjoint recovery sets = disjoint
 availability) and the transversal number `τ(H)` (smallest hitting set =
 adversarial cover), and prove the elementary weak-duality bound `ν ≤ τ`.
@@ -17,12 +19,14 @@ claimed here. The definitions are pinned by `card_le_matchingNumber` /
 `transversalNumber_le_card` (each is the intended extremal value, upper/lower
 bound + attained), and exercised on a concrete hypergraph in the examples below.
 
-The strict gap `τ > ν` is used by repair-hypergraph transfer arguments, while `δ_x = τ`
-relates the transversal number to a completion-distance invariant. The inequality `ν ≤ τ`
-is the common baseline. The strictness is real: the triangle
+The strict gap `τ > ν` on a positive fraction of coordinates is the point of the
+repair-hypergraph transfer (`RepairCodes` §1.4) and the `δ_x = τ`
+completion-distance invariant shared into `CompletionCore` (Phase 1 step 2);
+`ν ≤ τ` is the baseline those build on. The strictness is real: the triangle
 hypergraph example below exhibits `ν = 1 < 2 = τ` (so `ν ≤ τ` cannot be
-strengthened to equality). The definitions and proofs in this module are self-contained finite
-combinatorics; no field or code structure appears here.
+strengthened to equality). A *code-derived* `τ > ν` instance — the LRC repair
+hypergraph of a real coordinate — still waits on the concrete `FiniteGeom` code
+layer. Self-contained combinatorics — no field or code structure appears here.
 -/
 
 namespace FiniteGeom
@@ -863,7 +867,7 @@ theorem nu_le_tau (H : Finset (Finset V)) (hne : ∀ e ∈ H, e.Nonempty) :
 omit [Fintype V] in
 /-- **`p`-uniform transversal bound: `τ(H) ≤ p · ν(H)`** when every edge is nonempty with at
 most `p` vertices. This is the finite structural counterpart to the imported asymptotic
-`τ/ν → p`. The elementary bound is proved directly: the
+`τ/ν → p` (plan §5 decision 3: the elementary bounds are *proved*, not axiomatized). Proof: the
 vertex set of a **maximum** matching `M` is a transversal — any edge meeting none of `M`'s edges
 would extend `M`, contradicting maximality — and it has at most `p` vertices per matched edge, so
 `τ ≤ |⋃M| ≤ p·|M| = p·ν`. -/
@@ -939,7 +943,9 @@ example :
 /-- The triangle hypergraph `{{0,1},{1,2},{0,2}}` on `Fin 3`: three pairwise-intersecting
 edges. It witnesses the strict gap `ν = 1 < 2 = τ`, so weak duality `ν ≤ τ` is *not* an
 equality in general (contrast the one-edge example above, where `ν = τ`). This is the
-combinatorial demonstration of the `τ > ν` phenomenon used by repair-hypergraph transfer. -/
+combinatorial demonstration of the `τ > ν` phenomenon the repair-hypergraph transfer exploits.
+`RepairCodes.Q9Seed` now supplies a code-derived repair hypergraph; its exact `ν=3, τ=5`
+evaluation is the remaining strict-gap goal. -/
 example :
     matchingNumber ({{0, 1}, {1, 2}, {0, 2}} : Finset (Finset (Fin 3))) = 1 ∧
       transversalNumber ({{0, 1}, {1, 2}, {0, 2}} : Finset (Finset (Fin 3))) = 2 := by

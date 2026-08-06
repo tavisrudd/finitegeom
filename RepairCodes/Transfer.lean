@@ -1,13 +1,13 @@
 import FiniteGeom.Weight
 
 /-!
-# Concatenation transfer for bounded-weight repair hypergraphs
+# Concatenation transfer: the bounded-weight repair-hypergraph corollary (`RepairCodes` §1.4)
 
 Ordinary concatenation `C = O ∘ I` of an inner code `I` and an outer code `O`.
 This file proves the finite counting core over the structural interface `ConcatDualWord`.
 The coordinate-free facts that block coefficients are faithful and that concatenation
 orthogonality puts their vector in the outer dual are proved separately in
-`RepairCodes.CodeInstance` and `RepairCodes.OuterDual`. The counting corollary states:
+`RepairCodes.CodeInstance` and `RepairCodes.OuterDual`. The counting corollary is:
 
 * under `wt_q(w) < d(O⊥)`, a dual word is **blockwise inner-dual** — every block
   lies in `I⊥` (`transfer_blockwise`);
@@ -20,12 +20,14 @@ orthogonality puts their vector in the outer dual are proved separately in
 Stated over the abstract model `ConcatDualWord`, whose fields are the structural
 inputs the counting argument consumes — trace-representation faithfulness
 (`hbeta`) and the outer dual distance (`houter`) among them. Those inputs are
-**hypotheses, not axioms**. Consequently:
+**hypotheses, not axioms** (plan §5 decision 3, preferred form). Consequently:
 
 * the theorems are unconditional in the proof-theoretic sense — `#print axioms`
   shows only `propext` / `Classical.choice` / `Quot.sound`, no `sorryAx`;
-* but they are *conditional on the model*: a concrete code must instantiate
-  `ConcatDualWord` and supply outer-code orthogonality and functional-dual distance.
+* but they are *conditional on the model*: they say nothing about a concrete code
+  until `ConcatDualWord` is instantiated for one. `RepairCodes.Q9Seed` supplies
+  the real `𝔽₉` inner code and `q9Inner_transfer_ofOuterCode` discharges the model from
+  outer-code orthogonality and functional-dual distance.
 
 The analytic/asymptotic inputs (Sauermann, Ellenberg–Gijswijt) are *not* used by
 this finite lemma and do not appear.

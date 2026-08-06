@@ -4,11 +4,11 @@ import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 import FiniteGeom.EvalCode
 
 /-!
-# The moment curve and normal rational curve: general position via Vandermonde
+# The moment curve / normal rational curve: general position via Vandermonde (`FiniteGeom`)
 
-This module provides the algebraic core of the `q = 3^h` uniform distance theorem
-`C(S_q) = [2q+1, 4, q-1]_q` and of the normal-rational-curve constructions used by
-`RepairCodes`.
+The self-contained algebraic core of the `q = 3^h` uniform distance theorem, which gives the
+parameters `C(S_q) = [2q+1, 4, q-1]_q`, and more broadly of the normal rational curve and twisted
+cubic development of `RepairCodes`.
 
 The generator system of that family has as columns the `q` finite twisted-cubic points
 `(1, t, t², t³)` together with the axis line. The distance argument turns on two facts about the
@@ -22,8 +22,9 @@ Vandermonde statement, proved here in full generality for the `n`-dimensional **
 * `twistedCubic_span` — four distinct-parameter twisted-cubic points span `𝔽^4`.
 
 The matrix of the `n` points *is* `Matrix.vandermonde v`, whose determinant `∏_{i<j}(v j - v i)`
-is nonzero exactly when `v` is injective (`Matrix.det_vandermonde_ne_zero_iff`). The proofs use
-this Vandermonde identity directly; no generated certificate or native evaluation occurs.
+is nonzero exactly when `v` is injective (`Matrix.det_vandermonde_ne_zero_iff`). Plan §5 decision 3
+lists this "Vandermonde independence" as an elementary *prove-don't-import* input; no imported
+content enters. `#print axioms`-clean.
 -/
 
 namespace FiniteGeom

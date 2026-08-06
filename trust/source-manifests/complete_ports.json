@@ -1,7 +1,4 @@
 {
-  "schema_version": 1,
-  "source_commit": "77e5454b28c498d190ec89ac961bf30442037bae",
-  "module_count": 31,
   "external_imports": [
     "Mathlib.Algebra.Field.ZMod",
     "Mathlib.Algebra.Module.Equiv.Basic",
@@ -41,10 +38,11 @@
     "Mathlib.Tactic",
     "Mathlib.Tactic.FinCases"
   ],
+  "module_count": 31,
   "roots": [
-    "RepairPorts.Gates.CompletePorts",
-    "RepairPorts.PointedTutte"
+    "RepairPorts.Gates.CompletePorts"
   ],
+  "schema_version": 1,
   "sources": [
     {
       "bytes": 13334,
@@ -77,28 +75,28 @@
       "sha256": "3af41b990e82bc42bb6f1f5979ba2b34de5d8821822163e62fc6939a52c78331"
     },
     {
-      "bytes": 8556,
+      "bytes": 8563,
       "module": "FiniteGeom.ColumnCode",
       "path": "FiniteGeom/ColumnCode.lean",
-      "sha256": "8fa7ea4be19c85f2fa1bd660380ab12c3151bde9cf872d7283755454b85533ed"
+      "sha256": "f5d54596d6ec923241a9ca1efcda53f34398495110dab3751de5fa23198bcba9"
     },
     {
-      "bytes": 8390,
+      "bytes": 8397,
       "module": "FiniteGeom.EvalCode",
       "path": "FiniteGeom/EvalCode.lean",
-      "sha256": "357c5db5476481b0d4e035bae4e1b47a6d33181df2a0836692e7a9b97083b26e"
+      "sha256": "e9a5061a3877c5c6d644b4be954d6adc6415330aa9accb179e1f116f387e8fca"
     },
     {
-      "bytes": 44971,
+      "bytes": 44914,
       "module": "FiniteGeom.Hypergraph",
       "path": "FiniteGeom/Hypergraph.lean",
-      "sha256": "e77c774f53a7916c80f603b1ffec996fa4b1be9a9049ca1acd8831b71620776a"
+      "sha256": "132a7b4235f75fdf41f69db9d06bcd770ddd470970553b4541b2d77af0bf88d5"
     },
     {
-      "bytes": 9171,
+      "bytes": 9147,
       "module": "FiniteGeom.MomentCurve",
       "path": "FiniteGeom/MomentCurve.lean",
-      "sha256": "195c703b0d953d42fa31cb59bc09a79535c510c2c0dde67dba3f34ada3df8783"
+      "sha256": "16c6f81afecb8d546ed13986a3fac9104414231447134e76d3762f362ac8ab07"
     },
     {
       "bytes": 21724,
@@ -161,10 +159,10 @@
       "sha256": "1154f08075e5a01d2a343665951f1d58869be5a7ffcdbca414a9605ae4e2f66c"
     },
     {
-      "bytes": 7323,
+      "bytes": 7246,
       "module": "RepairCodes.Transfer",
       "path": "RepairCodes/Transfer.lean",
-      "sha256": "4870f80db4c8aadcb442cb54a97c1b53db50dc4129461bf944a4ed9d72dcac1f"
+      "sha256": "cce23a47ffb836e7ec296c49d4e6238a4dd84250b35be5d251a5427c69a8dec3"
     },
     {
       "bytes": 31587,
@@ -197,10 +195,10 @@
       "sha256": "089fef8a5f4397aaf84d143c93b48f76d02226e1779b8a24e7f8185f25d59480"
     },
     {
-      "bytes": 3040,
+      "bytes": 3496,
       "module": "RepairPorts.Gates.CompletePorts",
       "path": "RepairPorts/Gates/CompletePorts.lean",
-      "sha256": "8a35ad9c9d82a38276532cc0fd4e5ef28611218c59688df53629347f826f6698"
+      "sha256": "8dcc66eab5745946b112e9a54ec1cb5f5ef3d5494b24eb60aa4a34e37a8343f6"
     },
     {
       "bytes": 12163,

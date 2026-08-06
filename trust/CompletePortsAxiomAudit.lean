@@ -1,0 +1,54 @@
+import RepairPorts.Gates.CompletePorts
+
+/-!
+# Axiom audit for the complete bounded repair-port theorem
+
+This audit prints the axioms of the terminals exported with the bounded
+repair-port boundary: the coefficient-port object and intrinsic reconstruction
+radius, the standard-code duality bridge, minimum-port reconstruction for
+maximum distance separable codes, exact pointed transfer, and the finite
+reliability and bounded-radius erasure calculus.
+-/
+
+#print axioms FiniteGeom.dualCode_dualCode
+#print axioms FiniteGeom.dualCode_injective
+#print axioms RepairCodes.projectiveAxisTwistedCubic_strict_weighted_transfer_of_regular_projective_action
+#print axioms RepairPorts.HasMDSDualParameters.exists_normalized_word
+#print axioms RepairPorts.HasMDSDualParameters.pointedZeroFunctionalCost_eq
+#print axioms RepairPorts.HasMDSDualParameters.reconstructionRadius_eq
+#print axioms RepairPorts.HasMDSDualParameters.reconstructsAt
+#print axioms RepairPorts.HasMDSDualParameters.reconstructsAt_iff
+#print axioms RepairPorts.HasMDSDualParameters.repairHypergraph_eq_powersetCard
+#print axioms RepairPorts.PointedCoefficientPortIso.reconstructionRadius_eq
+#print axioms RepairPorts.PointedCoefficientPortIso.reconstructsAt_iff
+#print axioms RepairPorts.blockerCount_eq_minimalBlockerCount_at_minimum
+#print axioms RepairPorts.blockerFailurePolynomial_eq_minimum_term_add_remainder
+#print axioms RepairPorts.cheapestRepairRadiusProbability
+#print axioms RepairPorts.cheapestRepairRadiusProbability_eq_failure_sub
+#print axioms RepairPorts.coeff_blockerFailurePolynomial_at_minimum
+#print axioms RepairPorts.coeff_blockerFailurePolynomial_eq_zero_below_minimum
+#print axioms RepairPorts.coefficientPort_concatenatedCode_eq_image_pointed
+#print axioms RepairPorts.concatenatedRestrictedCode_parameters
+#print axioms RepairPorts.deletionContractionRankDifference_eq_successfulSetEnumerator
+#print axioms RepairPorts.disjointTripleRepairs_reliability
+#print axioms RepairPorts.disjointTripleRepairs_reliability_ne_overlapping
+#print axioms RepairPorts.elementaryPerspectiveSubsetEvaluation_eq_pointedTutte
+#print axioms RepairPorts.erasureFailureProbability_delete_contract
+#print axioms RepairPorts.eventually_mdsMinimumCoefficientFingerprints
+#print axioms RepairPorts.eventually_pointedConfinement_iff_zeroCost
+#print axioms RepairPorts.eventually_prescribedPorts
+#print axioms RepairPorts.exactFunctionalStrata
+#print axioms RepairPorts.exactPointedConfinementAndTransfer
+#print axioms RepairPorts.hasDerivAt_homogeneous_portReliability
+#print axioms RepairPorts.hasDerivAt_portReliability_update
+#print axioms RepairPorts.noRepairProbability_eq_erasureFailure
+#print axioms RepairPorts.nonzeroOuterPointedRealizationCost_eq_fiberCost
+#print axioms RepairPorts.overlappingTripleRepairs_reliability
+#print axioms RepairPorts.pointedConfinement_iff_zeroCost_of_outerDualDistance
+#print axioms RepairPorts.pointedFunctionalTupleRealizationCost_eq
+#print axioms RepairPorts.portReliability_delete_contract
+#print axioms RepairPorts.portReliability_pair_homogeneous
+#print axioms RepairPorts.prescribedPorts_of_outerDualDistance
+#print axioms RepairPorts.reconstructedCode_eq
+#print axioms RepairPorts.representedTargets_density
+#print axioms RepairPorts.zeroFunctionalPointedNonembeddedCost_eq_closed

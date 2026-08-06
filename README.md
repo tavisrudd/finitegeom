@@ -176,6 +176,11 @@ Linux, and Apple Silicon macOS.
   deficiency bounds on the scaled defect, and the kernel-checked relative-conic
   witnesses at orders thirteen, seventeen, and nineteen, which establish the
   upper bounds alone.
+- `trust/manifests/complete_ports.json` content-addresses the bounded
+  repair-port boundary: the coefficient-port object and intrinsic reconstruction
+  radius, the standard-code duality bridge, minimum-port reconstruction for
+  maximum distance separable codes, exact pointed transfer, and the erasure
+  calculus in its finite reliability and bounded-radius forms.
 - `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module

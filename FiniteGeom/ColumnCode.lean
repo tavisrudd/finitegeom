@@ -3,12 +3,12 @@ import Mathlib.LinearAlgebra.Matrix.ToLin
 import Mathlib.LinearAlgebra.Matrix.DotProduct
 
 /-!
-# Projective systems as codes: distance from hyperplane sections
+# Projective systems as codes: distance from hyperplane sections (`FiniteGeom` base)
 
 The bridge that turns a *geometric* fact — "no hyperplane meets the point set in more than `s`
 points" — into a *coding* fact — "the minimum distance is `n - s`". This is the projective-systems
-↔ linear-codes correspondence used for twisted cubics, normal rational curves, and the associated
-evaluation and repair codes.
+↔ linear-codes correspondence, the tool the whole geometric-code development needs (twisted cubic, the
+`q = 9` seed, the uniform `q = 3^h` family, the NRC seeds of `RepairCodes`).
 
 Given `n` points `P : ι → 𝔽^k` (the columns of a generator matrix), the **column code**
 `columnCode P` is the set of evaluation vectors `a ↦ (⟨P_j, a⟩)_j` as `a` ranges over `𝔽^k`
@@ -23,7 +23,7 @@ points span `𝔽^k` (`finrank_columnCode`), and:
   so `d ≤ n - s`;
 * `columnCode_minDist_eq` — the two together pin `d = n - s` when `s` is the **maximum** section.
 
-The proofs use finite linear algebra; no generated certificate or native evaluation occurs. Applying
+Pure finite linear algebra, no imported input; `#print axioms`-clean. Applying
 `columnCode_minDist_eq` with `max section = q + 2` (proved separately for `S_q`) yields the
 `q = 3^h` distance `d = (2q+1) - (q+2) = q - 1`; the `dim = k = 4` half is `finrank_columnCode`
 fed by `FiniteGeom.twistedCubic_span`.
@@ -111,8 +111,8 @@ theorem columnCode_minDist_le {P : ι → (Fin k → 𝔽)} {a : Fin k → 𝔽}
 
 /-- **Distance = length − maximum section.** If `s` is the maximum hyperplane section — attained
 by some `a₀` (nonzero codeword) and an upper bound for all messages — then
-`d(columnCode P) = n - s`. For the `q = 3^h` family, take `s = q + 2`, the largest plane
-section of `S_q`, to obtain `q - 1 = (2q+1)-(q+2)`. -/
+`d(columnCode P) = n - s`. This is the packaging the `q = 3^h` distance `q - 1 = (2q+1)-(q+2)`
+uses, with `s = q + 2` the largest plane section of `S_q`. -/
 theorem columnCode_minDist_eq {P : ι → (Fin k → 𝔽)} {s : ℕ} {a₀ : Fin k → 𝔽}
     (hne : pointEval P a₀ ≠ 0) (hmax : sectionCount P a₀ = s)
     (hsec : ∀ a, pointEval P a ≠ 0 → sectionCount P a ≤ s) :
