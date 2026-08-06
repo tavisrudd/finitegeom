@@ -197,7 +197,7 @@ Linux, and Apple Silicon macOS.
   redundancy-six and seven synthesis interfaces, and the covering-radius
   threshold bridges.  Its synthesis theorems are conditional, carrying their
   geometric and literature inputs as explicit hypotheses.
-- `TARGET_MANIFEST.json` content-addresses the complete 314-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 317-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding
@@ -209,6 +209,9 @@ Linux, and Apple Silicon macOS.
   exhaustive order-sixteen families are not part of it.
 - `trust/manifests/arcs_complete_outside_conic_human.json` content-addresses
   the 77-module human Arcs boundary.
+- `trust/manifests/golden_quantum_statistics.json` records the symbolic
+  order-six balanced-cut boundary accompanying the Golden six-mode conference
+  interferometer.
 - `trust/manifests/clebsch_support_cubic_orientation.json` records the golden
   orientation boundary of the Clebsch support cubic, including the antipodal
   cover, the determinant pencil, the cross-golden trace dual, and the six

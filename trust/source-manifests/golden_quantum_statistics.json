@@ -1,0 +1,39 @@
+{
+  "external_imports": [
+    "Mathlib.Data.Matrix.Block",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.Notation",
+    "Mathlib.LinearAlgebra.Matrix.Trace",
+    "Mathlib.RingTheory.MvPolynomial.Symmetric.Defs",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring"
+  ],
+  "module_count": 3,
+  "roots": [
+    "RelativeConicArcs.Gates.GoldenQuantumStatistics"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 19320,
+      "module": "RelativeConicArcs.ConferenceExchangeSpectrum",
+      "path": "RelativeConicArcs/ConferenceExchangeSpectrum.lean",
+      "sha256": "e5c341ac95afd9973b00998a46231fcd506fec68ab6661480c890f175899cf34"
+    },
+    {
+      "bytes": 1547,
+      "module": "RelativeConicArcs.Gates.GoldenQuantumStatistics",
+      "path": "RelativeConicArcs/Gates/GoldenQuantumStatistics.lean",
+      "sha256": "adf6ed01fc24771fe120a5190af3f0a9ce5956f4861ae2176dfb4f134fcb11e5"
+    },
+    {
+      "bytes": 4246,
+      "module": "RelativeConicArcs.GoldenBalancedCut",
+      "path": "RelativeConicArcs/GoldenBalancedCut.lean",
+      "sha256": "ea9aa97f486ef37d6cc8becbca8d6d71b202172d0282a95b8c0de120756ed22a"
+    }
+  ]
+}

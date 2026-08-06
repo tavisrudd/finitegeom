@@ -52,11 +52,13 @@
     "Mathlib.Data.List.Fold",
     "Mathlib.Data.Matrix.Basic",
     "Mathlib.Data.Matrix.Basis",
+    "Mathlib.Data.Matrix.Block",
     "Mathlib.Data.Matrix.Mul",
     "Mathlib.Data.Nat.Choose.Basic",
     "Mathlib.Data.Nat.Choose.Sum",
     "Mathlib.Data.Nat.Factorization.PrimePow",
     "Mathlib.Data.Nat.ModEq",
+    "Mathlib.Data.Real.Basic",
     "Mathlib.Data.Set.Basic",
     "Mathlib.Data.ZMod.Basic",
     "Mathlib.FieldTheory.Finite.Basic",
@@ -95,6 +97,7 @@
     "Mathlib.LinearAlgebra.Finsupp.Supported",
     "Mathlib.LinearAlgebra.Matrix.Adjugate",
     "Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff",
+    "Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs",
     "Mathlib.LinearAlgebra.Matrix.ConjTranspose",
     "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
     "Mathlib.LinearAlgebra.Matrix.DotProduct",
@@ -119,11 +122,13 @@
     "Mathlib.Order.LiminfLimsup",
     "Mathlib.RingTheory.MvPolynomial.Basic",
     "Mathlib.RingTheory.MvPolynomial.EulerIdentity",
+    "Mathlib.RingTheory.MvPolynomial.Symmetric.Defs",
     "Mathlib.RingTheory.MvPolynomial.Symmetric.FundamentalTheorem",
     "Mathlib.RingTheory.Polynomial.Basic",
     "Mathlib.RingTheory.Trace.Basic",
     "Mathlib.Tactic",
     "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.LinearCombination",
     "Mathlib.Tactic.NormNum",
     "Mathlib.Tactic.Ring",
     "Mathlib.Topology.Algebra.Group.Quotient",
@@ -131,7 +136,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 314,
+  "module_count": 317,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -147,6 +152,7 @@
     "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
     "RelativeConicArcs.Gates.ClebschPassages",
     "RelativeConicArcs.Gates.ClebschRigidityTrust",
+    "RelativeConicArcs.Gates.GoldenQuantumStatistics",
     "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFour",
     "RelativeConicArcs.Gates.PRSBeyondRedundancyFourAxiomAudit",
@@ -936,6 +942,12 @@
       "sha256": "dbc4b8d27f63d5c285d284a213c8df4850a3f961d4fe52ab1dbefd715d9cdf4b"
     },
     {
+      "bytes": 19320,
+      "module": "RelativeConicArcs.ConferenceExchangeSpectrum",
+      "path": "RelativeConicArcs/ConferenceExchangeSpectrum.lean",
+      "sha256": "e5c341ac95afd9973b00998a46231fcd506fec68ab6661480c890f175899cf34"
+    },
+    {
       "bytes": 25762,
       "module": "RelativeConicArcs.Conic",
       "path": "RelativeConicArcs/Conic.lean",
@@ -1182,6 +1194,12 @@
       "sha256": "8dfca9f0db641507a439fe4719482e08f35bb490df0b6a599fb7cb2cbac030e1"
     },
     {
+      "bytes": 1547,
+      "module": "RelativeConicArcs.Gates.GoldenQuantumStatistics",
+      "path": "RelativeConicArcs/Gates/GoldenQuantumStatistics.lean",
+      "sha256": "adf6ed01fc24771fe120a5190af3f0a9ce5956f4861ae2176dfb4f134fcb11e5"
+    },
+    {
       "bytes": 7147,
       "module": "RelativeConicArcs.Gates.MDSCSSTransversalGeometry",
       "path": "RelativeConicArcs/Gates/MDSCSSTransversalGeometry.lean",
@@ -1222,6 +1240,12 @@
       "module": "RelativeConicArcs.Gates.PRSStableComponents",
       "path": "RelativeConicArcs/Gates/PRSStableComponents.lean",
       "sha256": "192d9d6142b42182e9c4948809eb24691870710565876678498f6fd413be8eb1"
+    },
+    {
+      "bytes": 4246,
+      "module": "RelativeConicArcs.GoldenBalancedCut",
+      "path": "RelativeConicArcs/GoldenBalancedCut.lean",
+      "sha256": "ea9aa97f486ef37d6cc8becbca8d6d71b202172d0282a95b8c0de120756ed22a"
     },
     {
       "bytes": 27548,
