@@ -801,10 +801,10 @@
       "sha256": "2ca60d94d0bab6238751dafd67f5b7088e93ae63683a3875bbfb804f88d98077"
     },
     {
-      "bytes": 35791,
+      "bytes": 36045,
       "module": "RelativeConicArcs.ClebschBalancedSheets",
       "path": "RelativeConicArcs/ClebschBalancedSheets.lean",
-      "sha256": "9f2f7958519ca4f7397e0895094fb96dab7d92c3737435ae640169d794f100b3"
+      "sha256": "b9d4e01754afd0ea3639894f50301f789e3e50b32579a1596a62b80d95cfbded"
     },
     {
       "bytes": 16025,
@@ -825,10 +825,10 @@
       "sha256": "9b5a8db6168d089c0c83cbb67f945bd502df036cb779e542a12707aa5a77862c"
     },
     {
-      "bytes": 14630,
+      "bytes": 14802,
       "module": "RelativeConicArcs.ClebschConicMatchingQuotient",
       "path": "RelativeConicArcs/ClebschConicMatchingQuotient.lean",
-      "sha256": "444e033a0e0e81ecf30cc6f2957eea406cd121ff371918bd96ba963a3d179450"
+      "sha256": "f1046464f8f37cc8c35bbb269bdd369ea03d58498d43ac2cf26931a0aaaa7389"
     },
     {
       "bytes": 4658,
@@ -867,10 +867,10 @@
       "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
     },
     {
-      "bytes": 29145,
+      "bytes": 29722,
       "module": "RelativeConicArcs.ClebschHarmonicQuotient",
       "path": "RelativeConicArcs/ClebschHarmonicQuotient.lean",
-      "sha256": "2cdedcfa1115120f317b124fde3109081e703173f783b5d10795d91b30a1448f"
+      "sha256": "3f8a3b30c0f46ae1faa90c769cd70bb8ccbcf90f3fbc7951440414a41457a394"
     },
     {
       "bytes": 2961,

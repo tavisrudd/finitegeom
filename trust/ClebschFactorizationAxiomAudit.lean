@@ -1,0 +1,35 @@
+import RelativeConicArcs.Gates.ClebschArithmeticGluing
+
+/-!
+# Axiom audit for rank-three arithmetic gluing
+
+This audit prints the axioms of the terminals exported with the arithmetic
+gluing boundary: the literal reductions and sheet actions at the three field
+orders, the polynomial splitting checks, the Coxeter-square orbits, the exact
+projective stabilizer and orbit theorems, and the bounded split and fused
+trichotomy.
+-/
+
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.a3_fused_stabilizer_and_orbit
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.a3_matching_is_fused
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.a3_two_has_no_root
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.b3_reductions_induce_split_matchings
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.b3_split_stabilizers_and_orbits
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.b3_two_roots
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.coxeterSquare_orbits
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.coxeterSquare_orders_and_square_determinants
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.frozen_matching_mates_are_fixedPointFree_involutions
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.goldenTransporter_swaps_matchings
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.h3_certificate_literal_checks
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.h3_five_roots
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.h3_golden_roots
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.h3_stabilizer_generation_word_data
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.matchingEdgeLists_encode_frozen_matchings
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.projective_group_orders
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.rankThree_split_fused_trichotomy
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.reduced_vertex_polynomials_split
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.sheetCharacter_eq_of_kernel_eq
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.silverTransporter_swaps_matchings
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.stabilizer_eq_character_kernel
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.transporters_are_outer
+#print axioms RelativeConicArcs.ClebschArithmeticGluing.vertexReductions_are_bijective

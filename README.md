@@ -186,6 +186,11 @@ Linux, and Apple Silicon macOS.
   diagonal-axis theorem, the transition atlases and intertwining criterion, the
   local-unitary to local-Clifford rigidity terminal, and the equal-phase MDS--CSS
   specialization.  Every terminal in it is a kernel proof.
+- `trust/manifests/clebsch_factorization.json` content-addresses the rank-three
+  arithmetic gluing boundary: the literal reductions and sheet actions at field
+  orders five, seven and eleven, the Coxeter-square orbits, the exact projective
+  stabilizer and orbit theorems, and the bounded split and fused trichotomy.  It
+  asserts no all-prime statement.
 - `TARGET_MANIFEST.json` content-addresses the complete 316-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
