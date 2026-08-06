@@ -324,10 +324,10 @@
       "sha256": "babb2a3f86fea4799d6d571e2d891dd3e1f163da5277e21c0f5f7cf9de37844b"
     },
     {
-      "bytes": 9859,
+      "bytes": 9898,
       "module": "ProjectiveCap.Binary",
       "path": "ProjectiveCap/Binary.lean",
-      "sha256": "a2b92c016175637ce1cc382f9247c75564452efff0c46c6d50f320ae50b8fc73"
+      "sha256": "2c3517cafbb8ff93a92cacaa748174f7fdd7deca0b92f6bab41b9f39d48053cb"
     },
     {
       "bytes": 65533,
@@ -348,10 +348,10 @@
       "sha256": "c11439cb3cb7860f607c2b912f6072ba11643bc4103c9908e7c9362085b2477f"
     },
     {
-      "bytes": 4722,
+      "bytes": 4765,
       "module": "ProjectiveCap.EllipticMirror",
       "path": "ProjectiveCap/EllipticMirror.lean",
-      "sha256": "dfc806bcdf72d0767d4af0aa0f2a31c5d684f6ac69d026f3aabcfbb18bc4eadc"
+      "sha256": "78970cac0310dd34d8d2416bacfe28a374bbc04c8eddff8003a5f7b2fadeba36"
     },
     {
       "bytes": 2882,
@@ -366,10 +366,10 @@
       "sha256": "017e32a4b2a1e6967f549247f2ef12fc25667c4c0916d7b8e6d50e3095c17109"
     },
     {
-      "bytes": 36870,
+      "bytes": 36913,
       "module": "ProjectiveCap.FrameGridBridge",
       "path": "ProjectiveCap/FrameGridBridge.lean",
-      "sha256": "0448371cea1563e6b1e5616c96dfaab438b46df6ef542d833bc6bda3182bb566"
+      "sha256": "d37120724c815af6b87c47d9c203dde1e0c453c12b6601a99d72acb46517be97"
     },
     {
       "bytes": 8081,
@@ -390,10 +390,10 @@
       "sha256": "c6a5ac95dc563f757221e0d32886cae4ada2d61a540d96ac727cc1054be1c285"
     },
     {
-      "bytes": 29805,
+      "bytes": 29848,
       "module": "ProjectiveCap.GridMirror",
       "path": "ProjectiveCap/GridMirror.lean",
-      "sha256": "dce18a74797b9f100cd986e01d6f8b60b4fd927b464e3c4eeecbb59750667c16"
+      "sha256": "45f742c626e158d9b0180a411645445af8a0f910d39ea20eec3961d1e74ce129"
     },
     {
       "bytes": 2272,
@@ -408,10 +408,10 @@
       "sha256": "6a6f41fa7176b2c1d51b1bc97c45e87b9a10f73cbb1a5199d82af4b5ba6b1a3a"
     },
     {
-      "bytes": 16206,
+      "bytes": 16245,
       "module": "ProjectiveCap.Mirror",
       "path": "ProjectiveCap/Mirror.lean",
-      "sha256": "9d11cfb77d87cbce5776707917065a85aabdbe5fd246134fecc610b96a91da35"
+      "sha256": "de83b8563fe5b3922436ef0fc6869a5ae87db3a5332d2aeedfe7c91f567c8ba1"
     },
     {
       "bytes": 33770,
@@ -450,10 +450,10 @@
       "sha256": "efb6491e202b297689deccf32a1b5a566612999506c9fce2f8a4971d3d26788e"
     },
     {
-      "bytes": 2356,
+      "bytes": 2399,
       "module": "ProjectiveCap.StableFacts",
       "path": "ProjectiveCap/StableFacts.lean",
-      "sha256": "59dca7f9ff37099de529899d433237e190bf4b226ffdafd2db7cd03f2e526d3a"
+      "sha256": "4d81d7fa158659063594c2c1c204bd8aa8ee4e54a7bf03b69dacdb06297a6f09"
     },
     {
       "bytes": 17250,
