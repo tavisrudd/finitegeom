@@ -227,14 +227,6 @@ Linux, and Apple Silicon macOS.
 - The remaining files under `trust/manifests/` preserve the separate AME–LU,
   PRS, Clebsch-rigidity-human, Clebsch-factorization, and complete-ports
   boundaries.
-- The projective-cap generated certificates are distributed as separate
-  [q=11](https://github.com/tavisrudd/finitegeom-projective-cap-q11-certificates)
-  and [q=13](https://github.com/tavisrudd/finitegeom-projective-cap-q13-certificates)
-  packages; their shared semantic checker is under `ProjectiveCap/`.
-- The generated q=25 tables are distributed in
-  [`finitegeom-q25-certificates`](https://github.com/tavisrudd/finitegeom-q25-certificates);
-  their human-readable completion and Baer-completion interfaces are under
-  `FiniteGeom/`.
 - `SOURCE_MANIFEST.json` and [`PROVENANCE.md`](PROVENANCE.md) record the
   source-to-release preparation boundary; they are not build inputs.
 
