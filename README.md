@@ -4,17 +4,10 @@
 
 `finitegeom` is a Lean 4 formalization library for finite geometry, coding
 theory, and their interactions with algebra, combinatorics, and quantum
-information. It is the public Lean development for a paper programme covering:
-
-- [arithmetic and harmonic realizations of the Clebsch cubic](https://github.com/tavisrudd/clebsch-passages);
-- [rigidity](https://github.com/tavisrudd/clebsch-rigidity) and
-  [factorization](https://github.com/tavisrudd/clebsch-factorization)
-  phenomena around the Clebsch configuration;
-- [arcs complete outside a prescribed conic](https://github.com/tavisrudd/arcs-complete-outside-conic);
-- [deep holes of projective Reed–Solomon codes beyond redundancy four](https://github.com/tavisrudd/beyond4-prs);
-- [local-unitary rigidity of stabilizer AME states and MDS–CSS codes](https://github.com/tavisrudd/ame-lu);
-  and
-- exact transfer, reliability, and geometry of bounded repair ports.
+information. It is the public Lean development for the paper programme
+collected in
+[math-papers-summary](https://github.com/tavisrudd/math-papers-summary), which
+links each paper's manuscript, repository, and DOI.
 
 Each paper-facing release has an explicit import boundary, terminal-theorem
 ledger, expected axiom sets, and content-addressed source manifest. Large
