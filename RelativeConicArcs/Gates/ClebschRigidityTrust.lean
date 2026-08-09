@@ -36,11 +36,11 @@ reductions.
 
 The orientation spine constructs the antipodal cover, golden orbital,
 switching class, determinant pencil, trace dual, six ordinary nodes, and the
-`S₅/A₅` symmetry boundary.  Its final commutant equalities are conditional on
-the proposition-valued classical `3+3'` splitting interface printed below;
-golden equivariance, the reverse rational containment, and the integral
-coefficient test are kernel checked.  No native execution enters these
-terminals.
+`S₅/A₅` symmetry boundary.  Golden equivariance is checked on all sixty action
+matrices, while the reverse commutant containment is the symbolic consequence
+of the rank-34 rational system imposed by an explicit five-cycle and
+three-cycle.  The rational and integral commutant equalities are therefore
+unconditional, and no native execution enters these terminals.
 -/
 
 -- The code--arc dictionary and syndrome conic.
@@ -108,7 +108,7 @@ terminals.
 #print axioms RelativeConicArcs.SupportOrientationNodes.supportCubic_singularLocus_eq_frame
 #print axioms RelativeConicArcs.SupportOrientationNodes.supportCubic_framePoints_ordinaryNodes
 
--- Rational and integral commutants relative to the classical splitting input.
+-- Unconditional rational and integral commutants from the explicit two-generator system.
 #print axioms RelativeConicArcs.SupportOrientationCommutant.oddModule_rationalCommutant_eq_adjoinGoldenOperator
 #print axioms RelativeConicArcs.SupportOrientationCommutant.adjoinGolden_integralPoints_eq_ZsqrtFive
 #print axioms RelativeConicArcs.SupportOrientationCommutant.oddLattice_integralCommutant_eq_ZsqrtFive

@@ -183,10 +183,10 @@
       "sha256": "db04687e7e35fe0d0c8d08add45826d6581967282d687df4223b973cfb53e805"
     },
     {
-      "bytes": 7394,
+      "bytes": 7462,
       "module": "RelativeConicArcs.Gates.ClebschRigidityTrust",
       "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
-      "sha256": "8dfca9f0db641507a439fe4719482e08f35bb490df0b6a599fb7cb2cbac030e1"
+      "sha256": "265e389500835048b25b9853db81c598f36ca463b7681ef8f0d040a0dbb767c9"
     },
     {
       "bytes": 27548,
@@ -543,10 +543,10 @@
       "sha256": "d78cb940373f546825d68b001f8d1f0e780eae99b36f1459fda80aeedad55e53"
     },
     {
-      "bytes": 8009,
+      "bytes": 18884,
       "module": "RelativeConicArcs.SupportOrientationCommutant",
       "path": "RelativeConicArcs/SupportOrientationCommutant.lean",
-      "sha256": "0e8260da2a8cd3ae5b00ebaeb52adbab7e06f85607ee2885b028fb72784b46c3"
+      "sha256": "8030d63d9ceaa615416e78c830bd4b590c5831c34d7504621539c372677dbef8"
     },
     {
       "bytes": 11179,
@@ -579,10 +579,10 @@
       "sha256": "ced85e3b80d1c1a46875d04340faa3d33fe9e114f2375feff6b9f93f798c7c1d"
     },
     {
-      "bytes": 1194,
+      "bytes": 1141,
       "module": "RelativeConicArcs.SupportOrientationSpine",
       "path": "RelativeConicArcs/SupportOrientationSpine.lean",
-      "sha256": "cf43afe21ab3df98fa58fb6bddb0c52494781c5d814fc9bc34bef0c482f2b717"
+      "sha256": "18e7cd50c82ffd1c141f728b67433ae06f14ae9f4a48b741a9ca3b378783abc0"
     },
     {
       "bytes": 4435,
