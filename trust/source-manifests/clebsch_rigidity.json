@@ -3,6 +3,7 @@
     "Mathlib",
     "Mathlib.Algebra.Field.Basic",
     "Mathlib.Combinatorics.Configuration",
+    "Mathlib.Data.Fin.Tuple.Basic",
     "Mathlib.Data.Fin.VecNotation",
     "Mathlib.Data.Finset.Basic",
     "Mathlib.Data.Finset.Powerset",
@@ -10,6 +11,7 @@
     "Mathlib.Data.Fintype.BigOperators",
     "Mathlib.Data.Fintype.Card",
     "Mathlib.Data.Fintype.Prod",
+    "Mathlib.Data.Matrix.Basic",
     "Mathlib.Data.Matrix.Basis",
     "Mathlib.Data.Matrix.Mul",
     "Mathlib.Data.Nat.Choose.Basic",
@@ -93,10 +95,10 @@
       "sha256": "e8c2bacdf93f05be2e1c9e3682de247e0d3bc844758db1faa7510f1a97c1477f"
     },
     {
-      "bytes": 17250,
+      "bytes": 17225,
       "module": "ProjectiveCap.Sym2ConicBridge",
       "path": "ProjectiveCap/Sym2ConicBridge.lean",
-      "sha256": "e4c763c56136c1e1d339aeba19df5c7944ec46cd65e98e98a1b088cda7edfa26"
+      "sha256": "be61eda7439d0caf7de6e897c9c71977659cea4378159359f705865bf1c473a3"
     },
     {
       "bytes": 9297,
@@ -117,10 +119,10 @@
       "sha256": "9b5a8db6168d089c0c83cbb67f945bd502df036cb779e542a12707aa5a77862c"
     },
     {
-      "bytes": 16254,
+      "bytes": 16501,
       "module": "RelativeConicArcs.ClebschGateway",
       "path": "RelativeConicArcs/ClebschGateway.lean",
-      "sha256": "c91e85fce72635a98b6e8b2cbecd887866145decfe163b20d9af911046e56b4b"
+      "sha256": "c7260abcca23ae3f0b0d0d8d5090decccc6bf6a24838efcfd58c25d539454182"
     },
     {
       "bytes": 4970,
@@ -195,10 +197,10 @@
       "sha256": "db04687e7e35fe0d0c8d08add45826d6581967282d687df4223b973cfb53e805"
     },
     {
-      "bytes": 7836,
+      "bytes": 7865,
       "module": "RelativeConicArcs.Gates.ClebschRigidityTrust",
       "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
-      "sha256": "449b644af907c080b888c957084155df51d813742b79b6856193ba1f2a90ab86"
+      "sha256": "6e52066855d72d4cf7ce14af1e30496f48630e10765622ad34326764cf2794eb"
     },
     {
       "bytes": 27548,
@@ -327,10 +329,10 @@
       "sha256": "8878c534db5192e9a9b412363378f61f3cac73e67e04b6d60dc0b1b02c697b89"
     },
     {
-      "bytes": 18023,
+      "bytes": 18212,
       "module": "RelativeConicArcs.Q11DecodingSynthesis",
       "path": "RelativeConicArcs/Q11DecodingSynthesis.lean",
-      "sha256": "5e44e3a406bff91c61df0441cb14ad31fd17856d5cc9c4d228053de376485932"
+      "sha256": "a43327d4744bc1ce8099104a724465b3237524c354bc03bce179df57394c1f2b"
     },
     {
       "bytes": 2680,
@@ -555,10 +557,10 @@
       "sha256": "d78cb940373f546825d68b001f8d1f0e780eae99b36f1459fda80aeedad55e53"
     },
     {
-      "bytes": 18884,
+      "bytes": 19050,
       "module": "RelativeConicArcs.SupportOrientationCommutant",
       "path": "RelativeConicArcs/SupportOrientationCommutant.lean",
-      "sha256": "8030d63d9ceaa615416e78c830bd4b590c5831c34d7504621539c372677dbef8"
+      "sha256": "c5a7ed960211d1c3cffeab901dfc2bd53c8ff227135ae1f6b98747e23d2546d7"
     },
     {
       "bytes": 11179,

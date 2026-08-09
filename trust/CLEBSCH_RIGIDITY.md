@@ -29,6 +29,8 @@ and consists of:
 - `RelativeConicArcs.ClebschGateway`
 - `RelativeConicArcs.ClebschGatewayQ11Extension`
 - `RelativeConicArcs.ClebschGoldenConference`
+- `RelativeConicArcs.ClebschSchemeChirality`
+- `RelativeConicArcs.ClebschSchemeChiralityData`
 - `RelativeConicArcs.ClebschTwoGraph`
 - `RelativeConicArcs.CodingBridge`
 - `RelativeConicArcs.Conic`

@@ -26,7 +26,8 @@ consumes by hash, pinned in `lean/trust/certificate-packages.toml`.  The
 rigidity conclusion uses the ten-point
 Brianchon bound and the equality classification of six-arcs attaining it; both
 are kernel-checked theorems of this repository and neither is assumed.  The
-same two statements appear as Theorems 1 and 3, pages 275--278 of R. H. Dye,
+same two statements appear as the count in Section 2.2 and Theorem 1(ii), both
+on page 275 of R. H. Dye,
 “Hexagons, conics, \(A_5\) and \(\mathrm{PSL}_2(K)\),” *Journal of the
 London Mathematical Society* (2) 44 (1991), doi:10.1112/jlms/s2-44.2.270, which
 is cited as the antecedent.  The small-arc bridge reduces the four-, five-,
@@ -55,7 +56,7 @@ unconditional, and no native execution enters these terminals.
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports
 
--- The intrinsic two-sheet support chirality and complete Brianchon/decoder dictionary.
+-- The displayed two-generator support sheets and complete Brianchon/decoder dictionary.
 #print axioms RelativeConicArcs.Examples.Q11Coding.distanceThree_leaderSupports_eq_chiralitySheets
 #print axioms RelativeConicArcs.Examples.Q11Coding.supportChirality_generatorOrbits_and_exchange
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_decoder_matching_dictionary

@@ -9,8 +9,8 @@ import RelativeConicArcs.ClebschSchemeChirality
 This downstream module packages the already kernel-checked `q = 11` semantic tables into the
 four-branch syndrome-distance oracle, the complete nearest-word ambiguity enumerator, and the
 explicit Brianchon/triple-ambiguity bridge.  The final semantic bridge identifies the twenty
-distance-three support triples with the two intrinsic ten-element chirality sheets recovered from
-the six scalar-line blocks.
+distance-three support triples with the two displayed ten-element generator sheets recovered from
+the six scalar-line blocks; full automorphism invariance of the unordered pair is a separate result.
 -/
 
 namespace RelativeConicArcs.Examples.Q11Coding
@@ -285,7 +285,7 @@ theorem brianchon_weightTwo_leaderSupports (k : Fin 10) :
       syndromeLeaderSupports_two_eq_raw (brianchonDirectionIndex k) hd
     _ = (brianchonMatching k).image pairSupport := brianchon_rawLeaderSupports k
 
-/-! ### Intrinsic support chirality and the complete Brianchon dictionary -/
+/-! ### Two-generator support sheets and the complete Brianchon dictionary -/
 
 /-- The first orbit of three-subsets under the two displayed icosahedral generators. -/
 def positiveSupportTriples : Finset (Finset (Fin 6)) :=
@@ -305,8 +305,9 @@ theorem supportChirality_partition :
         (Finset.univ : Finset (Fin 6)).powersetCard 3 := by
   decide
 
-/-- Every affine deep-hole syndrome has exactly the two intrinsic ten-element chirality sheets as
-its twenty minimum-support triples. -/
+/-- Every affine deep-hole syndrome has exactly the two displayed ten-element generator sheets as
+its twenty minimum-support triples.  The unordered sheets become intrinsic only after the full
+monomial-automorphism preservation theorem is supplied. -/
 theorem distanceThree_leaderSupports_eq_chiralitySheets {s : Vec (ZMod 11)}
     (hd : CodingBridge.SyndromeDistanceExactly (K := ZMod 11) witnessVec s 3) :
     CodingBridge.syndromeLeaderSupportsOfWeight (K := ZMod 11) witnessVec s 3 =

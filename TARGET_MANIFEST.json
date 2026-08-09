@@ -1375,10 +1375,10 @@
       "sha256": "361740f1fb6b805bbb5d03688ab918b2cf7e5dd72546775a87ea4f1bfbcb104a"
     },
     {
-      "bytes": 7836,
+      "bytes": 7865,
       "module": "RelativeConicArcs.Gates.ClebschRigidityTrust",
       "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
-      "sha256": "449b644af907c080b888c957084155df51d813742b79b6856193ba1f2a90ab86"
+      "sha256": "6e52066855d72d4cf7ce14af1e30496f48630e10765622ad34326764cf2794eb"
     },
     {
       "bytes": 1547,
@@ -1681,10 +1681,10 @@
       "sha256": "8878c534db5192e9a9b412363378f61f3cac73e67e04b6d60dc0b1b02c697b89"
     },
     {
-      "bytes": 18023,
+      "bytes": 18212,
       "module": "RelativeConicArcs.Q11DecodingSynthesis",
       "path": "RelativeConicArcs/Q11DecodingSynthesis.lean",
-      "sha256": "5e44e3a406bff91c61df0441cb14ad31fd17856d5cc9c4d228053de376485932"
+      "sha256": "a43327d4744bc1ce8099104a724465b3237524c354bc03bce179df57394c1f2b"
     },
     {
       "bytes": 2680,
