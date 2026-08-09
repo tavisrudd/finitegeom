@@ -44,8 +44,8 @@ with the six golden axis classes and proves each singular point an ordinary
 double point.  It further recovers the projective stabilizer of the support
 cubic as a copy of `S₅`, its oriented subgroup as a copy of `A₅` of index two,
 and computes the rational and integral commutants of the odd module, the last
-two conditional on the explicit classical splitting interface named in the
-exported spine module.
+two from the rank-34 rational system imposed by explicit five-cycle and
+three-cycle action generators.
 
 This formal artifact does not prove the deep-hole syndrome classification, the
 code--arc dictionary, the decoder stratification, or the small-arc exclusions.
@@ -63,12 +63,12 @@ threefold.
 
 ## Trust boundary
 
-Every unconditional terminal is a kernel proof over an explicit finite index
-type or an arbitrary field of characteristic zero containing a root of
-`t^2 = t + 1`.  The commutant terminals carry the classical splitting
-interface as an explicit hypothesis rather than an axiom.  The closure
-contains no generated certificate, native evaluation, imported external data,
-user axiom, unsafe declaration, or admitted proof.
+Every terminal is a kernel proof over an explicit finite index type or an
+arbitrary field of characteristic zero containing a root of `t^2 = t + 1`.
+The commutant terminals are unconditional: exact symbolic certificates prove
+the two-generator commutant system has rank 34 and hence commutant dimension
+two.  The closure contains no generated certificate, native evaluation,
+imported external data, user axiom, unsafe declaration, or admitted proof.
 
 The observed axiom set of every terminal below is contained in `Classical.choice`, `Quot.sound`, `propext`.
 Source and candidate bytes are recorded in

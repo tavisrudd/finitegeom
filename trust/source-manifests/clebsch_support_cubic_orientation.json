@@ -90,10 +90,10 @@
       "sha256": "30746ec72da8651bc8673b89d78f135632d37195b9c44ac5cca4f071808949ad"
     },
     {
-      "bytes": 8009,
+      "bytes": 19050,
       "module": "RelativeConicArcs.SupportOrientationCommutant",
       "path": "RelativeConicArcs/SupportOrientationCommutant.lean",
-      "sha256": "0e8260da2a8cd3ae5b00ebaeb52adbab7e06f85607ee2885b028fb72784b46c3"
+      "sha256": "c5a7ed960211d1c3cffeab901dfc2bd53c8ff227135ae1f6b98747e23d2546d7"
     },
     {
       "bytes": 11179,
@@ -126,10 +126,10 @@
       "sha256": "ced85e3b80d1c1a46875d04340faa3d33fe9e114f2375feff6b9f93f798c7c1d"
     },
     {
-      "bytes": 1194,
+      "bytes": 1141,
       "module": "RelativeConicArcs.SupportOrientationSpine",
       "path": "RelativeConicArcs/SupportOrientationSpine.lean",
-      "sha256": "cf43afe21ab3df98fa58fb6bddb0c52494781c5d814fc9bc34bef0c482f2b717"
+      "sha256": "18e7cd50c82ffd1c141f728b67433ae06f14ae9f4a48b741a9ca3b378783abc0"
     },
     {
       "bytes": 4435,

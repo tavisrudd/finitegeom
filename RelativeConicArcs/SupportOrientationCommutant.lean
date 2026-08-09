@@ -22,7 +22,10 @@ open scoped Matrix
 open SupportOrientationCover
 open SupportOrientationPentagon
 
+/-- Rational endomorphisms of the six-dimensional fibre-odd coordinate module. -/
 abbrev RationalOddOperator := Matrix (Fin 6) (Fin 6) ℚ
+
+/-- Integral endomorphisms of the six-dimensional fibre-odd coordinate lattice. -/
 abbrev IntegralOddOperator := Matrix (Fin 6) (Fin 6) ℤ
 
 /-- The integral golden operator viewed over the rationals. -/
