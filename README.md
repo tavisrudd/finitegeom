@@ -179,6 +179,11 @@ Linux, and Apple Silicon macOS.
   diagonal-axis theorem, the transition atlases and intertwining criterion, the
   local-unitary to local-Clifford rigidity terminal, and the equal-phase MDS--CSS
   specialization.  Every terminal in it is a kernel proof.
+- `trust/manifests/clebsch_factorization.json` content-addresses the 54-terminal
+  Paper II boundary: the structural conic-matching reduction, the explicit
+  rank-three arithmetic endpoints, Hilbert-symmetry forcing, and the
+  hyperplane-square annihilator argument.  It does not claim that classical
+  manuscript inputs are formalized or assert an all-prime endpoint theorem.
 - `trust/manifests/clebsch_factorization.json` content-addresses the rank-three
   arithmetic gluing boundary: the literal reductions and sheet actions at field
   orders five, seven and eleven, the Coxeter-square orbits, the exact projective
@@ -190,7 +195,7 @@ Linux, and Apple Silicon macOS.
   redundancy-six and seven synthesis interfaces, and the covering-radius
   threshold bridges.  Its synthesis theorems are conditional, carrying their
   geometric and literature inputs as explicit hypotheses.
-- `TARGET_MANIFEST.json` content-addresses the complete 319-module reviewed
+- `TARGET_MANIFEST.json` content-addresses the complete 347-module reviewed
   library state; the exact 24-module foundation is archived as `v0.1.0`.
 - `trust/manifests/clebsch_passages.json` content-addresses the three-module
   symbolic state added after `v0.1.0`; in `v0.3.0` it records the superseding

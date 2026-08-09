@@ -4,6 +4,7 @@
     "Mathlib.Algebra.BigOperators.Fin",
     "Mathlib.Algebra.BigOperators.ModEq",
     "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.CharP.Basic",
     "Mathlib.Algebra.CharP.Two",
     "Mathlib.Algebra.Exact.Basic",
     "Mathlib.Algebra.Field.Basic",
@@ -13,11 +14,13 @@
     "Mathlib.Algebra.Group.Basic",
     "Mathlib.Algebra.Module.Equiv.Basic",
     "Mathlib.Algebra.Module.LinearMap.Defs",
+    "Mathlib.Algebra.Module.Torsion.Free",
     "Mathlib.Algebra.MvPolynomial.Funext",
     "Mathlib.Algebra.Order.BigOperators.Group.Finset",
     "Mathlib.Algebra.Polynomial.Div",
     "Mathlib.Algebra.Polynomial.Eval.Coeff",
     "Mathlib.Algebra.Polynomial.Eval.SMul",
+    "Mathlib.Algebra.Polynomial.Expand",
     "Mathlib.Algebra.Polynomial.Roots",
     "Mathlib.Algebra.Ring.Parity",
     "Mathlib.Analysis.Asymptotics.Defs",
@@ -55,6 +58,8 @@
     "Mathlib.Data.Matrix.Block",
     "Mathlib.Data.Matrix.Mul",
     "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.Nat.Choose.Dvd",
+    "Mathlib.Data.Nat.Choose.Lucas",
     "Mathlib.Data.Nat.Choose.Sum",
     "Mathlib.Data.Nat.Factorization.PrimePow",
     "Mathlib.Data.Nat.ModEq",
@@ -111,6 +116,7 @@
     "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
     "Mathlib.LinearAlgebra.Matrix.Trace",
     "Mathlib.LinearAlgebra.Pi",
+    "Mathlib.LinearAlgebra.Prod",
     "Mathlib.LinearAlgebra.Projectivization.Action",
     "Mathlib.LinearAlgebra.Projectivization.Cardinality",
     "Mathlib.LinearAlgebra.Projectivization.Collinear",
@@ -136,7 +142,7 @@
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 319,
+  "module_count": 347,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -147,6 +153,7 @@
     "RelativeConicArcs.Gates.ArcsCompleteOutsideConic",
     "RelativeConicArcs.Gates.ArcsCompleteOutsideConicAdditions",
     "RelativeConicArcs.Gates.ClebschArithmeticGluing",
+    "RelativeConicArcs.Gates.ClebschFactorizationBoundary",
     "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
     "RelativeConicArcs.Gates.ClebschHyperplaneSquare",
     "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
@@ -456,10 +463,10 @@
       "sha256": "4d81d7fa158659063594c2c1c204bd8aa8ee4e54a7bf03b69dacdb06297a6f09"
     },
     {
-      "bytes": 17250,
+      "bytes": 17225,
       "module": "ProjectiveCap.Sym2ConicBridge",
       "path": "ProjectiveCap/Sym2ConicBridge.lean",
-      "sha256": "e4c763c56136c1e1d339aeba19df5c7944ec46cd65e98e98a1b088cda7edfa26"
+      "sha256": "be61eda7439d0caf7de6e897c9c71977659cea4378159359f705865bf1c473a3"
     },
     {
       "bytes": 52538,
@@ -804,6 +811,24 @@
       "sha256": "80997b0a2cbdcbbee576027deb33c9ca168863ec1365ce3f906bbc3eaddc5eab"
     },
     {
+      "bytes": 2740,
+      "module": "RelativeConicArcs.ClebschA3InvariantMatching",
+      "path": "RelativeConicArcs/ClebschA3InvariantMatching.lean",
+      "sha256": "75fe31a8741de165edc43f6eb27db3209078725c5d0a19300fe79ab9f8ad4904"
+    },
+    {
+      "bytes": 4856,
+      "module": "RelativeConicArcs.ClebschAffineContractionCohomology",
+      "path": "RelativeConicArcs/ClebschAffineContractionCohomology.lean",
+      "sha256": "ba24b8cbb37356b9c7bddce8b6c6219e3436609c36059292a6fab68ef8e97e9b"
+    },
+    {
+      "bytes": 2956,
+      "module": "RelativeConicArcs.ClebschAffineExtensionContraction",
+      "path": "RelativeConicArcs/ClebschAffineExtensionContraction.lean",
+      "sha256": "cfb7a7d180b1f7c38db714ca5fc1d8d9e73d522d9b87c7df64501fa73711221c"
+    },
+    {
       "bytes": 9155,
       "module": "RelativeConicArcs.ClebschArithmeticGluing",
       "path": "RelativeConicArcs/ClebschArithmeticGluing.lean",
@@ -814,6 +839,18 @@
       "module": "RelativeConicArcs.ClebschArithmeticGluingData",
       "path": "RelativeConicArcs/ClebschArithmeticGluingData.lean",
       "sha256": "2ca60d94d0bab6238751dafd67f5b7088e93ae63683a3875bbfb804f88d98077"
+    },
+    {
+      "bytes": 3375,
+      "module": "RelativeConicArcs.ClebschB3InvariantMatchings",
+      "path": "RelativeConicArcs/ClebschB3InvariantMatchings.lean",
+      "sha256": "3c240bd52e5a6c56f7d6925359bad08c7c9cf0a4959b6da835a2f6dcdf52868f"
+    },
+    {
+      "bytes": 4790,
+      "module": "RelativeConicArcs.ClebschBalancedOrbitEndgame",
+      "path": "RelativeConicArcs/ClebschBalancedOrbitEndgame.lean",
+      "sha256": "d75e36642fef24c574ea1d1e9ffeb0a5efb13a3d408d92077f4bb1ff49bcf5c7"
     },
     {
       "bytes": 36045,
@@ -846,6 +883,30 @@
       "sha256": "f1046464f8f37cc8c35bbb269bdd369ea03d58498d43ac2cf26931a0aaaa7389"
     },
     {
+      "bytes": 4398,
+      "module": "RelativeConicArcs.ClebschDetectingIntertwiners",
+      "path": "RelativeConicArcs/ClebschDetectingIntertwiners.lean",
+      "sha256": "683d9c64e65736068b19fec62c7f82c25607f18f47fc3cd437ea986f6afc74d3"
+    },
+    {
+      "bytes": 3433,
+      "module": "RelativeConicArcs.ClebschDetectingModuleVanishings",
+      "path": "RelativeConicArcs/ClebschDetectingModuleVanishings.lean",
+      "sha256": "ee25ba168fcb20b0322d4df46ea75083b42b8f6ced34dd12496f5d37daa266e3"
+    },
+    {
+      "bytes": 1752,
+      "module": "RelativeConicArcs.ClebschDihedralReflectionParity",
+      "path": "RelativeConicArcs/ClebschDihedralReflectionParity.lean",
+      "sha256": "430ee9b913e251f70fa787835fb161eca464038d6d21490d1647bcc37ac917da"
+    },
+    {
+      "bytes": 4695,
+      "module": "RelativeConicArcs.ClebschDividedPowerTopSlices",
+      "path": "RelativeConicArcs/ClebschDividedPowerTopSlices.lean",
+      "sha256": "b2817c34992e65989dd8440fff08295ba94cdb93c4338227982bcfa66c813299"
+    },
+    {
       "bytes": 4658,
       "module": "RelativeConicArcs.ClebschFactorizationB3",
       "path": "RelativeConicArcs/ClebschFactorizationB3.lean",
@@ -864,10 +925,34 @@
       "sha256": "a2e125505a0e42be799cb256005257e38a68ebc0b9c147bb65c36be7e226dd2c"
     },
     {
-      "bytes": 16254,
+      "bytes": 2113,
+      "module": "RelativeConicArcs.ClebschFiniteRootRecurrenceBridge",
+      "path": "RelativeConicArcs/ClebschFiniteRootRecurrenceBridge.lean",
+      "sha256": "a3de554d8e6119a902b1bd9c100c96bb594b9df313af4118f663beaca435f94e"
+    },
+    {
+      "bytes": 11211,
+      "module": "RelativeConicArcs.ClebschFiniteRootWeightSlice",
+      "path": "RelativeConicArcs/ClebschFiniteRootWeightSlice.lean",
+      "sha256": "b27cee7e69cc7993ec902456515a963f05bc10711299f1e40a67487c0fefdff0"
+    },
+    {
+      "bytes": 5245,
+      "module": "RelativeConicArcs.ClebschFirstFrobeniusSection",
+      "path": "RelativeConicArcs/ClebschFirstFrobeniusSection.lean",
+      "sha256": "1acd9a639efd03d8fc20f448f22a027cc217270b32d59b6fa18c954ddd0df06d"
+    },
+    {
+      "bytes": 19892,
+      "module": "RelativeConicArcs.ClebschFixedLineRadialTranslation",
+      "path": "RelativeConicArcs/ClebschFixedLineRadialTranslation.lean",
+      "sha256": "96d5a87159957a50f7743fb47c2857a9305dabdbcafb53539307b015e2f8ab1e"
+    },
+    {
+      "bytes": 16501,
       "module": "RelativeConicArcs.ClebschGateway",
       "path": "RelativeConicArcs/ClebschGateway.lean",
-      "sha256": "c91e85fce72635a98b6e8b2cbecd887866145decfe163b20d9af911046e56b4b"
+      "sha256": "c7260abcca23ae3f0b0d0d8d5090decccc6bf6a24838efcfd58c25d539454182"
     },
     {
       "bytes": 4970,
@@ -880,6 +965,12 @@
       "module": "RelativeConicArcs.ClebschGoldenConference",
       "path": "RelativeConicArcs/ClebschGoldenConference.lean",
       "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
+    },
+    {
+      "bytes": 6239,
+      "module": "RelativeConicArcs.ClebschH3InvariantMatchings",
+      "path": "RelativeConicArcs/ClebschH3InvariantMatchings.lean",
+      "sha256": "4f30b97b4d8e62b451a8fc23c99f5872baf1e0f11ebb8b2fd7f1bb1893c919e6"
     },
     {
       "bytes": 29722,
@@ -906,10 +997,34 @@
       "sha256": "3647783f1c7fcec39d311618a4f37c1b293ce064b9621c257b099869ad0f23f7"
     },
     {
+      "bytes": 1632,
+      "module": "RelativeConicArcs.ClebschInvariantMatchingCriterion",
+      "path": "RelativeConicArcs/ClebschInvariantMatchingCriterion.lean",
+      "sha256": "9b9fd3ea47cb15f17916e5fc06d2bdc4b9259ebb3cd05ac8e8a6eaaab7fd3c43"
+    },
+    {
+      "bytes": 12875,
+      "module": "RelativeConicArcs.ClebschLucasCoefficientBasis",
+      "path": "RelativeConicArcs/ClebschLucasCoefficientBasis.lean",
+      "sha256": "e215a5d6522efdeb19db6d27156634b031b51ad9d97215620f4ef9a87897942d"
+    },
+    {
+      "bytes": 4683,
+      "module": "RelativeConicArcs.ClebschLucasPolynomialFactorization",
+      "path": "RelativeConicArcs/ClebschLucasPolynomialFactorization.lean",
+      "sha256": "7c26e12060a8d66c6a1549f4d02e512431969af2549667e221f16a477dc52c4f"
+    },
+    {
       "bytes": 11115,
       "module": "RelativeConicArcs.ClebschMomentTrade",
       "path": "RelativeConicArcs/ClebschMomentTrade.lean",
       "sha256": "aa15ed2a8cf84116792e3024ab96c1a674979d41f533fe617d98ac5571b32cf8"
+    },
+    {
+      "bytes": 3021,
+      "module": "RelativeConicArcs.ClebschOrbitOrderReduction",
+      "path": "RelativeConicArcs/ClebschOrbitOrderReduction.lean",
+      "sha256": "1bfeb0dceec96283f5fc717fde88dae3af86ed4824a15aefda47821e3573f6a8"
     },
     {
       "bytes": 6448,
@@ -918,10 +1033,58 @@
       "sha256": "4af948c498b21433546f71029ee0f20ee2e2851991febf2d386a14c04be9464c"
     },
     {
+      "bytes": 4127,
+      "module": "RelativeConicArcs.ClebschOuterParityInjection",
+      "path": "RelativeConicArcs/ClebschOuterParityInjection.lean",
+      "sha256": "dbd52de6b35b7a238d3168a0a6ce91917ec98f88a1775ea2ed607e8b8ddcf07e"
+    },
+    {
+      "bytes": 2097,
+      "module": "RelativeConicArcs.ClebschOuterParityWeights",
+      "path": "RelativeConicArcs/ClebschOuterParityWeights.lean",
+      "sha256": "3c3aeeb079d57054c41e0463a830bae9612d38bcd588b59432324ca86d8a4da5"
+    },
+    {
       "bytes": 3725,
       "module": "RelativeConicArcs.ClebschPassagesCorrespondence",
       "path": "RelativeConicArcs/ClebschPassagesCorrespondence.lean",
       "sha256": "a7f152ab5fad8cfe4847c7cffd5103eb1c4cdba749b2428ce0327408117f8e28"
+    },
+    {
+      "bytes": 2603,
+      "module": "RelativeConicArcs.ClebschPolyhedralInvariantAverages",
+      "path": "RelativeConicArcs/ClebschPolyhedralInvariantAverages.lean",
+      "sha256": "b813fd843b61b131a35eb52609b55a84aa5a0e5cfc7ac713afa6abc5310af697"
+    },
+    {
+      "bytes": 7481,
+      "module": "RelativeConicArcs.ClebschPolynomialTopSliceDetection",
+      "path": "RelativeConicArcs/ClebschPolynomialTopSliceDetection.lean",
+      "sha256": "b90bc9105099198c4a7887757cff53a9ea8a7a0b1285696eedfd800fdc633a3a"
+    },
+    {
+      "bytes": 3917,
+      "module": "RelativeConicArcs.ClebschProjectiveTradeReduction",
+      "path": "RelativeConicArcs/ClebschProjectiveTradeReduction.lean",
+      "sha256": "7aae4c67a06a02f659ea725b83f12f5d357a99e43094735f80979e79982b0ee6"
+    },
+    {
+      "bytes": 9179,
+      "module": "RelativeConicArcs.ClebschRankThreeBalancedEndgame",
+      "path": "RelativeConicArcs/ClebschRankThreeBalancedEndgame.lean",
+      "sha256": "a56e3d4faad68c96197e8e68a6c82f4c5eb845ed2a2c70a5c6c00ebd23c59c75"
+    },
+    {
+      "bytes": 4047,
+      "module": "RelativeConicArcs.ClebschRegularMatching",
+      "path": "RelativeConicArcs/ClebschRegularMatching.lean",
+      "sha256": "5ca27dae16a2a571893c7db0a5df0b3672b2293f1b3db90296c9618f6007cb46"
+    },
+    {
+      "bytes": 6667,
+      "module": "RelativeConicArcs.ClebschRootDefect",
+      "path": "RelativeConicArcs/ClebschRootDefect.lean",
+      "sha256": "3bc15a5c6a81b9fa73d65ab9ec3f697a49a710b31dcd14796d56a77e32314176"
     },
     {
       "bytes": 6490,
@@ -1176,6 +1339,12 @@
       "sha256": "9ea2ba12de452fb6eef09f34d4c204c6e3bc9573f4b317108dea7fe3b714d5c8"
     },
     {
+      "bytes": 6076,
+      "module": "RelativeConicArcs.Gates.ClebschFactorizationBoundary",
+      "path": "RelativeConicArcs/Gates/ClebschFactorizationBoundary.lean",
+      "sha256": "d9246d0a0fb7be08510e3c2920537ee486377fe8221ad06087c71095632db9bd"
+    },
+    {
       "bytes": 399,
       "module": "RelativeConicArcs.Gates.ClebschHilbertSymmetry",
       "path": "RelativeConicArcs/Gates/ClebschHilbertSymmetry.lean",
@@ -1192,6 +1361,12 @@
       "module": "RelativeConicArcs.Gates.ClebschOrientationMechanisms",
       "path": "RelativeConicArcs/Gates/ClebschOrientationMechanisms.lean",
       "sha256": "07b715d6426e3f8543c29f9db25d5037ac34cbb8e3e5e97317a2a0b23069e9bd"
+    },
+    {
+      "bytes": 8356,
+      "module": "RelativeConicArcs.Gates.ClebschPaperIIStructural",
+      "path": "RelativeConicArcs/Gates/ClebschPaperIIStructural.lean",
+      "sha256": "00778825617b4721143c84108ab22bce89928d3203fb59da0727e0c269bd113d"
     },
     {
       "bytes": 7169,
