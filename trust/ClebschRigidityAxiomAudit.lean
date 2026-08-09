@@ -23,8 +23,11 @@ statements attributed to the literature.
 #print axioms RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts
 #print axioms RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree
+#print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_decoder_matching_dictionary
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports
+#print axioms RelativeConicArcs.Examples.Q11Coding.distanceThree_leaderSupports_eq_chiralitySheets
 #print axioms RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic
+#print axioms RelativeConicArcs.Examples.Q11Coding.supportChirality_generatorOrbits_and_exchange
 #print axioms RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact
 #print axioms RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three
 #print axioms RelativeConicArcs.Examples.Q11Coding.witness_mds_columns

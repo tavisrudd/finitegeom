@@ -44,7 +44,7 @@
     "Mathlib.Tactic.NormNum",
     "Mathlib.Tactic.Ring"
   ],
-  "module_count": 94,
+  "module_count": 96,
   "roots": [
     "RelativeConicArcs.Gates.ClebschRigidityTrust"
   ],
@@ -135,6 +135,18 @@
       "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
     },
     {
+      "bytes": 6490,
+      "module": "RelativeConicArcs.ClebschSchemeChirality",
+      "path": "RelativeConicArcs/ClebschSchemeChirality.lean",
+      "sha256": "7deb3f0ce0cbfe7a56c71de5a9a0635adc157eb7b2fa5409cc6a88d72f07921c"
+    },
+    {
+      "bytes": 2374,
+      "module": "RelativeConicArcs.ClebschSchemeChiralityData",
+      "path": "RelativeConicArcs/ClebschSchemeChiralityData.lean",
+      "sha256": "b56b3d7b18428517da497b464c48791587300d31a6a808004ee64f9a2c1c3803"
+    },
+    {
       "bytes": 4738,
       "module": "RelativeConicArcs.ClebschTwoGraph",
       "path": "RelativeConicArcs/ClebschTwoGraph.lean",
@@ -183,10 +195,10 @@
       "sha256": "db04687e7e35fe0d0c8d08add45826d6581967282d687df4223b973cfb53e805"
     },
     {
-      "bytes": 7462,
+      "bytes": 7836,
       "module": "RelativeConicArcs.Gates.ClebschRigidityTrust",
       "path": "RelativeConicArcs/Gates/ClebschRigidityTrust.lean",
-      "sha256": "265e389500835048b25b9853db81c598f36ca463b7681ef8f0d040a0dbb767c9"
+      "sha256": "449b644af907c080b888c957084155df51d813742b79b6856193ba1f2a90ab86"
     },
     {
       "bytes": 27548,
@@ -315,10 +327,10 @@
       "sha256": "8878c534db5192e9a9b412363378f61f3cac73e67e04b6d60dc0b1b02c697b89"
     },
     {
-      "bytes": 14115,
+      "bytes": 18023,
       "module": "RelativeConicArcs.Q11DecodingSynthesis",
       "path": "RelativeConicArcs/Q11DecodingSynthesis.lean",
-      "sha256": "5ef74a255532a6e7fd11509241f1454c876110f07bf9f66f4d280c19c29a18b6"
+      "sha256": "5e44e3a406bff91c61df0441cb14ad31fd17856d5cc9c4d228053de376485932"
     },
     {
       "bytes": 2680,

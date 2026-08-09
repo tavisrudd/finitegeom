@@ -161,8 +161,11 @@ Source and candidate bytes are recorded in
 - `RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_counts`
 - `RelativeConicArcs.Examples.Q11Coding.ambiguity_strata_sound`
 - `RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree`
+- `RelativeConicArcs.Examples.Q11Coding.brianchon_decoder_matching_dictionary`
 - `RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports`
+- `RelativeConicArcs.Examples.Q11Coding.distanceThree_leaderSupports_eq_chiralitySheets`
 - `RelativeConicArcs.Examples.Q11Coding.projective_distanceThreeDirections_eq_standardConic`
+- `RelativeConicArcs.Examples.Q11Coding.supportChirality_generatorOrbits_and_exchange`
 - `RelativeConicArcs.Examples.Q11Coding.totalSyndromeDistance_exact`
 - `RelativeConicArcs.Examples.Q11Coding.witness_code_coveringRadius_three`
 - `RelativeConicArcs.Examples.Q11Coding.witness_mds_columns`

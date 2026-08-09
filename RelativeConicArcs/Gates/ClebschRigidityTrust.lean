@@ -55,6 +55,11 @@ unconditional, and no native execution enters these terminals.
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchonDirectionIndices_eq_indexThree
 #print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_weightTwo_leaderSupports
 
+-- The intrinsic two-sheet support chirality and complete Brianchon/decoder dictionary.
+#print axioms RelativeConicArcs.Examples.Q11Coding.distanceThree_leaderSupports_eq_chiralitySheets
+#print axioms RelativeConicArcs.Examples.Q11Coding.supportChirality_generatorOrbits_and_exchange
+#print axioms RelativeConicArcs.Examples.Q11Coding.brianchon_decoder_matching_dictionary
+
 -- The symmetry-free rigidity implication and its six-arc concurrence inputs.
 #print axioms RelativeConicArcs.ClebschDye.sixArc_uncovered_add_brianchon_card
 #print axioms RelativeConicArcs.ClebschDye.sixArc_twelve_le_uncovered_card
