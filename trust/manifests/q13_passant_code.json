@@ -1,0 +1,94 @@
+{
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+    "Mathlib.Tactic"
+  ],
+  "module_count": 13,
+  "roots": [
+    "TavisRuddFiniteGeom.Papers.Q13PassantCode.SemanticGate"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "bytes": 3234,
+      "module": "TavisRuddFiniteGeom.Foundation.Coding",
+      "path": "TavisRuddFiniteGeom/Foundation/Coding.lean",
+      "sha256": "a733725b78dee6f82369cd22221043bfd1fd83e4d3290aa2d9e19256895314af"
+    },
+    {
+      "bytes": 4328,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.AssociationAlgebra",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/AssociationAlgebra.lean",
+      "sha256": "87c7a6eb50223cfd5cce3eebd203df3d580ed79e19aef932f127eac445d10c2e"
+    },
+    {
+      "bytes": 8702,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.Geometry",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/Geometry.lean",
+      "sha256": "c298e7edcfae509e7f82c59d9ae3439e1f5044c061a8297b6a92f5c0f3ebc89b"
+    },
+    {
+      "bytes": 6058,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.IncidenceCode",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/IncidenceCode.lean",
+      "sha256": "eca4553479ef395f497211d536258f8445eee9d034ac8375d543a6892088636d"
+    },
+    {
+      "bytes": 14115,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.LogicalSpine",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/LogicalSpine.lean",
+      "sha256": "4f5484e2fd1a848a14b2e641b2e216c49a52eea7d862d1d90d5ef66cb876042b"
+    },
+    {
+      "bytes": 5212,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.PencilIncidence",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/PencilIncidence.lean",
+      "sha256": "a5842b16b544b2c977a9a902bbd0bcd5e63dd8b16af9d7a14de18a8ae0cf87a5"
+    },
+    {
+      "bytes": 14248,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.PencilJoins",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/PencilJoins.lean",
+      "sha256": "e89f91d4a4fa5f9f08ff11177652bf623c0fb5648a1be5dfcbb55a14505c8785"
+    },
+    {
+      "bytes": 1744,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.Rank",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/Rank.lean",
+      "sha256": "b78c1cf125acfd76e402ffd948cfde2bb6d8db690506bd71e3d9e56a5041e934"
+    },
+    {
+      "bytes": 7749,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.Reconstruction",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/Reconstruction.lean",
+      "sha256": "854a196fd5f4c76876663d283e09bc285b8a1bc1c339792b43d37aa94aa3f74a"
+    },
+    {
+      "bytes": 5783,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.SemanticGate",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/SemanticGate.lean",
+      "sha256": "276e9c903b841a15f4fa66e70f585faed7a94b55443c661758c913f95524ea01"
+    },
+    {
+      "bytes": 6837,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.StructuralUpgrade",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/StructuralUpgrade.lean",
+      "sha256": "7349fecb8ebe15e3ce4292df75d6095485e435a94e97c644701ae769ad4dd639"
+    },
+    {
+      "bytes": 32591,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.WeightEight",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/WeightEight.lean",
+      "sha256": "7532abcf2485e65c8daddb96322f843c19f2bacedf1956b70337f36b073e34de"
+    },
+    {
+      "bytes": 18786,
+      "module": "TavisRuddFiniteGeom.Papers.Q13PassantCode.WeightTen",
+      "path": "TavisRuddFiniteGeom/Papers/Q13PassantCode/WeightTen.lean",
+      "sha256": "f94c65f7f91912d3e562aecb94b2a2fad811a31efb54292de2109a5c3da3fce7"
+    }
+  ]
+}

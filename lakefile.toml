@@ -395,3 +395,21 @@ roots = [
   "RelativeConicArcs.UncoveredLocusReconstruction",
   "RelativeConicArcs.ZeroDefectConicInvariance",
 ]
+
+[[lean_lib]]
+name = "TavisRuddFiniteGeom"
+roots = [
+  "TavisRuddFiniteGeom.Foundation.Coding",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.AssociationAlgebra",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.Geometry",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.IncidenceCode",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.LogicalSpine",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.PencilIncidence",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.PencilJoins",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.Rank",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.Reconstruction",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.SemanticGate",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.StructuralUpgrade",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.WeightEight",
+  "TavisRuddFiniteGeom.Papers.Q13PassantCode.WeightTen",
+]
