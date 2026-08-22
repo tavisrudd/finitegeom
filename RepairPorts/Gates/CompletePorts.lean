@@ -1,8 +1,10 @@
 import RepairPorts.MDSReconstruction
+import RepairPorts.HarmonicQuartic
 import RepairPorts.PointedTutte
 import RepairPorts.PointedTransfer
 import RepairPorts.PositiveDensity
 import RepairPorts.Reliability
+import RepairCodes.ProjectiveAxisTwistedCubicInvariants
 
 /-!
 # Complete bounded repair-port theorem gate
@@ -11,7 +13,8 @@ This import-only module exposes the paper-facing coefficient-port object, intrin
 radius, standard-code duality bridge, MDS minimum-port reconstruction, exact pointed transfer, and
 the finite reliability and bounded-radius erasure calculus.  The strict weighted example is
 conditional only on the displayed regular Singer-action input.  No executable certificate or fiber
-enumerator occurs in these dependency closures.
+enumerator occurs in these dependency closures.  The gate also exposes the completed projective
+twisted-cubic code parameters, radius-four stabilization, and exact cubic/axis port rows.
 -/
 
 #print axioms FiniteGeom.dualCode_dualCode
@@ -36,6 +39,7 @@ enumerator occurs in these dependency closures.
 #print axioms RepairPorts.prescribedPorts_of_outerDualDistance
 #print axioms RepairPorts.eventually_pointedConfinement_iff_zeroCost
 #print axioms RepairPorts.eventually_prescribedPorts
+#print axioms RepairPorts.eventually_radiusThree_prescribedPortPair
 #print axioms RepairPorts.HasMDSDualParameters.pointedZeroFunctionalCost_eq
 #print axioms RepairPorts.eventually_mdsMinimumCoefficientFingerprints
 #print axioms RepairPorts.portReliability_delete_contract
@@ -56,3 +60,21 @@ enumerator occurs in these dependency closures.
 #print axioms RepairPorts.coeff_blockerFailurePolynomial_eq_zero_below_minimum
 #print axioms RepairPorts.blockerFailurePolynomial_eq_minimum_term_add_remainder
 #print axioms RepairCodes.projectiveAxisTwistedCubic_strict_weighted_transfer_of_regular_projective_action
+#print axioms FiniteGeom.projectiveAxisTwistedCubic_code_parameters
+#print axioms RepairCodes.minimalProjectiveAxisTwistedCubicRepair_full_eq_four
+#print axioms RepairCodes.minimalProjectiveCubicRepair_four_invariants
+#print axioms RepairCodes.minimalProjectiveAxisRepair_four_invariants
+#print axioms RepairCodes.minimalProjectiveCubicRepair_full_invariants
+#print axioms RepairCodes.minimalProjectiveAxisRepair_full_invariants
+#print axioms RepairPorts.harmonicQuarticDeterminant_finite
+#print axioms RepairPorts.harmonicQuarticDeterminant_infinity
+#print axioms RepairPorts.existsUnique_harmonicQuarticCompletion
+#print axioms RepairPorts.harmonicQuarticFamily_projective_linearIndependent_iff
+#print axioms RepairPorts.harmonicQuarticGenerator_smallColumnIndependent
+#print axioms RepairPorts.dualDist_harmonicQuarticCode
+#print axioms RepairPorts.harmonicQuarticCode_parameters_of_sharp_section
+#print axioms RepairPorts.finiteHarmonicBlock_repairPort
+#print axioms RepairPorts.infinityHarmonicBlock_repairPort
+#print axioms RepairPorts.harmonicPortClosure_withNucleus_iff
+#print axioms RepairPorts.harmonicPortClosure_of_containsBlock_iff
+#print axioms RepairPorts.harmonicPortClosure_of_containsNoBlock_iff

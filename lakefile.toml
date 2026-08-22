@@ -79,21 +79,25 @@ roots = [
   "FiniteGeom.ColumnCode",
   "FiniteGeom.Completion",
   "FiniteGeom.EvalCode",
+  "FiniteGeom.ExplicitRainbowMatching",
   "FiniteGeom.Hypergraph",
   "FiniteGeom.MomentCurve",
   "FiniteGeom.ProjectiveAxisTwistedCubic",
   "FiniteGeom.ProjectiveAxisTwistedCubicCircuits",
   "FiniteGeom.Repair",
   "FiniteGeom.Weight",
+  "FiniteGeom.ZeroSumTriple",
 ]
 
 [[lean_lib]]
 name = "RepairCodes"
 roots = [
   "RepairCodes.AxisTwistedCubic",
+  "RepairCodes.AxisTwistedCubicInvariants",
   "RepairCodes.CodeInstance",
   "RepairCodes.OuterDual",
   "RepairCodes.ProjectiveAxisTwistedCubic",
+  "RepairCodes.ProjectiveAxisTwistedCubicInvariants",
   "RepairCodes.SeedLift",
   "RepairCodes.TraceDual",
   "RepairCodes.Transfer",
@@ -108,6 +112,7 @@ roots = [
   "RepairPorts.CoefficientPort",
   "RepairPorts.FunctionalCost",
   "RepairPorts.Gates.CompletePorts",
+  "RepairPorts.HarmonicQuartic",
   "RepairPorts.MDSReconstruction",
   "RepairPorts.PointedTransfer",
   "RepairPorts.PointedTutte",

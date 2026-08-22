@@ -1,5 +1,6 @@
 {
   "external_imports": [
+    "Mathlib.Algebra.CharP.Defs",
     "Mathlib.Algebra.Field.ZMod",
     "Mathlib.Algebra.Module.Equiv.Basic",
     "Mathlib.Algebra.Order.BigOperators.Group.Finset",
@@ -28,6 +29,7 @@
     "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
     "Mathlib.LinearAlgebra.Matrix.DotProduct",
     "Mathlib.LinearAlgebra.Matrix.Dual",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
     "Mathlib.LinearAlgebra.Matrix.ToLin",
     "Mathlib.LinearAlgebra.Pi",
     "Mathlib.LinearAlgebra.Span.Basic",
@@ -38,7 +40,7 @@
     "Mathlib.Tactic",
     "Mathlib.Tactic.FinCases"
   ],
-  "module_count": 31,
+  "module_count": 36,
   "roots": [
     "RepairPorts.Gates.CompletePorts"
   ],
@@ -87,6 +89,12 @@
       "sha256": "e9a5061a3877c5c6d644b4be954d6adc6415330aa9accb179e1f116f387e8fca"
     },
     {
+      "bytes": 7130,
+      "module": "FiniteGeom.ExplicitRainbowMatching",
+      "path": "FiniteGeom/ExplicitRainbowMatching.lean",
+      "sha256": "bb3cc97c25584aa31708e38239df46ad4a7cc00337776e874971da122cd18167"
+    },
+    {
       "bytes": 44914,
       "module": "FiniteGeom.Hypergraph",
       "path": "FiniteGeom/Hypergraph.lean",
@@ -123,10 +131,22 @@
       "sha256": "3b695571b7f83083173d26a1341282dce463fd3bc50673ed9396bf8d869c2e94"
     },
     {
+      "bytes": 21471,
+      "module": "FiniteGeom.ZeroSumTriple",
+      "path": "FiniteGeom/ZeroSumTriple.lean",
+      "sha256": "6816536e7fd09409320f50aceb09158d3f1426bc3b8e05fc8b71936765dbc55a"
+    },
+    {
       "bytes": 48154,
       "module": "RepairCodes.AxisTwistedCubic",
       "path": "RepairCodes/AxisTwistedCubic.lean",
       "sha256": "e80fbebb8dac7024b786bd0ba2eda2fc60023b12ab506fed271310c9f27070f3"
+    },
+    {
+      "bytes": 64404,
+      "module": "RepairCodes.AxisTwistedCubicInvariants",
+      "path": "RepairCodes/AxisTwistedCubicInvariants.lean",
+      "sha256": "a858d8f3b0f725c0055939e7903ffa0f7d73536121177300718977ac00c19e74"
     },
     {
       "bytes": 7010,
@@ -145,6 +165,12 @@
       "module": "RepairCodes.ProjectiveAxisTwistedCubic",
       "path": "RepairCodes/ProjectiveAxisTwistedCubic.lean",
       "sha256": "5a40e8beb9fc56af4e7fc8681d023549c8ec9759e52e79a4e954c9bb27531e1b"
+    },
+    {
+      "bytes": 69230,
+      "module": "RepairCodes.ProjectiveAxisTwistedCubicInvariants",
+      "path": "RepairCodes/ProjectiveAxisTwistedCubicInvariants.lean",
+      "sha256": "dd176de0875a7533965e9e3471f04cb20ebcb24dada1c287ce26441b5e5e58e7"
     },
     {
       "bytes": 18767,
@@ -195,10 +221,16 @@
       "sha256": "089fef8a5f4397aaf84d143c93b48f76d02226e1779b8a24e7f8185f25d59480"
     },
     {
-      "bytes": 3496,
+      "bytes": 5007,
       "module": "RepairPorts.Gates.CompletePorts",
       "path": "RepairPorts/Gates/CompletePorts.lean",
-      "sha256": "8dcc66eab5745946b112e9a54ec1cb5f5ef3d5494b24eb60aa4a34e37a8343f6"
+      "sha256": "65d4a8bb00b60e46380aa22eef7df17046340b07e334659b4fb37e5658e674fb"
+    },
+    {
+      "bytes": 80377,
+      "module": "RepairPorts.HarmonicQuartic",
+      "path": "RepairPorts/HarmonicQuartic.lean",
+      "sha256": "93f6b6320d7b2a5719fa486ca4aee0b4bcf6ab4d1e4b82eeb788d81db53f3632"
     },
     {
       "bytes": 12163,
@@ -219,10 +251,10 @@
       "sha256": "2aa8c3aff92a4da2e54319aa2000dcfb1e254adea946c4fce1f7383e66444b55"
     },
     {
-      "bytes": 15024,
+      "bytes": 17760,
       "module": "RepairPorts.PositiveDensity",
       "path": "RepairPorts/PositiveDensity.lean",
-      "sha256": "8c5d91c6db061bac5862808bc602d3fd1ae554e48ee39b7257ceab165a1f06b0"
+      "sha256": "20f4a6b95f2b5058e52f10e931ee6bd0cfad19e613d0e70182676a9ed5807725"
     },
     {
       "bytes": 33401,

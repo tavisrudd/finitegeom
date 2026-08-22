@@ -7,11 +7,18 @@ This audit prints the axioms of the terminals exported with the bounded
 repair-port boundary: the coefficient-port object and intrinsic reconstruction
 radius, the standard-code duality bridge, minimum-port reconstruction for
 maximum distance separable codes, exact pointed transfer, and the finite
-reliability and bounded-radius erasure calculus.
+reliability and bounded-radius erasure calculus, together with the completed
+projective twisted-cubic parameters and exact cubic/axis port rows.
 -/
 
 #print axioms FiniteGeom.dualCode_dualCode
 #print axioms FiniteGeom.dualCode_injective
+#print axioms FiniteGeom.projectiveAxisTwistedCubic_code_parameters
+#print axioms RepairCodes.minimalProjectiveAxisRepair_four_invariants
+#print axioms RepairCodes.minimalProjectiveAxisRepair_full_invariants
+#print axioms RepairCodes.minimalProjectiveAxisTwistedCubicRepair_full_eq_four
+#print axioms RepairCodes.minimalProjectiveCubicRepair_four_invariants
+#print axioms RepairCodes.minimalProjectiveCubicRepair_full_invariants
 #print axioms RepairCodes.projectiveAxisTwistedCubic_strict_weighted_transfer_of_regular_projective_action
 #print axioms RepairPorts.HasMDSDualParameters.exists_normalized_word
 #print axioms RepairPorts.HasMDSDualParameters.pointedZeroFunctionalCost_eq
@@ -32,15 +39,28 @@ reliability and bounded-radius erasure calculus.
 #print axioms RepairPorts.deletionContractionRankDifference_eq_successfulSetEnumerator
 #print axioms RepairPorts.disjointTripleRepairs_reliability
 #print axioms RepairPorts.disjointTripleRepairs_reliability_ne_overlapping
+#print axioms RepairPorts.dualDist_harmonicQuarticCode
 #print axioms RepairPorts.elementaryPerspectiveSubsetEvaluation_eq_pointedTutte
 #print axioms RepairPorts.erasureFailureProbability_delete_contract
 #print axioms RepairPorts.eventually_mdsMinimumCoefficientFingerprints
 #print axioms RepairPorts.eventually_pointedConfinement_iff_zeroCost
 #print axioms RepairPorts.eventually_prescribedPorts
+#print axioms RepairPorts.eventually_radiusThree_prescribedPortPair
 #print axioms RepairPorts.exactFunctionalStrata
 #print axioms RepairPorts.exactPointedConfinementAndTransfer
+#print axioms RepairPorts.existsUnique_harmonicQuarticCompletion
+#print axioms RepairPorts.finiteHarmonicBlock_repairPort
+#print axioms RepairPorts.harmonicPortClosure_of_containsBlock_iff
+#print axioms RepairPorts.harmonicPortClosure_of_containsNoBlock_iff
+#print axioms RepairPorts.harmonicPortClosure_withNucleus_iff
+#print axioms RepairPorts.harmonicQuarticCode_parameters_of_sharp_section
+#print axioms RepairPorts.harmonicQuarticDeterminant_finite
+#print axioms RepairPorts.harmonicQuarticDeterminant_infinity
+#print axioms RepairPorts.harmonicQuarticFamily_projective_linearIndependent_iff
+#print axioms RepairPorts.harmonicQuarticGenerator_smallColumnIndependent
 #print axioms RepairPorts.hasDerivAt_homogeneous_portReliability
 #print axioms RepairPorts.hasDerivAt_portReliability_update
+#print axioms RepairPorts.infinityHarmonicBlock_repairPort
 #print axioms RepairPorts.noRepairProbability_eq_erasureFailure
 #print axioms RepairPorts.nonzeroOuterPointedRealizationCost_eq_fiberCost
 #print axioms RepairPorts.overlappingTripleRepairs_reliability

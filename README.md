@@ -21,6 +21,12 @@ record each gate, its terminal declarations, and expected axiom sets;
 
 - `trust/` contains the claim boundaries, terminal ledgers, and reproducible
   axiom audit.
+- `trust/manifests/complete_ports.json` content-addresses the bounded
+  repair-port boundary: the coefficient-port object and intrinsic reconstruction
+  radius, the standard-code duality bridge, minimum-port reconstruction for
+  maximum distance separable codes, exact pointed transfer, completed
+  projective twisted-cubic rows, and the erasure calculus in its finite
+  reliability and bounded-radius forms.
 - `trust/manifests/q13_passant_code.json` content-addresses normalized projective coordinates, binary incidence semantics, rank transport, and low-weight geometric reductions.
 
 Large finite classifications are distributed as separately pinned certificate
