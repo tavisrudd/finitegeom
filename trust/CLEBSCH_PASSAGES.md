@@ -9,22 +9,33 @@ The exact project-local closure is rooted at
 and consists of:
 
 - `RelativeConicArcs.AlignedFamilyFaithfulness`
+- `RelativeConicArcs.AlignedQueryFaithfulness`
 - `RelativeConicArcs.AlignedQueryFamily`
 - `RelativeConicArcs.AlignedTwoGraph`
 - `RelativeConicArcs.ClebschGoldenConference`
+- `RelativeConicArcs.ClebschGoldenSteinChart`
 - `RelativeConicArcs.ClebschInvariantCubic`
 - `RelativeConicArcs.ClebschPassagesCorrespondence`
+- `RelativeConicArcs.ClebschSteinChart`
 - `RelativeConicArcs.ClebschTwoGraph`
 - `RelativeConicArcs.Gates.ClebschPassages`
 - `RelativeConicArcs.GoldenQuadraticCharacters`
+- `RelativeConicArcs.GoldenResidueAlgebra`
 - `RelativeConicArcs.InvolutiveOddUnit`
 - `RelativeConicArcs.KneserPairEigenspace`
 - `RelativeConicArcs.MarkedClebschBridge`
+- `RelativeConicArcs.NormalizedMarkedIncidence`
+- `RelativeConicArcs.NormalizedMarkedIncidenceData`
 - `RelativeConicArcs.PetersenHarmonicKernel`
 - `RelativeConicArcs.QuadraticPinching`
+- `RelativeConicArcs.SeidelPrincipalMinors`
 - `RelativeConicArcs.SignedEquiangularGram`
+- `RelativeConicArcs.SphereIntegralMoments`
+- `RelativeConicArcs.SphericalMomentFunctional`
+- `RelativeConicArcs.SpinorSquareClass`
 - `RelativeConicArcs.SplitQuadraticPinching`
 - `RelativeConicArcs.TightFrameConference`
+- `RelativeConicArcs.TraceSplitQuadraticAlgebra`
 
 ## Formal correspondence
 

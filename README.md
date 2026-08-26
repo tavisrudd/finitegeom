@@ -28,6 +28,11 @@ record each gate, its terminal declarations, and expected axiom sets;
   projective twisted-cubic rows, and the erasure calculus in its finite
   reliability and bounded-radius forms.
 - `trust/manifests/q13_passant_code.json` content-addresses normalized projective coordinates, binary incidence semantics, rank transport, and low-weight geometric reductions.
+- `trust/manifests/clebsch_passages.json` content-addresses the structural
+  Clebsch-passages closure: the quadratic and split pinching models, golden
+  residue and Stein-chart algebra, conference and Petersen calculations,
+  marked incidence and invariant-cubic comparisons, spherical moments,
+  spinor square classes, and aligned two-graph reconstruction.
 
 Large finite classifications are distributed as separately pinned certificate
 packages. They are not dependencies of this human-scale library.

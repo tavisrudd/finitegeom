@@ -1,6 +1,7 @@
 {
   "external_imports": [
     "Mathlib",
+    "Mathlib.Algebra.BigOperators.Field",
     "Mathlib.Algebra.BigOperators.Fin",
     "Mathlib.Algebra.BigOperators.ModEq",
     "Mathlib.Algebra.BigOperators.Ring.Finset",
@@ -32,6 +33,7 @@
     "Mathlib.Analysis.Complex.Exponential",
     "Mathlib.Analysis.Normed.Module.Connected",
     "Mathlib.Analysis.Real.Sqrt",
+    "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
     "Mathlib.Analysis.SpecialFunctions.Pow.Real",
     "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
     "Mathlib.Combinatorics.Configuration",
@@ -62,6 +64,7 @@
     "Mathlib.Data.Nat.Choose.Dvd",
     "Mathlib.Data.Nat.Choose.Lucas",
     "Mathlib.Data.Nat.Choose.Sum",
+    "Mathlib.Data.Nat.Factorial.Basic",
     "Mathlib.Data.Nat.Factorization.PrimePow",
     "Mathlib.Data.Nat.ModEq",
     "Mathlib.Data.Real.Basic",
@@ -78,6 +81,7 @@
     "Mathlib.GroupTheory.IndexNormal",
     "Mathlib.GroupTheory.Perm.Cycle.Type",
     "Mathlib.GroupTheory.Perm.Sign",
+    "Mathlib.GroupTheory.QuotientGroup.Basic",
     "Mathlib.GroupTheory.SpecificGroups.Alternating",
     "Mathlib.GroupTheory.SpecificGroups.Alternating.Simple",
     "Mathlib.GroupTheory.SpecificGroups.Dihedral",
@@ -125,8 +129,14 @@
     "Mathlib.LinearAlgebra.QuadraticForm.IsometryEquiv",
     "Mathlib.LinearAlgebra.Span.Basic",
     "Mathlib.LinearAlgebra.Vandermonde",
+    "Mathlib.MeasureTheory.Constructions.HaarToSphere",
+    "Mathlib.MeasureTheory.Integral.Gamma",
+    "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+    "Mathlib.MeasureTheory.Integral.Pi",
+    "Mathlib.MeasureTheory.Measure.Haar.InnerProductSpace",
     "Mathlib.Order.Lattice.Nat",
     "Mathlib.Order.LiminfLimsup",
+    "Mathlib.RingTheory.AdjoinRoot",
     "Mathlib.RingTheory.MvPolynomial.Basic",
     "Mathlib.RingTheory.MvPolynomial.EulerIdentity",
     "Mathlib.RingTheory.MvPolynomial.Symmetric.Defs",
@@ -135,15 +145,17 @@
     "Mathlib.RingTheory.Trace.Basic",
     "Mathlib.Tactic",
     "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.Linarith",
     "Mathlib.Tactic.LinearCombination",
     "Mathlib.Tactic.NormNum",
     "Mathlib.Tactic.Ring",
     "Mathlib.Topology.Algebra.Group.Quotient",
+    "Mathlib.Topology.Algebra.MvPolynomial",
     "Mathlib.Topology.Instances.Matrix",
     "Mathlib.Topology.Irreducible",
     "Mathlib.Topology.Separation.Connected"
   ],
-  "module_count": 365,
+  "module_count": 376,
   "roots": [
     "CapGame.Affine",
     "ProjectiveCap.Binary",
@@ -783,16 +795,22 @@
       "sha256": "220a62cba94bac13b43d13363e4654ec3b07357c5e650f884df7469a9443c048"
     },
     {
-      "bytes": 32968,
+      "bytes": 35547,
       "module": "RelativeConicArcs.AlignedFamilyFaithfulness",
       "path": "RelativeConicArcs/AlignedFamilyFaithfulness.lean",
-      "sha256": "1e7670f2533c172afa37acf3fd081b3467bd010dd4306960060099d0ad21ed56"
+      "sha256": "7b03be595261e056c35c9692348e009ab8e7ffb524a7ab620d2d8fc390a33424"
     },
     {
-      "bytes": 8534,
+      "bytes": 15286,
+      "module": "RelativeConicArcs.AlignedQueryFaithfulness",
+      "path": "RelativeConicArcs/AlignedQueryFaithfulness.lean",
+      "sha256": "3ee4df267f30df42ee79d7ad47f794a0280de7dc9dfbd08e70924d5ece56dd63"
+    },
+    {
+      "bytes": 8726,
       "module": "RelativeConicArcs.AlignedQueryFamily",
       "path": "RelativeConicArcs/AlignedQueryFamily.lean",
-      "sha256": "1b7dfc9171f244495996209594bdfeb78a11134100af74611dacf3fb295f63ce"
+      "sha256": "0b54a64f2fbf9a303369d8e4030d51113b1f33e136be93009331eda7d58eeeec"
     },
     {
       "bytes": 24843,
@@ -981,6 +999,12 @@
       "sha256": "aa207dac0e6dd2f38e642488d5ce05a9790e2ee200a23cf6c015bab5f0e31e30"
     },
     {
+      "bytes": 1600,
+      "module": "RelativeConicArcs.ClebschGoldenSteinChart",
+      "path": "RelativeConicArcs/ClebschGoldenSteinChart.lean",
+      "sha256": "ef2fdd61f35fb31ba5d10de064f841a805d1f8db464497e7521e4d8180020057"
+    },
+    {
       "bytes": 6239,
       "module": "RelativeConicArcs.ClebschH3InvariantMatchings",
       "path": "RelativeConicArcs/ClebschH3InvariantMatchings.lean",
@@ -1111,6 +1135,12 @@
       "module": "RelativeConicArcs.ClebschSchemeChiralityData",
       "path": "RelativeConicArcs/ClebschSchemeChiralityData.lean",
       "sha256": "b56b3d7b18428517da497b464c48791587300d31a6a808004ee64f9a2c1c3803"
+    },
+    {
+      "bytes": 2240,
+      "module": "RelativeConicArcs.ClebschSteinChart",
+      "path": "RelativeConicArcs/ClebschSteinChart.lean",
+      "sha256": "fc1632e9502121641facfacaecd3b2f887798b825c5188f4da34134ad125cec2"
     },
     {
       "bytes": 4738,
@@ -1383,10 +1413,10 @@
       "sha256": "00778825617b4721143c84108ab22bce89928d3203fb59da0727e0c269bd113d"
     },
     {
-      "bytes": 7169,
+      "bytes": 10180,
       "module": "RelativeConicArcs.Gates.ClebschPassages",
       "path": "RelativeConicArcs/Gates/ClebschPassages.lean",
-      "sha256": "361740f1fb6b805bbb5d03688ab918b2cf7e5dd72546775a87ea4f1bfbcb104a"
+      "sha256": "f69ceda8515855f6eb60416ac2f3224f94c812d39a27c47de9a4c77f09b3a316"
     },
     {
       "bytes": 7865,
@@ -1497,6 +1527,12 @@
       "sha256": "e91dc033c8269385018c0f8eae8d28df635e606a59083ccb242cfd88dec1842e"
     },
     {
+      "bytes": 4656,
+      "module": "RelativeConicArcs.GoldenResidueAlgebra",
+      "path": "RelativeConicArcs/GoldenResidueAlgebra.lean",
+      "sha256": "12704d989d470bec74b393d67b3e29888f3f33f2dcd797aa393102e4aed4a415"
+    },
+    {
       "bytes": 8824,
       "module": "RelativeConicArcs.InvolutiveOddUnit",
       "path": "RelativeConicArcs/InvolutiveOddUnit.lean",
@@ -1549,6 +1585,18 @@
       "module": "RelativeConicArcs.Moments",
       "path": "RelativeConicArcs/Moments.lean",
       "sha256": "a5dfcd948d94f2646aae87c8f71ea904de7ecfc2cb3d5bc5ef4dcca902c725c7"
+    },
+    {
+      "bytes": 3024,
+      "module": "RelativeConicArcs.NormalizedMarkedIncidence",
+      "path": "RelativeConicArcs/NormalizedMarkedIncidence.lean",
+      "sha256": "e535959d5b7b72ed3fe206b2e427d1bf47c373f5d68d30524545fdd37da6229c"
+    },
+    {
+      "bytes": 1712,
+      "module": "RelativeConicArcs.NormalizedMarkedIncidenceData",
+      "path": "RelativeConicArcs/NormalizedMarkedIncidenceData.lean",
+      "sha256": "dabf72e966d4814cc10b3ea6b55df98a4aa7cee72e2d93f201fa7f725902257a"
     },
     {
       "bytes": 25116,
@@ -1887,6 +1935,12 @@
       "sha256": "61e92ee9ac708e140375ee39b180b9938e814308608346c1c4abd19ffcd53fea"
     },
     {
+      "bytes": 19914,
+      "module": "RelativeConicArcs.SeidelPrincipalMinors",
+      "path": "RelativeConicArcs/SeidelPrincipalMinors.lean",
+      "sha256": "3479f18c61d4c26a46031002316c67a50a3acaed455b51f3c99794d1ac8a9d09"
+    },
+    {
       "bytes": 3417,
       "module": "RelativeConicArcs.SignedEquiangularGram",
       "path": "RelativeConicArcs/SignedEquiangularGram.lean",
@@ -2037,6 +2091,24 @@
       "sha256": "37d1d16ad262880c7b57cb0b8827c973ca6f2521226dbb1b4eb117f1fcc3828e"
     },
     {
+      "bytes": 18874,
+      "module": "RelativeConicArcs.SphereIntegralMoments",
+      "path": "RelativeConicArcs/SphereIntegralMoments.lean",
+      "sha256": "30e4edf2286be308e1a0a4347a1b95e05b26f00e16379dbe76de8112c9940f7d"
+    },
+    {
+      "bytes": 29042,
+      "module": "RelativeConicArcs.SphericalMomentFunctional",
+      "path": "RelativeConicArcs/SphericalMomentFunctional.lean",
+      "sha256": "ed3b994157c0621fb44b1862961eae65cf90cd9386c465884a8d9d2c986aa3a6"
+    },
+    {
+      "bytes": 2979,
+      "module": "RelativeConicArcs.SpinorSquareClass",
+      "path": "RelativeConicArcs/SpinorSquareClass.lean",
+      "sha256": "d69d41b7150c14cce11d10bcaf5fdb98e905023fea625596d899fa222316cdd7"
+    },
+    {
       "bytes": 6852,
       "module": "RelativeConicArcs.SplitQuadraticPinching",
       "path": "RelativeConicArcs/SplitQuadraticPinching.lean",
@@ -2125,6 +2197,12 @@
       "module": "RelativeConicArcs.TightFrameConference",
       "path": "RelativeConicArcs/TightFrameConference.lean",
       "sha256": "923582e8230cda462e0a7f42bbf323b6469b5f058ea0f0274e41c7e663993791"
+    },
+    {
+      "bytes": 3896,
+      "module": "RelativeConicArcs.TraceSplitQuadraticAlgebra",
+      "path": "RelativeConicArcs/TraceSplitQuadraticAlgebra.lean",
+      "sha256": "bd1aedb41d1e85bb42d3dc3616d1065bef95df098173363b9e84f4833406ccad"
     },
     {
       "bytes": 13997,
